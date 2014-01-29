@@ -1,0 +1,185 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <text>
+        <front>
+            <pb facs="#f0011" n="[3]"/>
+
+            <castList>
+                <head>
+                    <hi rendition="#c">Perſonen.
+                        <lb/>
+                    </hi>
+                </head>
+                <milestone rendition="#hr" unit="section"/>
+
+                <p>
+                    <hi rendition="#c">Beſetzung im k. k. priv. Theater an der Wien.
+                    </hi>
+                </p>
+                <lb/>
+                <milestone rendition="#hr" unit="section"/>
+
+                <castItem>
+                    <role xml:id="GRI">
+                        <hi rendition="#b">Grillhofer,
+                        </hi>
+                    </role>
+                    <roleDesc> ein reicher Bauer. 
+                    </roleDesc>
+                    <actor>
+                        <hi rendition="#et">Herr Martinelli.
+                        </hi>
+                    </actor>
+                </castItem>
+                <lb/>
+                <castItem>
+                    <role xml:id="DUS">
+                        <hi rendition="#b">Duſterer,
+                        </hi>
+                    </role>
+                    <roleDesc> ſein Schwager. 
+                    </roleDesc>
+                    <actor>
+                        <hi rendition="#et">〃 Frieſe.
+                        </hi>
+                    </actor>
+                </castItem>
+
+                <lb/>
+                <castGroup>
+                    <castItem>
+                        <role xml:id="WAS">
+                            <hi rendition="#b">Waſtl,
+                            </hi>
+                        </role>
+                        <actor> 
+                            <hi rendition="#et">〃 Szika.
+                            </hi>
+                        </actor>
+                    </castItem>
+                    <lb/>
+                    <castItem>
+                        <role xml:id="MIC">
+                            <hi rendition="#b">Michl,
+                            </hi>
+                        </role>
+                        <actor> 
+                            <hi rendition="#et">〃 Thalboth.
+                            </hi>
+                        </actor>
+                    </castItem>
+                    <lb/>
+                    <castItem>
+                        <role xml:id="ROS">
+                            <hi rendition="#b">Rosl,
+                            </hi>
+                        </role>
+                        <actor> 
+                            <hi rendition="#et">Fr. Cloſſegg.
+                            </hi>
+                        </actor>
+                    </castItem>
+                    <lb/>
+                    <castItem>
+                        <role xml:id="ANN">
+                            <hi rendition="#b">Annamirl,
+                            </hi>
+                        </role>
+                        <actor> 
+                            <hi rendition="#et">Frl. Schindler.
+                            </hi>
+                        </actor>
+                    </castItem>
+                    <roleDesc rend="braced">Dienſtleute bei Grillhofer.
+                    </roleDesc>
+                </castGroup>
+                <lb/>
+                <castItem>
+                    <role xml:id="LIE">Die 
+                        <hi rendition="#b">Horlacherlies.
+                        </hi>
+                    </role>
+                    <actor> 
+                        <hi rendition="#et">〃 Geiſtinger.
+                        </hi>
+                    </actor>
+                </castItem>
+                <lb/>
+                <castItem>
+                    <role xml:id="LEO">
+                        <hi rendition="#b">Leonhardt,
+                        </hi>
+                    </role>
+                    <roleDesc> Fuhrknecht.
+                    </roleDesc>
+                    <actor> 
+                        <hi rendition="#et">Herr Schreiber.
+                        </hi>
+                    </actor>
+                </castItem>
+                <lb/>
+                <castItem>
+                    <role xml:id="BAU">
+                        <hi rendition="#b">Poltner,
+                        </hi>
+                    </role>
+                    <roleDesc> der Bauer an der kahlen Lehnten.
+                    </roleDesc>
+                    <actor> 
+                        <hi rendition="#et">〃 Rott.
+                        </hi>
+                    </actor>
+                </castItem>
+                <lb/>
+                <castItem>
+                    <role xml:id="BAEU">
+                        <hi rendition="#b">Sein Weib.
+                        </hi>
+                    </role>
+                    <actor> 
+                        <hi rendition="#et">Frl. Herzog.
+                        </hi>
+                    </actor>
+                </castItem>
+                <lb/>
+                <castGroup>
+                    <castItem>
+                        <role xml:id="NAT">
+                            <hi rendition="#b">Natzl,
+                            </hi>
+                        </role>
+                        <actor> 
+                            <hi rendition="#et">Herr Jäger.
+                            </hi>
+                        </actor>
+                    </castItem>
+                    <lb/>
+                    <castItem>
+                        <role xml:id="HAN">
+                            <hi rendition="#b">Hanns,
+                            </hi>
+                        </role>
+                        <actor> 
+                            <hi rendition="#et">〃 Romani.
+                            </hi>
+                        </actor>
+                    </castItem>
+                    <roleDesc rend="braced"> deren Söhne.
+                    </roleDesc>
+                </castGroup>
+                <lb/>
+                <castItem>
+                    <role xml:id="KNE">
+                        <hi rendition="#c">(Knechte und Mägde im Grillhofer’ſchen Hauſe.)
+                        </hi>
+                    </role>
+                </castItem>
+            </castList>
+            <lb/>
+            <milestone rendition="#hr" unit="section"/>
+
+            <fw place="bottom" type="sig">1*
+            </fw>
+            <lb/>
+        </front>
+    </text>
+</TEI>

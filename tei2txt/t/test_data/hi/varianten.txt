@@ -1,0 +1,6 @@
+Initiale
+auseinander: High lights
+zusammen: Highlights
+getrennt durch newline
+
+

@@ -1,0 +1,13 @@
+<pb facs="#f1234"/>
+<p>
+    Wollen doch mal <hi>sehen</hi> ob das klappt, wie es soll.<lb/>
+</p>
+<p>
+    Wollen doch mal <hi>sehen</hi> <supplied>?</supplied> ob das klappt, wie es soll.<lb/>
+</p>
+        <p>
+    Wollen doch mal <hi>sehen</hi> <supplied>?</supplied> ob das klappt, wie es soll.<lb/>
+</p>
+    <p>
+    Wollen doch mal <hi>sehen</hi><hi>?</hi> ob das klappt, wie es soll.<lb/>
+</p>

@@ -1,0 +1,24 @@
+<!--
+,==========================.
+| Kopf 1 | Kopf 2 | Kopf 3 |
++========+========+========+
+| mehr= | zushgd. Zelle |
+| zeilg. +========+========|
+| Zelle | Wert x | Wert y |
+`========+========+========'
+-->
+<table>
+    <row>
+        <cell role="label">Kopf1</cell>
+        <cell role="label">Kopf2</cell>
+        <cell role="label">Kopf3</cell>
+    </row>
+    <row>
+        <cell rows="2">mehr-<lb/>zeilg.<lb/>Zelle</cell>
+        <cell cols="2">zushgd. Zelle</cell>
+    </row>
+    <row>
+        <cell>Wert x</cell>
+        <cell>Wert y</cell>
+    </row>
+</table>

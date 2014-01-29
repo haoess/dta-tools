@@ -1,0 +1,7 @@
+Gleich kommt ei-
+Something
+A	B
+1	0
+	1	C1	
+A2	B2	C2	
+-ne Tabelle.

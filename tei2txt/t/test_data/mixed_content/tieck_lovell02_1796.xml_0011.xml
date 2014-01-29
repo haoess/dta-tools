@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text>
+    <body>
+      <div n="1">
+        <pb facs="#f0011" n="[5]"/>
+        <milestone rendition="#hr" unit="section"/>
+        <div n="2">
+          <head>1.<lb/><hi rendition="#g">Willy</hi> an &#x17F;einen Bruder <hi rendition="#g">Thomas</hi>.</head>
+          <lb/>
+          <dateline>
+            <name type="place">
+              <hi rendition="#et"><hi rendition="#g">Rom</hi>.</hi>
+            </name>
+          </dateline>
+          <lb/>
+          <p><hi rendition="#in">G</hi>ottes Seegen mo&#x364;ge zu Dir kommen, lieber<lb/>Bruder, &#x17F;o wie er mich nun ganz verla&#x17F;&#x17F;en hat.<lb/>Wenn Du in Deinem Herzen noch an den ar-<lb/>men Willy denk&#x17F;t, &#x17F;o bete fu&#x364;r mich, da&#xDF; ich<lb/>bald un&#x17F;er gutes Engli&#x17F;ches Ufer wieder&#x17F;ehe,<lb/>und Dich mitten drinn&#x2019; im &#x17F;cho&#x364;nen gottesfu&#x364;rch-<lb/>tigen Lande, wo alle Men&#x17F;chen meinen frommen,<lb/>einfa&#x364;ltigen Glauben haben, und die ganze Chri-<lb/>&#x17F;tenheit einen &#x17F;tillen, eintra&#x364;chtigen Wandel<lb/>fu&#x364;hrt. Hier &#x17F;cheint zwar die Sonne &#x17F;cho&#x364;ner und<lb/>wa&#x364;rmer, weil es Gottes gna&#x364;diger Wille i&#x17F;t, da&#xDF;<lb/>&#x17F;ie auch u&#x364;ber die Gottlo&#x17F;en &#x17F;cheinen &#x17F;oll: aber<lb/>nach meiner Ein&#x17F;icht thut er daran gar nicht<lb/>ganz recht.</p>
+          <lb/>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

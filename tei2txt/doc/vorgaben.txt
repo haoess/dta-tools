@@ -1,0 +1,424 @@
+Absender: 	Frank Wiegand <wiegand@bbaw.de>   
+An: 	konstantin@baierer.de
+Datum: 	19.09.2011 10:57
+Betreff: 	Textversion Texte
+
+-------- Weitergeleitete Nachricht --------
+Von: Frank Wiegand <wiegand@bbaw.de>
+An: dta@bbaw.de
+Betreff: Textversion Texte
+Datum: Tue, 13 Sep 2011 13:37:52 +0200
+
+Hi @,
+
+es geht um die Rein-/Plain-/Nur-Text-Version unserer Texte. Dazu würde
+ich gerne Eure Meinungen/Anregungen sammeln, damit ich diese Baustelle
+baldmöglichst schließen kann.
+
+Zur Motivation: Für alle User, die sich rein für den Text interessieren
+und gerne ihre eigenen Untersuchungen damit anstellen möchten, ist diese
+Version interessant. Außerdem ist es die einzige Form unserer Text, die
+wirklich auf jedem Gerät ohne zusätzliche Software lesbar ist.
+
+Momentan ist die Textversion eines jeden Buches in DTAQ erreichbar über
+?Ansichten? ? ?Download? ? ?Text?.
+
+Das Kodierungsformat ist grundsätzlich UTF-8, ein BOM wird *nicht*
+eingesetzt.
+
+Eine Normalisierung (langes ? zu s, e über Vokalen zu Vokal mit Trema)
+findet *nicht* statt.
+
+Da es bei der Textversion keinerlei Markup gibt (geben *kann* und geben
+*soll*), kann dementsprechend auch kaum semantische Information in die
+Ausgabe fließen. Einzig folgende Auszeichnungen lassen sich problemlos
+umsetzen:
+
+* <lb/> und <cb/> ? Zeilenumbruch
+* <pb/> ? ASCII Form Feed (wird üblicherweise für den
+Seitenumbruch in Textdateien benutzt)
+
+
+Es gibt ein paar Punkte (Kustoden, Bogensignatur, Zeilennummern etc.),
+diese würde ich gerne parametrisierbar zu- und weglassbar machen, siehe
+dazu unten. Insgesamt möchte ich aber die Parametrisierbarkeit minimal
+halten, bin für Anregungen aber offen.
+
+Die einzelnen Fälle möchte ich gerne hiermit vorstellen. Ich habe zu
+jedem Punkt eine Meinung, und falls ich nicht anderweitig überzeugt
+werde, dann würde ich das so umsetzen, wie jeweils erläutert.
+
+Für das weitere Lesen empfiehlt sich die Benutzung einer
+Festbreitenschriftart.
+
+================================
+Grundsätzlicher Aufbau
+================================
+
+Hier ein Beispiel für die Textversion eines dreiseitigen Buches, das
+?^L? symbolisiert den oben erwähnten ASCII Form Feed (Seitenumbruch):
+
+------8<-----------
+Johann Wolfgang von Goethe
+Faust, der Trago?die erster Teil
+^L
+Nacht.
+
+In einem hochgewölbten, engen, gothi?chen Zimmer Fau?t
+unruhig auf ?einem Se??el am Pulte.
+
+Fau?t.
+Habe nun, ach! Philo?ophie,
+Juri?terey und Medicin,
+^L
+Stimme von innen, verhallend.
+Heinrich! Heinrich!
+------8<-----------
+
+================================
+Zusammenfassung von leeren Seiten
+================================
+
+Leere Seiten werden mitsamt ihres Seitenumbruches eliminiert.
+
+
+================================
+Metadaten
+================================
+
+Es werden keine Metadaten in die Textversion mit aufgenommen, da diese
+das Material verfälschen und nicht ohne weiteres automatisch wieder aus
+dem Textfile entfernt werden können.
+
+
+================================
+Darstellung von Textformatierungen (Bündigkeit,
+Fett-/Kursiv-/Gesperrtdruck, Einrückungen, Frakturwechsel, Farben,
+Initialen, Kapitälchen)
+================================
+
+Es erfolgt keine Umsetzung derer.
+
+
+================================
+Absätze, Inhaltseinheiten
+================================
+
+Absätze (<p>, <lg>, <div>, <sp>, <head> etc.) werden durch eine
+Leerzeile voneinander getrennt.
+
+
+================================
+Fußnoten
+================================
+
+Fußnoten werden vor dem Ende der Seite eingebunden. Beispiel:
+
+------8<-----------
+Der Glauben ist, wie schon die Schrift
+sagt¹, jedermanns Sache² nicht.
+
+¹ Vgl. [Gruber/2010]
+² ebds.
+------8<-----------
+
+Fußnoten werden durch eine Leerzeile vom Seitentext abgetrennt.
+
+
+================================
+Endnoten
+================================
+
+Endnoten werden dort dargestellt, wo sie auf der Seite stehen,
+Abtrennung mit Leerzeile erfolgt analog wie bei Fußnoten.
+
+------8<-----------
+Kapitel 1
+
+Der Glauben ist, wie schon die Schrift
+sagt¹, jedermanns Sache² nicht.
+
+¹ Vgl. [Gruber/2010]
+² ebds.
+
+Kapitel 2
+
+Diese These¹ kann man nur
+^L
+unterstützen.
+
+¹ Vgl. [Schmidt/2011]
+
+Kapitel 3
+
+bla blubb
+------8<-----------
+
+
+================================
+Marginalien
+================================
+
+Eine adäquate Darstellung von Marginalien ist nicht möglich. Daher
+werden diese nach einer Leerzeile am Seitenende hintereinander
+aufgeführt.
+
+Beispiel (Original, Vorlage):
+
+------8<-----------
+1722 Das Magnificat erscheint
+und in der Es-Dur-Fassung,
+1723 anschließend wird die
+Johannespassion urauf- 1724
+geführt.
+------8<-----------
+
+Umsetzung:
+
+------8<-----------
+Das Magnificat erscheint
+in der Es-Dur-Fassung,
+anschließend wird die
+Johannespassion urauf-
+geführt.
+
+1722
+und
+1723
+1724
+------8<-----------
+
+
+================================
+Tabellen
+================================
+
+Da eine Tabellendarstellung in ASCII nicht wirklich möglich ist, und
+Dekorationszeichen (ASCII-Art) den Text verfälschen, werden die
+Zelleninhalte literal und durch Tabulator getrennt dargestellt. Die
+Tabelle selbst wird durch Leerzeilen vom umgebenden Text separiert.
+
+Beispiel (Original, Vorlage):
+
+------8<-----------
+Es folgt eine Tabelle:
+
+,--------------------------.
+| Kopf 1 | Kopf 2 | Kopf 3 |
++--------+--------+--------+
+| mehr- | zushgd. Zelle |
+| zeilg. +--------+--------|
+| Zelle | Wert x | Wert y |
+`--------+--------+--------'
+
+Weiter im Text.
+------8<-----------
+
+Umsetzung:
+
+------8<-----------
+Es folgt eine Tabelle:
+
+Kopf1 Kopf2 Kopf3
+mehr-
+zeilg.
+Zelle zushgd. Zelle
+Wert x Wert y
+
+Weiter im Text.
+------8<-----------
+
+
+================================
+Listen
+================================
+
+Für Listen erfolgt keine besondere Formatierung. <item>'s werden durch
+Zeilenumbruch voneinander getrennt.
+
+
+================================
+Horizontale Linien
+================================
+
+Horizontale Linien werden nicht in Text umgesetzt.
+
+
+================================
+Formeln
+================================
+
+Für Formeln wird der Platzhalter [Formel] im Text platziert, auch wenn
+die Formel mit einem @notation="TeX"-Attribut versehen ist.
+
+
+================================
+Abbildungen
+================================
+
+Es gilt, mehrere Fälle abzudecken.
+
+1. Fall
+
+TEI: <figure/>
+Umsetzung: [Abbildung]
+
+
+2. Fall
+
+TEI: <figure><head>Titel der Abbildung</head></figure>
+Umsetzung: [Abbildung Titel der Abbildung]
+(Trennung durch Tabulator)
+
+
+3. Fall
+
+TEI: <figure><head>Titel</head><figDesc>Erläuterung</figDesc></figure>
+Umsetzung: [Abbildung Titel Erläuterung]
+(Trennung jeweils durch Tabulator)
+
+
+================================
+Zeilennummern
+================================
+
+Falls vorhanden, parametrisierbar dargestellt oder nicht. Vorbehaltlich
+eventueller Änderungen am Basisformat erfassen wir die Position der
+Zeilennummer *nicht*, daher erbringen die folgenden beiden Beispiele bei
+aktivierter Zeilennummerndarstellung das gleiche Resultat.
+
+Beispiel 1:
+
+Original-Text:
+,----------------------------------------------.
+| Brot aus der Hand; weil ferne der trozi- |
+| ge Hahn mit den Weibern 10 |
+| Harrte des Wurfs, und die trippelnde |
+`----------------------------------------------'
+
+TEI:
+------8<-----------
+Brot aus der Hand; weil ferne der trozi-<lb/>
+ge Hahn mit den Weibern<lb n="10"/>
+Harrte des Wurfs, und die trippelnde<lb/>
+------8<-----------
+
+Umsetzung Textversion:
+
+Brot aus der Hand; weil ferne der trozi-
+ge Hahn mit den Weibern 10
+Harrte des Wurfs, und die trippelnde
+
+
+Beispiel 2:
+
+Original-Text:
+,----------------------------------------------.
+| Brot aus der Hand; weil ferne der trozi- |
+| 10 ge Hahn mit den Weibern |
+| Harrte des Wurfs, und die trippelnde |
+`----------------------------------------------'
+
+TEI:
+------8<-----------
+Brot aus der Hand; weil ferne der trozi-<lb/>
+ge Hahn mit den Weibern<lb n="10"/>
+Harrte des Wurfs, und die trippelnde<lb/>
+------8<-----------
+
+Umsetzung Textversion:
+
+Brot aus der Hand; weil ferne der trozi-
+ge Hahn mit den Weibern 10
+Harrte des Wurfs, und die trippelnde
+
+
+Bemerkung: Das betrifft nur Zeilennummern, die auch wirklich gedruckt
+sind. Momentan gibt es das nur bei einem Buch im Korpus.
+
+
+================================
+Seitenzahlen
+================================
+
+Die Darstellung ist parametrisierbar. Falls angeschaltet, gilt es zwei
+Fälle zu unterscheiden.
+
+
+1. Fall: @n-Attribut bei <pb/> vorhanden (= gedruckte Seitenzahl
+vorhanden)
+
+Darstellung am Anfang der Seite:
+[%04d %s]
+
+
+2. Fall: @n-Attribut bei <pb/> nicht vorhanden (= keine gedruckte
+Seitenzahl vorhanden)
+
+Darstellung am Anfang der Seite:
+[%04d]
+
+
+Erklärung: %04d ist die mit Nullen aufgefüllte Faksimilenummer. %s ist
+der Wert des @n-Attributes von <pb/>. Beide Werte werden im 1. Fall
+durch einen Tabulator getrennt.
+
+
+================================
+Kolumnentitel
+================================
+
+Die Darstellung ist optional anschaltbar. Falls angeschaltet: Der
+Kolumnentitel wird am Anfang der Seite und durch eine Leerzeile nach
+unten abgetrennt vom Text dargestellt.
+
+
+================================
+Bogensignaturen
+================================
+
+Die Darstellung ist optional anschaltbar. Falls angeschaltet: Die
+Bogensignatur wird am Ende der Seite und durch eine Leerzeile nach oben
+abgetrennt vom Text dargestellt.
+
+
+================================
+Kustoden
+================================
+
+Die Darstellung ist optional anschaltbar. Falls angeschaltet: Die
+Kustode wird am Ende der Seite und durch eine Leerzeile nach oben
+abgetrennt vom Text dargestellt.
+
+
+================================
+<choice>
+================================
+
+Es gibt 3 Fälle.
+
+1. Fall <sic> und <corr>:
+Es wird der Inhalt von <corr> dargestellt, <sic> wird nicht dargestellt.
+
+2. Fall <orig> und <reg>:
+Es wird der Inhalt von <orig> dargestellt, <reg> wird nicht dargestellt.
+
+3. Es gibt kein <orig> und nur <reg>:
+<reg> wird dargestellt.
+
+-------------------------------------------------
+
+Ich hoffe, ich habe nicht allzuviel vergessen, und würde mich freuen,
+wenn ich dieses Pamphlet am Montagmorgen nächster Woche (19. September)
+an Konstantin übergeben könnte.
+
+
+Herzliche Grüße,
+Frank
+
+
+
+
+
+	 
+ 

@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text>
+    <body>
+      <div n="1">
+        <div n="2">
+          <pb facs="#f0063" n="55"/>
+          <sp who="#WAS">
+            <speaker>
+              <hi rendition="#b">Wa&#x17F;tl.</hi>
+            </speaker>
+            <p>Wann d&#x2019;es net be&#xDF;er wei&#xDF;t wie ich, &#x17F;o er&#x17F;par&#x2019;n<lb/>mer einand s&#x2019;Ausfrag&#x2019;n.</p>
+          </sp>
+          <lb/>
+          <sp who="#ROS">
+            <speaker>
+              <hi rendition="#b">Rosl.</hi>
+            </speaker>
+            <p>Horch! Es fahrt a Wag&#x2019;n!</p>
+          </sp>
+          <lb/>
+          <sp who="#WAS">
+            <speaker>
+              <hi rendition="#b">Wa&#x17F;tl.</hi>
+            </speaker>
+            <p>Richtig, h&#xF6;r&#x2019;n a. Aber der kimmt von der andern<lb/>Seiten, von der Ellersbrunner!</p>
+          </sp>
+          <lb/>
+          <sp who="#ROS">
+            <speaker>
+              <hi rendition="#b">Rosl.</hi>
+            </speaker>
+            <p>Schau, haha, bei Dir kimmt hizt All&#x2019;s von Eller-<lb/>brunn.</p>
+          </sp>
+          <lb/>
+          <sp who="#WAS">
+            <speaker>
+              <hi rendition="#b">Wa&#x17F;tl.</hi>
+            </speaker>
+            <p>No ohne Frotzeln, horch doch nur, hizt polter&#x2019;ns<lb/>&#xFC;ber d&#xF6; Brucken und hizt fahr&#x2019;ns beim Kreuzwirth in&#x2019;s Thor<lb/>und &#x17F;tell&#x2019;n ein.</p>
+          </sp>
+          <lb/>
+          <sp who="#ROS">
+            <speaker>
+              <hi rendition="#b">Rosl.</hi>
+            </speaker>
+            <p>Ha&#x17F;t a Recht, aber hizt is der &#x17F;till und ma h&#xF6;rt<lb/>no oan Wag&#x2019;n, der kimmt von der andern Seiten und immer<lb/>naheter.</p>
+          </sp>
+          <lb/>
+          <sp who="#WAS">
+            <speaker>
+              <hi rendition="#b">Wa&#x17F;tl.</hi>
+            </speaker>
+            <p>H&#xF6;r&#x2019;n &#x17F;chon. &#x2014; Hizt w&#xE4;r&#x2019; er ganz nah, &#x2014; no?<lb/>&#x2014; Richtig fahrt er in&#x2019; Hof ein. No m&#xF6;cht&#x2019;s doch wol der<lb/>Bauer &#x17F;ein. Schau ich halt nach.</p>
+            <stage>(Ab.)</stage>
+          </sp>
+          <lb/>
+          <sp who="#ROS">
+            <speaker>
+              <hi rendition="#b">Rosl.</hi>
+            </speaker>
+            <p>No Gott &#x17F;ei Dauk, da&#xDF; er nur da is! Is a Zeit,<lb/>&#x2014; nach a Zehni! Nur a Gl&#xFC;ck, da&#xDF; er &#x17F;ein Schofpelz mit<lb/>hat, geht zwar a wacherlwarmit Luft, aber halt do, im Fahr&#x2019;n!</p>
+          </sp>
+        </div>
+        <lb/>
+        <div n="2">
+          <head>
+            <hi rendition="#b">Zweite Scene.</hi>
+          </head>
+          <lb/>
+          <stage><hi rendition="#b">Vorige Grillhofer</hi> auf <hi rendition="#b">Wa&#x17F;tl</hi> ge&#x17F;t&#xFC;tzt, zuletzt folgt <hi rendition="#b">Du&#x17F;terer,</hi> der &#x17F;ich an der Th&#xFC;re<lb/>auf&#x17F;tellt, als wollte er gar nicht bemerkt werden.</stage>
+          <lb/>
+          <sp who="#WAS">
+            <speaker>
+              <hi rendition="#b">Wa&#x17F;tl</hi>
+            </speaker>
+            <stage>(geleitet Grillhofer zu dem Sorgen&#x17F;tuhl).</stage>
+            <p>Mu&#xDF; &#x17F;ch&#xF6;n d&#x2019;rein-<lb/>teufelt hab&#x2019;n, der Michl, da&#xDF;&#x2019;s &#x17F;chon wieder da &#x17F;eid&#x2019;s. Hizt<lb/>derf ich nur gleich nah&#x2019;m Stall &#x17F;chau&#x2019;n!</p>
+          </sp>
+          <lb/>
+          <sp who="#ROS">
+            <speaker>
+              <hi rendition="#b">Rosl.</hi>
+            </speaker>
+            <p>Je, d&#xF6; armen R&#xF6;&#x17F;&#x17F;er!</p>
+          </sp>
+          <lb/>
+          <sp who="#GRI">
+            <speaker>
+              <hi rendition="#b">Grillhofer</hi>
+            </speaker>
+            <stage>(&#x17F;ehr er&#x17F;ch&#xF6;pft).</stage>
+            <p>Gilt mer gleich. Hon kein Er-<lb/>barmnu&#xDF; mehr mit d&#xF6; Viecher&#x2019;, hab&#x2019;ns do allmal be&#x17F;&#x17F;er af der<lb/>Welt wie un&#x17F;ereins!</p>
+          </sp>
+          <lb/>
+          <sp who="#ROS">
+            <speaker>
+              <hi rendition="#b">Rosl.</hi>
+            </speaker>
+            <p>Bi&#x17F;t g&#x2019;&#x17F;cheidt?</p>
+          </sp>
+          <lb/>
+          <sp who="#GRI">
+            <speaker>
+              <hi rendition="#b">Grillhofer.</hi>
+            </speaker>
+            <p>Leb&#x2019;n do, und kennen kein Vor&#x17F;chrift. &#x2014; No<lb/>&#x17F;chau&#x2019; halt nach&#x2019;m Stall, Wa&#x17F;tl.</p>
+          </sp>
+          <lb/>
+          <sp who="#WAS">
+            <speaker>
+              <hi rendition="#b">Wa&#x17F;tl.</hi>
+            </speaker>
+            <p>Gute Nacht, Bauer.</p>
+            <stage>(Ab.)</stage>
+          </sp>
+          <lb/>
+          <sp who="#GRI">
+            <speaker>
+              <hi rendition="#b">Grillhofer.</hi>
+            </speaker>
+            <p>Gute Nacht! Kann&#x17F;t a geh&#x2019;n, Rosl.</p>
+          </sp>
+          <lb/>
+          <sp who="#ROS">
+            <speaker>
+              <hi rendition="#b">Rosl.</hi>
+            </speaker>
+            <p>No will&#x17F;t allanig in&#x2019;s Bett kral&#x2019;n?<note place="foot" n="*)">Klettern.</note> Wird m&#xFC;h-<lb/>&#x17F;elig gehn&#x2019;.</p>
+          </sp>
+          <lb/>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

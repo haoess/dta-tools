@@ -1,0 +1,4 @@
+<p>
+    Hier ist mein Text<note place="right">Das steht an der Seite.</note><lb/>
+    Und noch mehr Text<lb/><note place="left">und wieder was im rand.</note> Noch mehr text.
+</p>

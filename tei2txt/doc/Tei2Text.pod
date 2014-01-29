@@ -1,0 +1,23 @@
+#=======================================================================
+#
+#         FILE:  Tei2Text.pod
+#
+#  DESCRIPTION:  
+#
+#       AUTHOR:  Konstantin Baierer (kba), <konstantin.baierer@gmail.com>
+#      COMPANY:  
+#      CREATED:  10/05/2011
+#     REVISION:  ---
+#=======================================================================
+
+=head1 NAME
+
+Tei2Text - XSLT Stylesheet, Test-Suite und Tools um TEI nach Plain Text zu konvertieren
+
+=head1 SYNOPSIS
+
+    # Konvertieren eines Buches nach Text
+    perl bin/process.pl -d '/home/wiegand/dta-booktemp/EinAutor_1803/pages' --out 'EinAutor_1803.txt'
+
+    # Test-Suite
+    prove

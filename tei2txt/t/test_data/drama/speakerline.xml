@@ -1,0 +1,9 @@
+<sp who="#sprecher1">
+  <speaker>SprecherEins</speaker>
+  <stage>wankend</stage><!-- zum Beispiel -->
+  <p>Was giebts?<lb/>Was ist vorgefallen?</p>
+</sp>
+<sp who="#sprecher2">
+  <speaker>SprecherZwei</speaker>
+  <p>Ein Lyndwurm, du Gauch!</p>
+</sp>

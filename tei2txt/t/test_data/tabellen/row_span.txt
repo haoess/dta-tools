@@ -1,0 +1,6 @@
+Kopf1	Kopf2	Kopf3
+mehr-
+zeilg.
+Zelle	zushgd. Zelle
+Wert x	Wert y
+

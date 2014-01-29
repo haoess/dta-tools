@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text>
+    <body>
+      <div>
+        <pb facs="#f0013" n="13"/>
+        <table rend="rules">
+          <head>
+            <hi rendition="#c">Anmerckungen des im Jahr 1680 und 81 erschie-<lb/>
+nenen Cometens.</hi>
+          </head>
+          <row>
+            <cell cols="2"> 1680 <lb/>
+Tag </cell>
+            <cell> La&#x364;nge </cell>
+            <cell> Breite </cell>
+            <cell> Ta&#x364;glicher <lb/>
+Lauf </cell>
+            <cell> Lauff vom<lb/>
+<hi rendition="#aq">Perig&#xE6;o </hi>an<lb/>
+zusammen<lb/>
+<hi rendition="#aq">summiert</hi> </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell> St.N. </cell>
+            <cell> St.V. </cell>
+            <cell> Z. - Gr. - M. </cell>
+            <cell> Gr. - M. </cell>
+            <cell> Gr. - M. </cell>
+            <cell> Gr. - M. </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell> Dec. - 4. </cell>
+            <cell> Nov. 24. </cell>
+            <cell> &#x264F;- 10 - 0 </cell>
+            <cell> 2 - 0 - S </cell>
+            <cell> 76 - 40 </cell>
+            <cell> 81 &#x2013; 30. </cell>
+            <cell> Ist H. D. Megerlins <hi rendition="#aq">observation</hi> </cell>
+          </row>
+          <row>
+            <cell> - 29. </cell>
+            <cell> - Dec. - 19. </cell>
+            <cell> - &#x2651;- 25 - 30 </cell>
+            <cell> 18 - 40 - N </cell>
+            <cell> 4 - 50 </cell>
+            <cell> 4 - 50 </cell>
+            <cell> Under der Brust <hi rendition="#aq">Ganymedis</hi> </cell>
+          </row>
+          <row>
+            <cell> 30. </cell>
+            <cell> 20. </cell>
+            <cell> &#x2652; 0 - 20 </cell>
+            <cell> 21 - 0 - N </cell>
+            <cell> 0.0 </cell>
+            <cell> 0.0 </cell>
+            <cell><hi rendition="#aq">Perig&#xE6;um</hi>; und schneidt den Nacht-<lb/>
+gleicher durch </cell>
+          </row>
+          <row>
+            <cell> 31. </cell>
+            <cell> 21. </cell>
+            <cell> 5 - 20 </cell>
+            <cell> 22 - 30 N </cell>
+            <cell> 4 - 50 </cell>
+            <cell> 4 - 50 </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell> 1681 </cell>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+          </row>
+          <row>
+            <cell> Jan. 2 </cell>
+            <cell> 23 </cell>
+            <cell> 15.0 </cell>
+            <cell> 24.30.N </cell>
+            <cell> 9.5. </cell>
+            <cell> 13 55. </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell> 8. </cell>
+            <cell> 29 </cell>
+            <cell> &#x2653;12.30 </cell>
+            <cell> 28.0.N </cell>
+            <cell> 25.25 </cell>
+            <cell> 39.20 </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell> 9. </cell>
+            <cell> 30. </cell>
+            <cell> 17.0 </cell>
+            <cell> 28.5. N </cell>
+            <cell> 3.3.0. </cell>
+            <cell> 42.50. </cell>
+            <cell> An dem Brustriemen des fliegenden<lb/>
+Pferds <hi rendition="#aq">Pegasus</hi> </cell>
+          </row>
+          <row>
+            <cell> 11. </cell>
+            <cell> Jan. 1 </cell>
+            <cell> 25.30 </cell>
+            <cell> 27.50 N. </cell>
+            <cell> 7.25. </cell>
+            <cell> 50.15. </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell> 15. </cell>
+            <cell> 5. </cell>
+            <cell> &#x2648;. 8.50 </cell>
+            <cell> 26.0.N. </cell>
+            <cell> 12.0. </cell>
+            <cell> 62.15. </cell>
+            <cell> Bey der <hi rendition="#aq">Andromeda</hi> Haupt </cell>
+          </row>
+          <row>
+            <cell> 17. </cell>
+            <cell> 7. </cell>
+            <cell> 14.0 </cell>
+            <cell> 25. 30.N. </cell>
+            <cell> 4.30. </cell>
+            <cell> 66.45. </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell> 18. </cell>
+            <cell> 8. </cell>
+            <cell> 16.40 </cell>
+            <cell> 25.0 N. </cell>
+            <cell> 2.40. </cell>
+            <cell> 69.25. </cell>
+            <cell> Bey ihrer Suderschulter </cell>
+          </row>
+          <row>
+            <cell> 24. </cell>
+            <cell> 14. </cell>
+            <cell> 26.50 </cell>
+            <cell> 20.25.N. </cell>
+            <cell> 10.30. </cell>
+            <cell> 79.55. </cell>
+            <cell> Er wich au&#xDF; seinem geraden Glei&#xDF; et-<lb/>
+was gegen Mittag, aber die 2 fol-<lb/>
+genden Tage schwange er sich eins-<lb/>
+mals wieder gegen Mitternacht </cell>
+          </row>
+          <row>
+            <cell> 25. </cell>
+            <cell> 15. </cell>
+            <cell> 28.20 </cell>
+            <cell> 20.30.N. </cell>
+            <cell> 1.35. </cell>
+            <cell> 81.30. </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell> 26. </cell>
+            <cell> 16. </cell>
+            <cell> 29.40 </cell>
+            <cell> 20.50.N. </cell>
+            <cell> 1.25. </cell>
+            <cell> 82.55. </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell> Feb. 4. </cell>
+            <cell> 25. </cell>
+            <cell> &#x2649; 9.40 </cell>
+            <cell> 17.25.N. </cell>
+            <cell> 10.0. </cell>
+            <cell> 92.55. </cell>
+            <cell> Bey der Grundseiten des Norder-<lb/>
+Dreyecks </cell>
+          </row>
+          <row>
+            <cell> 5. </cell>
+            <cell> 26. </cell>
+            <cell> 10.20 </cell>
+            <cell> 17. 5.N. </cell>
+            <cell> 1.0. </cell>
+            <cell> 93.55. </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell> 6. </cell>
+            <cell> 27. </cell>
+            <cell> 11.0. </cell>
+            <cell> 17.0.N. </cell>
+            <cell> 0.55. </cell>
+            <cell> 94.50. </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell> 7. </cell>
+            <cell> 28. </cell>
+            <cell> 11.35. </cell>
+            <cell> 17.0.N. </cell>
+            <cell> 0.52. </cell>
+            <cell> 95.42. </cell>
+            <cell/>
+          </row>
+          <row>
+            <cell> 16. </cell>
+            <cell> Febr. 6 </cell>
+            <cell> 16.40. </cell>
+            <cell> 15.30.N. </cell>
+            <cell> 5.15. </cell>
+            <cell> 100.57. </cell>
+            <cell> Zwischen der Bienen und dem Medu-<lb/>
+senhaupt: Station und Verschwindung </cell>
+          </row>
+          <row>
+            <cell> 17. </cell>
+            <cell> 7. </cell>
+            <cell> 16.40. </cell>
+            <cell> 15.30.N. </cell>
+            <cell> 0.0. </cell>
+            <cell> 100.57. </cell>
+            <cell/>
+          </row>
+        </table>
+        <p>Weil aber der Comet in etwas au&#xDF; seinem geraden Glei&#xDF; geschritten ware, so thut seine gantze Be-<lb/>
+wegung vom <hi rendition="#aq">Perig&#xE6;o </hi>an bi&#xDF; zur <hi rendition="#aq">Station</hi> dem gro&#x364;&#xDF;ten Circul nach<lb/>
+nicht mehr als 99 gr. 51 m.</p>
+        <p>Seine gro&#x364;ste Abweichung vom Nachtgleicher ist 32 gr. die rechte Aufsteigung ihres Durchschnitts<lb/>
+ist nicht, wie der Franzo&#xDF; berichtet, 292, sondern 298 Stuffen: also auch die schlimme Aufsteigung,<lb/>
+und ist la&#x364;cherlich, da&#xDF; er mit underscheid redet von der Aufsteigung; weil die rechte und die schlimme<lb/>
+im Durchschnitt nothwendig gleich seyn mu&#x364;ssen. </p>
+        <p>Der Winckel des Cometen-Kreises mit der Fla&#x364;che des Thier-kreises ist 28 gr. 5 min. </p>
+        <p>Man wird eben diesen Cometen in seinem <hi rendition="#aq">Perig&#xE6;o </hi>wiederum sehen im Jahr 1719 den 27. Meyen<lb/>
+im 1. gr. 12. m. &#x264E;. </p>
+      </div>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,87 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <text>
+        <front>
+            <pb facs="#f0008" n="[2]"/>
+            <castList>
+
+                <head>
+                    <hi rendition="#g">Perſonen</hi>. </head>
+                <lb/>
+                <castItem>
+                    <role xml:id="GER">
+                        <hi rendition="#fr">Gerhard</hi>, ein reicher Privatmann.
+                    </role>
+                </castItem>
+                <lb/>
+                <castGroup rend="braced">
+                    <castItem>
+                        <role xml:id="STE">
+                            <hi rendition="#fr">Sternberg</hi>, Advokat, Vetter
+                        </role>
+                    </castItem>
+                    <castItem>
+                        <role xml:id="WUNGE">
+                            <hi rendition="#fr">Wittwe Ungewitter</hi>, Muhme
+                        </role>
+                    </castItem>
+                    <lb/>
+                    <castItem>
+                        <role xml:id="WEIN">
+                            <hi rendition="#fr">Weinhold</hi>, Vetter
+                        </role>
+                    </castItem>
+                    <lb/>
+                    <castItem>
+                        <role xml:id="JUS">
+                            <hi rendition="#fr">Juſtine</hi>, Haushaͤlterinn
+                        </role>
+                    </castItem>
+                    <lb/>
+                    <castItem>
+                        <role xml:id="BEN">
+                            <hi rendition="#fr">Benedikt</hi>, Bedienter
+                        </role>
+                    </castItem>
+                    <roleDesc> des Herrn
+                        <lb/>Gerhard.
+                        <lb/>
+                    </roleDesc>
+                </castGroup>
+                <lb/>
+                <castItem>
+                    <role xml:id="ANKER">
+                        <hi rendition="#fr">Madam Anker</hi>, Lieutenantswittwe.
+                    </role>
+                </castItem>
+                <lb/>
+                <castItem>
+                    <role xml:id="THE">
+                        <hi rendition="#fr">Thereſe</hi>, ihre Tochter.
+                    </role>
+                </castItem>
+                <lb/>
+                <castItem>
+                    <role xml:id="BIE">
+                        <hi rendition="#fr">Bieder</hi>, Landgeiſtlicher.
+                    </role>
+                </castItem>
+                <lb/>
+                <castItem>
+                    <role xml:id="PIS">
+                        <hi rendition="#fr">Piſtorius</hi>, Apotheker.
+                    </role>
+                </castItem>
+                <lb/>
+                <milestone rendition="#hr" unit="section"/>
+
+                <p>Die Handlung geht in einer anſehnlichen
+                    <lb/>Landſtadt vor.
+                </p>
+                <lb/>
+            </castList>
+        </front>
+        <body>
+
+        </body>
+    </text>
+</TEI>

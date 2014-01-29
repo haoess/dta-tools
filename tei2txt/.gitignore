@@ -1,0 +1,15 @@
+*.sq?
+.*.sw?
+tmp/
+MANIFEST
+MANIFEST.SKIP.bak
+Build
+_build
+blib
+MYMETA.yml
+META.yml
+*.tar.gz
+pod2htm*
+META*
+MY*
+*.bak

@@ -1,0 +1,59 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text>
+    <body>
+      <pb facs="#f0013" n="[5]"/>
+      <div n="1">
+        <head>
+          <hi rendition="#b">Erſter Akt.</hi>
+        </head><lb/>
+
+        <stage>(Wohlhäbige Bauernſtube. Hintergrund links ein Doppelfenſter, rechts der Haupteingang.<lb/>
+Rechte Seite Fenſter, links eine Seitenthür. Vorne gegen links ein Tiſch mit mehreren<lb/>
+Stühlen, gegen die Wand ein mit Leder überzogener Sorgenſtuhl, an deſſen Rückenlehne<lb/>
+ein Bettpolſter. Wie der Vorhang aufgeht iſt die Bühne leer. Auf dem Tiſche ſteht eine<lb/>
+dampfende Schüßel. Vor dem Fenſter ſieht man Knechte und Mägde mit Rechen und<lb/>
+Heugabeln vorbeiziehen.)</stage><lb/>
+
+        <milestone rendition="#hr" unit="section"/>
+        <div n="2">
+          <head>
+            <hi rendition="#b">Erſte Scene.</hi>
+          </head><lb/>
+
+          <stage><hi rendition="#b">Knechte</hi> und <hi rendition="#b">Mägde.</hi></stage><lb/>
+
+          <stage>
+            <hi rendition="#b">Chor.</hi>
+          </stage><lb/>
+
+          <sp who="#KNE">
+            <speaker><hi rendition="#g">Knechte</hi>.</speaker><lb/>
+
+            <p>Glei is die Sunn am Platz,<lb/>
+Mußt Dich halt ſchlau’n,<lb/>
+Sunſten, mein lieber Schatz<lb/>
+Brennt’s Dich ganz braun.</p>
+          </sp><lb/>
+
+          <sp who="#MAEG">
+            <speaker><hi rendition="#g">Mägde</hi>.</speaker><lb/>
+
+            <p>Mei Bub, geh ſag ma no<lb/>
+Was kümmert’s Dich?<lb/>
+Die Sunn, die brennt Dich do<lb/>
+Schwärzer als mich!</p>
+          </sp><lb/>
+
+          <sp who="#KNE #MAEG">
+            <speaker><hi rendition="#g">Beide</hi>.</speaker><lb/>
+
+            <stage>(Jodler.)</stage>
+            <p>Jujujuheh!</p>
+            <stage>(Ausklingend.)</stage>
+          </sp>
+        </div><lb/>
+
+      </div>
+    </body>
+  </text>
+</TEI>

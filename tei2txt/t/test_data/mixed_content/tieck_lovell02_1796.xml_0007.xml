@@ -1,0 +1,5 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><front><pb facs="#f0007" n="[1]"/>
+<titlePage type="main"><docTitle><titlePart type="main"><hi rendition="#b"><hi rendition="#g">William Lovell</hi>.</hi></titlePart></docTitle><lb/><milestone rendition="#hr" unit="section"/>
+<milestone rendition="#hr" unit="section"/>
+<titlePart type="volume"><hi rendition="#g">Zweyter Band</hi>.</titlePart><lb/><milestone rendition="#hr" unit="section"/>
+<docImprint><pubPlace><hi rendition="#g">Berlin und Leipzig</hi>,</pubPlace><lb/><hi rendition="#g">bey</hi> <publisher><hi rendition="#g">Carl Auguſt Nicolai</hi>.</publisher><lb/><docDate><hi rendition="#g">1796</hi>.</docDate></docImprint></titlePage><lb/></front></text></TEI>

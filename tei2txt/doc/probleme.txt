@@ -1,0 +1,11 @@
+# Tabellen
+    * Zeilenumbrüche irgendwo anders als in der ersten Zelle einer Zeile
+    * mehrere Zellen pro Zeile mit rowspan
+# Seitenumbrueche
+    * XSLT kann keine Formfeed (\xf) ausgeben. Daher vorerst durch den
+      String '!!FORMFEED!!' ersetzt (zwei Ausrufezeichen am anfang und ende).
+      * ueber post_process hook geloest
+# Was fehlt
+    * Dramenspezifisches (<l>, <stage> ...)
+    * cit/quote/bibl
+# Bindestriche am Zeilenende (¬)

@@ -1,0 +1,5 @@
+DONE process sollte xsl_params entgegennehmen
+DONE !!FORMFEED!! parametrisierbar an/ausschalten
+DONE footnotes werden doppelt anegzeigt (mode-parameter fuer die XSLT/Templates!!!)
+DONE footnote whitespace nach footnotezeichen im text weg
+DONE footnote textgetreue/typographische Zeichen wahlbar

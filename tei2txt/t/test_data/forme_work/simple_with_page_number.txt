@@ -1,0 +1,7 @@
+[101/0123]
+KOPFZEILE
+
+Ein Absatz
+
+FUSSZEILE
+

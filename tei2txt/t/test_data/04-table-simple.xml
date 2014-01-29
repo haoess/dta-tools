@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text>
+    <body>
+        Gleich kommt ei-
+        <table>
+            <head>Something</head>
+            <row>
+                <cell>A1</cell>
+                <cell>B1</cell>
+                <cell>C1</cell>
+                <cell>D1</cell>
+                <cell>E1</cell>
+            </row>
+            <row>
+                <cell>A2</cell>
+                <cell>B2</cell>
+                <cell>C2</cell>
+                <cell>D2</cell>
+                <cell>E2</cell>
+            </row>
+        </table>
+        -ne Tabelle.
+    </body>
+  </text>
+</TEI>
+
