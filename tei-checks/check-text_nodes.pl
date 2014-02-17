@@ -28,14 +28,11 @@ Arne Binder
 
 =head1 LICENSE AND COPYRIGHT
 
-    This program is free software, you can redistribute it and/or
-    modify it under the terms of the GNU Lesser General Public
-    License v3 (LGPL-3.0).
-    You may copy, distribute and modify the software provided that 
-    modifications are open source. However, software that includes 
-    the license may release under a different license.
-
-    See http://opensource.org/licenses/lgpl-3.0.html for more information.
+    "THE BEER-WARE LICENSE" (Revision 42):
+    
+    <arne.b.binder@gmail> wrote this file. As long as you retain this notice you
+    can do whatever you want with this stuff. If we meet some day, and you think
+    this stuff is worth it, you can buy me a beer in return.
 
 =cut
 
@@ -92,23 +89,25 @@ my $depth = -1;
   }
   
   sub node_char{
-	my ($p, $str) = @_;
-	my $pln = $p->current_line;
-	my $ppos = $p->current_column +1;
-	my @pcontext = split(/\n/,$p->position_in_context(0));
-	my $context = shift(@pcontext);
-	while($str =~ /(@|\#|&\S|ſ\s|\x{204a})/gs){
-		my $realPos = length($`) + $ppos;			
-		print "$1\t\@line: $pln \@pos: $realPos in:\t$context\n";
-		$correct = 0;
-	}	
-	#außerhalb von #aq...
-	if($depth < 0){ 
-		while($str=~/\x{a7fe}/g){
+    if($elements[-1] ne "email"){
+		my ($p, $str) = @_;
+		my $pln = $p->current_line;
+		my $ppos = $p->current_column +1;
+		my @pcontext = split(/\n/,$p->position_in_context(0));
+		my $context = shift(@pcontext);
+		while($str =~ /(@|\#|&\S|ſ\s|\x{204a})/gs){
 			my $realPos = length($`) + $ppos;			
-			print "I\t\@line: $pln \@pos: $realPos in:\t$context\n";
-			$correct = 0;		}
-	}	
+			print "$1\t\@line: $pln \@pos: $realPos in:\t$context\n";
+			$correct = 0;
+		}	
+		#außerhalb von #aq...
+		if($depth < 0){ 
+			while($str=~/\x{a7fe}/g){
+				my $realPos = length($`) + $ppos;			
+				print "I\t\@line: $pln \@pos: $realPos in:\t$context\n";
+				$correct = 0;			}
+		}	
+	}
   }
 
 exit $correct;
