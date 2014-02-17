@@ -51,6 +51,7 @@ my $correct = 1;
 my $ln = 0;
 my @elements;
 my $depth = -1;
+my $inText = 0;
 
   my $p = new XML::Parser(Handlers => {Start => \&node_start,
                                      End   => \&node_end,
@@ -62,6 +63,9 @@ my $depth = -1;
   	my $ln = $p->current_line;
   	my $pos = $p->current_column;
   	
+	if($elem eq "text"){
+		$inText = 1;
+	}
   	if($atts{'rendition'}){
   		#merke die Tiefe, in der #aq das erste mal gesetzt wird...
   		if($atts{'rendition'}=~/#aq\b/s){
@@ -81,6 +85,9 @@ my $depth = -1;
   	if($lastElem ne $elem){
 		print "hier ist was falsch! \@line: $ln current_element: $elem != stack_element: $lastElem\n";
 	}else{
+		if($elem eq "text"){
+			$inText = 0;
+		}
 		#wenn #aq in der aktuellen Ebene das erste mal gesetzt wurde...
 		if($depth==@elements){
 			$depth = -1;
@@ -89,7 +96,7 @@ my $depth = -1;
   }
   
   sub node_char{
-    if($elements[-1] ne "email"){
+    if($inText){
 		my ($p, $str) = @_;
 		my $pln = $p->current_line;
 		my $ppos = $p->current_column +1;
@@ -105,7 +112,8 @@ my $depth = -1;
 			while($str=~/\x{a7fe}/g){
 				my $realPos = length($`) + $ppos;			
 				print "I\t\@line: $pln \@pos: $realPos in:\t$context\n";
-				$correct = 0;			}
+				$correct = 0;
+			}
 		}	
 	}
   }
