@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--perhaps a problem: xpath-default-namespace is an XSLT 2.0 feature -->
+<!--perhaps a PROBLEM: xpath-default-namespace is an XSLT 2.0 feature -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dta="urn:dta" exclude-result-prefixes="dta tei"
   xpath-default-namespace="http://www.tei-c.org/ns/1.0">
@@ -9,14 +9,32 @@
 
   <xsl:template match="tei:teiHeader"/>
 
-  <!-- added by Arne: or just in choice?
-<xsl:template match='tei:abbr>
 
-</xsl:template>
--->
 
-  <xsl:template match="tei:actor"> </xsl:template>
+  <xsl:template match="tei:text[not(descendant::tei:text)]">
+    <xsl:apply-templates/>
+    <xsl:if test='//tei:note[@place="foot"]'>
+      <div class="footnotesep"/>
+      <xsl:apply-templates select='//tei:seg[@part="M" or @part="F"]/tei:note[@place="foot"]'
+        mode="footnotes"/>
+      <xsl:apply-templates
+        select='//tei:note[@place="foot" and not(parent::tei:seg[@part="M" or @part="F"])]'
+        mode="footnotes"/>
+    </xsl:if>
+    <xsl:apply-templates select='//tei:fw[@place="bottom"]' mode="signatures"/>
+  </xsl:template>
 
+  
+  <!-- TODO: implement class=dta-back -->
+  <xsl:template match="tei:back"> 
+    <xsl:element name="div">
+      <xsl:attribute name="class">dta-back</xsl:attribute>
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+  
+  <!-- <xsl:template match="tei:body"/>  -->
+      
   <xsl:template match="tei:cb">
     <span class="dta-cb">
       <xsl:choose>
@@ -69,17 +87,12 @@
 -->
   <!-- end column breaks -->
 
-  <xsl:template match="tei:text[not(descendant::tei:text)]">
-    <xsl:apply-templates/>
-    <xsl:if test='//tei:note[@place="foot"]'>
-      <div class="footnotesep"/>
-      <xsl:apply-templates select='//tei:seg[@part="M" or @part="F"]/tei:note[@place="foot"]'
-        mode="footnotes"/>
-      <xsl:apply-templates
-        select='//tei:note[@place="foot" and not(parent::tei:seg[@part="M" or @part="F"])]'
-        mode="footnotes"/>
-    </xsl:if>
-    <xsl:apply-templates select='//tei:fw[@place="bottom"]' mode="signatures"/>
+  <!-- TODO: just a DUMMY, implement! -->
+  <xsl:template match="tei:cell"> 
+    <xsl:element name="th">
+      <xsl:attribute name="class">dta-cell</xsl:attribute>
+      <xsl:apply-templates/>
+    </xsl:element>
   </xsl:template>
 
   <xsl:template match="tei:choice">
@@ -1100,6 +1113,7 @@
     </xsl:element>
   </xsl:template>
 
+  <!-- Publikationstyp auflösen?? -->
   <xsl:template match="tei:bibl">
     <span class="dta-bibl">
       <xsl:call-template name="applyRendition"/>
@@ -1148,5 +1162,14 @@
   <xsl:template match="text()">
     <xsl:value-of select="."/>
   </xsl:template>
+  
+  <xsl:template name="addClass">
+    <xsl:param name="value"/>
+    <xsl:attribute name="class">
+        <xsl:value-of select="$value"/>
+        <xsl:text> </xsl:text>
+    </xsl:attribute>
+  </xsl:template>
+  
 
 </xsl:stylesheet>
