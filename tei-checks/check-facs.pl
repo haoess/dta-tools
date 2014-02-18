@@ -22,11 +22,14 @@ Arne Binder
 
 =head1 LICENSE AND COPYRIGHT
 
-    "THE BEER-WARE LICENSE" (Revision 42):
-    
-    <arne.b.binder@gmail> wrote this file. As long as you retain this notice you
-    can do whatever you want with this stuff. If we meet some day, and you think
-    this stuff is worth it, you can buy me a beer in return.
+    This program is free software, you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License v3 (LGPL-3.0).
+    You may copy, distribute and modify the software provided that
+    modifications are open source. However, software that includes
+    the license may release under a different license.
+
+    See http://opensource.org/licenses/lgpl-3.0.html for more information.
 
 =cut
 
