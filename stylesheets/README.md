@@ -7,6 +7,7 @@ To run the provided test, you'll need perl, Test::More, XML::LibXML, and XML::Li
 
 To run tests:
 
-  # if you are not already there
-  % cd stylesheets
+```
+  % cd stylesheets    # if you are not already there
   % prove -l t
+```
