@@ -23,8 +23,9 @@ sub process {
 
     my $out = $xsltTransformer->output_string( $results );
     for ( $out ) {
-        s{\Q<?xml version="1.0" encoding="utf-8"?>\E}{}g;
+        s{\Q<?xml version="1.0" encoding="utf-8"?>\E\s+}{}g;
         s{^\s+|\s+$}{}g;
+        s{ +}{ }g;
     }
     return $out;
 }
