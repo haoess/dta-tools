@@ -2,9 +2,8 @@
 
 <!--perhaps a PROBLEM: xpath-default-namespace is an XSLT 2.0 feature -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
-  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dta="urn:dta" exclude-result-prefixes="dta tei" 
-  xpath-default-namespace="http://www.tei-c.org/ns/1.0"
-  >  
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dta="urn:dta" exclude-result-prefixes="dta tei"
+  xpath-default-namespace="http://www.tei-c.org/ns/1.0">
   <xsl:include href="uri-encode.xsl"/>
   <xsl:output method="xml" cdata-section-elements="script style" indent="no" encoding="utf-8"/>
 
@@ -16,24 +15,22 @@
     <xsl:apply-templates/>
     <xsl:if test='//tei:note[@place="foot"]'>
       <div class="footnotesep"/>
-      <xsl:apply-templates
-        select='//tei:note[@place="foot"]'
-        mode="footnotes"/>
+      <xsl:apply-templates select='//tei:note[@place="foot"]' mode="footnotes"/>
     </xsl:if>
     <xsl:apply-templates select='//tei:fw[@place="bottom"]' mode="signatures"/>
   </xsl:template>
 
-  
+
   <!-- TODO: implement class=dta-back -->
-  <xsl:template match="tei:back"> 
+  <xsl:template match="tei:back">
     <xsl:element name="div">
       <xsl:attribute name="class">dta-back</xsl:attribute>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
-  
+
   <!-- <xsl:template match="tei:body"/>  -->
-      
+
   <xsl:template match="tei:cb">
     <span class="dta-cb">
       <xsl:choose>
@@ -87,7 +84,7 @@
   <!-- end column breaks -->
 
   <!-- TODO: just a DUMMY, implement! -->
-  <xsl:template match="tei:cell"> 
+  <xsl:template match="tei:cell">
     <xsl:element name="th">
       <xsl:attribute name="class">dta-cell</xsl:attribute>
       <xsl:apply-templates/>
@@ -199,7 +196,7 @@
               <xsl:call-template name="url-encode">
                 <xsl:with-param name="str" select="string(.)"/>
               </xsl:call-template>
-              <!-- <xsl:value-of select="custom:uriencode(string(.))"/>   -->           
+              <!-- <xsl:value-of select="custom:uriencode(string(.))"/>   -->
             </xsl:attribute>
             <!--            </xsl:otherwise>
           </xsl:choose>-->
@@ -448,8 +445,10 @@
   </xsl:template>
 
   <xsl:template match="tei:docAuthor">
-    <span class="docauthor">
-      <xsl:call-template name="applyRendition"/>
+    <span>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'docauthor'"/> 
+      </xsl:call-template>
       <xsl:apply-templates/>
     </span>
   </xsl:template>
@@ -460,8 +459,10 @@
   </xsl:template>
 
   <xsl:template match="tei:byline">
-    <div class="byline">
-      <xsl:call-template name="applyRendition"/>
+    <div>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'byline'"> </xsl:with-param>
+      </xsl:call-template>
       <xsl:apply-templates/>
     </div>
   </xsl:template>
@@ -688,10 +689,14 @@
             <xsl:apply-templates/>
           </div>
         </xsl:when>
-        <xsl:otherwise>
+        <xsl:when test="@type">
           <xsl:attribute name="class">
             <xsl:value-of select="@type"/>
           </xsl:attribute>
+          <xsl:apply-templates/>
+        </xsl:when>
+        <xsl:otherwise>
+          <!-- assign no class if no type-attribute is given -->
           <xsl:apply-templates/>
         </xsl:otherwise>
       </xsl:choose>
@@ -827,7 +832,18 @@
   </xsl:template>
 
   <xsl:template name="applyRendition">
+    <xsl:param name="class" select="'noClass'"/>
     <xsl:attribute name="class">
+      <xsl:choose>
+        <xsl:when test="$class = 'noClass'"/>
+        <xsl:otherwise>
+          <xsl:value-of select="$class"/>
+          <xsl:if test="@rendition!=''">
+            <xsl:text> </xsl:text>
+          </xsl:if>
+        </xsl:otherwise>
+      </xsl:choose>
+
       <xsl:choose>
         <xsl:when test="@rendition=''"/>
         <xsl:when test="contains(normalize-space(@rendition),' ')">
@@ -1156,15 +1172,15 @@
   <xsl:template match="text()">
     <xsl:value-of select="."/>
   </xsl:template>
-  
+
   <xsl:template name="addClass">
     <xsl:param name="value"/>
     <xsl:attribute name="class">
-        <xsl:value-of select="$value"/>
-        <xsl:text> </xsl:text>
+      <xsl:value-of select="$value"/>
+      <xsl:text> </xsl:text>
     </xsl:attribute>
   </xsl:template>
-  
+
   <!-- 
   <msxsl:script language="JScript" implements-prefix="custom">
     function uriencode(string) {
