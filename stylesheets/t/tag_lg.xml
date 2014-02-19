@@ -1,0 +1,10 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text>
+    <body>
+      <lg>
+        <l>Das ist der erste Vers.</l><lb/>
+        <l>Das ist der zweite Vers.</l><lb/>
+      </lg>
+    </body>
+  </text>
+</TEI>
