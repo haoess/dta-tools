@@ -2,9 +2,10 @@
 
 <!--perhaps a PROBLEM: xpath-default-namespace is an XSLT 2.0 feature -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
-  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dta="urn:dta" exclude-result-prefixes="dta tei"
-  xpath-default-namespace="http://www.tei-c.org/ns/1.0">
-
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dta="urn:dta" exclude-result-prefixes="dta tei" 
+  xpath-default-namespace="http://www.tei-c.org/ns/1.0"
+  >  
+  <xsl:include href="uri-encode.xsl"/>
   <xsl:output method="xml" cdata-section-elements="script style" indent="no" encoding="utf-8"/>
 
   <xsl:template match="tei:teiHeader"/>
@@ -197,7 +198,10 @@
             <xsl:otherwise>-->
             <xsl:attribute name="src">
               <xsl:text>http://dinglr.de/formula/</xsl:text>
-              <xsl:value-of select="dta:urlencode(.)"/>
+              <xsl:call-template name="url-encode">
+                <xsl:with-param name="str" select="string(.)"/>
+              </xsl:call-template>
+              <!-- <xsl:value-of select="custom:uriencode(string(.))"/>   -->           
             </xsl:attribute>
             <!--            </xsl:otherwise>
           </xsl:choose>-->
@@ -229,7 +233,12 @@
       <xsl:attribute name="src">
         <!--<xsl:text>http://dinglr.de/formula/</xsl:text><xsl:value-of select="dta:urlencode($fraction)"/>-->
         <xsl:text>http://kaskade.dwds.de/dtaq/formula/preview/</xsl:text>
-        <xsl:value-of select="dta:urlencode($fraction)"/>
+        <xsl:call-template name="url-encode">
+          <xsl:with-param name="str" select="$fraction"/>
+        </xsl:call-template>
+        <!--
+        <xsl:value-of select="custom:uriencode(string($fraction))"/>
+         -->
       </xsl:attribute>
     </xsl:element>
   </xsl:template>
@@ -244,7 +253,12 @@
         -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
       <xsl:attribute name="src">
         <xsl:text>http://dinglr.de/formula/</xsl:text>
-        <xsl:value-of select="dta:urlencode($fraction)"/>
+        <xsl:call-template name="url-encode">
+          <xsl:with-param name="str" select="$fraction"/>
+        </xsl:call-template>
+        <!-- 
+        <xsl:value-of select="custom:uriencode(string($fraction))"/>
+         -->
       </xsl:attribute>
     </xsl:element>
   </xsl:template>
@@ -1171,5 +1185,11 @@
     </xsl:attribute>
   </xsl:template>
   
-
+  <!-- 
+  <msxsl:script language="JScript" implements-prefix="custom">
+    function uriencode(string) {
+      return encodeURIComponent(string);
+    }
+  </msxsl:script>
+ -->
 </xsl:stylesheet>
