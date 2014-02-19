@@ -16,10 +16,8 @@
     <xsl:apply-templates/>
     <xsl:if test='//tei:note[@place="foot"]'>
       <div class="footnotesep"/>
-      <xsl:apply-templates select='//tei:seg[@part="M" or @part="F"]/tei:note[@place="foot"]'
-        mode="footnotes"/>
       <xsl:apply-templates
-        select='//tei:note[@place="foot" and not(parent::tei:seg[@part="M" or @part="F"])]'
+        select='//tei:note[@place="foot"]'
         mode="footnotes"/>
     </xsl:if>
     <xsl:apply-templates select='//tei:fw[@place="bottom"]' mode="signatures"/>
@@ -327,13 +325,9 @@
     </xsl:if>
   </xsl:template>
 
-  <xsl:template match='tei:seg[@part="M" or @part="F"]/tei:note[@place="foot"]'/>
-
   <xsl:template match='tei:note[@place="foot"]' mode="footnotes">
     <div class="footnote">
       <xsl:choose>
-        <xsl:when test='parent::tei:seg[@part="M" or @part="F"]'
-          ><!--[<xsl:value-of select="@n"/>]--></xsl:when>
         <xsl:when test="string-length(@prev)!=0 or string-length(@sameAs)!=0"/>
         <xsl:otherwise>
           <span class="fn-sign">
@@ -350,11 +344,6 @@
   <!-- end footnotes -->
 
   <!-- end notes -->
-  <xsl:template match='tei:seg[@part="I" and @n]'>
-    <span class="fn-sign">
-      <xsl:value-of select="@n"/>
-    </span>
-  </xsl:template>
 
   <xsl:template match='tei:note[@place="end"]'>
     <xsl:choose>
@@ -762,15 +751,6 @@
     <div class="dta-argument">
       <xsl:apply-templates/>
     </div>
-  </xsl:template>
-
-  <xsl:template match="tei:c">
-    <xsl:element name="span">
-      <xsl:attribute name="id">
-        <xsl:value-of select="@xml:id"/>
-      </xsl:attribute>
-      <xsl:apply-templates/>
-    </xsl:element>
   </xsl:template>
 
   <xsl:template match="tei:l">
