@@ -461,7 +461,7 @@
   <xsl:template match="tei:byline">
     <div>
       <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'byline'"> </xsl:with-param>
+        <xsl:with-param name="class" select="'byline'"/>
       </xsl:call-template>
       <xsl:apply-templates/>
     </div>
