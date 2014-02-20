@@ -764,25 +764,9 @@
 
   <xsl:template match="tei:l">
     <xsl:element name="div">
-      <xsl:attribute name="class"> dta-l <xsl:choose>
-          <xsl:when test="@rendition=''"/>
-          <xsl:when test="contains(normalize-space(@rendition),' ')">
-            <xsl:call-template name="splitRendition">
-              <xsl:with-param name="value">
-                <xsl:value-of select="normalize-space(@rendition)"/>
-              </xsl:with-param>
-            </xsl:call-template>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:call-template name="findRendition">
-              <xsl:with-param name="value">
-                <xsl:value-of select="@rendition"/>
-              </xsl:with-param>
-            </xsl:call-template>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:attribute>
-      <xsl:apply-templates/>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-l'"/>
+      </xsl:call-template>  
     </xsl:element>
   </xsl:template>
 
