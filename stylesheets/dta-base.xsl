@@ -4,7 +4,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
   xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:dta="urn:dta" exclude-result-prefixes="dta tei"
   xpath-default-namespace="http://www.tei-c.org/ns/1.0">
-  <xsl:include href="uri-encode.xsl"/>
+  <!-- <xsl:include href="uri-encode.xsl"/> -->
   <xsl:include href="dta-base-helper.xsl"/>
   <xsl:output method="xml" cdata-section-elements="script style" indent="no" encoding="utf-8"/>
 
@@ -1056,7 +1056,12 @@
   </xsl:template>
 
   <xsl:template match="text()">
-    <xsl:value-of select="."/>
+     <!-- <xsl:call-template name="escapeUnicode">
+      <xsl:with-param name="str"> -->
+        <xsl:value-of select="."/>
+     <!--</xsl:with-param> 
+    </xsl:call-template>-->
+    
   </xsl:template>
 
 </xsl:stylesheet>
