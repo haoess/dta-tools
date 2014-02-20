@@ -766,7 +766,8 @@
     <xsl:element name="div">
       <xsl:call-template name="applyRendition">
         <xsl:with-param name="class" select="'dta-l'"/>
-      </xsl:call-template>  
+      </xsl:call-template> 
+      <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
 
