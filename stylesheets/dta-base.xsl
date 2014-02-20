@@ -667,15 +667,19 @@
   </xsl:template>
 
   <xsl:template match="tei:dateline">
-    <span class="dta-dateline">
-      <xsl:call-template name="applyRendition"/>
+    <span>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-dateline'"/>
+      </xsl:call-template>
       <xsl:apply-templates/>
     </span>
   </xsl:template>
 
   <xsl:template match="tei:closer">
-    <div class="dta-closer">
-      <xsl:call-template name="applyRendition"/>
+    <div>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-closer'"/>
+      </xsl:call-template>
       <xsl:apply-templates/>
     </div>
   </xsl:template>
@@ -838,28 +842,26 @@
         <xsl:when test="$class = 'noClass'"/>
         <xsl:otherwise>
           <xsl:value-of select="$class"/>
-          <xsl:if test="@rendition!=''">
+          <xsl:if test="@rendition">
             <xsl:text> </xsl:text>
           </xsl:if>
         </xsl:otherwise>
       </xsl:choose>
-
       <xsl:choose>
-        <xsl:when test="@rendition=''"/>
-        <xsl:when test="contains(normalize-space(@rendition),' ')">
+        <xsl:when test="@rendition and contains(normalize-space(@rendition),' ')">
           <xsl:call-template name="splitRendition">
             <xsl:with-param name="value">
               <xsl:value-of select="normalize-space(@rendition)"/>
             </xsl:with-param>
           </xsl:call-template>
         </xsl:when>
-        <xsl:otherwise>
+        <xsl:when test="@rendition">
           <xsl:call-template name="findRendition">
             <xsl:with-param name="value">
               <xsl:value-of select="@rendition"/>
             </xsl:with-param>
           </xsl:call-template>
-        </xsl:otherwise>
+        </xsl:when>
       </xsl:choose>
     </xsl:attribute>
   </xsl:template>
@@ -874,6 +876,7 @@
             <xsl:value-of select="substring-before($value,' ')"/>
           </xsl:with-param>
         </xsl:call-template>
+        <xsl:text> </xsl:text>
         <xsl:call-template name="splitRendition">
           <xsl:with-param name="value">
             <xsl:value-of select="substring-after($value,' ')"/>
@@ -895,14 +898,15 @@
     <xsl:choose>
       <xsl:when test="starts-with($value,'#')">
         <xsl:value-of select="substring-after($value,'#')"/>
-        <xsl:text> </xsl:text>
       </xsl:when>
+      <!-- 
       <xsl:otherwise>
         <xsl:for-each select="document($value)">
           <xsl:apply-templates select="@xml:id"/>
           <xsl:text> </xsl:text>
         </xsl:for-each>
       </xsl:otherwise>
+       -->
     </xsl:choose>
   </xsl:template>
 
