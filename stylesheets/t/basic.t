@@ -9,7 +9,7 @@ use DTAStyleSheets qw( process );
 
 sub slurp {
     my $file = shift;
-    open( my $fh, '<', $file ) or die $!;
+    open( my $fh, '<', $file ) or die "could not open $file: $!";
     my $contents = do { local $/; <$fh> };
     close $fh;
     chomp( $contents );
