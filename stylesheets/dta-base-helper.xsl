@@ -90,7 +90,7 @@
             <xsl:value-of select="$str"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:text>&amp;#</xsl:text>
+            <!-- TODO: add escaping here -->
             <xsl:value-of select="$str"/>
             <xsl:text>;</xsl:text>
           </xsl:otherwise>
