@@ -90,8 +90,9 @@
             <xsl:value-of select="$str"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:text>&amp;</xsl:text>
+            <xsl:text>&amp;#</xsl:text>
             <xsl:value-of select="$str"/>
+            <xsl:text>;</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:when>

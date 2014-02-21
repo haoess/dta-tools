@@ -84,14 +84,6 @@
 -->
   <!-- end column breaks -->
 
-  <!-- TODO: just a DUMMY, implement! -->
-  <xsl:template match="tei:cell">
-    <xsl:element name="th">
-      <xsl:attribute name="class">dta-cell</xsl:attribute>
-      <xsl:apply-templates/>
-    </xsl:element>
-  </xsl:template>
-
   <xsl:template match="tei:choice">
     <xsl:choose>
       <xsl:when test="./tei:reg">
@@ -1056,11 +1048,11 @@
   </xsl:template>
 
   <xsl:template match="text()">
-     <!-- <xsl:call-template name="escapeUnicode">
-      <xsl:with-param name="str"> -->
+      <xsl:call-template name="escapeUnicode">
+      <xsl:with-param name="str"> 
         <xsl:value-of select="."/>
-     <!--</xsl:with-param> 
-    </xsl:call-template>-->
+     </xsl:with-param> 
+    </xsl:call-template>
     
   </xsl:template>
 
