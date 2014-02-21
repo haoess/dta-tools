@@ -462,24 +462,9 @@
 
   <xsl:template match="tei:publisher">
     <xsl:element name="span">
-      <xsl:attribute name="class">dta-publisher <xsl:choose>
-          <xsl:when test="@rendition=''"/>
-          <xsl:when test="contains(normalize-space(@rendition),' ')">
-            <xsl:call-template name="splitRendition">
-              <xsl:with-param name="value">
-                <xsl:value-of select="normalize-space(@rendition)"/>
-              </xsl:with-param>
-            </xsl:call-template>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:call-template name="findRendition">
-              <xsl:with-param name="value">
-                <xsl:value-of select="@rendition"/>
-              </xsl:with-param>
-            </xsl:call-template>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:attribute>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-publisher'"/>
+      </xsl:call-template>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
@@ -1047,7 +1032,7 @@
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="text()">
+  <xsl:template match="text()">    
       <xsl:call-template name="escapeUnicode">
       <xsl:with-param name="str"> 
         <xsl:value-of select="."/>

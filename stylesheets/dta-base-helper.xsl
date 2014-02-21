@@ -91,8 +91,9 @@
           </xsl:when>
           <xsl:otherwise>
             <!-- TODO: add escaping here -->
+            <!-- <xsl:text disable-output-escaping="yes">&amp;#</xsl:text> -->          
             <xsl:value-of select="$str"/>
-            <xsl:text>;</xsl:text>
+            <!-- <xsl:text>;</xsl:text>-->
           </xsl:otherwise>
         </xsl:choose>
       </xsl:when>
@@ -101,7 +102,7 @@
           <xsl:with-param name="str" select="substring($str,1,1)"/>
         </xsl:call-template>
         <xsl:call-template name="escapeUnicode">
-          <xsl:with-param name="str" select="substring($str,2)"/>
+          <xsl:with-param name="str" select="substring($str,2)"/>            
         </xsl:call-template>
       </xsl:otherwise>
     </xsl:choose>
