@@ -1,0 +1,9 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text>
+    <body>
+      <p>
+        <formula notation="TeX">\frac{1}{2}</formula>
+      </p>
+    </body>
+  </text>
+</TEI>

@@ -1,15 +1,15 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <text>
     <body>
-      <p>Das ist ein Absatz.</p>
+      <p>a</p>
       <cb type="start"/>
       <p>
-        Erste Spalte.
+        S1
         <cb/>
-        Zweite Spalte.
+        S2
       </p>
       <cb type="end"/>
-      <p>Noch ein Absatz.</p>
+      <p>b</p>
     </body>
   </text>
 </TEI>

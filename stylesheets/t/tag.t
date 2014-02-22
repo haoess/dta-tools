@@ -1,44 +1,34 @@
 use warnings;
 use strict;
 
-use Test::More;
-use XML::Compare;
+use Test::More tests => 7;
 
-use File::Basename qw( basename );
 use DTAStyleSheets qw( process );
 
-sub slurp {
-    my $file = shift;
-    open( my $fh, '<', $file ) or die "could not open $file: $!";
-    my $contents = do { local $/; <$fh> };
-    close $fh;
-    chomp( $contents );
-    return $contents;
-}
+my $xsl = 'dta-base.xsl';
 
-my $stylesheet = 'dta-base.xsl';
+# <cb>
+like( process($xsl, 't/xml/cb.xml'), qr{
+    <p\s+class="dta-p">a</p>\s*
+    <span\s+class="dta-cb">\[Beginn[ ]Spaltensatz\]</span>\s*
+    <p\s+class="dta-p">\s*
+    S1\s*
+    <span\s+class="dta-cb">\[Spaltenumbruch\]</span>\s*
+    S2\s*
+    </p>\s*
+    <span\s+class="dta-cb">\[Ende[ ]Spaltensatz\]</span>\s*
+    <p\s+class="dta-p">b</p>}x );
 
-my $test_cnt = 0;
-foreach my $file ( glob 't/tag_*.xml' ) {
-    my $tag = basename( $file, '.xml' );
-    $tag =~ s/^tag_//;
+# <div>
+like( process($xsl, 't/xml/div_simple.xml'), qr{<div>\s*<p class="dta-p">Das ist ein Absatz.</p>\s*</div>} );
 
-    my $got = process( $stylesheet, $file );
-    my $expected  = slurp("t/tag_$tag.html");
-     
-    my $same = eval { XML::Compare::same( $got, $expected ) };
-    if ( $same ) {
-        pass( $tag );
-    }
-    else {
-        $@ =~ s/ at \S+\.pm line \d+\.$//;
-        fail( $tag );
-        diag( "  testing tag $tag: $@\n" );
-        diag( "got:\n$got\n\n" );
-        diag( "expected:\n$expected\n\n" );
+# <formula>
+like( process($xsl, 't/xml/formula.xml'), qr{<span class="ph formula-1" onclick="editFormula\(1\)" style="cursor:pointer"> \[Formel 1\] </span>} );
+like( process($xsl, 't/xml/formula_tex.xml'), qr{<span class="formula"><img.*?\s+src="http://.*?/%5Cfrac%7B1%7D%7B2%7D"/></span>} );
+like( process($xsl, 't/xml/formula_utf8.xml'), qr{http://.*?/%FC%20%2B%20%3F} );
 
-    }
-    $test_cnt++;
-}
+# <lg>
+like( process($xsl, 't/xml/lg.xml'), qr{<div class="dta-lg">\s*<div class="dta-l">V1</div>\s*<br/>\s*<div class="dta-l">V2</div>\s*<br/>\s*</div>} );
 
-done_testing( $test_cnt );
+# <p>
+like( process($xsl, 't/xml/p.xml'), qr{<p class="dta-p">X</p>} );

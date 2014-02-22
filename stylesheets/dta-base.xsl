@@ -1033,12 +1033,7 @@
   </xsl:template>
 
   <xsl:template match="text()">    
-      <xsl:call-template name="escapeUnicode">
-      <xsl:with-param name="str"> 
-        <xsl:value-of select="."/>
-     </xsl:with-param> 
-    </xsl:call-template>
-    
+      <xsl:value-of select="."/>
   </xsl:template>
 
 </xsl:stylesheet>

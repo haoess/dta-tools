@@ -15,6 +15,8 @@ sub process {
     my $xmlParser     = XML::LibXML->new();
     my $xsltProcessor = XML::LibXSLT->new();
 
+    XML::LibXSLT->register_function( 'urn:dta', 'urlencode', \&urlencode );
+
     my $xmlDocument    = $xmlParser->parse_file( $xml );
     my $xsltStylesheet = $xmlParser->parse_file( $xslt );
 
@@ -22,12 +24,26 @@ sub process {
     my $results = $xsltTransformer->transform( $xmlDocument );
 
     my $out = $xsltTransformer->output_string( $results );
-    for ( $out ) {
-        s{\Q<?xml version="1.0" encoding="utf-8"?>\E\s+}{}g;
-        s{^\s+|\s+$}{}g;
-        s{ +}{ }g;
+    return entities( $out );
+}
+
+sub entities {
+    my $str = shift;
+    utf8::decode( $str );
+    $str =~ s{([^\x{01}-\x{ff}])}{sprintf "&#x%04X;", ord($1)}eg;
+    return $str;
+}
+
+sub urlencode {
+    my $str = shift;
+    $str = uri_escape_utf8($str);
+    for ( $str ) {
+        s/&/&amp;/g;
+        s/"/&quot;/g;
+        s/</&lt;/g;
+        s/>/&gt;/g;
     }
-    return $out;
+    return $str;
 }
 
 1;
