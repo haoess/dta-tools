@@ -31,6 +31,7 @@ sub entities {
     my $str = shift;
     utf8::decode( $str );
     $str =~ s{([^\x{01}-\x{ff}])}{sprintf "&#x%04X;", ord($1)}eg;
+    utf8::encode( $str );
     return $str;
 }
 
