@@ -186,9 +186,10 @@
             <xsl:otherwise>-->
             <xsl:attribute name="src">
               <xsl:text>http://dinglr.de/formula/</xsl:text>
-              <xsl:call-template name="url-encode">
+              <xsl:value-of select="string(.)"/>
+              <!-- <xsl:call-template name="url-encode">
                 <xsl:with-param name="str" select="string(.)"/>
-              </xsl:call-template>
+              </xsl:call-template> -->
               <!-- <xsl:value-of select="custom:uriencode(string(.))"/>   -->
             </xsl:attribute>
             <!--            </xsl:otherwise>
@@ -221,9 +222,10 @@
       <xsl:attribute name="src">
         <!--<xsl:text>http://dinglr.de/formula/</xsl:text><xsl:value-of select="dta:urlencode($fraction)"/>-->
         <xsl:text>http://kaskade.dwds.de/dtaq/formula/preview/</xsl:text>
-        <xsl:call-template name="url-encode">
+        <xsl:value-of select="$fraction"/>
+        <!-- <xsl:call-template name="url-encode">
           <xsl:with-param name="str" select="$fraction"/>
-        </xsl:call-template>
+        </xsl:call-template> -->
         <!--
         <xsl:value-of select="custom:uriencode(string($fraction))"/>
          -->
@@ -241,9 +243,10 @@
         -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
       <xsl:attribute name="src">
         <xsl:text>http://dinglr.de/formula/</xsl:text>
-        <xsl:call-template name="url-encode">
+        <xsl:value-of select="$fraction"/>
+        <!-- <xsl:call-template name="url-encode">
           <xsl:with-param name="str" select="$fraction"/>
-        </xsl:call-template>
+        </xsl:call-template> -->
         <!-- 
         <xsl:value-of select="custom:uriencode(string($fraction))"/>
          -->
