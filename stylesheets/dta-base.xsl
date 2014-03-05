@@ -677,6 +677,26 @@
     </div>
   </xsl:template>
 
+  <xsl:template match="tei:spGrp">
+    <xsl:choose>
+      <xsl:when test="child::*[1][self::tei:stage][@rendition='#rightBraced']">
+        <table>
+          <tr>
+            <td style="vertical-align:middle"><xsl:apply-templates select="child::*[1]"/></td>
+            <td class="braced-base braced-left">
+              <xsl:for-each select="tei:sp">
+                <div class="dta-sp"><xsl:apply-templates/></div>
+              </xsl:for-each>
+            </td>
+          </tr>
+        </table>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <xsl:template match="tei:p">
     <xsl:choose>
       <xsl:when test="ancestor::tei:sp and name(preceding-sibling::*[2]) != 'p'">
