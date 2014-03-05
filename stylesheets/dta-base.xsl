@@ -530,7 +530,7 @@
       <xsl:for-each select="tei:castItem">
         <tr>
           <td class="castitem">
-            <xsl:apply-templates select="tei:role"/>
+            <xsl:apply-templates/>
           </td>
           <xsl:if test="position()=1">
             <xsl:element name="td">
