@@ -534,12 +534,7 @@
           </td>
           <xsl:if test="position()=1">
             <xsl:element name="td">
-              <xsl:attribute name="class">
-                roledesc
-                <xsl:if test='@rendition="#rightBraced"'>
-                  braced-base braced-right
-                </xsl:if>
-              </xsl:attribute>
+              <xsl:attribute name="class">roledesc</xsl:attribute>
               <xsl:attribute name="rowspan">
                 <xsl:value-of select="count(../tei:castItem)"/>
               </xsl:attribute>
