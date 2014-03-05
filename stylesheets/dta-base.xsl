@@ -525,30 +525,37 @@
     </div>
   </xsl:template>
 
-  <xsl:template match="tei:castGroup">
-    <table class="dta-castgroup">
-      <xsl:for-each select="tei:castItem">
-        <tr>
-          <td class="castitem">
-            <xsl:apply-templates/>
-          </td>
-          <xsl:if test="position()=1">
-            <xsl:element name="td">
-              <xsl:attribute name="class">roledesc</xsl:attribute>
-              <xsl:attribute name="rowspan">
-                <xsl:value-of select="count(../tei:castItem)"/>
-              </xsl:attribute>
-              <xsl:apply-templates select="../tei:roleDesc"/>
-            </xsl:element>
-          </xsl:if>
-          <xsl:if test="tei:actor">
-            <td class="dta-actor">
-              <xsl:apply-templates select="tei:actor"/>
-            </td>
-          </xsl:if>
-        </tr>
-      </xsl:for-each>
-    </table>
+  <xsl:template match='tei:castGroup'>
+    <xsl:choose>
+      <!-- nested castGroups, e. g. http://www.deutschestextarchiv.de/dtaq/book/view/16258?p=10 -->
+      <xsl:when test="tei:castGroup">
+        <table class="dta-castgroup">
+          <td><xsl:apply-templates/></td>
+          <td class="roledesc"><xsl:apply-templates select="tei:roleDesc"/></td>
+        </table>
+      </xsl:when>
+      <xsl:otherwise>
+        <table class="dta-castgroup">
+          <xsl:for-each select='tei:castItem'>
+            <tr>
+              <td class="castitem"><xsl:apply-templates/></td>
+              <xsl:if test="position()=1">
+                <xsl:element name="td">
+                  <xsl:attribute name="class">
+                    roledesc
+                  </xsl:attribute>
+                  <xsl:attribute name="rowspan"><xsl:value-of select="count(../tei:castItem)"/></xsl:attribute>
+                  <xsl:apply-templates select="../tei:roleDesc"/>
+                </xsl:element>
+              </xsl:if>
+              <xsl:if test="tei:actor">
+                <td class="dta-actor"><xsl:apply-templates select="tei:actor"/></td>
+              </xsl:if>
+            </tr>
+          </xsl:for-each>
+        </table>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="tei:actor">
