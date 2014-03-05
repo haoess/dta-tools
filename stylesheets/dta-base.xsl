@@ -691,6 +691,18 @@
           </tr>
         </table>
       </xsl:when>
+      <xsl:when test="child::*[last()][self::tei:stage][@rendition='#leftBraced']">
+        <table>
+          <tr>
+            <td class="braced-base braced-right">
+              <xsl:for-each select="tei:sp">
+                <div class="dta-sp"><xsl:apply-templates/></div>
+              </xsl:for-each>
+            </td>
+            <td style="vertical-align:middle"><xsl:apply-templates select="child::*[last()]"/></td>
+          </tr>
+        </table>
+      </xsl:when>
       <xsl:otherwise>
         <xsl:apply-templates/>
       </xsl:otherwise>
