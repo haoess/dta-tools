@@ -1,0 +1,10 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text>
+    <front>
+		<figure facs="http://dummy.org/dmmy.jpg">
+			<head>HEAD</head><lb/>
+			<p>caption</p>
+		</figure>
+    </front>
+  </text>
+</TEI>

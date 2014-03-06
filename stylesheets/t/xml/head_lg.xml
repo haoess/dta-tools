@@ -1,0 +1,19 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text>
+	<body>
+      <div n="1">
+        <lg type="poem">
+          <head>DIE RABEN</head>
+          <lb/>
+          <lg n="1">
+            <l>v1a</l><lb/>
+            <l>v1b</l><lb/>
+          </lg>
+          <lg n="2">
+            <l>v2a</l><lb/>
+          </lg>
+        </lg>
+      </div>
+	</body>
+  </text>
+</TEI>
