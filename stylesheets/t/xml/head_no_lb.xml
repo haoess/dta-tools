@@ -1,0 +1,12 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text>
+    <front>
+		<div>
+			<head>HEAD</head><span> text</span>
+		</div>
+		<div>
+			<head>HE<lb/>AD</head><span> text<lb/></span>
+		</div>
+    </front>
+  </text>
+</TEI>

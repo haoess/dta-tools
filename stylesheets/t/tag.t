@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 13;
+use Test::More tests => 14;
 
 use DTAStyleSheets qw( process );
 
@@ -80,3 +80,11 @@ like( process($xsl, 't/xml/head_div_n.xml'), qr{
 			<p\s+class="dta-p">text2</p>\s*
 		</div><br/>\s*
 	</div>}x );	
+like( process($xsl, 't/xml/head_no_lb.xml'), qr{
+	<div>\s*
+		HEAD text\s*
+	</div>\s*
+	<div>\s*
+		HE<br/>AD[ ]text<br/>\s*
+	</div>
+}x );
