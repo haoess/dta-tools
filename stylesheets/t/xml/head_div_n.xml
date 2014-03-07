@@ -1,0 +1,17 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<div n="6">
+				<head>1. Kapitel<lb/>Kapitelname</head><lb/>
+				<div n="7">
+					<head>p1</head><lb/>
+					<p>text1</p>
+				</div><lb/>
+				<div n="7">
+					<head>p2</head><lb/>
+					<p>text2</p>
+				</div><lb/>
+			</div>			
+		</body>
+	</text>
+</TEI>
