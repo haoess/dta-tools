@@ -489,7 +489,7 @@
         <xsl:choose>
           <xsl:when test="parent::tei:div/@n or parent::tei:div">
             <xsl:choose>
-              <xsl:when test="parent::tei:div/@n > 6 or not(@n)">
+              <xsl:when test="parent::tei:div/@n > 6  or not(@n)">
                 <div class="dta-head">
                   <xsl:apply-templates/>
                 </div>
@@ -505,6 +505,7 @@
               </xsl:otherwise>
             </xsl:choose>
           </xsl:when>
+          <!-- WARNING: never used (because of xsl:when test="ancestor::tei:list above -->
           <xsl:when test="parent::tei:list">
             <xsl:apply-templates/>
           </xsl:when>
