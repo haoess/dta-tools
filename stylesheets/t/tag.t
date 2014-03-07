@@ -28,7 +28,8 @@ like( process($xsl, 't/xml/formula_tex.xml'), qr{<span class="formula"><img.*?\s
 like( process($xsl, 't/xml/formula_utf8.xml'), qr{http://.*?/%FC%20%2B%20%3F} );
 
 # <lg>
-like( process($xsl, 't/xml/lg.xml'), qr{<div class="dta-lg">\s*<div class="dta-l">V1</div>\s*<br/>\s*<div class="dta-l">V2</div>\s*<br/>\s*</div>} );
+like( process($xsl, 't/xml/lg.xml'), qr{<div class="dta-lg">\s*<span class="dta-l">V1</span>\s*<br/>\s*<span class="dta-l">V2</span>\s*<br/>\s*</div>} );
+like( process($xsl, 't/xml/lg2.xml'), qr{<div class="dta-lg">\s*<div class="dta-l et"><span>V1</span></div>\s*<br/>\s*<div class="dta-l et aq"><span>V2</span></div>\s*<br/>\s*</div>} );
 
 # <p>
 like( process($xsl, 't/xml/p.xml'), qr{<p class="dta-p">X</p>} );

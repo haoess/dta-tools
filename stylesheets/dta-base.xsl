@@ -764,6 +764,7 @@
     </div>
   </xsl:template>
 
+<!--
   <xsl:template match="tei:l">
     <xsl:element name="div">
       <xsl:call-template name="applyRendition">
@@ -771,6 +772,35 @@
       </xsl:call-template> 
       <xsl:apply-templates/>
     </xsl:element>
+  </xsl:template>
+-->
+  <xsl:template match='tei:l'>
+    <xsl:choose>
+      <xsl:when test="contains(@rendition,'#c') or contains(@rendition,'#et') or contains(@rendition,'#right')">
+        <xsl:element name="div">
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class" select="'dta-l'"/>
+          </xsl:call-template>
+          <xsl:element name="span">
+            <xsl:call-template name="applyXmlId"/>
+            <xsl:call-template name="applyPrev"/>
+            <xsl:call-template name="applyNext"/>
+            <xsl:apply-templates />
+          </xsl:element>
+        </xsl:element>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:element name="span">
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class" select="'dta-l'"/>
+          </xsl:call-template>
+          <xsl:call-template name="applyXmlId"/>
+          <xsl:call-template name="applyPrev"/>
+          <xsl:call-template name="applyNext"/>
+          <xsl:apply-templates />
+        </xsl:element>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="tei:lb">
@@ -1070,6 +1100,26 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+
+  <!-- @prev/@next stuff -->
+  <xsl:template name="applyPrev">
+    <xsl:if test="@prev">
+      <xsl:attribute name="data-prev"><xsl:value-of select="@prev"/></xsl:attribute>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="applyNext">
+    <xsl:if test="@next">
+      <xsl:attribute name="data-next"><xsl:value-of select="@next"/></xsl:attribute>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="applyXmlId">
+    <xsl:if test="@xml:id">
+      <xsl:attribute name="data-xmlid"><xsl:value-of select="@xml:id"/></xsl:attribute>
+    </xsl:if>
+  </xsl:template>
+  <!-- end @prev/@next stuff -->
 
   <xsl:template match="text()">    
       <xsl:value-of select="."/>
