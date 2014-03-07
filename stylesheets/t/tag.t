@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 9;
+use Test::More tests => 10;
 
 use DTAStyleSheets qw( process );
 
@@ -35,8 +35,22 @@ like( process($xsl, 't/xml/lg2.xml'), qr{<div class="dta-lg">\s*<div class="dta-
 like( process($xsl, 't/xml/p.xml'), qr{<p class="dta-p">X</p>} );
 
 # <head>
-like( process($xsl, 't/xml/head_figure.xml'), qr{\s*
+like( process($xsl, 't/xml/head_figure.xml'), qr{
 		<span\s+class="ph\s+dta-figure"\s+type="1"><img\s+src="http://dummy.org/dmmy.jpg"/><br/>\s+\[Abbildung\]\s* 
 			<span\s+class="figdesc">HEAD</span><br/>\s*
 			<p\s+class="dta-p">caption</p>\s*
-		</span>\s*}x );
+		</span>}x );
+like( process($xsl, 't/xml/head_lg.xml'), qr{		
+	  <div>\s*
+        <div\s+class="poem">\s*
+          <div\s+class="head">DIE[ ]RABEN</div>\s*
+          <br/>\s*
+          <div\s+class="dta-lg">\s*
+            <span\s+class="dta-l">v1a</span><br/>\s*
+            <span\s+class="dta-l">v1b</span><br/>\s*
+          </div>\s*
+          <div\s+class="dta-lg">\s*
+            <span\s+class="dta-l">v2a</span><br/>\s*
+          </div>\s*
+        </div>\s*
+      </div>}x );
