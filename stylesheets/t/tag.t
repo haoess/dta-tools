@@ -85,7 +85,7 @@ like( process($xsl, 't/xml/head_no_lb.xml'), qr{
 		HEAD text\s*
 	</div>\s*
 	<div>\s*
-		HE<br/>AD[ ]text<br/>\s*
+		HE<br/>AD[ ]text\s*
 	</div>
 }x );
 
