@@ -1,0 +1,14 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<castList>         
+				<head>Personen<lb/></head>
+				<castItem>
+					<role xml:id="GRI">R1</role>
+					<roleDesc>R1desc</roleDesc>
+					<actor>A1</actor>
+				</castItem><lb/>
+			</castList><lb/>
+		</body>
+	</text>
+</TEI>

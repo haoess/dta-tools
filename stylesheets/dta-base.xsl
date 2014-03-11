@@ -471,29 +471,34 @@
 
   <xsl:template match="tei:head">
     <xsl:choose>
+      <!-- if embedded in a <figure>: create span (figdesc) -->
       <xsl:when test="ancestor::tei:figure">
         <span class="figdesc">
           <xsl:apply-templates/>
         </span>
       </xsl:when>
+      <!-- if embedded in a <list> or child of <lg>: create div-block (dta-head) -->
       <xsl:when test="ancestor::tei:list or parent::tei:lg">
         <div class="dta-head">
           <xsl:apply-templates/>
         </div>
       </xsl:when>
+      <!-- if no </lb> at the end or after the head: embed directly -->
       <xsl:when
         test="local-name(./*[position()=last()]) != 'lb' and local-name(following::*[1]) != 'lb'">
         <xsl:apply-templates/>
       </xsl:when>
-      <xsl:otherwise>
-        <xsl:choose>
+      <xsl:otherwise> 
+        <xsl:choose> <!-- why the second choose? -->          
           <xsl:when test="parent::tei:div/@n or parent::tei:div">
             <xsl:choose>
+              <!-- if the embedding div-block's n-attribute is greater 6 or does not exist: create div-block (dta-head)  -->
               <xsl:when test="parent::tei:div/@n > 6 or not(parent::tei:div/@n)">
                 <div class="dta-head">
                   <xsl:apply-templates/>
                 </div>
               </xsl:when>
+              <!-- if the embedding div-block's n-attribute is lesser than 7: create h(@n)-block -->
               <xsl:otherwise>
                 <xsl:text disable-output-escaping="yes">&lt;h</xsl:text>
                 <xsl:value-of select="parent::tei:div/@n"/>
@@ -509,6 +514,7 @@
           <xsl:when test="parent::tei:list">
             <xsl:apply-templates/>
           </xsl:when>
+          <!-- default -->
           <xsl:otherwise>
             <h2>
               <xsl:apply-templates/>
@@ -542,9 +548,7 @@
               <td class="castitem"><xsl:apply-templates/></td>
               <xsl:if test="position()=1">
                 <xsl:element name="td">
-                  <xsl:attribute name="class">
-                    roledesc
-                  </xsl:attribute>
+                  <xsl:attribute name="class">roledesc</xsl:attribute>
                   <xsl:attribute name="rowspan"><xsl:value-of select="count(../tei:castItem)"/></xsl:attribute>
                   <xsl:apply-templates select="../tei:roleDesc"/>
                 </xsl:element>
@@ -559,12 +563,6 @@
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="tei:actor">
-    <span class="dta-actor">
-      <xsl:apply-templates/>
-    </span>
-  </xsl:template>
-
   <xsl:template match="tei:castItem[not(parent::tei:castGroup)]">
     <div class="castitem">
       <xsl:apply-templates/>
@@ -575,6 +573,12 @@
     <h2 class="head">
       <xsl:apply-templates/>
     </h2>
+  </xsl:template>
+  
+  <xsl:template match="tei:actor">
+    <span class="dta-actor">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>
 
   <xsl:template match="tei:role">

@@ -1,0 +1,17 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<castGroup>
+				<castItem>
+					<role xml:id="WAS">R1a</role>
+					<actor>A3a</actor>
+				</castItem><lb/>
+				<castItem>
+					<role xml:id="MIC">R1b</role>
+					<actor>A3b</actor>
+				</castItem><lb/>				
+				<roleDesc rendition="#leftBraced">R1Desc</roleDesc>
+			</castGroup><lb/>
+		</body>
+	</text>
+</TEI>
