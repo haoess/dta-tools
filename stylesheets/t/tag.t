@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 14;
+use Test::More tests => 17;
 
 use DTAStyleSheets qw( process );
 
@@ -88,3 +88,38 @@ like( process($xsl, 't/xml/head_no_lb.xml'), qr{
 		HE<br/>AD[ ]text<br/>\s*
 	</div>
 }x );
+
+# <castList>
+like( process($xsl, 't/xml/castlist.xml'), qr{
+	<div\s+class="castlist">\s*         
+		<p\s+class="dta-p">Besetzung</p>\s*
+	</div>}x );
+
+# <castList/castItem>
+like( process($xsl, 't/xml/castlist_castitem.xml'), qr{
+	<div\s+class="castlist">\s*         
+		<h2\s+class="head">Personen<br/></h2>\s*
+		<div\s+class="castitem">\s*
+			R1\s*
+			R1desc\s*
+			<span\s+class="dta-actor">A1</span>\s*
+		</div><br/>\s*
+	</div><br/>}x );
+
+# <castGroup/castItem>
+like( process($xsl, 't/xml/castgroup_castitem.xml'), qr{
+	<table\s+class="dta-castgroup">
+		<tr>
+			<td\s+class="castitem">\s*
+				R1a\s*<span\s+class="dta-actor">A3a</span>\s*
+			</td>\s*
+			<td\s+class="roledesc"\s+rowspan="2">\s*
+				R1Desc\s*
+			</td>\s*
+		</tr>\s*
+		<tr>\s*
+			<td\s+class="castitem">\s*
+				R1b\s*<span\s+class="dta-actor">A3b</span>\s*
+			</td>\s*
+		</tr>\s*
+	</table><br/>}x );
