@@ -485,7 +485,7 @@
       </xsl:when>
       <!-- if no </lb> at the end or after the head: embed directly -->
       <xsl:when
-        test="local-name(./*[position()=last()]) != 'lb' and local-name(following::*[1]) != 'lb'">
+        test="(local-name(./*[position()=last()]) != 'lb' or normalize-space(./tei:lb[position()=last()]/following-sibling::text()[1]) != '') and local-name(following::*[1]) != 'lb'">
         <xsl:apply-templates/>
       </xsl:when>
       <xsl:otherwise> 
