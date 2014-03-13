@@ -594,8 +594,10 @@
     </span>
   </xsl:template>
 
+  <!-- stage direction -->
   <xsl:template match="tei:stage">
     <xsl:choose>
+      <!-- if embedded in a speech act... -->
       <xsl:when test="ancestor::tei:sp">
         <span class="stage">
           <xsl:text> </xsl:text>
