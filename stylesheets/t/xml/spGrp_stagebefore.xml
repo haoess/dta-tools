@@ -1,0 +1,28 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<spGrp>
+				<stage rendition="#rightBraced">
+					<p rendition="#v">Sprechen gleichzeitig</p>
+				</stage>
+				<sp who="#WEH">
+					<speaker>S1</speaker>
+					<p>t1</p>
+					<stage>to S2</stage> 
+					<p>t2</p><lb/>
+				</sp>
+				<sp who="#KRUE">
+					<speaker>S2</speaker>
+					<stage>to S3</stage>
+					<p>t3</p><lb/>
+				</sp>
+				<sp who="#FLE">
+					<speaker>S3</speaker>
+					<stage>to S1</stage>
+					<p>t4</p><lb/>
+				</sp>				
+			</spGrp>
+			<lb/>
+		</body>
+	</text>
+</TEI>

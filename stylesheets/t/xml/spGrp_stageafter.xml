@@ -1,0 +1,18 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<spGrp>           
+				<sp who="#WAL" xml:id="simspeech1a">             
+					<speaker><hi rendition="#g">S1</hi></speaker>             
+					<p>t1</p>
+				</sp><lb/>
+				<sp who="#ALB" xml:id="simspeech1b">
+					<speaker><hi rendition="#g">S2</hi></speaker>
+					<p>t2</p>
+				</sp>
+				<stage rendition="#leftBraced" corresp="#simspeech1a #simspeech1b">gleichzeitig</stage>
+			</spGrp>
+			<lb/>
+		</body>
+	</text>
+</TEI>

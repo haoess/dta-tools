@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 18;
+use Test::More tests => 19;
 
 use DTAStyleSheets qw( process );
 
@@ -125,29 +125,31 @@ like( process($xsl, 't/xml/castgroup_castitem.xml'), qr{
 	</table><br/>}x );
 	
 # <spGrp>
-like( process($xsl, 't/xml/spGrp.xml'), qr{
-	<table><tr><td\s+class="braced-base\s+braced-right"><div\s+class="dta-sp">\s*
-			<span\s+class="speaker">\s+<span\s+class="g">S1</span>:\s+</span>\s*
-			<span\s+class="dta-in-sp">test1</span>\s*
-		</div><div\s+class="dta-sp">\s*
-			<span\s+class="speaker">\s+<span\s+class="g">S2</span>:\s+</span>\s*
-			<span\s+class="dta-in-sp">test2</span>\s*
-		</div></td><td\s+style="vertical-align:middle"><div\s+class="stage">(gleichzeitig\.)</div></td></tr></table>\s*
-	<br/>\s*
+like( process($xsl, 't/xml/spGrp_stagebefore.xml'), qr{
 	<table><tr><td\s+style="vertical-align:middle"><div\s+class="stage">\s*
-			<p\s+class="v">(Sprechen\s+gleichzeitig\.)</p>\s*
+			<p\s+class="v">Sprechen\s+gleichzeitig</p>\s*
 		</div></td><td\s+class="braced-base\s+braced-left"><div\s+class="dta-sp">\s*
-			<span\s+class="speaker">\s+S1\.\s+</span>\s*
-			<span\s+class="dta-in-sp">test1</span>\s*
-			<span\s+class="stage">\s+(to\s+S2)\.\s+</span>\s+\s*
-			<span\s+class="dta-in-sp">test2</span><br/>\s*
+			<span\s+class="speaker">\s+S1\s+</span>\s*
+			<span\s+class="dta-in-sp">t1</span>\s*
+			<span\s+class="stage">\s+to\s+S2\s+</span>\s+\s*
+			<span\s+class="dta-in-sp">t2</span><br/>\s*
 		</div><div\s+class="dta-sp">\s*
 			<span\s+class="speaker">\s+S2\s+</span>\s*
-			<span\s+class="stage">\s+(to\s+S3)\.\s+</span>\s*
-			<span\s+class="dta-in-sp">test3</span><br/>\s*
+			<span\s+class="stage">\s+to\s+S3\s+</span>\s*
+			<span\s+class="dta-in-sp">t3</span><br/>\s*
 		</div><div\s+class="dta-sp">\s*
-			<span\s+class="speaker">\s+S3\.\s+</span>\s*
-			<span\s+class="stage">\s+(to\s+S1)\.\s+</span>\s*
-			<span\s+class="dta-in-sp">test4</span><br/>\s*
+			<span\s+class="speaker">\s+S3\s+</span>\s*
+			<span\s+class="stage">\s+to\s+S1\s+</span>\s*
+			<span\s+class="dta-in-sp">t4</span><br/>\s*
 		</div></td></tr></table>\s*
+	<br/>}x);
+	
+like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
+	<table><tr><td\s+class="braced-base\s+braced-right"><div\s+class="dta-sp">\s*
+			<span\s+class="speaker">\s+<span\s+class="g">S1</span>\s+</span>\s*
+			<span\s+class="dta-in-sp">t1</span>\s*
+		</div><div\s+class="dta-sp">\s*
+			<span\s+class="speaker">\s+<span\s+class="g">S2</span>\s+</span>\s*
+			<span\s+class="dta-in-sp">t2</span>\s*
+		</div></td><td\s+style="vertical-align:middle"><div\s+class="stage">gleichzeitig</div></td></tr></table>\s*
 	<br/>}x);
