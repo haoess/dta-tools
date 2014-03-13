@@ -253,6 +253,7 @@
 
   <xsl:template match="tei:figure">
     <xsl:choose>
+      <!-- WARNING: what is if there is text between <lb/> and <figure/>? -->
       <xsl:when
         test="(local-name(preceding-sibling::node()[1]) = 'lb' and local-name(following-sibling::node()[1]) = 'lb') or @rendition='#c'">
         <xsl:element name="div">
