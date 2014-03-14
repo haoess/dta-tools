@@ -158,5 +158,5 @@ like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 like( process($xsl, 't/xml/figure.xml'), qr{
 	<div>\s*
 		<p\s+class="dta-p">text1</p><br/>\s*
-		<div\s+class="phbl[ ]dta-figure"\s+type="1"\s+style="text-align:center">Abbildung</div>\s*
+		<div\s+class="phbl[ ]dta-figure"\s+type="1"\s+style="text-align:center">\s+\[Abbildung\]\s+</div>\s*
 	</div>}x);
