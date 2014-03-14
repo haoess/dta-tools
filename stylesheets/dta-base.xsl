@@ -255,11 +255,8 @@
     <xsl:choose>
       <!-- WARNING: what is if there is text between <lb/> and <figure/>? -->
       <xsl:when
-        test="(local-name(preceding-sibling::*[1]) = 'lb' and local-name(following-sibling::*[1]) = 'lb') or @rendition='#c'">
-        <xsl:call-template name="applyFigure">
-          <xsl:with-param name="node">div</xsl:with-param>
-          <xsl:with-param name="class">phbl dta-figure</xsl:with-param>
-        </xsl:call-template>        
+        test="(local-name(preceding-sibling::*[1]) = 'lb' and not(normalize-space(preceding-sibling::*[1]/following-sibling::text()[1])) and local-name(following-sibling::*[1]) = 'lb' and not(normalize-space(following-sibling::*[1]/preceding-sibling::text()[1]))) or @rendition='#c'">
+        <xsl:call-template name="applyFigure"/>        
       </xsl:when>
       <xsl:otherwise>
         <xsl:call-template name="applyFigure">
@@ -308,9 +305,7 @@
       <span class="fn-intext">
         <xsl:value-of select="@n"/>
       </span>
-      <!--
-      <xsl:text> </xsl:text> warum?
-    -->
+      <xsl:text> </xsl:text>
     </xsl:if>
   </xsl:template>
 

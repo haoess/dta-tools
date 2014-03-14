@@ -12,10 +12,17 @@
 		</div>
 		<div>
 			<p>text4</p><lb/>
-			<figure type="notatedMusic"/><lb/>
+			<figure type="notatedMusic"/><lb/>			
 			<p>text5</p>
 			<lb/>
 		</div>
+    	<div>
+    		<p>text4<lb/>text5
+    		<figure/><lb/>
+    		</p>
+    		<p>text6</p>
+    		<lb/>
+    	</div>
     </body>
   </text>
 </TEI>

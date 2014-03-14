@@ -170,4 +170,11 @@ like( process($xsl, 't/xml/figure.xml'), qr{
 		<div\s+class="phbl[ ]dta-figure"\s+type="3">\s+\[Musik\]\s+</div><br/>\s*
 		<p\s+class="dta-p">text5</p>\s*
 		<br/>\s*
+	</div>\s*
+	<div>\s*
+		<p\s+class="dta-p">text4<br/>text5\s*
+		<span\s+class="ph[ ]dta-figure"\s+type="4">\s+\[Abbildung]\s+</span><br/>\s*
+		</p>\s*
+		<p\s+class="dta-p">text6</p>\s*
+		<br/>\s*
 	</div>}x);
