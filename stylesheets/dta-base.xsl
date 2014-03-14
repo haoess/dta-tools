@@ -382,7 +382,7 @@
       <xsl:if test="contains(concat(' ', @reason, ' '), ' illegible ')">unleserliches </xsl:if>
       <xsl:if test="@reason">Material</xsl:if>
       <xsl:if test="@unit and @reason">
-        <xsl:text> </xsl:text>
+        <xsl:text> – </xsl:text>
       </xsl:if>
       <xsl:choose>
         <xsl:when test="@unit">

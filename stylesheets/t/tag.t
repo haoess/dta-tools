@@ -223,5 +223,5 @@ like( process($xsl, 't/xml/gap.xml'), qr{
 	</div>}x);	
 like( process($xsl, 't/xml/gap_dummy.xml'), qr{	
 	<div>\s*
-		<p\s+class="dta-p">t1<span\s+class="gap">\[verlorenes[ ]Material[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*
+		<p\s+class="dta-p">t1<span\s+class="gap">\[verlorenes[ ]Material[ ]\–[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*
 	</div>}x);	
