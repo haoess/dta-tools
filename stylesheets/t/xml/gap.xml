@@ -1,0 +1,18 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<div>
+				<p>t1<gap quantity="1" reason="lost" unit="pages"/>t1</p>
+				<p>t2<gap quantity="2" reason="fm insignificant" unit="pages"/>t2</p>				
+				<p>t3<gap quantity="1" reason="illegible insignificant lost" unit="lines"/>t3</p>
+				<p>t4<gap quantity="2" reason="fm" unit="lines"/>t4</p>				
+				<p>t5<gap quantity="1" reason="illegible" unit="words"/>t5</p>
+				<p>t6<gap quantity="2" reason="fm" unit="words"/>t6</p>				
+				<p>t7<gap quantity="1" reason="fm" unit="chars"/>t7</p>				
+				<p>t8<gap quantity="1" unit="chars"/>t8</p>
+				<p>t9<gap reason="fm"/>t9</p>
+				<p>t10<gap unit="words"/>t10</p>
+			</div>
+		</body>
+	</text>
+</TEI>

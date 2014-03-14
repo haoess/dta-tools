@@ -376,11 +376,12 @@
   <xsl:template match="tei:gap">
     <span class="gap">
       <xsl:text>[</xsl:text>
-      <xsl:if test="@reason='lost'">verlorenes Material</xsl:if>
-      <xsl:if test="@reason='insignificant'">irrelevantes Material</xsl:if>
-      <xsl:if test="@reason='fm'">fremdsprachliches Material</xsl:if>
-      <xsl:if test="@reason='illegible'">unleserliches Material</xsl:if>
-      <xsl:if test="@unit">
+      <xsl:if test="contains(concat(' ', @reason, ' '), ' lost ')">verlorenes </xsl:if>
+      <xsl:if test="contains(concat(' ', @reason, ' '), ' insignificant ')">irrelevantes </xsl:if>
+      <xsl:if test="contains(concat(' ', @reason, ' '), ' fm ')">fremdsprachliches </xsl:if>
+      <xsl:if test="contains(concat(' ', @reason, ' '), ' illegible ')">unleserliches </xsl:if>
+      <xsl:if test="@reason">Material</xsl:if>
+      <xsl:if test="@unit and @reason">
         <xsl:text> – </xsl:text>
       </xsl:if>
       <xsl:choose>
@@ -391,11 +392,11 @@
           </xsl:if>
           <xsl:choose>
             <xsl:when test="@unit='pages' and @quantity!=1">Seiten</xsl:when>
-            <xsl:when test="@unit='pages' and @quantity=1">Seite</xsl:when>
+            <xsl:when test="@unit='pages' and (@quantity=1 or not(@quantity))">Seite</xsl:when>
             <xsl:when test="@unit='lines' and @quantity!=1">Zeilen</xsl:when>
-            <xsl:when test="@unit='lines' and @quantity=1">Zeile</xsl:when>
+            <xsl:when test="@unit='lines' and (@quantity=1 or not(@quantity))">Zeile</xsl:when>
             <xsl:when test="@unit='words' and @quantity!=1">Wörter</xsl:when>
-            <xsl:when test="@unit='words' and @quantity=1">Wort</xsl:when>
+            <xsl:when test="@unit='words' and (@quantity=1 or not(@quantity))">Wort</xsl:when>
             <xsl:when test="@unit='chars'">Zeichen</xsl:when>
           </xsl:choose>
           <xsl:text> fehl</xsl:text>
