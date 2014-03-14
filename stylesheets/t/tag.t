@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 22;
+use Test::More tests => 23;
 
 use DTAStyleSheets qw( process );
 
