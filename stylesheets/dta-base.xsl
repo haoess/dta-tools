@@ -284,12 +284,12 @@
         <xsl:element name="img">
           <xsl:attribute name="src"><xsl:value-of select="@facs"/></xsl:attribute>
         </xsl:element><br/>
-      </xsl:if> <xsl:choose>
+      </xsl:if> [<xsl:choose>
         <xsl:when test="@type='notatedMusic'">Musik</xsl:when>
         <xsl:otherwise>Abbildung</xsl:otherwise>
       </xsl:choose>
       <xsl:if test="tei:figDesc"><xsl:text> </xsl:text><xsl:apply-templates select="tei:figDesc"
-        mode="figdesc"/></xsl:if> <xsl:apply-templates/>
+        mode="figdesc"/></xsl:if>] <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
 
