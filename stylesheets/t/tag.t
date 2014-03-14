@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 20;
+use Test::More tests => 21;
 
 use DTAStyleSheets qw( process );
 
@@ -178,3 +178,31 @@ like( process($xsl, 't/xml/figure.xml'), qr{
 		<p\s+class="dta-p">text6</p>\s*
 		<br/>\s*
 	</div>}x);
+	
+# <table>
+like( process($xsl, 't/xml/table.xml'), qr{
+	<table\s+class="dta-table">\s*
+		<caption>\s*caption\s*</caption>\s*
+		<tr>\s*
+			<th\s+colspan="2">th12</th>\s*
+			<th>th3</th>\s*
+			<th>th4</th>\s*
+		</tr>\s*
+		<tr>\s*
+			<td>td1a</td>\s*
+			<td\s+style="padding-left:2em">td2a</td>\s*
+			<td>td3a</td>\s*
+			<td\s+rowspan="2">td4ab</td>\s*
+		</tr>\s*
+		<tr>\s*
+			<td>td1b</td>\s*
+			<td\s+style="text-align:center">td2b</td>\s*
+			<td>td3b</td>\s*
+		</tr>\s*
+		<tr>\s*
+			<td>td1c</td>\s*
+			<td\s+style="text-align:right">td2c</td>\s*
+			<td>td3c</td>\s*
+			<td>td3d</td>\s*
+		</tr>\s*
+	</table>}x);	

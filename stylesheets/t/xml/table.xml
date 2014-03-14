@@ -1,0 +1,33 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<table>
+				<head>
+					caption
+				</head>
+				<row role="label">
+					<cell cols="2">th12</cell>
+					<cell>th3</cell>
+					<cell>th4</cell>
+				</row>
+				<row>
+					<cell>td1a</cell>
+					<cell rendition="#et">td2a</cell>
+					<cell>td3a</cell>
+					<cell rows="2">td4ab</cell>
+				</row>
+				<row>
+					<cell>td1b</cell>
+					<cell rendition="#c">td2b</cell>
+					<cell>td3b</cell>
+				</row>		
+				<row>
+					<cell>td1c</cell>
+					<cell rendition="#right">td2c</cell>
+					<cell>td3c</cell>
+					<cell>td3d</cell>
+				</row>	
+			</table> 
+		</body>
+	</text>
+</TEI>

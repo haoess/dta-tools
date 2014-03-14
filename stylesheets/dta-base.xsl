@@ -253,8 +253,7 @@
 
   <xsl:template match="tei:figure">
     <xsl:choose>
-      <!-- WARNING: what is if there is text between <lb/> and <figure/>? -->
-      <xsl:when
+     <xsl:when
         test="(local-name(preceding-sibling::*[1]) = 'lb' and not(normalize-space(preceding-sibling::*[1]/following-sibling::text()[1])) and local-name(following-sibling::*[1]) = 'lb' and not(normalize-space(following-sibling::*[1]/preceding-sibling::text()[1]))) or @rendition='#c'">
         <xsl:call-template name="applyFigure"/>        
       </xsl:when>
@@ -988,33 +987,12 @@
               <xsl:for-each select="tei:cell">
                 <xsl:choose>
                   <xsl:when test="../@role='label'">
-                    <xsl:element name="th">
-                      <xsl:apply-templates/>
-                    </xsl:element>
+                    <xsl:call-template name="applyCell">
+                      <xsl:with-param name="node">th</xsl:with-param>
+                    </xsl:call-template>
                   </xsl:when>
                   <xsl:otherwise>
-                    <xsl:element name="td">
-                      <xsl:if test="@cols">
-                        <xsl:attribute name="colspan">
-                          <xsl:value-of select="@cols"/>
-                        </xsl:attribute>
-                      </xsl:if>
-                      <xsl:if test="@rows">
-                        <xsl:attribute name="rowspan">
-                          <xsl:value-of select="@rows"/>
-                        </xsl:attribute>
-                      </xsl:if>
-                      <xsl:if test="@rendition='#c'">
-                        <xsl:attribute name="style">text-align:center</xsl:attribute>
-                      </xsl:if>
-                      <xsl:if test="@rendition='#right'">
-                        <xsl:attribute name="style">text-align:right</xsl:attribute>
-                      </xsl:if>
-                      <xsl:if test="@rendition='#et'">
-                        <xsl:attribute name="style">padding-left:2em</xsl:attribute>
-                      </xsl:if>
-                      <xsl:apply-templates/>
-                    </xsl:element>
+                    <xsl:call-template name="applyCell"/>
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:for-each>
@@ -1023,6 +1001,32 @@
         </table>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template name="applyCell">
+    <xsl:param name="node" select="'td'"/>
+    <xsl:element name="{$node}">
+      <xsl:if test="@cols">
+        <xsl:attribute name="colspan">
+          <xsl:value-of select="@cols"/>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:if test="@rows">
+        <xsl:attribute name="rowspan">
+          <xsl:value-of select="@rows"/>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:if test="@rendition='#c'">
+        <xsl:attribute name="style">text-align:center</xsl:attribute>
+      </xsl:if>
+      <xsl:if test="@rendition='#right'">
+        <xsl:attribute name="style">text-align:right</xsl:attribute>
+      </xsl:if>
+      <xsl:if test="@rendition='#et'">
+        <xsl:attribute name="style">padding-left:2em</xsl:attribute>
+      </xsl:if>
+      <xsl:apply-templates/>
+    </xsl:element>
   </xsl:template>
 
   <xsl:template match="tei:opener">
