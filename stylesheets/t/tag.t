@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 21;
+use Test::More tests => 22;
 
 use DTAStyleSheets qw( process );
 
@@ -220,4 +220,8 @@ like( process($xsl, 't/xml/gap.xml'), qr{
 		<p\s+class="dta-p">t8<span\s+class="gap">\[1[ ]Zeichen[ ]fehlt\]</span>t8</p>\s*
 		<p\s+class="dta-p">t9<span\s+class="gap">\[fremdsprachliches[ ]Material\]</span>t9</p>\s*
 		<p\s+class="dta-p">t10<span\s+class="gap">\[Wort[ ]fehlt\]</span>t10</p>\s*
+	</div>}x);	
+like( process($xsl, 't/xml/gap_dummy.xml'), qr{	
+	<div>\s*
+		<p\s+class="dta-p">t1<span\s+class="gap">\[verlorenes[ ]Material[ ]&#x2013;[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*
 	</div>}x);	

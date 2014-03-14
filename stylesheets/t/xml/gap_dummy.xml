@@ -1,0 +1,9 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<div>
+				<p>t1<gap quantity="1" reason="lost" unit="pages"/>t1</p>
+			</div>
+		</body>
+	</text>
+</TEI>
