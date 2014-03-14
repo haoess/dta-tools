@@ -1,0 +1,21 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text>
+    <body>
+		<div>
+			<p>text1</p><lb/>
+			<figure rendition="#c"/>
+		</div>
+		<div>
+			<p>text2</p>
+			<figure facs="3"/><lb/>
+			<p>text3</p>
+		</div>
+		<div>
+			<p>text4</p><lb/>
+			<figure type="notatedMusic"/><lb/>
+			<p>text5</p>
+			<lb/>
+		</div>
+    </body>
+  </text>
+</TEI>

@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 19;
+use Test::More tests => 20;
 
 use DTAStyleSheets qw( process );
 
@@ -153,3 +153,21 @@ like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 			<span\s+class="dta-in-sp">t2</span>\s*
 		</div></td><td\s+style="vertical-align:middle"><div\s+class="stage">gleichzeitig</div></td></tr></table>\s*
 	<br/>}x);
+	
+# <figure>
+like( process($xsl, 't/xml/figure.xml'), qr{
+	<div>\s*
+		<p\s+class="dta-p">text1</p><br/>\s*
+		<div\s+class="phbl[ ]dta-figure"\s+type="1"\s+style="text-align:center">[ ]\[Abbildung\][ ]</div>\s*
+	</div>\s*
+	<div>\s*
+		<p\s+class="dta-p">text2</p>\s*
+		<span\s+class="ph[ ]dta-figure"\s+type="2"><img\s+src="3"/><br/>[ ]\[Abbildung\][ ]</span><br/>\s*
+		<p class="dta-p">text3</p>\s*
+	</div>\s*
+	<div>\s*
+		<p\s+class="dta-p">text4</p><br/>\s*
+		<div\s+class="phbl[ ]dta-figure"\s+type="3">[ ]\[Musik\][ ]</div><br/>\s*
+		<p\s+class="dta-p">text5</p>\s*
+		<br/>\s*
+	</div>}x);

@@ -255,44 +255,42 @@
     <xsl:choose>
       <!-- WARNING: what is if there is text between <lb/> and <figure/>? -->
       <xsl:when
-        test="(local-name(preceding-sibling::node()[1]) = 'lb' and local-name(following-sibling::node()[1]) = 'lb') or @rendition='#c'">
-        <xsl:element name="div">
-          <xsl:attribute name="class">phbl dta-figure</xsl:attribute>
-          <xsl:attribute name="type"><xsl:value-of select="count(preceding::tei:figure)+1"
-            /></xsl:attribute>
-          <xsl:if test="@rendition='#c'">
-            <xsl:attribute name="style">text-align:center</xsl:attribute>
-          </xsl:if>
-          <xsl:if test="@facs">
-            <xsl:element name="img">
-              <xsl:attribute name="src"><xsl:value-of select="@facs"/></xsl:attribute>
-            </xsl:element><br/>
-          </xsl:if> [<xsl:choose>
-            <xsl:when test="@type='notatedMusic'">Musik</xsl:when>
-            <xsl:otherwise>Abbildung</xsl:otherwise>
-          </xsl:choose>
-          <xsl:if test="tei:figDesc"><xsl:text> </xsl:text><xsl:apply-templates select="tei:figDesc"
-              mode="figdesc"/></xsl:if>] <xsl:apply-templates/>
-        </xsl:element>
+        test="(local-name(preceding-sibling::*[1]) = 'lb' and local-name(following-sibling::*[1]) = 'lb') or @rendition='#c'">
+        <xsl:call-template name="applyFigure">
+          <xsl:with-param name="node">div</xsl:with-param>
+          <xsl:with-param name="class">phbl dta-figure</xsl:with-param>
+        </xsl:call-template>        
       </xsl:when>
       <xsl:otherwise>
-        <xsl:element name="span">
-          <xsl:attribute name="class">ph dta-figure</xsl:attribute>
-          <xsl:attribute name="type"><xsl:value-of select="count(preceding::tei:figure)+1"
-            /></xsl:attribute>
-          <xsl:if test="@facs">
-            <xsl:element name="img">
-              <xsl:attribute name="src"><xsl:value-of select="@facs"/></xsl:attribute>
-            </xsl:element><br/>
-          </xsl:if> [<xsl:choose>
-            <xsl:when test="@type='notatedMusic'">Musik</xsl:when>
-            <xsl:otherwise>Abbildung</xsl:otherwise>
-          </xsl:choose>
-          <xsl:if test="tei:figDesc"><xsl:text> </xsl:text><xsl:apply-templates select="tei:figDesc"
-              mode="figdesc"/></xsl:if>] <xsl:apply-templates/>
-        </xsl:element>
+        <xsl:call-template name="applyFigure">
+          <xsl:with-param name="node">span</xsl:with-param>
+          <xsl:with-param name="class">ph dta-figure</xsl:with-param>
+        </xsl:call-template>   
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template name="applyFigure">
+    <xsl:param name="node" select="'div'"/>
+    <xsl:param name="class" select="'phbl dta-figure'"/>
+    <xsl:element name="{$node}">
+      <xsl:attribute name="class"><xsl:value-of select="$class"/></xsl:attribute>
+      <xsl:attribute name="type"><xsl:value-of select="count(preceding::tei:figure)+1"
+      /></xsl:attribute>
+      <xsl:if test="@rendition='#c'">
+        <xsl:attribute name="style">text-align:center</xsl:attribute>
+      </xsl:if>
+      <xsl:if test="@facs">
+        <xsl:element name="img">
+          <xsl:attribute name="src"><xsl:value-of select="@facs"/></xsl:attribute>
+        </xsl:element><br/>
+      </xsl:if> [<xsl:choose>
+        <xsl:when test="@type='notatedMusic'">Musik</xsl:when>
+        <xsl:otherwise>Abbildung</xsl:otherwise>
+      </xsl:choose>
+      <xsl:if test="tei:figDesc"><xsl:text> </xsl:text><xsl:apply-templates select="tei:figDesc"
+        mode="figdesc"/></xsl:if>] <xsl:apply-templates/>
+    </xsl:element>
   </xsl:template>
 
   <xsl:template match="tei:figDesc"/>
