@@ -210,18 +210,7 @@ like( process($xsl, 't/xml/table.xml'), qr{
 # <gap>
 like( process($xsl, 't/xml/gap.xml'), qr{	
 	<div>\s*
-		<p\s+class="dta-p">t1<span\s+class="gap">\[verlorenes[ ]Material[ ]&#x2013;[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*
-		<p\s+class="dta-p">t2<span\s+class="gap">\[irrelevantes[ ]fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Seiten[ ]fehlen\]</span>t2</p>\s*			
-		<p\s+class="dta-p">t3<span\s+class="gap">\[verlorenes[ ]irrelevantes[ ]unleserliches[ ]Material[ ]&#x2013;[ ]1[ ]Zeile[ ]fehlt\]</span>t3</p>\s*
-		<p\s+class="dta-p">t4<span\s+class="gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Zeilen[ ]fehlen\]</span>t4</p>\s*				
-		<p\s+class="dta-p">t5<span\s+class="gap">\[unleserliches[ ]Material[ ]&#x2013;[ ]1[ ]Wort[ ]fehlt\]</span>t5</p>\s*
-		<p\s+class="dta-p">t6<span\s+class="gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Wörter[ ]fehlen\]</span>t6</p>\s*				
-		<p\s+class="dta-p">t7<span\s+class="gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]1[ ]Zeichen[ ]fehlt\]</span>t7</p>\s*				
-		<p\s+class="dta-p">t8<span\s+class="gap">\[1[ ]Zeichen[ ]fehlt\]</span>t8</p>\s*
-		<p\s+class="dta-p">t9<span\s+class="gap">\[fremdsprachliches[ ]Material\]</span>t9</p>\s*
-		<p\s+class="dta-p">t10<span\s+class="gap">\[Wort[ ]fehlt\]</span>t10</p>\s*
-	</div>}x);	
+		<p\s+class="dta-p">t1<span\s+class="gap">\[verlorenes[ ]Material[ ]&#x2013;[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*<p\s+class="dta-p">t2<span\s+class="gap">\[irrelevantes[ ]fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Seiten[ ]fehlen\]</span>t2</p>\s*<p\s+class="dta-p">t3<span\s+class="gap">\[verlorenes[ ]irrelevantes[ ]unleserliches[ ]Material[ ]&#x2013;[ ]1[ ]Zeile[ ]fehlt\]</span>t3</p>\s*<p\s+class="dta-p">t4<span\s+class="gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Zeilen[ ]fehlen\]</span>t4</p>\s*<p\s+class="dta-p">t5<span\s+class="gap">\[unleserliches[ ]Material[ ]&#x2013;[ ]1[ ]Wort[ ]fehlt\]</span>t5</p>\s*<p\s+class="dta-p">t6<span\s+class="gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Wörter[ ]fehlen\]</span>t6</p>\s*<p\s+class="dta-p">t7<span\s+class="gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]1[ ]Zeichen[ ]fehlt\]</span>t7</p>\s*<p\s+class="dta-p">t8<span\s+class="gap">\[1[ ]Zeichen[ ]fehlt\]</span>t8</p>\s*<p\s+class="dta-p">t9<span\s+class="gap">\[fremdsprachliches[ ]Material\]</span>t9</p>\s*<p\s+class="dta-p">t10<span\s+class="gap">\[Wort[ ]fehlt\]</span>t10</p>\s*</div>}x);	
 like( process($xsl, 't/xml/gap_dummy.xml'), qr{	
 	<div>\s*
-		<p\s+class="dta-p">t1<span\s+class="gap">\[verlorenes[ ]Material[ ]&#x2013;[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*
-	</div>}x);	
+		<p\s+class="dta-p">t1<span\s+class="gap">\[verlorenes[ ]Material[ ]&#x2013;[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*</div>}x);	
