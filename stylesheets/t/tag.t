@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 27;
+use Test::More tests => 28;
 
 use DTAStyleSheets qw( process );
 
@@ -215,6 +215,12 @@ like( process($xsl, 't/xml/gap_simple.xml'), qr{
 	<div>\s*
 		<p\s+class="dta-p">t1<span\s+class="gap">\[verlorenes[ ]Material[ ]&#x2013;[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*</div>}x);	
 
+# <item>
+like( process($xsl, 't/xml/item_simple_p_pb.xml'), qr{		
+	<div\s+class="dta-list-item">i1</div><br/>\s*
+	<p\s+class="dta-p"><span\s+class="dta-list-item">i2</span></p><br/>\s*
+	<div\s+class="dta-list-item-noindent">i3ai3b</div><br/>}x);		
+		
 # <list>
 like( process($xsl, 't/xml/list_simple.xml'), qr{	
 	<div\s+class="dta-list">\s*
@@ -252,3 +258,4 @@ like( process($xsl, 't/xml/list_leftrightbraced.xml'), qr{
 			gemeinsamer[ ]Textbaustein[ ]hinten\s*
 		</div>\s*
 	</div>}x);
+
