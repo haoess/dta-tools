@@ -884,6 +884,7 @@
 
   <xsl:template match="tei:list">
     <xsl:choose>
+      <!-- old -->
       <xsl:when test='@rend="braced"'>
         <table class="list">
           <xsl:choose>
@@ -927,21 +928,23 @@
           </xsl:choose>
         </table>
       </xsl:when>
-      <xsl:when test='@rendition="#leftBraced"'>
-        <span class="braced-base braced-left">
-          <xsl:apply-templates/>
-        </span>
-      </xsl:when>
-      <xsl:when test='@rendition="#rightBraced"'>
-        <span class="braced-base braced-right">
-          <xsl:apply-templates/>
-        </span>
-      </xsl:when>
-      <xsl:when test='@rendition="#leftBraced #rightBraced"'>
+      <!-- end of old -->
+      <xsl:when test='contains(@rendition, "#leftBraced") and contains(@rendition, "#rightBraced")'>
         <span class="braced-base braced-left-right">
           <xsl:apply-templates/>
         </span>
       </xsl:when>
+      <xsl:when test='contains(@rendition,"#leftBraced")'>
+        <span class="braced-base braced-left">
+          <xsl:apply-templates/>
+        </span>
+      </xsl:when>
+      <xsl:when test='contains(@rendition,"#rightBraced")'>
+        <span class="braced-base braced-right">
+          <xsl:apply-templates/>
+        </span>
+      </xsl:when>
+     
       <xsl:otherwise>
         <div class="dta-list">
           <xsl:apply-templates/>

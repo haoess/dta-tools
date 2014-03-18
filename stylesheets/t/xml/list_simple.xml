@@ -1,0 +1,10 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<list>
+				<item>t1a<lb/>t1b</item>
+				<item>t2</item>
+			</list>
+		</body>
+	</text>
+</TEI>

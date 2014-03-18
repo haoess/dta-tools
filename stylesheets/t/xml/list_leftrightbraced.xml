@@ -1,0 +1,16 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<list>
+				<item>gemeinsamer Textbaustein vorn
+					<list rendition="#leftBraced #rightBraced">
+						<item>Element 1 der geklammerten Liste</item><lb/>
+						<item>Element 2 der geklammerten Liste</item><lb/>
+						<item>Element n der geklammerten Liste</item><lb/>
+					</list>
+					gemeinsamer Textbaustein hinten
+				</item>
+			</list>
+		</body>
+	</text>
+</TEI>

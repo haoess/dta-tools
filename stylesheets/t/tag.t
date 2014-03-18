@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 23;
+use Test::More tests => 27;
 
 use DTAStyleSheets qw( process );
 
@@ -214,3 +214,41 @@ like( process($xsl, 't/xml/gap.xml'), qr{
 like( process($xsl, 't/xml/gap_simple.xml'), qr{	
 	<div>\s*
 		<p\s+class="dta-p">t1<span\s+class="gap">\[verlorenes[ ]Material[ ]&#x2013;[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*</div>}x);	
+
+# <list>
+like( process($xsl, 't/xml/list_simple.xml'), qr{	
+	<div\s+class="dta-list">\s*
+		<div\s+class="dta-list-item">t1a<br/>t1b</div>\s*
+		<div\s+class="dta-list-item">t2</div>\s*
+	</div>}x);
+like( process($xsl, 't/xml/list_leftbraced.xml'), qr{	
+	<div\s+class="dta-list">\s*
+		<div\s+class="dta-list-item">gemeinsamer[ ]Textbaustein[ ]vorn\s*
+			<span\s+class="braced-base braced-left">\s*
+				<div\s+class="dta-list-item">Element[ ]1[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
+				<div\s+class="dta-list-item">Element[ ]2[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
+				<div\s+class="dta-list-item">Element[ ]n[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
+			</span>\s*
+		</div>\s*
+	</div>}x);
+like( process($xsl, 't/xml/list_rightbraced.xml'), qr{	
+	<div\s+class="dta-list">\s*
+		<div\s+class="dta-list-item">\s*
+			<span\s+class="braced-base braced-right">\s*
+				<div\s+class="dta-list-item">Element[ ]1[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
+				<div\s+class="dta-list-item">Element[ ]2[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
+				<div\s+class="dta-list-item">Element[ ]n[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
+			</span>\s*
+			gemeinsamer[ ]Textbaustein[ ]hinten</div><br/>\s*
+	</div>}x);
+like( process($xsl, 't/xml/list_leftrightbraced.xml'), qr{	
+	<div\s+class="dta-list">\s*
+		<div\s+class="dta-list-item">gemeinsamer[ ]Textbaustein[ ]vorn\s*
+			<span\s+class="braced-base braced-left-right">\s*
+				<div\s+class="dta-list-item">Element[ ]1[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
+				<div\s+class="dta-list-item">Element[ ]2[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
+				<div\s+class="dta-list-item">Element[ ]n[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
+			</span>\s*
+			gemeinsamer[ ]Textbaustein[ ]hinten\s*
+		</div>\s*
+	</div>}x);
