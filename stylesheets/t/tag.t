@@ -224,7 +224,7 @@ like( process($xsl, 't/xml/list_simple.xml'), qr{
 like( process($xsl, 't/xml/list_leftbraced.xml'), qr{	
 	<div\s+class="dta-list">\s*
 		<div\s+class="dta-list-item">gemeinsamer[ ]Textbaustein[ ]vorn\s*
-			<span\s+class="braced-base braced-left">\s*
+			<span\s+class="braced-base[ ]braced-left">\s*
 				<div\s+class="dta-list-item">Element[ ]1[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
 				<div\s+class="dta-list-item">Element[ ]2[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
 				<div\s+class="dta-list-item">Element[ ]n[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
@@ -234,17 +234,17 @@ like( process($xsl, 't/xml/list_leftbraced.xml'), qr{
 like( process($xsl, 't/xml/list_rightbraced.xml'), qr{	
 	<div\s+class="dta-list">\s*
 		<div\s+class="dta-list-item">\s*
-			<span\s+class="braced-base braced-right">\s*
+			<span\s+class="braced-base[ ]braced-right">\s*
 				<div\s+class="dta-list-item">Element[ ]1[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
 				<div\s+class="dta-list-item">Element[ ]2[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
-				<div\s+class="dta-list-item">Element[ ]n[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
+				<div\s+class="dta-list-item">Element[ ]n[ ]der[ ]geklammerten[ ]Liste</div>\s*
 			</span>\s*
 			gemeinsamer[ ]Textbaustein[ ]hinten</div><br/>\s*
 	</div>}x);
 like( process($xsl, 't/xml/list_leftrightbraced.xml'), qr{	
 	<div\s+class="dta-list">\s*
 		<div\s+class="dta-list-item">gemeinsamer[ ]Textbaustein[ ]vorn\s*
-			<span\s+class="braced-base braced-left-right">\s*
+			<span\s+class="braced-base[ ]braced-left-right">\s*
 				<div\s+class="dta-list-item">Element[ ]1[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
 				<div\s+class="dta-list-item">Element[ ]2[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
 				<div\s+class="dta-list-item">Element[ ]n[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
