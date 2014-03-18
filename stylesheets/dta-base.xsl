@@ -16,19 +16,19 @@
     <xsl:apply-templates/>
     <xsl:if test='//tei:note[@place="foot"]'>
       <div class="footnotesep"/>
-      <xsl:apply-templates select='//tei:note[@place="foot"]' mode="footnotes"/>
+      <xsl:apply-templates select='//tei:note[@place="foot" and text()]' mode="footnotes"/>
     </xsl:if>
-    <xsl:apply-templates select='//tei:fw[@place="bottom"]' mode="signatures"/>
+    <xsl:apply-templates select='//tei:fw[@place="bottom" and text()]' mode="signatures"/>
   </xsl:template>
 
 
-  <!-- TODO: implement class=dta-back -->
+  <!-- TODO: implement class=dta-back 
   <xsl:template match="tei:back">
     <xsl:element name="div">
       <xsl:attribute name="class">dta-back</xsl:attribute>
       <xsl:apply-templates/>
     </xsl:element>
-  </xsl:template>
+  </xsl:template>-->
 
   <!-- <xsl:template match="tei:body"/>  -->
 
@@ -310,8 +310,10 @@
 
   <xsl:template match='tei:note[@place="foot"]' mode="footnotes">
     <div class="footnote">
-      <xsl:choose>
-        <xsl:when test="string-length(@prev)!=0 or string-length(@sameAs)!=0"/>
+      <xsl:variable name="prev" select="@prev"/>
+      <xsl:choose>       
+        <!-- if previous is not empty or sameAs is set: -->
+        <xsl:when test="(string-length(@prev)!=0 and //*[@xml:id=$prev][1]/text()) or string-length(@sameAs)!=0"/>
         <xsl:otherwise>
           <span class="fn-sign">
             <xsl:value-of select="@n"/>
