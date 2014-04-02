@@ -1,0 +1,11 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <text>
+        <front>
+            <titlePage>
+                <docImprint>
+                    <pubPlace>place</pubPlace> 
+                </docImprint>
+            </titlePage>
+        </front>
+    </text>
+</TEI>
