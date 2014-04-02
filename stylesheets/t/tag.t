@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 50;
+use Test::More tests => 51;
 
 use DTAStyleSheets qw( process );
 
@@ -335,3 +335,6 @@ like( process($xsl, 't/xml/role.xml'), qr{content});
 
 # <roleDesc>
 like( process($xsl, 't/xml/roledesc.xml'), qr{content});
+
+# <cit>
+like( process($xsl, 't/xml/cit.xml'), qr{<span data-id="id" data-prev="prev-id" data-next="next-id" class="dta-cit">content</span>});

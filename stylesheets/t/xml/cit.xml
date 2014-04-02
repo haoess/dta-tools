@@ -1,0 +1,7 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <text>
+        <body>
+            <cit xml:id="id" prev="prev-id" next="next-id">content</cit> 
+        </body> 
+    </text>
+</TEI>
