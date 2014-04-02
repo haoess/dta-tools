@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 45;
+use Test::More tests => 48;
 
 use DTAStyleSheets qw( process );
 
@@ -321,4 +321,11 @@ like( process($xsl, 't/xml/opener.xml'), qr{<span class="">content</span>});
 # <salute>
 like( process($xsl, 't/xml/salute.xml'), qr{<div class="dta-salute">content</div>});
 
+# <closer>
+like( process($xsl, 't/xml/closer.xml'), qr{<div class="dta-closer">content</div>}); 
 
+# <signed>
+like( process($xsl, 't/xml/signed.xml'), qr{content});
+
+# <postscript>
+like( process($xsl, 't/xml/postscript.xml'), qr{content});
