@@ -1,0 +1,9 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <text>
+        <front>
+            <titlePage>
+                <docEdition>edition</docEdition>    
+            </titlePage>
+        </front>
+    </text>
+</TEI>
