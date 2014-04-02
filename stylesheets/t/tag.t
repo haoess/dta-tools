@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 52;
+use Test::More tests => 53;
 
 use DTAStyleSheets qw( process );
 
@@ -341,3 +341,6 @@ like( process($xsl, 't/xml/cit.xml'), qr{<span data-id="id" data-prev="prev-id" 
 
 # <bibl>
 like( process($xsl, 't/xml/bibl.xml'), qr{<span class="dta-bibl">content</span>}); 
+
+# <epigraph>
+like( process($xsl, 't/xml/epigraph.xml'), qr{<blockquote class="quote">content</blockquote>});
