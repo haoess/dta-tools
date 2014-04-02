@@ -332,8 +332,10 @@
 
   <xsl:template match='tei:note[@place="end"]'>
     <xsl:choose>
+      <!-- occurance at the end (content of the endnote) -->
       <xsl:when test="string-length(.) &gt; 0">
         <xsl:choose>
+          <!-- doesn't contain pagebreak -->
           <xsl:when test="local-name(*[1])!='pb'">
             <div class="endnote endnote-indent">
               <span class="fn-sign">
@@ -343,6 +345,7 @@
               <xsl:apply-templates/>
             </div>
           </xsl:when>
+          <!-- contains pagebreak -->
           <xsl:otherwise>
             <div class="endnote">
               <xsl:apply-templates/>
@@ -350,6 +353,7 @@
           </xsl:otherwise>
         </xsl:choose>
       </xsl:when>
+      <!-- occurence in text (link to the endnote) -->
       <xsl:otherwise>
         <span class="fn-sign">
           <xsl:value-of select="@n"/>
@@ -422,10 +426,7 @@
   <xsl:template match="tei:titlePart">
     <xsl:element name="div">
       <xsl:attribute name="class">titlepart titlepart-<xsl:value-of select="@type"/></xsl:attribute>
-      <!--    <xsl:element name="div">
-      <xsl:call-template name="applyRendition"/>-->
       <xsl:apply-templates/>
-      <!--    </xsl:element>-->
     </xsl:element>
   </xsl:template>
 
@@ -845,7 +846,7 @@
   <!-- end renditions -->
 
   <xsl:template match="tei:cit">
-    <span class="dta-cit">
+    <span>
       <xsl:if test="@xml:id">
         <xsl:attribute name="data-id">
           <xsl:value-of select="@xml:id"/>
@@ -861,7 +862,9 @@
           <xsl:value-of select="@next"/>
         </xsl:attribute>
       </xsl:if>
-      <xsl:call-template name="applyRendition"/>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-cit'"/>
+      </xsl:call-template>
       <xsl:apply-templates/>
     </span>
   </xsl:template>
