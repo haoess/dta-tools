@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 29;
+use Test::More tests => 30;
 
 use DTAStyleSheets qw( process );
 
@@ -260,14 +260,16 @@ like( process($xsl, 't/xml/list_leftrightbraced.xml'), qr{
 	</div>}x);
 	
 # <note>
+# footnote
 like( process($xsl, 't/xml/note_foot.xml'), qr{	
-		<p\s+class="dta-p">text1<span class="fn-intext">(a)</span> text2</p>\s*
-			<p\s+class="dta-p">text3<span\s+class="fn-intext">(b)</span>[ ]text4</p>\s*
-			<p\s+class="dta-p">text5<span\s+class="fn-intext">(c)</span>[ ]text6</p>\s*
-	<div\s+class="footnotesep"/>\s*
-		<div\s+class="footnote"><span\s+class="fn-sign">(a)</span>[ ]footnotea</div>\s*
-		<div\s+class="footnote"><span\s+class="fn-sign">(b)</span>[ ]footnoteb</div>\s*
-		<div\s+class="footnote">[ ]footnotebCont</div>\s*
-		<div\s+class="footnote"><span\s+class="fn-sign">(c)</span>[ ]footnotecCont</div>}x);
-
-
+	<p\s+class="dta-p">text1<span\s+class="fn-intext">\(a\)</span>[ ]text2</p>\s*
+		<p\s+class="dta-p">text3<span\s+class="fn-intext">\(b\)</span>[ ]text4</p>\s*
+		<p\s+class="dta-p">text5<span\s+class="fn-intext">\(c\)</span>[ ]text6</p>\s*	
+	<div\s+class="footnotesep"/><div\s+class="footnote"><span\s+class="fn-sign">\(a\)</span>[ ]footnotea</div><div\s+class="footnote"><span\s+class="fn-sign">\(b\)</span>[ ]footnoteb</div><div\s+class="footnote">[ ]footnotebCont</div><div\s+class="footnote"><span\s+class="fn-sign">\(c\)</span>[ ]footnotec</div>}x);
+	
+# endnote
+like( process($xsl, 't/xml/note_end.xml'), qr{	
+	<p\s+class="dta-p">text1<span\s+class="fn-sign">\(a\)</span>text2</p>\s*
+	<p\s+class="dta-p">text3<span\s+class="fn-sign">\(b\)</span>text4</p>\s*
+	<div\s+class="endnote\s+endnote-indent"><span\s+class="fn-sign">\(a\)</span>[ ]endnotea</div>\s*
+	<div\s+class="endnote">endnotebendnotebCont</div>}x);		

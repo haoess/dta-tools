@@ -3,7 +3,7 @@
 		<body>
 			<p>text1<note place="foot" n="(a)" xml:id="fa1">footnotea</note>text2</p>
 			<p>text3<note place="foot" n="(b)" xml:id="fb1" next="fb2">footnoteb</note>text4</p>
-			<p>text5<note place="foot" n="(c)" xml:id="fb1" next="fb2"/>text6</p>
+			<p>text5<note place="foot" n="(c)" xml:id="fc1" next="fc2"/>text6</p>
 			<pb n="1" facs="#f0001"/>
 			<note place="foot" n="(b)" xml:id="fb2" prev="fb1">footnotebCont</note>
 			<note place="foot" n="(c)" xml:id="fc2" prev="fc1">footnotec</note>
