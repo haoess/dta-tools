@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 31;
+use Test::More tests => 32;
 
 use DTAStyleSheets qw( process );
 
@@ -278,3 +278,6 @@ like( process($xsl, 't/xml/note_end.xml'), qr{
 like( process($xsl, 't/xml/note_marginals.xml'), qr{	
 	<p\s+class="dta-p">text1<span\s+class="dta-marginal[ ]dta-marginal-left">marginalLeft</span>text2</p>\s*
 	<p\s+class="dta-p">text3<span\s+class="dta-marginal[ ]dta-marginal-right">marginalRight</span>text4</p>}x);		
+
+# <supplied>	
+like( process($xsl, 't/xml/supplied.xml'), qr{<p class="dta-p">te<span class="dta-supplied">\[x\]</span>t</p>});
