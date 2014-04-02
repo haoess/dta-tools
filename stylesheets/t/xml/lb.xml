@@ -1,0 +1,7 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <text>
+        <body>
+            <p>text1<lb/>text2</p>
+        </body> 
+    </text>
+</TEI>
