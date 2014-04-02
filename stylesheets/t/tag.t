@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 42;
+use Test::More tests => 45;
 
 use DTAStyleSheets qw( process );
 
@@ -311,4 +311,14 @@ like( process($xsl, 't/xml/publisher.xml'), qr{<div class="titlepage">\s*<span c
 
 # <pubPlace>
 like( process($xsl, 't/xml/pubplace.xml'), qr{<div class="titlepage">\s*place\s*</div>});
+
+# <dateline>
+like( process($xsl, 't/xml/dateline.xml'), qr{<span class="dta-dateline">content</span>});
+
+# <opener>
+like( process($xsl, 't/xml/opener.xml'), qr{<span class="">content</span>});
+
+# <salute>
+like( process($xsl, 't/xml/salute.xml'), qr{<div class="dta-salute">content</div>});
+
 
