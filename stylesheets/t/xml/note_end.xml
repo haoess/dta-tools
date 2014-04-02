@@ -1,0 +1,10 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<p>text1<note place="end" n="a" xml:id="ea1"/>text2</p>
+			<p>text3<note place="end" n="b" xml:id="eb1"/>text4</p>			
+			<note place="end" n="a" xml:id="ea">endnotea</note>
+			<note place="end" n="b" xml:id="eb">endnoteb<pb n="1" facs="#f0001"/>endnotebCont</note>
+		</body>
+	</text>
+</TEI>
