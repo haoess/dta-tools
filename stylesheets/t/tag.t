@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 55;
+use Test::More tests => 58;
 
 use DTAStyleSheets qw( process );
 
@@ -350,3 +350,11 @@ like( process($xsl, 't/xml/argument.xml'), qr{<div class="dta-argument">content<
 
 # <byline>
 like( process($xsl, 't/xml/byline.xml'), qr{<div class="byline">content</div>}); 
+
+# <milestone>
+# rendition="#hr"
+like( process($xsl, 't/xml/milestone_hr.xml'), qr{<hr/>});
+# rendition="#hrRed"
+like( process($xsl, 't/xml/milestone_hrred.xml'), qr{<hr class="red"/>});
+# rendition="#hrBlue"
+like( process($xsl, 't/xml/milestone_hrblue.xml'), qr{<hr class="blue"/>});
