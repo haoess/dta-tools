@@ -1039,15 +1039,19 @@
   </xsl:template>
 
   <xsl:template match="tei:opener">
-    <span class="dta-opener">
-      <xsl:call-template name="applyRendition"/>
+    <span>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-opener'"/>
+      </xsl:call-template>
       <xsl:apply-templates/>
     </span>
   </xsl:template>
 
   <xsl:template match="tei:trailer">
-    <span class="dta-trailer">
-      <xsl:call-template name="applyRendition"/>
+    <span>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-trailer'"/>
+      </xsl:call-template>
       <xsl:apply-templates/>
     </span>
   </xsl:template>
@@ -1072,8 +1076,10 @@
 
   <!-- Publikationstyp auflösen?? -->
   <xsl:template match="tei:bibl">
-    <span class="dta-bibl">
-      <xsl:call-template name="applyRendition"/>
+    <span>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-bibl'"/>
+      </xsl:call-template>
       <xsl:apply-templates/>
     </span>
   </xsl:template>
