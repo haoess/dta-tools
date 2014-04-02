@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 54;
+use Test::More tests => 55;
 
 use DTAStyleSheets qw( process );
 
@@ -347,3 +347,6 @@ like( process($xsl, 't/xml/epigraph.xml'), qr{<blockquote class="quote">content<
 
 # <argument>
 like( process($xsl, 't/xml/argument.xml'), qr{<div class="dta-argument">content</div>}); 
+
+# <byline>
+like( process($xsl, 't/xml/byline.xml'), qr{<div class="byline">content</div>}); 
