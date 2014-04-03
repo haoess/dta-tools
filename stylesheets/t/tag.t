@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 65;
+use Test::More tests => 66;
 
 use DTAStyleSheets qw( process );
 
@@ -379,3 +379,7 @@ like( process($xsl, 't/xml/floatingtext.xml'), qr{<div class="dta-floatingtext">
 
 # <quote>
 like( process($xsl, 't/xml/quote.xml'), qr{<q class="quote">content</q>});
+
+# <hi> 
+# not(@rend)
+like( process($xsl, 't/xml/hi.xml'), qr{<p class="dta-p"><span class="aq b blue">content</span></p>});
