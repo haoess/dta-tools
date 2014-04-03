@@ -835,14 +835,13 @@
       <xsl:if test="@rendition">
         <xsl:call-template name="applyRendition"/>
       </xsl:if>
+      <!-- TODO: depricated? overwrites @rendition classes -->
       <xsl:if test="@rend">
         <xsl:attribute name="class">dta-rend</xsl:attribute>
       </xsl:if>
       <xsl:apply-templates/>
     </xsl:element>
-  </xsl:template>
-
-  
+  </xsl:template>  
   <!-- end renditions -->
 
   <xsl:template match="tei:cit">
