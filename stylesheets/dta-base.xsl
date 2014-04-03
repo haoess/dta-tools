@@ -18,19 +18,10 @@
       <div class="footnotesep"/>
       <xsl:apply-templates select='//tei:note[@place="foot" and text()]' mode="footnotes"/>
     </xsl:if>
-    <xsl:apply-templates select='//tei:fw[@place="bottom" and text()]' mode="signatures"/>
+    <!-- TODO: or node() added. correct? (otherweise <fw><hi rendition="#b">text</hi></fw> will be empty) -->
+    <xsl:apply-templates select='//tei:fw[@place="bottom" and (text() or node())]' mode="signatures"/>
   </xsl:template>
 
-
-  <!-- TODO: implement class=dta-back 
-  <xsl:template match="tei:back">
-    <xsl:element name="div">
-      <xsl:attribute name="class">dta-back</xsl:attribute>
-      <xsl:apply-templates/>
-    </xsl:element>
-  </xsl:template>-->
-
-  <!-- <xsl:template match="tei:body"/>  -->
 
   <xsl:template match="tei:cb">
     <span class="dta-cb">
@@ -124,29 +115,30 @@
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match='tei:fw[@place="top"]'>
-    <div>
-      <xsl:attribute name="class">fw-top fw-<xsl:value-of select="@type"/></xsl:attribute>
-      <xsl:apply-templates/>
-    </div>
+  <!-- TODO: check this -->
+  <xsl:template match='tei:fw'>
+    <xsl:choose>
+      <xsl:when test="@place='top'">
+        <div>
+          <xsl:attribute name="class">fw-top fw-<xsl:value-of select="@type"/></xsl:attribute>
+          <xsl:apply-templates/>
+        </div>
+      </xsl:when>
+      <xsl:when test="@place='bottom'"/>
+      <xsl:when test="@type='pageNum'"/>
+    </xsl:choose>    
   </xsl:template>
 
   <xsl:template match='tei:fw[@place="bottom"]' mode="signatures">
-    <xsl:if test="not(@type='page number')">
+    <xsl:if test="@type='sig' or @type='catch'">
       <xsl:element name="div">
         <xsl:attribute name="class">
-          <xsl:choose>
-            <xsl:when test='@type="sig"'> fw-bottom-sig </xsl:when>
-            <xsl:when test='@type="catch"'> fw-bottom-catch </xsl:when>
-          </xsl:choose>
-        </xsl:attribute>
+          <xsl:text>fw-bottom-</xsl:text><xsl:value-of select="@type"/></xsl:attribute>
         <xsl:apply-templates/>
       </xsl:element>
     </xsl:if>
   </xsl:template>
-  <xsl:template match='tei:fw[@place="bottom"]'/>
 
-  <xsl:template match='tei:fw[@type="page number"]'/>
 
   <xsl:template match="tei:milestone">
     <xsl:if
