@@ -1,0 +1,7 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <text>
+        <body>
+            <p><hi rendition="#aq #b #blue">content</hi></p>
+        </body> 
+    </text>
+</TEI>
