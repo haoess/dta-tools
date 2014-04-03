@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 66;
+use Test::More tests => 70;
 
 use DTAStyleSheets qw( process );
 
@@ -383,3 +383,14 @@ like( process($xsl, 't/xml/quote.xml'), qr{<q class="quote">content</q>});
 # <hi> 
 # not(@rend)
 like( process($xsl, 't/xml/hi.xml'), qr{<p class="dta-p"><span class="aq b blue">content</span></p>});
+
+
+# <fw>
+# @place="top" (@type="header")
+like( process($xsl, 't/xml/fw_top.xml'), qr{<p class="dta-p"><div class="fw-top fw-header">content</div></p>});
+# @place="bottom" and @type="sig"
+like( process($xsl, 't/xml/fw_bottom_sig.xml'), qr{<p class="dta-p"/>\s*<div class="fw-bottom-sig">content</div>});
+# @place="bottom" and @type="catch"
+like( process($xsl, 't/xml/fw_bottom_catch.xml'), qr{<p class="dta-p"/>\s*<div class="fw-bottom-catch">content</div>});
+# @place="bottom" and @type="pageNum"
+like( process($xsl, 't/xml/fw_bottom_pagenum.xml'), qr{<p class="dta-p"/>});
