@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 70;
+use Test::More tests => 72;
 
 use DTAStyleSheets qw( process );
 
@@ -21,7 +21,9 @@ like( process($xsl, 't/xml/cb.xml'), qr{
 
 # <div>
 like( process($xsl, 't/xml/div_simple.xml'), qr{<div>\s*<p class="dta-p">Das ist ein Absatz.</p>\s*</div>} );
-
+like( process($xsl, 't/xml/div_advertisement.xml'), qr{<div><div class="dta-anzeige">\s*<p class="dta-p">Anzeige</p>\s*</div></div>});
+like( process($xsl, 't/xml/div_otherType.xml'), qr{<div class="edition">\s*<p class="dta-p">Anzeige</p>\s*</div>});
+	  
 # <formula>
 like( process($xsl, 't/xml/formula.xml'), qr{<span class="ph formula-1" onclick="editFormula\(1\)" style="cursor:pointer"> \[Formel 1\] </span>} );
 like( process($xsl, 't/xml/formula_tex.xml'), qr{<span class="formula"><img.*?\s+src="http://.*?/%5Cfrac%7B1%7D%7B2%7D"/></span>} );
