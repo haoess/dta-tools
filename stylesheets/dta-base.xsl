@@ -23,423 +23,24 @@
   </xsl:template>
 
 
-  <xsl:template match="tei:cb">
-    <span class="dta-cb">
-      <xsl:choose>
-        <xsl:when test="@type='start'">[Beginn Spaltensatz]</xsl:when>
-        <xsl:when test="@type='end'">[Ende Spaltensatz]</xsl:when>
-        <xsl:otherwise>[Spaltenumbruch]</xsl:otherwise>
-      </xsl:choose>
-    </span>
-  </xsl:template>
-
-  <!-- column breaks, EXPERIMENTAL -->
-  <!--
-<img src="static/images/cb.png" alt="Spaltenumbruch" title="Spaltenumbruch" /></xsl:template>
-<xsl:template match='tei:cb'>
-  <xsl:if test='.. = (//tei:cb)[1]/.. and .. = (//tei:cb)[last()]/..'>
-    <xsl:choose>
-      <xsl:when test='count( (//tei:cb)[1] | . ) = 1'>
-        <xsl:text disable-output-escaping="yes">
-          &lt;table class="dta-columntext"&gt;
-            &lt;tr&gt;
-              &lt;td&gt;
-        </xsl:text>
-      </xsl:when>
-      <xsl:when test='@type="end"'>
-        <xsl:text disable-output-escaping="yes">
-              &lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/table&gt;
-        </xsl:text>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:text disable-output-escaping="yes">
-          &lt;/td&gt;
-          &lt;td style="border-left:1px solid #666"&gt;
-        </xsl:text>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:if>
-</xsl:template>
-
-<xsl:template name="close-cb">
-  <xsl:if test='tei:cb and (not(tei:cb[last()][@type]) or tei:cb[last()][@type!="end"]) and (//tei:cb)[1]/.. = (//tei:cb)[last()]/..'>
-    <xsl:text disable-output-escaping="yes">
-          &lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/table&gt;
-    </xsl:text>
-  </xsl:if>
-</xsl:template>
--->
-  <!-- end column breaks -->
-
-  <xsl:template match="tei:choice">
-    <xsl:choose>
-      <xsl:when test="./tei:reg">
-        <xsl:element name="span">
-          <xsl:attribute name="title">Original: <xsl:value-of select="tei:orig"/></xsl:attribute>
-          <xsl:attribute name="class">dta-reg</xsl:attribute>
-          <xsl:apply-templates select="tei:reg"/>
-        </xsl:element>
-      </xsl:when>
-      <xsl:when test="./tei:abbr">
-        <xsl:element name="span">
-          <xsl:attribute name="title">
-            <xsl:value-of select="tei:expan"/>
-          </xsl:attribute>
-          <xsl:attribute name="class">dta-abbr</xsl:attribute>
-          <xsl:apply-templates select="tei:abbr"/>
-        </xsl:element>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:element name="span">
-          <xsl:attribute name="title">Schreibfehler: <xsl:value-of select="tei:sic"
-            /></xsl:attribute>
-          <xsl:attribute name="class">dta-corr</xsl:attribute>
-          <xsl:apply-templates select="tei:corr"/>
-        </xsl:element>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match="tei:corr">
-    <xsl:choose>
-      <xsl:when test="not(string(.))">
-        <xsl:text>[&#8230;]</xsl:text>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:apply-templates/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <!-- TODO: check this -->
-  <xsl:template match='tei:fw'>
-    <xsl:choose>
-      <xsl:when test="@place='top'">
-        <div>
-          <xsl:attribute name="class">fw-top fw-<xsl:value-of select="@type"/></xsl:attribute>
-          <xsl:apply-templates/>
-        </div>
-      </xsl:when>
-      <xsl:when test="@place='bottom'"/>
-      <xsl:when test="@type='pageNum'"/>
-    </xsl:choose>    
-  </xsl:template>
-
-  <xsl:template match='tei:fw[@place="bottom"]' mode="signatures">
-    <xsl:if test="@type='sig' or @type='catch'">
-      <xsl:element name="div">
-        <xsl:attribute name="class">
-          <xsl:text>fw-bottom-</xsl:text><xsl:value-of select="@type"/></xsl:attribute>
-        <xsl:apply-templates/>
-      </xsl:element>
-    </xsl:if>
-  </xsl:template>
-
-
-  <xsl:template match="tei:milestone">
-    <xsl:if
-      test="contains(@rendition, '#hrRed') or contains(@rendition, '#hrBlue') or contains(@rendition, '#hr')">
-      <xsl:element name="hr">
-        <xsl:choose>
-          <xsl:when test="contains(@rendition, '#red') or contains(@rendition, '#hrRed')">
-            <xsl:attribute name="class">red</xsl:attribute>
-          </xsl:when>
-          <xsl:when test="contains(@rendition, '#blue') or contains(@rendition, '#hrBlue')">
-            <xsl:attribute name="class">blue</xsl:attribute>
-          </xsl:when>
-        </xsl:choose>
-      </xsl:element>
-    </xsl:if>
-  </xsl:template>
-
-  <!-- place holders -->
-  <xsl:template match="tei:formula">
-    <xsl:choose>
-      <xsl:when test="@notation='TeX'">
-        <xsl:element name="span">
-          <xsl:attribute name="class">formula</xsl:attribute>
-          <xsl:if test="@rendition='#c'">
-            <xsl:attribute name="style">display:block; text-align:center</xsl:attribute>
-          </xsl:if>
-          <xsl:element name="img">
-            <xsl:attribute name="style">vertical-align:middle; -moz-transform:scale(0.7);
-              -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
-            <!--          <xsl:choose>
-            <xsl:when test="@rendition">
-              <xsl:call-template name="applyRendition"/>
-              <xsl:attribute name="src">
-                <xsl:text>http://dinglr.de/formula/</xsl:text><xsl:value-of select="dta:urlencode(.)"/>
-              </xsl:attribute>
-            </xsl:when>
-            <xsl:otherwise>-->
-            <xsl:attribute name="src">
-              <xsl:text>http://dinglr.de/formula/</xsl:text>
-              <xsl:call-template name="url-encode">
-                <xsl:with-param name="str" select="string(.)"/>
-              </xsl:call-template>
-              <!-- <xsl:value-of select="custom:uriencode(string(.))"/>   -->
-            </xsl:attribute>
-            <!--            </xsl:otherwise>
-          </xsl:choose>-->
-          </xsl:element>
-        </xsl:element>
-      </xsl:when>
-      <xsl:when test="string-length(.) &gt; 0">
-        <xsl:apply-templates/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:element name="span">
-          <xsl:attribute name="class">ph formula-<xsl:value-of
-              select="count(preceding::tei:formula)+1"/></xsl:attribute>
-          <xsl:attribute name="onclick">editFormula(<xsl:value-of
-              select="count(preceding::tei:formula)+1"/>)</xsl:attribute>
-          <xsl:attribute name="style">cursor:pointer</xsl:attribute> [Formel <xsl:value-of
-            select="count(preceding::tei:formula)+1"/>] </xsl:element>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match='tei:g[@ref="#frac"]'>
-    <xsl:variable name="enumerator" select="substring-before(., '/')"/>
-    <xsl:variable name="denominator" select="substring-after(., '/')"/>
-    <xsl:variable name="fraction" select="concat('\frac{', $enumerator, '}{', $denominator, '}')"/>
-    <xsl:element name="img">
-      <xsl:attribute name="style">vertical-align:middle; -moz-transform:scale(0.7);
-        -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
-      <xsl:attribute name="src">
-        <!--<xsl:text>http://dinglr.de/formula/</xsl:text><xsl:value-of select="dta:urlencode($fraction)"/>-->
-        <xsl:text>http://kaskade.dwds.de/dtaq/formula/preview/</xsl:text>
-        <xsl:call-template name="url-encode">
-          <xsl:with-param name="str" select="$fraction"/>
-        </xsl:call-template>
-        <!--
-        <xsl:value-of select="custom:uriencode(string($fraction))"/>
-         -->
-      </xsl:attribute>
-    </xsl:element>
-  </xsl:template>
-
-  <xsl:template match='tei:g[@ref="#fric"]'>
-    <xsl:variable name="enumerator" select="substring-before(., '/')"/>
-    <xsl:variable name="denominator" select="substring-after(., '/')"/>
-    <xsl:variable name="fraction"
-      select="concat('\nicefrac{', $enumerator, '}{', $denominator, '}')"/>
-    <xsl:element name="img">
-      <xsl:attribute name="style">vertical-align:middle; -moz-transform:scale(0.7);
-        -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
-      <xsl:attribute name="src">
-        <xsl:text>http://dinglr.de/formula/</xsl:text>
-        <xsl:call-template name="url-encode">
-          <xsl:with-param name="str" select="$fraction"/>
-        </xsl:call-template>
-        <!-- 
-        <xsl:value-of select="custom:uriencode(string($fraction))"/>
-         -->
-      </xsl:attribute>
-    </xsl:element>
-  </xsl:template>
-
-  <xsl:template match="tei:figure">
-    <xsl:choose>
-     <xsl:when
-        test="(local-name(preceding-sibling::*[1]) = 'lb' and not(normalize-space(preceding-sibling::*[1]/following-sibling::text()[1])) and local-name(following-sibling::*[1]) = 'lb' and not(normalize-space(following-sibling::*[1]/preceding-sibling::text()[1]))) or @rendition='#c'">
-        <xsl:call-template name="applyFigure"/>        
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:call-template name="applyFigure">
-          <xsl:with-param name="node">span</xsl:with-param>
-          <xsl:with-param name="class">ph dta-figure</xsl:with-param>
-        </xsl:call-template>   
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
+  <!-- begin DOCUMENT STUCTURE ELEMENTS -->
   
-  <xsl:template name="applyFigure">
-    <xsl:param name="node" select="'div'"/>
-    <xsl:param name="class" select="'phbl dta-figure'"/>
-    <xsl:element name="{$node}">
-      <xsl:attribute name="class"><xsl:value-of select="$class"/></xsl:attribute>
-      <xsl:attribute name="type"><xsl:value-of select="count(preceding::tei:figure)+1"
-      /></xsl:attribute>
-      <xsl:if test="@rendition='#c'">
-        <xsl:attribute name="style">text-align:center</xsl:attribute>
-      </xsl:if>
-      <xsl:if test="@facs">
-        <xsl:element name="img">
-          <xsl:attribute name="src"><xsl:value-of select="@facs"/></xsl:attribute>
-        </xsl:element><br/>
-      </xsl:if> [<xsl:choose>
-        <xsl:when test="@type='notatedMusic'">Musik</xsl:when>
-        <xsl:otherwise>Abbildung</xsl:otherwise>
-      </xsl:choose>
-      <xsl:if test="tei:figDesc"><xsl:text> </xsl:text><xsl:apply-templates select="tei:figDesc"
-        mode="figdesc"/></xsl:if>] <xsl:apply-templates/>
-    </xsl:element>
-  </xsl:template>
-
-  <xsl:template match="tei:figDesc"/>
-  <xsl:template match="tei:figDesc" mode="figdesc">
-    <xsl:apply-templates/>
-  </xsl:template>
-  <!-- end place holders -->
-
-  <!-- editorial notes -->
-  <xsl:template match='tei:note[@type="editorial"]'/>
-
-  <!-- footnotes -->
-  <xsl:template match='tei:note[@place="foot"]'>
-    <xsl:if test="string-length(@prev)=0">
-      <span class="fn-intext">
-        <xsl:value-of select="@n"/>
-      </span>
-      <xsl:text> </xsl:text>
-    </xsl:if>
-  </xsl:template>
-
-  <xsl:template match='tei:note[@place="foot"]' mode="footnotes">
-    <div class="footnote">
-      <xsl:variable name="prev" select="@prev"/>
-      <xsl:choose>       
-        <!-- if previous is not empty or sameAs is set: -->
-        <xsl:when test="(string-length(@prev)!=0 and //*[@xml:id=$prev][1]/text()) or string-length(@sameAs)!=0"/>
-        <xsl:otherwise>
-          <span class="fn-sign">
-            <xsl:value-of select="@n"/>
-          </span>
-        </xsl:otherwise>
-      </xsl:choose>
-      <!--<span class="fn-sign"><xsl:value-of select='@n'/></span>-->
-      <xsl:text> </xsl:text>
-      <xsl:apply-templates/>
-      <xsl:apply-templates select='tei:fw[@place="bottom"][@type="catch"]' mode="signatures"/>
-    </div>
-  </xsl:template>
-  <!-- end footnotes -->
-
-  <!-- end notes -->
-
-  <xsl:template match='tei:note[@place="end"]'>
-    <xsl:choose>
-      <!-- occurance at the end (content of the endnote) -->
-      <xsl:when test="string-length(.) &gt; 0">
-        <xsl:choose>
-          <!-- doesn't contain pagebreak -->
-          <xsl:when test="local-name(*[1])!='pb'">
-            <div class="endnote endnote-indent">
-              <span class="fn-sign">
-                <xsl:value-of select="@n"/>
-              </span>
-              <xsl:text> </xsl:text>
-              <xsl:apply-templates/>
-            </div>
-          </xsl:when>
-          <!-- contains pagebreak -->
-          <xsl:otherwise>
-            <div class="endnote">
-              <xsl:apply-templates/>
-            </div>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:when>
-      <!-- occurence in text (link to the endnote) -->
-      <xsl:otherwise>
-        <span class="fn-sign">
-          <xsl:value-of select="@n"/>
-        </span>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-  <!-- end end notes -->
-
-  <!-- marginals -->
-  <xsl:template match='tei:note[@place="right" and not(@type)]'>
-    <xsl:value-of select="@n"/>
-    <span class="dta-marginal dta-marginal-right">
-      <xsl:apply-templates/>
-    </span>
-  </xsl:template>
-
-  <xsl:template match='tei:note[@place="left" and not(@type)]'>
-    <xsl:value-of select="@n"/>
-    <span class="dta-marginal dta-marginal-left">
-      <xsl:apply-templates/>
-    </span>
-  </xsl:template>
-  <!-- end marginals -->
-
-  <xsl:template match="tei:gap">
-    <span class="gap">
-      <xsl:text>[</xsl:text>
-      <xsl:if test="contains(concat(' ', @reason, ' '), ' lost ')">verlorenes </xsl:if>
-      <xsl:if test="contains(concat(' ', @reason, ' '), ' insignificant ')">irrelevantes </xsl:if>
-      <xsl:if test="contains(concat(' ', @reason, ' '), ' fm ')">fremdsprachliches </xsl:if>
-      <xsl:if test="contains(concat(' ', @reason, ' '), ' illegible ')">unleserliches </xsl:if>
-      <xsl:if test="@reason">Material</xsl:if>
-      <xsl:if test="@unit and @reason">
-        <xsl:text> – </xsl:text>
-      </xsl:if>
-      <xsl:choose>
-        <xsl:when test="@unit">
-          <xsl:if test="@quantity">
-            <xsl:value-of select="@quantity"/>
-            <xsl:text> </xsl:text>
-          </xsl:if>
-          <xsl:choose>
-            <xsl:when test="@unit='pages' and @quantity!=1">Seiten</xsl:when>
-            <xsl:when test="@unit='pages' and (@quantity=1 or not(@quantity))">Seite</xsl:when>
-            <xsl:when test="@unit='lines' and @quantity!=1">Zeilen</xsl:when>
-            <xsl:when test="@unit='lines' and (@quantity=1 or not(@quantity))">Zeile</xsl:when>
-            <xsl:when test="@unit='words' and @quantity!=1">Wörter</xsl:when>
-            <xsl:when test="@unit='words' and (@quantity=1 or not(@quantity))">Wort</xsl:when>
-            <xsl:when test="@unit='chars'">Zeichen</xsl:when>
-          </xsl:choose>
-          <xsl:text> fehl</xsl:text>
-          <xsl:if test="@quantity=1 or not(@quantity)">t</xsl:if>
-          <xsl:if test="@quantity!=1">en</xsl:if>
-        </xsl:when>
-        <!--      <xsl:otherwise>
-        <xsl:text> ...</xsl:text>
-      </xsl:otherwise>-->
-      </xsl:choose>
-      <xsl:text>]</xsl:text>
-    </span>
-  </xsl:template>
-
+  <xsl:template match="tei:pb"/>
+  
+  <!-- begin titlepage -->
   <xsl:template match="tei:titlePage">
     <div class="titlepage">
       <xsl:apply-templates/>
     </div>
   </xsl:template>
-
+  
   <xsl:template match="tei:titlePart">
     <xsl:element name="div">
       <xsl:attribute name="class">titlepart titlepart-<xsl:value-of select="@type"/></xsl:attribute>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
-
-  <xsl:template match="tei:docImprint">
-    <xsl:apply-templates/>
-  </xsl:template>
-
-  <xsl:template match="tei:docAuthor">
-    <span>
-      <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'docauthor'"/> 
-      </xsl:call-template>
-      <xsl:apply-templates/>
-    </span>
-  </xsl:template>
-
-  <xsl:template match="tei:docDate">
-    <!--  <xsl:call-template name="applyRendition"/>-->
-    <xsl:apply-templates/>
-  </xsl:template>
-
+    
   <xsl:template match="tei:byline">
     <div>
       <xsl:call-template name="applyRendition">
@@ -448,7 +49,25 @@
       <xsl:apply-templates/>
     </div>
   </xsl:template>
-
+  
+  <xsl:template match="tei:docAuthor">
+    <span>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'docauthor'"/> 
+      </xsl:call-template>
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+  
+  <xsl:template match="tei:docImprint">
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  <xsl:template match="tei:docDate">
+    <!--  <xsl:call-template name="applyRendition"/>-->
+    <xsl:apply-templates/>
+  </xsl:template>
+    
   <xsl:template match="tei:publisher">
     <xsl:element name="span">
       <xsl:call-template name="applyRendition">
@@ -457,7 +76,15 @@
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
+  <!-- end titlepage -->
+  
+  <!-- end DOCUMENT STUCTURE ELEMENTS -->
 
+  <!-- ______________________________ -->
+
+  <!-- begin TEXT STUCTURE ELEMENTS   -->
+  
+  <!-- begin general -->
   <xsl:template match="tei:head">
     <xsl:choose>
       <!-- if embedded in a <figure>: create span (figdesc) -->
@@ -512,15 +139,69 @@
         </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>   
+  
+  <xsl:template match="tei:argument">
+    <div class="dta-argument">
+      <xsl:apply-templates/>
+    </div>
   </xsl:template>
-
-  <!-- dramas -->
+  
+  <xsl:template match="tei:trailer">
+    <span>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-trailer'"/>
+      </xsl:call-template>
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+  <!-- end general -->
+  
+  <!-- begin letter -->
+  <xsl:template match="tei:dateline">
+    <span>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-dateline'"/>
+      </xsl:call-template>
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+  
+  <xsl:template match="tei:salute">
+    <xsl:element name="div">
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-salute'"/>
+      </xsl:call-template>
+      <xsl:apply-templates/>
+    </xsl:element>      
+  </xsl:template>
+  
+  <xsl:template match="tei:opener">
+    <span>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-opener'"/>
+      </xsl:call-template>
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+    
+  <xsl:template match="tei:closer">
+    <div>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-closer'"/>
+      </xsl:call-template>
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
+  <!-- end letter -->
+  
+  <!-- begin drama -->
   <xsl:template match="tei:castList">
     <div class="castlist">
       <xsl:apply-templates/>
     </div>
   </xsl:template>
-
+  
   <xsl:template match='tei:castGroup'>
     <xsl:choose>
       <!-- nested castGroups, e. g. http://www.deutschestextarchiv.de/dtaq/book/view/16258?p=10 -->
@@ -552,13 +233,14 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
+  
   <xsl:template match="tei:castItem[not(parent::tei:castGroup)]">
     <div class="castitem">
       <xsl:apply-templates/>
     </div>
   </xsl:template>
-
+  
+  <!-- TODO: right place? -->
   <xsl:template match="tei:castList/tei:head">
     <h2 class="head">
       <xsl:apply-templates/>
@@ -570,11 +252,12 @@
       <xsl:apply-templates/>
     </span>
   </xsl:template>
-
+  
   <xsl:template match="tei:role">
     <xsl:apply-templates/>
   </xsl:template>
-
+  
+  <!-- TODO: right place? (no certain structure) -->
   <xsl:template match="tei:speaker">
     <span class="speaker">
       <xsl:text> </xsl:text>
@@ -582,105 +265,13 @@
       <xsl:text> </xsl:text>
     </span>
   </xsl:template>
-
-  <!-- stage direction -->
-  <xsl:template match="tei:stage">
-    <xsl:choose>
-      <!-- if embedded in a speech act... -->
-      <xsl:when test="ancestor::tei:sp">
-        <span class="stage">
-          <xsl:text> </xsl:text>
-          <xsl:apply-templates/>
-          <xsl:text> </xsl:text>
-        </span>
-      </xsl:when>
-      <xsl:otherwise>
-        <div class="stage">
-          <xsl:apply-templates/>
-        </div>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-  <!-- end dramas -->
-
-  <!-- poems -->
-  <xsl:template match='tei:lg[@type="poem"]/tei:head'>
-    <div class="head">
-      <xsl:apply-templates/>
-    </div>
-  </xsl:template>
-
-  <xsl:template match='tei:lg[@type="poem"]'>
-    <div class="poem">
-      <xsl:apply-templates/>
-    </div>
-  </xsl:template>
-
-  <xsl:template match='tei:lg[not(@type="poem")]'>
-    <div class="dta-lg">
-      <xsl:apply-templates/>
-    </div>
-  </xsl:template>
-  <!-- end poems -->
-
-  <!-- letters -->
-  <xsl:template match="tei:salute">
-    <xsl:element name="div">
-      <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'dta-salute'"/>
-      </xsl:call-template>
-      <xsl:apply-templates/>
-    </xsl:element>      
-  </xsl:template>
-
-  <xsl:template match="tei:dateline">
-    <span>
-      <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'dta-dateline'"/>
-      </xsl:call-template>
-      <xsl:apply-templates/>
-    </span>
-  </xsl:template>
-
-  <xsl:template match="tei:closer">
-    <div>
-      <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'dta-closer'"/>
-      </xsl:call-template>
-      <xsl:apply-templates/>
-    </div>
-  </xsl:template>
-  <!-- end letters -->
-
-  <xsl:template match="tei:div">
-    <xsl:element name="div">
-      <xsl:choose>
-        <xsl:when test="@type='advertisment' or @type='advertisement'">
-          <div class="dta-anzeige">
-            <xsl:apply-templates/>
-          </div>
-        </xsl:when>
-        <xsl:when test="@type">
-          <xsl:attribute name="class">
-            <xsl:value-of select="@type"/>
-          </xsl:attribute>
-          <xsl:apply-templates/>
-        </xsl:when>
-        <xsl:otherwise>
-          <!-- assign no class if no type-attribute is given -->
-          <xsl:apply-templates/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:element>
-    <!--  <xsl:call-template name="close-cb"/>-->
-  </xsl:template>
-
+  
   <xsl:template match="tei:sp">
     <div class="dta-sp">
       <xsl:apply-templates/>
     </div>
   </xsl:template>
-
+  
   <xsl:template match="tei:spGrp">
     <xsl:choose>
       <xsl:when test="child::*[1][self::tei:stage][@rendition='#rightBraced']">
@@ -712,7 +303,178 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
+  
+  <!-- stage direction -->
+  <!-- TODO: right place? (no certain structure) -->
+  <xsl:template match="tei:stage">
+    <xsl:choose>
+      <!-- if embedded in a speech act... -->
+      <xsl:when test="ancestor::tei:sp">
+        <span class="stage">
+          <xsl:text> </xsl:text>
+          <xsl:apply-templates/>
+          <xsl:text> </xsl:text>
+        </span>
+      </xsl:when>
+      <xsl:otherwise>
+        <div class="stage">
+          <xsl:apply-templates/>
+        </div>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  <!-- end drama -->
+  
+  <!-- poems -->
+  <xsl:template match='tei:l'>
+    <xsl:choose>
+      <xsl:when test="contains(@rendition,'#c') or contains(@rendition,'#et') or contains(@rendition,'#right')">
+        <xsl:element name="div">
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class" select="'dta-l'"/>
+          </xsl:call-template>
+          <xsl:element name="span">
+            <xsl:call-template name="applyXmlId"/>
+            <xsl:call-template name="applyPrev"/>
+            <xsl:call-template name="applyNext"/>
+            <xsl:apply-templates />
+          </xsl:element>
+        </xsl:element>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:element name="span">
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class" select="'dta-l'"/>
+          </xsl:call-template>
+          <xsl:call-template name="applyXmlId"/>
+          <xsl:call-template name="applyPrev"/>
+          <xsl:call-template name="applyNext"/>
+          <xsl:apply-templates />
+        </xsl:element>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template match='tei:lg[@type="poem"]/tei:head'>
+    <div class="head">
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
+  
+  <xsl:template match='tei:lg[@type="poem"]'>
+    <div class="poem">
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
+  
+  <xsl:template match='tei:lg[not(@type="poem")]'>
+    <div class="dta-lg">
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
+  <!-- end poems -->
+  
+  <!-- begin citations (1) -->
+  <xsl:template match="tei:cit">
+    <span>
+      <xsl:if test="@xml:id">
+        <xsl:attribute name="data-id">
+          <xsl:value-of select="@xml:id"/>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:if test="@prev">
+        <xsl:attribute name="data-prev">
+          <xsl:value-of select="@prev"/>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:if test="@next">
+        <xsl:attribute name="data-next">
+          <xsl:value-of select="@next"/>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-cit'"/>
+      </xsl:call-template>
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+  
+  <xsl:template match="tei:epigraph">
+    <blockquote class="quote">
+      <xsl:apply-templates/>
+    </blockquote>
+  </xsl:template>
+  
+  <xsl:template match="tei:bibl">
+    <span>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-bibl'"/>
+      </xsl:call-template>
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+  <!-- end citations (1) -->
+  
+  <!-- begin structural -->
+  <xsl:template match="tei:lb">
+    <xsl:if test="@n">
+      <span class="dta-lb-n">
+        <xsl:apply-templates select="@n"/>
+      </span>
+    </xsl:if>
+    <br/>
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  <xsl:template match='tei:space[@dim="horizontal"]'>
+    <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;&amp;nbsp;</xsl:text>
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  <xsl:template match='tei:space[@dim="vertical"]'>
+    <br class="space"/>
+    <!--  <div style="height:20px; float:"></div> -->
+  </xsl:template>
+  
+  <xsl:template match="tei:milestone">
+    <xsl:if
+      test="contains(@rendition, '#hrRed') or contains(@rendition, '#hrBlue') or contains(@rendition, '#hr')">
+      <xsl:element name="hr">
+        <xsl:choose>
+          <xsl:when test="contains(@rendition, '#red') or contains(@rendition, '#hrRed')">
+            <xsl:attribute name="class">red</xsl:attribute>
+          </xsl:when>
+          <xsl:when test="contains(@rendition, '#blue') or contains(@rendition, '#hrBlue')">
+            <xsl:attribute name="class">blue</xsl:attribute>
+          </xsl:when>
+        </xsl:choose>
+      </xsl:element>
+    </xsl:if>
+  </xsl:template>
+  
+  <xsl:template match="tei:div">
+    <xsl:element name="div">
+      <xsl:choose>
+        <xsl:when test="@type='advertisment' or @type='advertisement'">
+          <div class="dta-anzeige">
+            <xsl:apply-templates/>
+          </div>
+        </xsl:when>
+        <xsl:when test="@type">
+          <xsl:attribute name="class">
+            <xsl:value-of select="@type"/>
+          </xsl:attribute>
+          <xsl:apply-templates/>
+        </xsl:when>
+        <xsl:otherwise>
+          <!-- assign no class if no type-attribute is given -->
+          <xsl:apply-templates/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:element>
+    <!--  <xsl:call-template name="close-cb"/>-->
+  </xsl:template>
+    
   <xsl:template match="tei:p">
     <xsl:choose>
       <xsl:when test="ancestor::tei:sp and name(preceding-sibling::*[2]) != 'p'">
@@ -754,130 +516,59 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
-  <xsl:template match="tei:argument">
-    <div class="dta-argument">
-      <xsl:apply-templates/>
-    </div>
-  </xsl:template>
-
-<!--
-  <xsl:template match="tei:l">
-    <xsl:element name="div">
-      <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'dta-l'"/>
-      </xsl:call-template> 
-      <xsl:apply-templates/>
-    </xsl:element>
-  </xsl:template>
--->
-  <xsl:template match='tei:l'>
-    <xsl:choose>
-      <xsl:when test="contains(@rendition,'#c') or contains(@rendition,'#et') or contains(@rendition,'#right')">
-        <xsl:element name="div">
-          <xsl:call-template name="applyRendition">
-            <xsl:with-param name="class" select="'dta-l'"/>
-          </xsl:call-template>
-          <xsl:element name="span">
-            <xsl:call-template name="applyXmlId"/>
-            <xsl:call-template name="applyPrev"/>
-            <xsl:call-template name="applyNext"/>
-            <xsl:apply-templates />
-          </xsl:element>
-        </xsl:element>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:element name="span">
-          <xsl:call-template name="applyRendition">
-            <xsl:with-param name="class" select="'dta-l'"/>
-          </xsl:call-template>
-          <xsl:call-template name="applyXmlId"/>
-          <xsl:call-template name="applyPrev"/>
-          <xsl:call-template name="applyNext"/>
-          <xsl:apply-templates />
-        </xsl:element>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match="tei:lb">
-    <xsl:if test="@n">
-      <span class="dta-lb-n">
-        <xsl:apply-templates select="@n"/>
-      </span>
-    </xsl:if>
-    <br/>
-    <xsl:apply-templates/>
-  </xsl:template>
-
-  <xsl:template match="tei:pb"/>
-
-  <xsl:template match="tei:floatingText">
-    <xsl:element name="div">
-      <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'dta-floatingtext'"/>
-      </xsl:call-template> 
-      <xsl:apply-templates/>
-    </xsl:element>
-  </xsl:template>
-
-  <!-- renditions -->
-  <xsl:template match="tei:hi">
-    <xsl:element name="span">
-      <xsl:if test="@rendition">
-        <xsl:call-template name="applyRendition"/>
-      </xsl:if>
-      <!-- TODO: depricated? overwrites @rendition classes -->
-      <xsl:if test="@rend">
-        <xsl:attribute name="class">dta-rend</xsl:attribute>
-      </xsl:if>
-      <xsl:apply-templates/>
-    </xsl:element>
-  </xsl:template>  
-  <!-- end renditions -->
-
-  <xsl:template match="tei:cit">
-    <span>
-      <xsl:if test="@xml:id">
-        <xsl:attribute name="data-id">
-          <xsl:value-of select="@xml:id"/>
-        </xsl:attribute>
-      </xsl:if>
-      <xsl:if test="@prev">
-        <xsl:attribute name="data-prev">
-          <xsl:value-of select="@prev"/>
-        </xsl:attribute>
-      </xsl:if>
-      <xsl:if test="@next">
-        <xsl:attribute name="data-next">
-          <xsl:value-of select="@next"/>
-        </xsl:attribute>
-      </xsl:if>
-      <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'dta-cit'"/>
-      </xsl:call-template>
-      <xsl:apply-templates/>
+  
+  <xsl:template match="tei:cb">
+    <span class="dta-cb">
+      <xsl:choose>
+        <xsl:when test="@type='start'">[Beginn Spaltensatz]</xsl:when>
+        <xsl:when test="@type='end'">[Ende Spaltensatz]</xsl:when>
+        <xsl:otherwise>[Spaltenumbruch]</xsl:otherwise>
+      </xsl:choose>
     </span>
   </xsl:template>
+  
+  <!-- column breaks, EXPERIMENTAL -->
+  <!--
+<img src="static/images/cb.png" alt="Spaltenumbruch" title="Spaltenumbruch" /></xsl:template>
+<xsl:template match='tei:cb'>
+  <xsl:if test='.. = (//tei:cb)[1]/.. and .. = (//tei:cb)[last()]/..'>
+    <xsl:choose>
+      <xsl:when test='count( (//tei:cb)[1] | . ) = 1'>
+        <xsl:text disable-output-escaping="yes">
+          &lt;table class="dta-columntext"&gt;
+            &lt;tr&gt;
+              &lt;td&gt;
+        </xsl:text>
+      </xsl:when>
+      <xsl:when test='@type="end"'>
+        <xsl:text disable-output-escaping="yes">
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/table&gt;
+        </xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text disable-output-escaping="yes">
+          &lt;/td&gt;
+          &lt;td style="border-left:1px solid #666"&gt;
+        </xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:if>
+</xsl:template>
 
-  <xsl:template match="tei:epigraph">
-    <blockquote class="quote">
-      <xsl:apply-templates/>
-    </blockquote>
-  </xsl:template>
-
-  <xsl:template match="tei:quote">
-    <q class="quote">
-      <xsl:apply-templates/>
-    </q>
-  </xsl:template>
-
-  <xsl:template match="tei:q">
-    <q class="quote">
-      <xsl:apply-templates/>
-    </q>
-  </xsl:template>
-
+<xsl:template name="close-cb">
+  <xsl:if test='tei:cb and (not(tei:cb[last()][@type]) or tei:cb[last()][@type!="end"]) and (//tei:cb)[1]/.. = (//tei:cb)[last()]/..'>
+    <xsl:text disable-output-escaping="yes">
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    </xsl:text>
+  </xsl:if>
+</xsl:template>
+-->
+  <!-- end column breaks -->
+  
   <xsl:template match="tei:list">
     <xsl:choose>
       <!-- old -->
@@ -940,7 +631,7 @@
           <xsl:apply-templates/>
         </span>
       </xsl:when>
-     
+      
       <xsl:otherwise>
         <div class="dta-list">
           <xsl:apply-templates/>
@@ -949,7 +640,7 @@
     </xsl:choose>
     <!--  <xsl:call-template name="close-cb"/>-->
   </xsl:template>
-
+  
   <xsl:template match="tei:item">
     <xsl:choose>
       <xsl:when test="ancestor::tei:p">
@@ -969,7 +660,8 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
+  
+  <!-- begin floats -->
   <xsl:template match="tei:table">
     <xsl:choose>
       <xsl:when test="not(string(.)) or not(normalize-space(.))">
@@ -1028,25 +720,271 @@
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
-
-  <xsl:template match="tei:opener">
-    <span>
+  
+  <xsl:template match="tei:floatingText">
+    <xsl:element name="div">
       <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'dta-opener'"/>
-      </xsl:call-template>
+        <xsl:with-param name="class" select="'dta-floatingtext'"/>
+      </xsl:call-template> 
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+  
+  <xsl:template match='tei:fw[@place="bottom"]' mode="signatures">
+    <xsl:if test="@type='sig' or @type='catch'">
+      <xsl:element name="div">
+        <xsl:attribute name="class">
+          <xsl:text>fw-bottom-</xsl:text><xsl:value-of select="@type"/></xsl:attribute>
+        <xsl:apply-templates/>
+      </xsl:element>
+    </xsl:if>
+  </xsl:template>
+  
+  <!-- TODO: check <fw> template -->
+  <xsl:template match='tei:fw'>
+    <xsl:choose>
+      <xsl:when test="@place='top'">
+        <div>
+          <xsl:attribute name="class">fw-top fw-<xsl:value-of select="@type"/></xsl:attribute>
+          <xsl:apply-templates/>
+        </div>
+      </xsl:when>
+      <xsl:when test="@place='bottom'"/>
+      <xsl:when test="@type='pageNum'"/>
+    </xsl:choose>    
+  </xsl:template>
+  
+  <!-- editorial notes -->
+  <xsl:template match='tei:note[@type="editorial"]'/>
+  
+  <!-- begin footnotes -->
+  <xsl:template match='tei:note[@place="foot"]'>
+    <xsl:if test="string-length(@prev)=0">
+      <span class="fn-intext">
+        <xsl:value-of select="@n"/>
+      </span>
+      <xsl:text> </xsl:text>
+    </xsl:if>
+  </xsl:template>
+  
+  <xsl:template match='tei:note[@place="foot"]' mode="footnotes">
+    <div class="footnote">
+      <xsl:variable name="prev" select="@prev"/>
+      <xsl:choose>       
+        <!-- if previous is not empty or sameAs is set: -->
+        <xsl:when test="(string-length(@prev)!=0 and //*[@xml:id=$prev][1]/text()) or string-length(@sameAs)!=0"/>
+        <xsl:otherwise>
+          <span class="fn-sign">
+            <xsl:value-of select="@n"/>
+          </span>
+        </xsl:otherwise>
+      </xsl:choose>
+      <!--<span class="fn-sign"><xsl:value-of select='@n'/></span>-->
+      <xsl:text> </xsl:text>
+      <xsl:apply-templates/>
+      <xsl:apply-templates select='tei:fw[@place="bottom"][@type="catch"]' mode="signatures"/>
+    </div>
+  </xsl:template>
+  <!-- end footnotes -->
+  
+  <!-- begin end notes -->
+  <xsl:template match='tei:note[@place="end"]'>
+    <xsl:choose>
+      <!-- occurance at the end (content of the endnote) -->
+      <xsl:when test="string-length(.) &gt; 0">
+        <xsl:choose>
+          <!-- doesn't contain pagebreak -->
+          <xsl:when test="local-name(*[1])!='pb'">
+            <div class="endnote endnote-indent">
+              <span class="fn-sign">
+                <xsl:value-of select="@n"/>
+              </span>
+              <xsl:text> </xsl:text>
+              <xsl:apply-templates/>
+            </div>
+          </xsl:when>
+          <!-- contains pagebreak -->
+          <xsl:otherwise>
+            <div class="endnote">
+              <xsl:apply-templates/>
+            </div>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+      <!-- occurence in text (link to the endnote) -->
+      <xsl:otherwise>
+        <span class="fn-sign">
+          <xsl:value-of select="@n"/>
+        </span>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  <!-- end end notes -->
+  
+  <!-- begin marginals -->
+  <xsl:template match='tei:note[@place="right" and not(@type)]'>
+    <xsl:value-of select="@n"/>
+    <span class="dta-marginal dta-marginal-right">
       <xsl:apply-templates/>
     </span>
   </xsl:template>
-
-  <xsl:template match="tei:trailer">
-    <span>
-      <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'dta-trailer'"/>
-      </xsl:call-template>
+  
+  <xsl:template match='tei:note[@place="left" and not(@type)]'>
+    <xsl:value-of select="@n"/>
+    <span class="dta-marginal dta-marginal-left">
       <xsl:apply-templates/>
     </span>
   </xsl:template>
+  <!-- end marginals -->
+  
+  <!-- end notes -->
+  
+  <xsl:template match="tei:figure">
+    <xsl:choose>
+      <xsl:when
+        test="(local-name(preceding-sibling::*[1]) = 'lb' and not(normalize-space(preceding-sibling::*[1]/following-sibling::text()[1])) and local-name(following-sibling::*[1]) = 'lb' and not(normalize-space(following-sibling::*[1]/preceding-sibling::text()[1]))) or @rendition='#c'">
+        <xsl:call-template name="applyFigure"/>        
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="applyFigure">
+          <xsl:with-param name="node">span</xsl:with-param>
+          <xsl:with-param name="class">ph dta-figure</xsl:with-param>
+        </xsl:call-template>   
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template name="applyFigure">
+    <xsl:param name="node" select="'div'"/>
+    <xsl:param name="class" select="'phbl dta-figure'"/>
+    <xsl:element name="{$node}">
+      <xsl:attribute name="class"><xsl:value-of select="$class"/></xsl:attribute>
+      <xsl:attribute name="type"><xsl:value-of select="count(preceding::tei:figure)+1"
+      /></xsl:attribute>
+      <xsl:if test="@rendition='#c'">
+        <xsl:attribute name="style">text-align:center</xsl:attribute>
+      </xsl:if>
+      <xsl:if test="@facs">
+        <xsl:element name="img">
+          <xsl:attribute name="src"><xsl:value-of select="@facs"/></xsl:attribute>
+        </xsl:element><br/>
+      </xsl:if> [<xsl:choose>
+        <xsl:when test="@type='notatedMusic'">Musik</xsl:when>
+        <xsl:otherwise>Abbildung</xsl:otherwise>
+      </xsl:choose>
+      <xsl:if test="tei:figDesc"><xsl:text> </xsl:text><xsl:apply-templates select="tei:figDesc"
+        mode="figdesc"/></xsl:if>] <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+  
+  <xsl:template match="tei:figDesc"/>
+  <xsl:template match="tei:figDesc" mode="figdesc">
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  <!-- end floats -->
+  
+  <!-- end structural -->
+  
+  <!-- end TEXT STUCTURE ELEMENTS -->
+  
+  
+  <!-- begin PHRASE STUCTURE ELEMENTS -->
+  
+  <!-- begin citations (2) -->
+  <xsl:template match="tei:quote">
+    <q class="quote">
+      <xsl:apply-templates/>
+    </q>
+  </xsl:template>
+  
+  <xsl:template match="tei:q">
+    <q class="quote">
+      <xsl:apply-templates/>
+    </q>
+  </xsl:template>  
+  <!-- end citations (2) -->
 
+  <!-- renditions -->
+  <xsl:template match="tei:hi">
+    <xsl:element name="span">
+      <xsl:if test="@rendition">
+        <xsl:call-template name="applyRendition"/>
+      </xsl:if>
+      <!-- TODO: depricated? overwrites @rendition classes -->
+      <xsl:if test="@rend">
+        <xsl:attribute name="class">dta-rend</xsl:attribute>
+      </xsl:if>
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>  
+  <!-- end renditions -->
+  
+  <xsl:template match="tei:formula">
+    <xsl:choose>
+      <xsl:when test="@notation='TeX'">
+        <xsl:element name="span">
+          <xsl:attribute name="class">formula</xsl:attribute>
+          <xsl:if test="@rendition='#c'">
+            <xsl:attribute name="style">display:block; text-align:center</xsl:attribute>
+          </xsl:if>
+          <xsl:element name="img">
+            <xsl:attribute name="style">vertical-align:middle; -moz-transform:scale(0.7);
+              -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
+            <!--          <xsl:choose>
+            <xsl:when test="@rendition">
+              <xsl:call-template name="applyRendition"/>
+              <xsl:attribute name="src">
+                <xsl:text>http://dinglr.de/formula/</xsl:text><xsl:value-of select="dta:urlencode(.)"/>
+              </xsl:attribute>
+            </xsl:when>
+            <xsl:otherwise>-->
+            <xsl:attribute name="src">
+              <xsl:text>http://dinglr.de/formula/</xsl:text>
+              <xsl:call-template name="url-encode">
+                <xsl:with-param name="str" select="string(.)"/>
+              </xsl:call-template>
+              <!-- <xsl:value-of select="custom:uriencode(string(.))"/>   -->
+            </xsl:attribute>
+            <!--            </xsl:otherwise>
+          </xsl:choose>-->
+          </xsl:element>
+        </xsl:element>
+      </xsl:when>
+      <xsl:when test="string-length(.) &gt; 0">
+        <xsl:apply-templates/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:element name="span">
+          <xsl:attribute name="class">ph formula-<xsl:value-of
+            select="count(preceding::tei:formula)+1"/></xsl:attribute>
+          <xsl:attribute name="onclick">editFormula(<xsl:value-of
+            select="count(preceding::tei:formula)+1"/>)</xsl:attribute>
+          <xsl:attribute name="style">cursor:pointer</xsl:attribute> [Formel <xsl:value-of
+            select="count(preceding::tei:formula)+1"/>] </xsl:element>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template match="tei:foreign">
+    <xsl:choose>
+      <!--<xsl:when test="not(*//text()) and @xml:lang">-->
+      <xsl:when test="not(child::node()) and @xml:lang">
+        <span class="dta-foreign" title="fremdsprachliches Material">FM: <xsl:choose>
+          <xsl:when test="@xml:lang='he' or @xml:lang='heb' or @xml:lang='hbo'"
+            >hebräisch</xsl:when>
+          <xsl:when test="@xml:lang='el' or @xml:lang='grc' or @xml:lang='ell'"
+            >griechisch</xsl:when>
+          <xsl:otherwise><xsl:value-of select="@xml:lang"/></xsl:otherwise>
+        </xsl:choose>
+        </span>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  
   <xsl:template match="tei:ref">
     <xsl:element name="span">
       <xsl:attribute name="class">ref</xsl:attribute>
@@ -1065,24 +1003,89 @@
     </xsl:element>
   </xsl:template>
 
-  <!-- Publikationstyp auflösen?? -->
-  <xsl:template match="tei:bibl">
-    <span>
-      <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'dta-bibl'"/>
-      </xsl:call-template>
-      <xsl:apply-templates/>
+  <!-- end PHRASE STUCTURE ELEMENTS -->
+  
+  <!-- ____________________________________ -->
+  
+  <!-- begin NO CERTAIN STRUCTURE ELEMENTS -->
+  
+  <!-- begin editorial -->
+  <xsl:template match="tei:choice">
+    <xsl:choose>
+      <xsl:when test="./tei:reg">
+        <xsl:element name="span">
+          <xsl:attribute name="title">Original: <xsl:value-of select="tei:orig"/></xsl:attribute>
+          <xsl:attribute name="class">dta-reg</xsl:attribute>
+          <xsl:apply-templates select="tei:reg"/>
+        </xsl:element>
+      </xsl:when>
+      <xsl:when test="./tei:abbr">
+        <xsl:element name="span">
+          <xsl:attribute name="title">
+            <xsl:value-of select="tei:expan"/>
+          </xsl:attribute>
+          <xsl:attribute name="class">dta-abbr</xsl:attribute>
+          <xsl:apply-templates select="tei:abbr"/>
+        </xsl:element>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:element name="span">
+          <xsl:attribute name="title">Schreibfehler: <xsl:value-of select="tei:sic"
+            /></xsl:attribute>
+          <xsl:attribute name="class">dta-corr</xsl:attribute>
+          <xsl:apply-templates select="tei:corr"/>
+        </xsl:element>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template match="tei:corr">
+    <xsl:choose>
+      <xsl:when test="not(string(.))">
+        <xsl:text>[&#8230;]</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template match="tei:gap">
+    <span class="gap">
+      <xsl:text>[</xsl:text>
+      <xsl:if test="contains(concat(' ', @reason, ' '), ' lost ')">verlorenes </xsl:if>
+      <xsl:if test="contains(concat(' ', @reason, ' '), ' insignificant ')">irrelevantes </xsl:if>
+      <xsl:if test="contains(concat(' ', @reason, ' '), ' fm ')">fremdsprachliches </xsl:if>
+      <xsl:if test="contains(concat(' ', @reason, ' '), ' illegible ')">unleserliches </xsl:if>
+      <xsl:if test="@reason">Material</xsl:if>
+      <xsl:if test="@unit and @reason">
+        <xsl:text> – </xsl:text>
+      </xsl:if>
+      <xsl:choose>
+        <xsl:when test="@unit">
+          <xsl:if test="@quantity">
+            <xsl:value-of select="@quantity"/>
+            <xsl:text> </xsl:text>
+          </xsl:if>
+          <xsl:choose>
+            <xsl:when test="@unit='pages' and @quantity!=1">Seiten</xsl:when>
+            <xsl:when test="@unit='pages' and (@quantity=1 or not(@quantity))">Seite</xsl:when>
+            <xsl:when test="@unit='lines' and @quantity!=1">Zeilen</xsl:when>
+            <xsl:when test="@unit='lines' and (@quantity=1 or not(@quantity))">Zeile</xsl:when>
+            <xsl:when test="@unit='words' and @quantity!=1">Wörter</xsl:when>
+            <xsl:when test="@unit='words' and (@quantity=1 or not(@quantity))">Wort</xsl:when>
+            <xsl:when test="@unit='chars'">Zeichen</xsl:when>
+          </xsl:choose>
+          <xsl:text> fehl</xsl:text>
+          <xsl:if test="@quantity=1 or not(@quantity)">t</xsl:if>
+          <xsl:if test="@quantity!=1">en</xsl:if>
+        </xsl:when>
+        <!--      <xsl:otherwise>
+        <xsl:text> ...</xsl:text>
+      </xsl:otherwise>-->
+      </xsl:choose>
+      <xsl:text>]</xsl:text>
     </span>
-  </xsl:template>
-
-  <xsl:template match='tei:space[@dim="horizontal"]'>
-    <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;&amp;nbsp;</xsl:text>
-    <xsl:apply-templates/>
-  </xsl:template>
-
-  <xsl:template match='tei:space[@dim="vertical"]'>
-    <br class="space"/>
-    <!--  <div style="height:20px; float:"></div> -->
   </xsl:template>
 
   <xsl:template match="tei:supplied">
@@ -1093,45 +1096,62 @@
     </span>
     <!--<span class="dta-supplied"><xsl:apply-templates/></span>-->
   </xsl:template>
+  
+  <!-- end editorial -->
+  
+  <!-- end NO CERTAIN STRUCTURE ELEMENTS -->
+  
+  <!-- ____________________________________ -->
 
-  <xsl:template match="tei:foreign">
-    <xsl:choose>
-      <!--<xsl:when test="not(*//text()) and @xml:lang">-->
-      <xsl:when test="not(child::node()) and @xml:lang">
-        <span class="dta-foreign" title="fremdsprachliches Material">FM: <xsl:choose>
-            <xsl:when test="@xml:lang='he' or @xml:lang='heb' or @xml:lang='hbo'"
-              >hebräisch</xsl:when>
-            <xsl:when test="@xml:lang='el' or @xml:lang='grc' or @xml:lang='ell'"
-              >griechisch</xsl:when>
-            <xsl:otherwise><xsl:value-of select="@xml:lang"/></xsl:otherwise>
-          </xsl:choose>
-        </span>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:apply-templates/>
-      </xsl:otherwise>
-    </xsl:choose>
+
+
+  <!-- place holders -->
+ 
+  <!-- WARNING: DEPRICATED (TODO: just in schroeder_logik0202_1905.TEI-P5.xml) -->
+  <xsl:template match='tei:g[@ref="#frac"]'>
+    <xsl:variable name="enumerator" select="substring-before(., '/')"/>
+    <xsl:variable name="denominator" select="substring-after(., '/')"/>
+    <xsl:variable name="fraction" select="concat('\frac{', $enumerator, '}{', $denominator, '}')"/>
+    <xsl:element name="img">
+      <xsl:attribute name="style">vertical-align:middle; -moz-transform:scale(0.7);
+        -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
+      <xsl:attribute name="src">
+        <!--<xsl:text>http://dinglr.de/formula/</xsl:text><xsl:value-of select="dta:urlencode($fraction)"/>-->
+        <xsl:text>http://kaskade.dwds.de/dtaq/formula/preview/</xsl:text>
+        <xsl:call-template name="url-encode">
+          <xsl:with-param name="str" select="$fraction"/>
+        </xsl:call-template>
+        <!--
+        <xsl:value-of select="custom:uriencode(string($fraction))"/>
+         -->
+      </xsl:attribute>
+    </xsl:element>
   </xsl:template>
 
-  <!-- @prev/@next stuff -->
-  <xsl:template name="applyPrev">
-    <xsl:if test="@prev">
-      <xsl:attribute name="data-prev"><xsl:value-of select="@prev"/></xsl:attribute>
-    </xsl:if>
+  <!-- WARNING: DEPRICATED (TODO: just in schroeder_logik0202_1905.TEI-P5.xml)-->
+  <xsl:template match='tei:g[@ref="#fric"]'>
+    <xsl:variable name="enumerator" select="substring-before(., '/')"/>
+    <xsl:variable name="denominator" select="substring-after(., '/')"/>
+    <xsl:variable name="fraction"
+      select="concat('\nicefrac{', $enumerator, '}{', $denominator, '}')"/>
+    <xsl:element name="img">
+      <xsl:attribute name="style">vertical-align:middle; -moz-transform:scale(0.7);
+        -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
+      <xsl:attribute name="src">
+        <xsl:text>http://dinglr.de/formula/</xsl:text>
+        <xsl:call-template name="url-encode">
+          <xsl:with-param name="str" select="$fraction"/>
+        </xsl:call-template>
+        <!-- 
+        <xsl:value-of select="custom:uriencode(string($fraction))"/>
+         -->
+      </xsl:attribute>
+    </xsl:element>
   </xsl:template>
 
-  <xsl:template name="applyNext">
-    <xsl:if test="@next">
-      <xsl:attribute name="data-next"><xsl:value-of select="@next"/></xsl:attribute>
-    </xsl:if>
-  </xsl:template>
+  <!-- end place holders -->
+  
 
-  <xsl:template name="applyXmlId">
-    <xsl:if test="@xml:id">
-      <xsl:attribute name="data-xmlid"><xsl:value-of select="@xml:id"/></xsl:attribute>
-    </xsl:if>
-  </xsl:template>
-  <!-- end @prev/@next stuff -->
 
   <xsl:template match="text()">    
       <xsl:value-of select="."/>

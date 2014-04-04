@@ -71,6 +71,26 @@
     </xsl:choose>
   </xsl:template>  
   
+  <!-- @prev/@next stuff -->
+  <xsl:template name="applyPrev">
+    <xsl:if test="@prev">
+      <xsl:attribute name="data-prev"><xsl:value-of select="@prev"/></xsl:attribute>
+    </xsl:if>
+  </xsl:template>
+  
+  <xsl:template name="applyNext">
+    <xsl:if test="@next">
+      <xsl:attribute name="data-next"><xsl:value-of select="@next"/></xsl:attribute>
+    </xsl:if>
+  </xsl:template>
+  
+  <xsl:template name="applyXmlId">
+    <xsl:if test="@xml:id">
+      <xsl:attribute name="data-xmlid"><xsl:value-of select="@xml:id"/></xsl:attribute>
+    </xsl:if>
+  </xsl:template>
+  <!-- end @prev/@next stuff -->
+  
   <xsl:template name="addClass">
     <xsl:param name="value"/>
     <xsl:attribute name="class">
