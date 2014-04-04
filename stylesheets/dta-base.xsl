@@ -426,6 +426,7 @@
     <xsl:apply-templates/>
   </xsl:template>
   
+  <!-- TODO: check Template! -->
   <xsl:template match='tei:space[@dim="horizontal"]'>
     <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;&amp;nbsp;</xsl:text>
     <xsl:apply-templates/>
@@ -571,7 +572,7 @@
   
   <xsl:template match="tei:list">
     <xsl:choose>
-      <!-- old -->
+      <!-- old: TODO: change all occurrences in xml fils to new version -->
       <xsl:when test='@rend="braced"'>
         <table class="list">
           <xsl:choose>
@@ -888,6 +889,7 @@
   
   <!-- end TEXT STUCTURE ELEMENTS -->
   
+  <!-- ____________________________________ -->
   
   <!-- begin PHRASE STUCTURE ELEMENTS -->
   
