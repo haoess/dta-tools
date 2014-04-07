@@ -1,0 +1,10 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <text>
+        <body>
+            <listBibl>
+                <bibl>bibl1</bibl> 
+                <bibl>bibl2</bibl>
+            </listBibl>
+        </body> 
+    </text>
+</TEI>
