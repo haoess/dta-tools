@@ -18,7 +18,6 @@
       <div class="footnotesep"/>
       <xsl:apply-templates select='//tei:note[@place="foot" and text()]' mode="footnotes"/>
     </xsl:if>
-    <!-- TODO: "or *" added. correct? yes (otherweise <fw><hi rendition="#b">text</hi></fw> will be empty) -->
     <xsl:apply-templates select='//tei:fw[@place="bottom" and (text() or *)]' mode="signatures"/>
   </xsl:template>
 
@@ -414,9 +413,11 @@
     </span>
   </xsl:template>
   
-  <!-- TODO: add template? -> yes, like list, but dta-biblList...
-  <xsl:template match="tei:bibl">
-   -->
+  <xsl:template match="tei:listBibl">
+    <div class="dta-list-bibl">
+      <xsl:apply-templates/>
+    </div>
+  </xsl:template>
   <!-- end citations (1) -->
   
   <!-- begin structural -->
