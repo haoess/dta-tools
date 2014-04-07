@@ -18,8 +18,8 @@
       <div class="footnotesep"/>
       <xsl:apply-templates select='//tei:note[@place="foot" and text()]' mode="footnotes"/>
     </xsl:if>
-    <!-- TODO: or node() added. correct? (otherweise <fw><hi rendition="#b">text</hi></fw> will be empty) -->
-    <xsl:apply-templates select='//tei:fw[@place="bottom" and (text() or node())]' mode="signatures"/>
+    <!-- TODO: "or *" added. correct? (otherweise <fw><hi rendition="#b">text</hi></fw> will be empty) -->
+    <xsl:apply-templates select='//tei:fw[@place="bottom" and (text() or *)]' mode="signatures"/>
   </xsl:template>
 
 
@@ -240,7 +240,7 @@
     </div>
   </xsl:template>
   
-  <!-- TODO: right place? -->
+  <!-- todo: right place? -->
   <xsl:template match="tei:castList/tei:head">
     <h2 class="head">
       <xsl:apply-templates/>
@@ -257,7 +257,7 @@
     <xsl:apply-templates/>
   </xsl:template>
   
-  <!-- TODO: right place? (no certain structure) -->
+  <!-- todo: right place? (no certain structure) -->
   <xsl:template match="tei:speaker">
     <span class="speaker">
       <xsl:text> </xsl:text>
@@ -305,7 +305,7 @@
   </xsl:template>
   
   <!-- stage direction -->
-  <!-- TODO: right place? (no certain structure) -->
+  <!-- todo: right place? (no certain structure) -->
   <xsl:template match="tei:stage">
     <xsl:choose>
       <!-- if embedded in a speech act... -->
@@ -978,6 +978,7 @@
     <xsl:choose>
       <!--<xsl:when test="not(*//text()) and @xml:lang">-->
       <!-- TODO: check: only if foreign-node has no content? -->
+      <!-- TODO: node() vs. *?  -->
       <xsl:when test="not(child::node()) and @xml:lang">
         <span class="dta-foreign" title="fremdsprachliches Material">FM: <xsl:choose>
           <xsl:when test="@xml:lang='he' or @xml:lang='heb' or @xml:lang='hbo'"
@@ -994,6 +995,7 @@
     </xsl:choose>
   </xsl:template>
   
+  <!-- TODO: -->
   <xsl:template match="tei:ref">
     <xsl:element name="span">
       <xsl:attribute name="class">ref</xsl:attribute>
@@ -1034,6 +1036,7 @@
             <xsl:value-of select="tei:expan"/>
           </xsl:attribute>
           <xsl:attribute name="class">dta-abbr</xsl:attribute>
+          <!-- TODO: no template "tei:abbr" -->
           <xsl:apply-templates select="tei:abbr"/>
         </xsl:element>
       </xsl:when>
