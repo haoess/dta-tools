@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 74;
+use Test::More tests => 75;
 
 use DTAStyleSheets qw( process );
 
@@ -402,3 +402,7 @@ like( process($xsl, 't/xml/fw_bottom_pagenum.xml'), qr{<p class="dta-p"/>});
 
 # <trailer>
 like( process($xsl, 't/xml/trailer.xml'), qr{<p class="dta-p">p</p>\s*<span class="dta-trailer">content</span>});
+
+# <foreign>
+# empty node, @xml:lang="he"
+like( process($xsl, 't/xml/foreign_he.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material">FM: hebräisch</span></p>});
