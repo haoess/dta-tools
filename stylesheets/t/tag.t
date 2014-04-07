@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 75;
+use Test::More tests => 79;
 
 use DTAStyleSheets qw( process );
 
@@ -406,3 +406,13 @@ like( process($xsl, 't/xml/trailer.xml'), qr{<p class="dta-p">p</p>\s*<span clas
 # <foreign>
 # empty node, @xml:lang="he"
 like( process($xsl, 't/xml/foreign_he.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material">FM: hebräisch</span></p>});
+
+# <choice>
+# reg and orig
+like( process($xsl, 't/xml/choice_reg.xml'), qr{<p class="dta-p"><span title="Original: orig" class="dta-reg">reg</span></p>});
+# abbr and expand
+like( process($xsl, 't/xml/choice_abbr.xml'), qr{<p class="dta-p"><span title="expan" class="dta-abbr">abbr</span></p>});
+# corr and sic
+like( process($xsl, 't/xml/choice_corr.xml'), qr{<p class="dta-p"><span title="Schreibfehler: sic" class="dta-corr">corr</span></p>});
+#corr(empty) and sic
+like( process($xsl, 't/xml/choice_corr_empty.xml'), qr{<p class="dta-p"><span title="Schreibfehler: sic" class="dta-corr">\[\&\#x2026;\]</span></p>});
