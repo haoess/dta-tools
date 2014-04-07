@@ -920,6 +920,7 @@
         <xsl:call-template name="applyRendition"/>
       </xsl:if>
       <!-- TODO: depricated? overwrites @rendition classes -->
+      <!-- TODO: @rend → <span title="...">
       <xsl:if test="@rend">
         <xsl:attribute name="class">dta-rend</xsl:attribute>
       </xsl:if>
