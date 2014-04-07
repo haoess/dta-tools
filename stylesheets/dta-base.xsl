@@ -18,7 +18,7 @@
       <div class="footnotesep"/>
       <xsl:apply-templates select='//tei:note[@place="foot" and text()]' mode="footnotes"/>
     </xsl:if>
-    <!-- TODO: "or *" added. correct? (otherweise <fw><hi rendition="#b">text</hi></fw> will be empty) -->
+    <!-- TODO: "or *" added. correct? yes (otherweise <fw><hi rendition="#b">text</hi></fw> will be empty) -->
     <xsl:apply-templates select='//tei:fw[@place="bottom" and (text() or *)]' mode="signatures"/>
   </xsl:template>
 
@@ -414,7 +414,7 @@
     </span>
   </xsl:template>
   
-  <!-- TODO: add template?
+  <!-- TODO: add template? -> yes, like list, but dta-biblList...
   <xsl:template match="tei:bibl">
    -->
   <!-- end citations (1) -->
@@ -433,12 +433,12 @@
   <!-- TODO: check Template! -->
   <xsl:template match='tei:space[@dim="horizontal"]'>
     <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;&amp;nbsp;</xsl:text>
+    <!-- check, if anywhere content! if not delete this: -->
     <xsl:apply-templates/>
   </xsl:template>
   
   <xsl:template match='tei:space[@dim="vertical"]'>
     <br class="space"/>
-    <!--  <div style="height:20px; float:"></div> -->
   </xsl:template>
   
   <xsl:template match="tei:milestone">
@@ -480,6 +480,9 @@
     <!--  <xsl:call-template name="close-cb"/>-->
   </xsl:template>
     
+  <!-- TODO: restructure -->
+  <!-- p as speech act vs. real paragraph -->
+  <!-- indent vs. no indent -->
   <xsl:template match="tei:p">
     <xsl:choose>
       <xsl:when test="ancestor::tei:sp and name(preceding-sibling::*[2]) != 'p'">
@@ -505,12 +508,14 @@
         </p>
       </xsl:when>
       <!-- TODO: if descendant::pb no @prev is possible? (occurence found!) -->
+      <!-- ->cascade! -->
       <xsl:when test="@rendition">
         <p>
           <xsl:call-template name="applyRendition"/>
           <xsl:apply-templates/>
         </p>
       </xsl:when>
+      <!-- ->cascade! -->
       <xsl:when test="@prev">
         <p class="dta-no-indent">
           <xsl:apply-templates/>
@@ -534,6 +539,7 @@
     </span>
   </xsl:template>
   
+  <!-- DONT TOUCH -->
   <!-- column breaks, EXPERIMENTAL -->
   <!--
 <img src="static/images/cb.png" alt="Spaltenumbruch" title="Spaltenumbruch" /></xsl:template>
@@ -747,7 +753,6 @@
     </xsl:if>
   </xsl:template>
   
-  <!-- TODO: check <fw> template -->
   <xsl:template match='tei:fw'>
     <xsl:choose>
       <xsl:when test="@place='top'">
@@ -919,8 +924,8 @@
       <xsl:if test="@rendition">
         <xsl:call-template name="applyRendition"/>
       </xsl:if>
-      <!-- TODO: depricated? overwrites @rendition classes -->
-      <!-- TODO: @rend → <span title="..."> -->
+      <!-- TODO: depricated? no!  overwrites @rendition classes -->
+      <!-- TODO: @rend → <span title="..."> (content of @rend) -->
       <xsl:if test="@rend">
         <xsl:attribute name="class">dta-rend</xsl:attribute>
       </xsl:if>
@@ -978,7 +983,7 @@
   <xsl:template match="tei:foreign">
     <xsl:choose>
       <!--<xsl:when test="not(*//text()) and @xml:lang">-->
-      <!-- TODO: check: only if foreign-node has no content? -->
+      <!-- TODO: check: only if foreign-node has no content? no! put span everytime (just content is dependent) -->
       <!-- TODO: node() vs. *?  -->
       <xsl:when test="not(child::node()) and @xml:lang">
         <span class="dta-foreign" title="fremdsprachliches Material">FM: <xsl:choose>
@@ -1000,6 +1005,7 @@
   <xsl:template match="tei:ref">
     <xsl:element name="span">
       <xsl:attribute name="class">ref</xsl:attribute>
+      <!-- only '#f' and 'http' (-> add data-target attribute with content of @target) vs. no operation -->
       <xsl:if
         test="starts-with(@target, '#f') or starts-with(@target, 'BrN3E.htm') or starts-with(@target, 'ZgZuE.htm')">
         <xsl:attribute name="target">
@@ -1022,6 +1028,9 @@
   <!-- begin NO CERTAIN STRUCTURE ELEMENTS -->
   
   <!-- begin editorial -->
+  
+  <!-- implement template for every #editorial tag -->
+  <!-- attributes have to get only text! other can get rendition-stuff etc. -->
   <xsl:template match="tei:choice">
     <xsl:choose>
       <xsl:when test="./tei:reg">
@@ -1119,48 +1128,6 @@
 
 
   <!-- place holders -->
- 
-  <!-- WARNING: DEPRICATED (TODO: just in schroeder_logik0202_1905.TEI-P5.xml) -->
-  <xsl:template match='tei:g[@ref="#frac"]'>
-    <xsl:variable name="enumerator" select="substring-before(., '/')"/>
-    <xsl:variable name="denominator" select="substring-after(., '/')"/>
-    <xsl:variable name="fraction" select="concat('\frac{', $enumerator, '}{', $denominator, '}')"/>
-    <xsl:element name="img">
-      <xsl:attribute name="style">vertical-align:middle; -moz-transform:scale(0.7);
-        -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
-      <xsl:attribute name="src">
-        <!--<xsl:text>http://dinglr.de/formula/</xsl:text><xsl:value-of select="dta:urlencode($fraction)"/>-->
-        <xsl:text>http://kaskade.dwds.de/dtaq/formula/preview/</xsl:text>
-        <xsl:call-template name="url-encode">
-          <xsl:with-param name="str" select="$fraction"/>
-        </xsl:call-template>
-        <!--
-        <xsl:value-of select="custom:uriencode(string($fraction))"/>
-         -->
-      </xsl:attribute>
-    </xsl:element>
-  </xsl:template>
-
-  <!-- WARNING: DEPRICATED (TODO: just in schroeder_logik0202_1905.TEI-P5.xml)-->
-  <xsl:template match='tei:g[@ref="#fric"]'>
-    <xsl:variable name="enumerator" select="substring-before(., '/')"/>
-    <xsl:variable name="denominator" select="substring-after(., '/')"/>
-    <xsl:variable name="fraction"
-      select="concat('\nicefrac{', $enumerator, '}{', $denominator, '}')"/>
-    <xsl:element name="img">
-      <xsl:attribute name="style">vertical-align:middle; -moz-transform:scale(0.7);
-        -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
-      <xsl:attribute name="src">
-        <xsl:text>http://dinglr.de/formula/</xsl:text>
-        <xsl:call-template name="url-encode">
-          <xsl:with-param name="str" select="$fraction"/>
-        </xsl:call-template>
-        <!-- 
-        <xsl:value-of select="custom:uriencode(string($fraction))"/>
-         -->
-      </xsl:attribute>
-    </xsl:element>
-  </xsl:template>
 
   <!-- end place holders -->
   
