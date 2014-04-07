@@ -413,6 +413,10 @@
       <xsl:apply-templates/>
     </span>
   </xsl:template>
+  
+  <!-- TODO: add template?
+  <xsl:template match="tei:bibl">
+   -->
   <!-- end citations (1) -->
   
   <!-- begin structural -->
@@ -494,11 +498,13 @@
           <xsl:apply-templates/>
         </p>
       </xsl:when>
+      <!-- TODO: check: if descendant::pb no @rendition is possible? (occurence found!) -->
       <xsl:when test="descendant::tei:pb">
         <p>
           <xsl:apply-templates/>
         </p>
       </xsl:when>
+      <!-- TODO: if descendant::pb no @prev is possible? (occurence found!) -->
       <xsl:when test="@rendition">
         <p>
           <xsl:call-template name="applyRendition"/>
@@ -971,6 +977,7 @@
   <xsl:template match="tei:foreign">
     <xsl:choose>
       <!--<xsl:when test="not(*//text()) and @xml:lang">-->
+      <!-- TODO: check: only if foreign-node has no content? -->
       <xsl:when test="not(child::node()) and @xml:lang">
         <span class="dta-foreign" title="fremdsprachliches Material">FM: <xsl:choose>
           <xsl:when test="@xml:lang='he' or @xml:lang='heb' or @xml:lang='hbo'"
