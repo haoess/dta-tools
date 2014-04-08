@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 87;
+use Test::More tests => 88;
 
 use DTAStyleSheets qw( process );
 
@@ -437,3 +437,6 @@ like( process($xsl, 't/xml/choice_abbr.xml'), qr{<p class="dta-p"><span title="e
 like( process($xsl, 't/xml/choice_corr.xml'), qr{<p class="dta-p"><span title="Schreibfehler: sic" class="dta-corr">corr</span></p>});
 #corr(empty) and sic
 like( process($xsl, 't/xml/choice_corr_empty.xml'), qr{<p class="dta-p"><span title="Schreibfehler: sic" class="dta-corr">\[\&\#x2026;\]</span></p>});
+
+# <ref>
+like( process($xsl, 't/xml/ref.xml'), qr{<p class="dta-p"><span class="ref" data-target="#f0001">ref</span></p>});
