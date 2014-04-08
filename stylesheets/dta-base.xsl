@@ -482,7 +482,7 @@
     <!--  <xsl:call-template name="close-cb"/>-->
   </xsl:template>
     
-  <!-- TODO: restructure -->
+  <!-- TODO: restructure <p> -->
   <!-- p as speech act vs. real paragraph -->
   <!-- indent vs. no indent -->
   <xsl:template match="tei:p">
@@ -1009,22 +1009,20 @@
     </span>
   </xsl:template>
   
-  <!-- TODO: -->
   <xsl:template match="tei:ref">
     <xsl:element name="span">
       <xsl:attribute name="class">ref</xsl:attribute>
-      <!-- only '#f' and 'http' (-> add data-target attribute with content of @target) vs. no operation -->
-      <xsl:if
-        test="starts-with(@target, '#f') or starts-with(@target, 'BrN3E.htm') or starts-with(@target, 'ZgZuE.htm')">
-        <xsl:attribute name="target">
-          <xsl:value-of select="@target"/>
-        </xsl:attribute>
-      </xsl:if>
-      <xsl:if test="starts-with(@target, 'http')">
-        <xsl:attribute name="target">
-          <xsl:value-of select="@target"/>
-        </xsl:attribute>
-      </xsl:if>
+      <xsl:choose>     
+        <xsl:when
+          test="starts-with(@target, '#f') or starts-with(@target, 'http') or starts-with(@target, 'BrN3E.htm') or starts-with(@target, 'ZgZuE.htm')">
+          <xsl:attribute name="data-target">
+            <xsl:value-of select="@target"/>
+          </xsl:attribute>
+        </xsl:when>
+        <xsl:otherwise>
+         <!-- no operation -->
+        </xsl:otherwise>
+      </xsl:choose>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
@@ -1037,7 +1035,6 @@
   
   <!-- begin editorial -->
   
-  <!-- attributes have to get only text! other can get rendition-stuff etc. -->
   <xsl:template match="tei:choice">
     <xsl:choose>
       <xsl:when test="./tei:reg">
@@ -1069,6 +1066,7 @@
   </xsl:template>
   
   <xsl:template match="tei:orig" mode="choice">
+    <!-- used as attribute -->
     <xsl:value-of select="string(.)"/>
   </xsl:template>
   
@@ -1077,6 +1075,7 @@
   </xsl:template>
   
   <xsl:template match="tei:expan" mode="choice">
+    <!-- used as attribute -->
     <xsl:value-of select="string(.)"/>
   </xsl:template>
   
@@ -1092,6 +1091,7 @@
   </xsl:template>
   
   <xsl:template match="tei:sic" mode="choice">
+    <!-- used as attribute -->
     <xsl:value-of select="string(.)"/>
   </xsl:template>
   
