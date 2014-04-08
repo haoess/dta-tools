@@ -1042,27 +1042,21 @@
     <xsl:choose>
       <xsl:when test="./tei:reg">
         <xsl:element name="span">
-          <xsl:attribute name="title">
-            Original: <xsl:apply-templates select="tei:orig" mode="choice"/>
-          </xsl:attribute>
+          <xsl:attribute name="title">Original: <xsl:apply-templates select="tei:orig" mode="choice"/></xsl:attribute>
           <xsl:attribute name="class">dta-reg</xsl:attribute>
           <xsl:apply-templates select="tei:reg" mode="choice"/>
         </xsl:element>
       </xsl:when>
       <xsl:when test="./tei:abbr">
         <xsl:element name="span">
-          <xsl:attribute name="title">
-            <xsl:apply-templates select="tei:expan" mode="choice"/>
-          </xsl:attribute>
+          <xsl:attribute name="title"><xsl:apply-templates select="tei:expan" mode="choice"/></xsl:attribute>
           <xsl:attribute name="class">dta-abbr</xsl:attribute>
           <xsl:apply-templates select="tei:abbr" mode="choice"/>
         </xsl:element>
       </xsl:when>
       <xsl:when test="./tei:corr">
         <xsl:element name="span">
-          <xsl:attribute name="title">
-            Schreibfehler: <xsl:apply-templates select="tei:sic" mode="choice"/>
-          </xsl:attribute>
+          <xsl:attribute name="title">Schreibfehler: <xsl:apply-templates select="tei:sic" mode="choice"/></xsl:attribute>
           <xsl:attribute name="class">dta-corr</xsl:attribute>
           <xsl:apply-templates select="tei:corr" mode="choice"/>
         </xsl:element>
