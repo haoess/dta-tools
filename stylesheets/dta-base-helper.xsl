@@ -8,16 +8,25 @@
 
   <xsl:template name="applyRendition">
     <xsl:param name="class" select="'noClass'"/>
+    <xsl:if test="@rend">
+      <xsl:attribute name="title">
+        <xsl:value-of select="@rend"/>
+      </xsl:attribute>  
+    </xsl:if>
     <xsl:attribute name="class">
       <xsl:choose>
         <xsl:when test="$class = 'noClass'"/>
         <xsl:otherwise>
           <xsl:value-of select="$class"/>
-          <xsl:if test="@rendition">
+          <xsl:if test="@rendition or @rend">
             <xsl:text> </xsl:text>
           </xsl:if>
         </xsl:otherwise>
       </xsl:choose>
+      <xsl:if test="@rend">
+        <xsl:value-of select="'dta-rend'"/>
+        <xsl:if test="@rendtion"><xsl:text> </xsl:text></xsl:if>        
+      </xsl:if>
       <xsl:choose>
         <xsl:when test="@rendition and contains(normalize-space(@rendition),' ')">
           <xsl:call-template name="splitRendition">

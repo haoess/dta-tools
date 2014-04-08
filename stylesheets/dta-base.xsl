@@ -431,16 +431,17 @@
     <xsl:apply-templates/>
   </xsl:template>
   
-  <!-- TODO: check Template! -->
-  <xsl:template match='tei:space[@dim="horizontal"]'>
-    <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;&amp;nbsp;</xsl:text>
-    <!-- check, if anywhere content! if not delete this: -->
-    <xsl:apply-templates/>
+  <xsl:template match='tei:space'>
+    <xsl:choose>
+      <xsl:when test="@dim='horizontal'">
+        <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;&amp;nbsp;</xsl:text>
+      </xsl:when>
+      <xsl:when test="@dim='vertical'">
+        <br class="space"/>
+      </xsl:when>
+    </xsl:choose>
   </xsl:template>
-  
-  <xsl:template match='tei:space[@dim="vertical"]'>
-    <br class="space"/>
-  </xsl:template>
+
   
   <xsl:template match="tei:milestone">
     <xsl:if
@@ -922,14 +923,7 @@
   <!-- renditions -->
   <xsl:template match="tei:hi">
     <xsl:element name="span">
-      <xsl:if test="@rendition">
-        <xsl:call-template name="applyRendition"/>
-      </xsl:if>
-      <!-- TODO: depricated? no!  overwrites @rendition classes -->
-      <!-- TODO: @rend → <span title="..."> (content of @rend) -->
-      <xsl:if test="@rend">
-        <xsl:attribute name="class">dta-rend</xsl:attribute>
-      </xsl:if>
+      <xsl:call-template name="applyRendition"/>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>  
