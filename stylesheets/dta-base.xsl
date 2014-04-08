@@ -15,8 +15,8 @@
   <xsl:template match="tei:text[not(descendant::tei:text)]">
     <xsl:apply-templates/>
     <xsl:if test='//tei:note[@place="foot"]'>
-      <div class="footnotesep"/>
-      <xsl:apply-templates select='//tei:note[@place="foot" and text()]' mode="footnotes"/>
+      <div class="dta-footnotesep"/>
+      <xsl:apply-templates select='//tei:note[@place="foot" and text()]' mode="dta-footnotes"/>
     </xsl:if>
     <xsl:apply-templates select='//tei:fw[@place="bottom" and (text() or *)]' mode="signatures"/>
   </xsl:template>
@@ -28,14 +28,14 @@
   
   <!-- begin titlepage -->
   <xsl:template match="tei:titlePage">
-    <div class="titlepage">
+    <div class="dta-titlepage">
       <xsl:apply-templates/>
     </div>
   </xsl:template>
   
   <xsl:template match="tei:titlePart">
     <xsl:element name="div">
-      <xsl:attribute name="class">titlepart titlepart-<xsl:value-of select="@type"/></xsl:attribute>
+      <xsl:attribute name="class">dta-titlepart dta-titlepart-<xsl:value-of select="@type"/></xsl:attribute>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
@@ -43,7 +43,7 @@
   <xsl:template match="tei:byline">
     <div>
       <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'byline'"/>
+        <xsl:with-param name="class" select="'dta-byline'"/>
       </xsl:call-template>
       <xsl:apply-templates/>
     </div>
@@ -52,7 +52,7 @@
   <xsl:template match="tei:docAuthor">
     <span>
       <xsl:call-template name="applyRendition">
-        <xsl:with-param name="class" select="'docauthor'"/> 
+        <xsl:with-param name="class" select="'dta-docauthor'"/> 
       </xsl:call-template>
       <xsl:apply-templates/>
     </span>
@@ -88,7 +88,7 @@
     <xsl:choose>
       <!-- if embedded in a <figure>: create span (figdesc) -->
       <xsl:when test="ancestor::tei:figure">
-        <span class="figdesc">
+        <span class="dta-figdesc">
           <xsl:apply-templates/>
         </span>
       </xsl:when>
@@ -196,7 +196,7 @@
   
   <!-- begin drama -->
   <xsl:template match="tei:castList">
-    <div class="castlist">
+    <div class="dta-castlist">
       <xsl:apply-templates/>
     </div>
   </xsl:template>
@@ -207,17 +207,17 @@
       <xsl:when test="tei:castGroup">
         <table class="dta-castgroup">
           <td><xsl:apply-templates/></td>
-          <td class="roledesc"><xsl:apply-templates select="tei:roleDesc"/></td>
+          <td class="dta-roledesc"><xsl:apply-templates select="tei:roleDesc"/></td>
         </table>
       </xsl:when>
       <xsl:otherwise>
         <table class="dta-castgroup">
           <xsl:for-each select='tei:castItem'>
             <tr>
-              <td class="castitem"><xsl:apply-templates/></td>
+              <td class="dta-castitem"><xsl:apply-templates/></td>
               <xsl:if test="position()=1">
                 <xsl:element name="td">
-                  <xsl:attribute name="class">roledesc</xsl:attribute>
+                  <xsl:attribute name="class">dta-roledesc</xsl:attribute>
                   <xsl:attribute name="rowspan"><xsl:value-of select="count(../tei:castItem)"/></xsl:attribute>
                   <xsl:apply-templates select="../tei:roleDesc"/>
                 </xsl:element>
@@ -234,14 +234,14 @@
   </xsl:template>
   
   <xsl:template match="tei:castItem[not(parent::tei:castGroup)]">
-    <div class="castitem">
+    <div class="dta-castitem">
       <xsl:apply-templates/>
     </div>
   </xsl:template>
   
   <!-- todo: right place? -->
   <xsl:template match="tei:castList/tei:head">
-    <h2 class="head">
+    <h2 class="dta-head">
       <xsl:apply-templates/>
     </h2>
   </xsl:template>
@@ -258,7 +258,7 @@
   
   <!-- todo: right place? (no certain structure) -->
   <xsl:template match="tei:speaker">
-    <span class="speaker">
+    <span class="dta-speaker">
       <xsl:text> </xsl:text>
       <xsl:apply-templates/>
       <xsl:text> </xsl:text>
@@ -277,7 +277,7 @@
         <table>
           <tr>
             <td style="vertical-align:middle"><xsl:apply-templates select="child::*[1]"/></td>
-            <td class="braced-base braced-left">
+            <td class="dta-braced-base dta-braced-left">
               <xsl:for-each select="tei:sp">
                 <div class="dta-sp"><xsl:apply-templates/></div>
               </xsl:for-each>
@@ -288,7 +288,7 @@
       <xsl:when test="child::*[last()][self::tei:stage][@rendition='#leftBraced']">
         <table>
           <tr>
-            <td class="braced-base braced-right">
+            <td class="dta-braced-base dta-braced-right">
               <xsl:for-each select="tei:sp">
                 <div class="dta-sp"><xsl:apply-templates/></div>
               </xsl:for-each>
@@ -309,14 +309,14 @@
     <xsl:choose>
       <!-- if embedded in a speech act... -->
       <xsl:when test="ancestor::tei:sp">
-        <span class="stage">
+        <span class="dta-stage">
           <xsl:text> </xsl:text>
           <xsl:apply-templates/>
           <xsl:text> </xsl:text>
         </span>
       </xsl:when>
       <xsl:otherwise>
-        <div class="stage">
+        <div class="dta-stage">
           <xsl:apply-templates/>
         </div>
       </xsl:otherwise>
@@ -355,13 +355,13 @@
   </xsl:template>
   
   <xsl:template match='tei:lg[@type="poem"]/tei:head'>
-    <div class="head">
+    <div class="dta-head">
       <xsl:apply-templates/>
     </div>
   </xsl:template>
   
   <xsl:template match='tei:lg[@type="poem"]'>
-    <div class="poem">
+    <div class="dta-poem">
       <xsl:apply-templates/>
     </div>
   </xsl:template>
@@ -399,7 +399,7 @@
   </xsl:template>
   
   <xsl:template match="tei:epigraph">
-    <blockquote class="quote">
+    <blockquote class="dta-quote">
       <xsl:apply-templates/>
     </blockquote>
   </xsl:template>
@@ -437,7 +437,7 @@
         <xsl:text disable-output-escaping="yes">&amp;nbsp;&amp;nbsp;&amp;nbsp;</xsl:text>
       </xsl:when>
       <xsl:when test="@dim='vertical'">
-        <br class="space"/>
+        <br class="dta-space"/>
       </xsl:when>
     </xsl:choose>
   </xsl:template>
@@ -449,10 +449,10 @@
       <xsl:element name="hr">
         <xsl:choose>
           <xsl:when test="contains(@rendition, '#red') or contains(@rendition, '#hrRed')">
-            <xsl:attribute name="class">red</xsl:attribute>
+            <xsl:attribute name="class">dta-red</xsl:attribute>
           </xsl:when>
           <xsl:when test="contains(@rendition, '#blue') or contains(@rendition, '#hrBlue')">
-            <xsl:attribute name="class">blue</xsl:attribute>
+            <xsl:attribute name="class">dta-blue</xsl:attribute>
           </xsl:when>
         </xsl:choose>
       </xsl:element>
@@ -468,9 +468,7 @@
           </div>
         </xsl:when>
         <xsl:when test="@type">
-          <xsl:attribute name="class">
-            <xsl:value-of select="@type"/>
-          </xsl:attribute>
+          <xsl:attribute name="class">dta-<xsl:value-of select="@type"/></xsl:attribute>
           <xsl:apply-templates/>
         </xsl:when>
         <xsl:otherwise>
@@ -588,12 +586,12 @@
     <xsl:choose>
       <!-- old: TODO: change all occurrences in xml fils to new version -->
       <xsl:when test='@rend="braced"'>
-        <table class="list">
+        <table class="dta-list">
           <xsl:choose>
             <xsl:when test="tei:trailer">
               <xsl:for-each select="tei:item">
                 <tr>
-                  <td class="item-left">
+                  <td class="dta-item-left">
                     <xsl:apply-templates/>
                   </td>
                   <xsl:if test="position()=1">
@@ -621,7 +619,7 @@
                       <xsl:apply-templates select="../tei:head"/>
                     </xsl:element>
                   </xsl:if>
-                  <td class="item-right">
+                  <td class="dta-item-right">
                     <xsl:apply-templates/>
                   </td>
                 </tr>
@@ -632,17 +630,17 @@
       </xsl:when>
       <!-- end of old -->
       <xsl:when test='contains(@rendition, "#leftBraced") and contains(@rendition, "#rightBraced")'>
-        <span class="braced-base braced-left-right">
+        <span class="dta-braced-base dta-braced-left-right">
           <xsl:apply-templates/>
         </span>
       </xsl:when>
       <xsl:when test='contains(@rendition,"#leftBraced")'>
-        <span class="braced-base braced-left">
+        <span class="dta-braced-base dta-braced-left">
           <xsl:apply-templates/>
         </span>
       </xsl:when>
       <xsl:when test='contains(@rendition,"#rightBraced")'>
-        <span class="braced-base braced-right">
+        <span class="dta-braced-base dta-braced-right">
           <xsl:apply-templates/>
         </span>
       </xsl:when>
@@ -680,7 +678,7 @@
   <xsl:template match="tei:table">
     <xsl:choose>
       <xsl:when test="not(string(.)) or not(normalize-space(.))">
-        <div class="gap">[Tabelle]</div>
+        <div class="dta-gap">[Tabelle]</div>
       </xsl:when>
       <xsl:otherwise>
         <table class="dta-table">
@@ -749,7 +747,7 @@
     <xsl:if test="@type='sig' or @type='catch'">
       <xsl:element name="div">
         <xsl:attribute name="class">
-          <xsl:text>fw-bottom-</xsl:text><xsl:value-of select="@type"/></xsl:attribute>
+          <xsl:text>dta-fw-bottom-</xsl:text><xsl:value-of select="@type"/></xsl:attribute>
         <xsl:apply-templates/>
       </xsl:element>
     </xsl:if>
@@ -759,7 +757,7 @@
     <xsl:choose>
       <xsl:when test="@place='top'">
         <div>
-          <xsl:attribute name="class">fw-top fw-<xsl:value-of select="@type"/></xsl:attribute>
+          <xsl:attribute name="class">dta-fw-top fw-<xsl:value-of select="@type"/></xsl:attribute>
           <xsl:apply-templates/>
         </div>
       </xsl:when>
@@ -774,7 +772,7 @@
   <!-- begin footnotes -->
   <xsl:template match='tei:note[@place="foot"]'>
     <xsl:if test="string-length(@prev)=0">
-      <span class="fn-intext">
+      <span class="dta-fn-intext">
         <xsl:value-of select="@n"/>
       </span>
       <xsl:text> </xsl:text>
@@ -782,18 +780,18 @@
   </xsl:template>
   
   <xsl:template match='tei:note[@place="foot"]' mode="footnotes">
-    <div class="footnote">
+    <div class="dta-footnote">
       <xsl:variable name="prev" select="@prev"/>
       <xsl:choose>       
         <!-- if previous is not empty or sameAs is set: -->
         <xsl:when test="(string-length(@prev)!=0 and //*[@xml:id=$prev][1]/text()) or string-length(@sameAs)!=0"/>
         <xsl:otherwise>
-          <span class="fn-sign">
+          <span class="dta-fn-sign">
             <xsl:value-of select="@n"/>
           </span>
         </xsl:otherwise>
       </xsl:choose>
-      <!--<span class="fn-sign"><xsl:value-of select='@n'/></span>-->
+      <!--<span class="dta-fn-sign"><xsl:value-of select='@n'/></span>-->
       <xsl:text> </xsl:text>
       <xsl:apply-templates/>
       <xsl:apply-templates select='tei:fw[@place="bottom"][@type="catch"]' mode="signatures"/>
@@ -809,8 +807,8 @@
         <xsl:choose>
           <!-- doesn't contain pagebreak -->
           <xsl:when test="local-name(*[1])!='pb'">
-            <div class="endnote endnote-indent">
-              <span class="fn-sign">
+            <div class="dta-endnote dta-endnote-indent">
+              <span class="dta-fn-sign">
                 <xsl:value-of select="@n"/>
               </span>
               <xsl:text> </xsl:text>
@@ -819,7 +817,7 @@
           </xsl:when>
           <!-- contains pagebreak -->
           <xsl:otherwise>
-            <div class="endnote">
+            <div class="dta-endnote">
               <xsl:apply-templates/>
             </div>
           </xsl:otherwise>
@@ -827,7 +825,7 @@
       </xsl:when>
       <!-- occurence in text (link to the endnote) -->
       <xsl:otherwise>
-        <span class="fn-sign">
+        <span class="dta-fn-sign">
           <xsl:value-of select="@n"/>
         </span>
       </xsl:otherwise>
@@ -862,7 +860,7 @@
       <xsl:otherwise>
         <xsl:call-template name="applyFigure">
           <xsl:with-param name="node">span</xsl:with-param>
-          <xsl:with-param name="class">ph dta-figure</xsl:with-param>
+          <xsl:with-param name="class">dta-ph dta-figure</xsl:with-param>
         </xsl:call-template>   
       </xsl:otherwise>
     </xsl:choose>
@@ -870,7 +868,7 @@
   
   <xsl:template name="applyFigure">
     <xsl:param name="node" select="'div'"/>
-    <xsl:param name="class" select="'phbl dta-figure'"/>
+    <xsl:param name="class" select="'dta-phbl dta-figure'"/>
     <xsl:element name="{$node}">
       <xsl:attribute name="class"><xsl:value-of select="$class"/></xsl:attribute>
       <xsl:attribute name="type"><xsl:value-of select="count(preceding::tei:figure)+1"
@@ -908,13 +906,13 @@
   
   <!-- begin citations (2) -->
   <xsl:template match="tei:quote">
-    <q class="quote">
+    <q class="dta-quote">
       <xsl:apply-templates/>
     </q>
   </xsl:template>
   
   <xsl:template match="tei:q">
-    <q class="quote">
+    <q class="dta-quote">
       <xsl:apply-templates/>
     </q>
   </xsl:template>  
@@ -933,7 +931,7 @@
     <xsl:choose>
       <xsl:when test="@notation='TeX'">
         <xsl:element name="span">
-          <xsl:attribute name="class">formula</xsl:attribute>
+          <xsl:attribute name="class">dta-formula</xsl:attribute>
           <xsl:if test="@rendition='#c'">
             <xsl:attribute name="style">display:block; text-align:center</xsl:attribute>
           </xsl:if>
@@ -965,7 +963,7 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:element name="span">
-          <xsl:attribute name="class">ph formula-<xsl:value-of
+          <xsl:attribute name="class">dta-ph dta-formula-<xsl:value-of
             select="count(preceding::tei:formula)+1"/></xsl:attribute>
           <xsl:attribute name="onclick">editFormula(<xsl:value-of
             select="count(preceding::tei:formula)+1"/>)</xsl:attribute>
@@ -1011,7 +1009,7 @@
   
   <xsl:template match="tei:ref">
     <xsl:element name="span">
-      <xsl:attribute name="class">ref</xsl:attribute>
+      <xsl:attribute name="class">dta-ref</xsl:attribute>
       <xsl:choose>     
         <xsl:when
           test="starts-with(@target, '#f') or starts-with(@target, 'http') or starts-with(@target, 'BrN3E.htm') or starts-with(@target, 'ZgZuE.htm')">
@@ -1096,7 +1094,7 @@
   </xsl:template>
   
   <xsl:template match="tei:gap">
-    <span class="gap">
+    <span class="dta-gap">
       <xsl:text>[</xsl:text>
       <xsl:if test="contains(concat(' ', @reason, ' '), ' lost ')">verlorenes </xsl:if>
       <xsl:if test="contains(concat(' ', @reason, ' '), ' insignificant ')">irrelevantes </xsl:if>
