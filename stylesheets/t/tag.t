@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 82;
+use Test::More tests => 87;
 
 use DTAStyleSheets qw( process );
 
@@ -414,8 +414,19 @@ like( process($xsl, 't/xml/fw_bottom_pagenum.xml'), qr{<p class="dta-p"/>});
 like( process($xsl, 't/xml/trailer.xml'), qr{<p class="dta-p">p</p>\s*<span class="dta-trailer">content</span>});
 
 # <foreign>
-# empty node, @xml:lang="he"
-like( process($xsl, 't/xml/foreign_he.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material">FM: hebräisch</span></p>});
+# no content, @xml:lang="he"
+like( process($xsl, 't/xml/foreign_no_content_he.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material" xml:lang="he">FM: hebräisch</span></p>});
+# no content, @xml:lang="zh"
+like( process($xsl, 't/xml/foreign_no_content_zh.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material" xml:lang="zh">FM: zh</span></p>});
+# no content, not(@xml:lang)
+like( process($xsl, 't/xml/foreign_no_content_no_lang.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material"/></p>});
+# content, @xml:lang="he"
+like( process($xsl, 't/xml/foreign_content_he.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material" xml:lang="he">content</span></p>});
+# content, @xml:lang="zh"
+like( process($xsl, 't/xml/foreign_content_zh.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material" xml:lang="zh">content</span></p>});
+# content, not(@xml:lang)
+like( process($xsl, 't/xml/foreign_content_no_lang.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material">content</span></p>});
+
 
 # <choice>
 # reg and orig
