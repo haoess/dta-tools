@@ -157,6 +157,7 @@ like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 	<br/>}x);
 	
 # <figure>
+# TODO: simplify!
 like( process($xsl, 't/xml/figure.xml'), qr{
 	<div>\s*
 		<p\s+class="dta-p">text1</p><br/>\s*
@@ -210,6 +211,7 @@ like( process($xsl, 't/xml/table.xml'), qr{
 	</table>}x);	
 
 # <gap>
+# TODO: simplify!
 like( process($xsl, 't/xml/gap.xml'), qr{	
 	<div>\s*
 		<p\s+class="dta-p">t1<span\s+class="dta-gap">\[verlorenes[ ]Material[ ]&#x2013;[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*<p\s+class="dta-p">t2<span\s+class="dta-gap">\[irrelevantes[ ]fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Seiten[ ]fehlen\]</span>t2</p>\s*<p\s+class="dta-p">t3<span\s+class="dta-gap">\[verlorenes[ ]irrelevantes[ ]unleserliches[ ]Material[ ]&#x2013;[ ]1[ ]Zeile[ ]fehlt\]</span>t3</p>\s*<p\s+class="dta-p">t4<span\s+class="dta-gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Zeilen[ ]fehlen\]</span>t4</p>\s*<p\s+class="dta-p">t5<span\s+class="dta-gap">\[unleserliches[ ]Material[ ]&#x2013;[ ]1[ ]Wort[ ]fehlt\]</span>t5</p>\s*<p\s+class="dta-p">t6<span\s+class="dta-gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Wörter[ ]fehlen\]</span>t6</p>\s*<p\s+class="dta-p">t7<span\s+class="dta-gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]1[ ]Zeichen[ ]fehlt\]</span>t7</p>\s*<p\s+class="dta-p">t8<span\s+class="dta-gap">\[1[ ]Zeichen[ ]fehlt\]</span>t8</p>\s*<p\s+class="dta-p">t9<span\s+class="dta-gap">\[fremdsprachliches[ ]Material\]</span>t9</p>\s*<p\s+class="dta-p">t10<span\s+class="dta-gap">\[Wort[ ]fehlt\]</span>t10</p>\s*</div>}x);	
