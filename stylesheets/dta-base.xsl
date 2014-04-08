@@ -1037,39 +1037,56 @@
   
   <!-- begin editorial -->
   
-  <!-- implement template for every #editorial tag -->
   <!-- attributes have to get only text! other can get rendition-stuff etc. -->
   <xsl:template match="tei:choice">
     <xsl:choose>
       <xsl:when test="./tei:reg">
         <xsl:element name="span">
-          <xsl:attribute name="title">Original: <xsl:value-of select="tei:orig"/></xsl:attribute>
+          <xsl:attribute name="title">
+            Original: <xsl:apply-templates select="tei:orig" mode="choice"/>
+          </xsl:attribute>
           <xsl:attribute name="class">dta-reg</xsl:attribute>
-          <xsl:apply-templates select="tei:reg"/>
+          <xsl:apply-templates select="tei:reg" mode="choice"/>
         </xsl:element>
       </xsl:when>
       <xsl:when test="./tei:abbr">
         <xsl:element name="span">
           <xsl:attribute name="title">
-            <xsl:value-of select="tei:expan"/>
+            <xsl:apply-templates select="tei:expan" mode="choice"/>
           </xsl:attribute>
           <xsl:attribute name="class">dta-abbr</xsl:attribute>
-          <!-- TODO: no template "tei:abbr" -->
-          <xsl:apply-templates select="tei:abbr"/>
+          <xsl:apply-templates select="tei:abbr" mode="choice"/>
         </xsl:element>
       </xsl:when>
-      <xsl:otherwise>
+      <xsl:when test="./tei:corr">
         <xsl:element name="span">
-          <xsl:attribute name="title">Schreibfehler: <xsl:value-of select="tei:sic"
-            /></xsl:attribute>
+          <xsl:attribute name="title">
+            Schreibfehler: <xsl:apply-templates select="tei:sic" mode="choice"/>
+          </xsl:attribute>
           <xsl:attribute name="class">dta-corr</xsl:attribute>
-          <xsl:apply-templates select="tei:corr"/>
+          <xsl:apply-templates select="tei:corr" mode="choice"/>
         </xsl:element>
-      </xsl:otherwise>
+      </xsl:when>
     </xsl:choose>
+  </xsl:template>  
+  
+  <xsl:template match="tei:reg" mode="choice">
+    <xsl:apply-templates/>
   </xsl:template>
-
-  <xsl:template match="tei:corr">
+  
+  <xsl:template match="tei:orig" mode="choice">
+    <xsl:value-of select="string(.)"/>
+  </xsl:template>
+  
+  <xsl:template match="tei:abbr" mode="choice">
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  <xsl:template match="tei:expan" mode="choice">
+    <xsl:value-of select="string(.)"/>
+  </xsl:template>
+  
+  <xsl:template match="tei:corr" mode="choice">
     <xsl:choose>
       <xsl:when test="not(string(.))">
         <xsl:text>[&#8230;]</xsl:text>
@@ -1078,6 +1095,10 @@
         <xsl:apply-templates/>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template match="tei:sic" mode="choice">
+    <xsl:value-of select="string(.)"/>
   </xsl:template>
   
   <xsl:template match="tei:gap">
