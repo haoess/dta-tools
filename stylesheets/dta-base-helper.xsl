@@ -25,7 +25,7 @@
       </xsl:choose>
       <xsl:if test="@rend">
         <xsl:value-of select="'dta-rend'"/>
-        <xsl:if test="@rendtion"><xsl:text> </xsl:text></xsl:if>        
+        <xsl:if test="@rendition"><xsl:text> </xsl:text></xsl:if>        
       </xsl:if>
       <xsl:choose>
         <xsl:when test="@rendition and contains(normalize-space(@rendition),' ')">
