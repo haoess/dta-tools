@@ -16,7 +16,7 @@
     <xsl:apply-templates/>
     <xsl:if test='//tei:note[@place="foot"]'>
       <div class="dta-footnotesep"/>
-      <xsl:apply-templates select='//tei:note[@place="foot" and text()]' mode="dta-footnotes"/>
+      <xsl:apply-templates select='//tei:note[@place="foot" and text()]' mode="footnotes"/>
     </xsl:if>
     <xsl:apply-templates select='//tei:fw[@place="bottom" and (text() or *)]' mode="signatures"/>
   </xsl:template>
@@ -757,7 +757,7 @@
     <xsl:choose>
       <xsl:when test="@place='top'">
         <div>
-          <xsl:attribute name="class">dta-fw-top fw-<xsl:value-of select="@type"/></xsl:attribute>
+          <xsl:attribute name="class">dta-fw-top dta-fw-<xsl:value-of select="@type"/></xsl:attribute>
           <xsl:apply-templates/>
         </div>
       </xsl:when>

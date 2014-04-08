@@ -129,8 +129,8 @@ like( process($xsl, 't/xml/castgroup_castitem.xml'), qr{
 # <spGrp>
 like( process($xsl, 't/xml/spGrp_stagebefore.xml'), qr{
 	<table><tr><td\s+style="vertical-align:middle"><div\s+class="dta-stage">\s*
-			<p\s+class="dta-v">Sprechen\s+gleichzeitig</p>\s*
-		</div></td><td\s+class="dta-braced-base\s+braced-left"><div\s+class="dta-sp">\s*
+			<p\s+class="v">Sprechen\s+gleichzeitig</p>\s*
+		</div></td><td\s+class="dta-braced-base\s+dta-braced-left"><div\s+class="dta-sp">\s*
 			<span\s+class="dta-speaker">\s+S1\s+</span>\s*
 			<span\s+class="dta-in-sp">t1</span>\s*
 			<span\s+class="dta-stage">\s+to\s+S2\s+</span>\s+\s*
@@ -147,7 +147,7 @@ like( process($xsl, 't/xml/spGrp_stagebefore.xml'), qr{
 	<br/>}x);
 	
 like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
-	<table><tr><td\s+class="dta-braced-base\s+braced-right"><div\s+class="dta-sp">\s*
+	<table><tr><td\s+class="dta-braced-base\s+dta-braced-right"><div\s+class="dta-sp">\s*
 			<span\s+class="dta-speaker">\s+<span\s+class="g">S1</span>\s+</span>\s*
 			<span\s+class="dta-in-sp">t1</span>\s*
 		</div><div\s+class="dta-sp">\s*
@@ -232,7 +232,7 @@ like( process($xsl, 't/xml/list_simple.xml'), qr{
 like( process($xsl, 't/xml/list_leftbraced.xml'), qr{	
 	<div\s+class="dta-list">\s*
 		<div\s+class="dta-list-item">gemeinsamer[ ]Textbaustein[ ]vorn\s*
-			<span\s+class="dta-braced-base[ ]braced-left">\s*
+			<span\s+class="dta-braced-base[ ]dta-braced-left">\s*
 				<div\s+class="dta-list-item">Element[ ]1[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
 				<div\s+class="dta-list-item">Element[ ]2[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
 				<div\s+class="dta-list-item">Element[ ]n[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
@@ -242,7 +242,7 @@ like( process($xsl, 't/xml/list_leftbraced.xml'), qr{
 like( process($xsl, 't/xml/list_rightbraced.xml'), qr{	
 	<div\s+class="dta-list">\s*
 		<div\s+class="dta-list-item">\s*
-			<span\s+class="dta-braced-base[ ]braced-right">\s*
+			<span\s+class="dta-braced-base[ ]dta-braced-right">\s*
 				<div\s+class="dta-list-item">Element[ ]1[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
 				<div\s+class="dta-list-item">Element[ ]2[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
 				<div\s+class="dta-list-item">Element[ ]n[ ]der[ ]geklammerten[ ]Liste</div>\s*
@@ -252,7 +252,7 @@ like( process($xsl, 't/xml/list_rightbraced.xml'), qr{
 like( process($xsl, 't/xml/list_leftrightbraced.xml'), qr{	
 	<div\s+class="dta-list">\s*
 		<div\s+class="dta-list-item">gemeinsamer[ ]Textbaustein[ ]vorn\s*
-			<span\s+class="dta-braced-base[ ]braced-left-right">\s*
+			<span\s+class="dta-braced-base[ ]dta-braced-left-right">\s*
 				<div\s+class="dta-list-item">Element[ ]1[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
 				<div\s+class="dta-list-item">Element[ ]2[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
 				<div\s+class="dta-list-item">Element[ ]n[ ]der[ ]geklammerten[ ]Liste</div><br/>\s*
@@ -273,7 +273,7 @@ like( process($xsl, 't/xml/note_foot.xml'), qr{
 like( process($xsl, 't/xml/note_end.xml'), qr{	
 	<p\s+class="dta-p">text1<span\s+class="dta-fn-sign">\(a\)</span>text2</p>\s*
 	<p\s+class="dta-p">text3<span\s+class="dta-fn-sign">\(b\)</span>text4</p>\s*
-	<div\s+class="dta-endnote\s+endnote-indent"><span\s+class="dta-fn-sign">\(a\)</span>[ ]endnotea</div>\s*
+	<div\s+class="dta-endnote\s+dta-endnote-indent"><span\s+class="dta-fn-sign">\(a\)</span>[ ]endnotea</div>\s*
 	<div\s+class="dta-endnote">endnotebendnotebCont</div>}x);	
 
 # marginals
@@ -294,7 +294,7 @@ like( process($xsl, 't/xml/titlepage.xml'), qr{<div class="dta-titlepage">\s*<p 
 like( process($xsl, 't/xml/titlepart.xml'), qr{<div class="dta-titlepart dta-titlepart-main">Title</div>});
 
 # <docAuthor>
-like( process($xsl, 't/xml/docauthor.xml'), qr{<div class="dta-titlepage">\s*<span class="docauthor">author</span>\s*</div>});
+like( process($xsl, 't/xml/docauthor.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docauthor">author</span>\s*</div>});
 
 # <docDate>
 like( process($xsl, 't/xml/docdate.xml'), qr{<div class="dta-titlepage">\s*date\s*</div>});
