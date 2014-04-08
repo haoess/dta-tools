@@ -976,24 +976,37 @@
   </xsl:template>
   
   <xsl:template match="tei:foreign">
-    <xsl:choose>
-      <!--<xsl:when test="not(*//text()) and @xml:lang">-->
-      <!-- TODO: check: only if foreign-node has no content? no! put span everytime (just content is dependent) -->
-      <!-- TODO: node() vs. *?  -->
-      <xsl:when test="not(child::node()) and @xml:lang">
-        <span class="dta-foreign" title="fremdsprachliches Material">FM: <xsl:choose>
-          <xsl:when test="@xml:lang='he' or @xml:lang='heb' or @xml:lang='hbo'"
-            >hebräisch</xsl:when>
-          <xsl:when test="@xml:lang='el' or @xml:lang='grc' or @xml:lang='ell'"
-            >griechisch</xsl:when>
-          <xsl:otherwise><xsl:value-of select="@xml:lang"/></xsl:otherwise>
+    <span class="dta-foreign" title="fremdsprachliches Material">
+     <xsl:choose>       
+      <xsl:when test="@xml:lang">
+        <xsl:attribute name="xml:lang">
+          <xsl:value-of select="@xml:lang"/>
+        </xsl:attribute>
+        <xsl:choose>
+          <xsl:when test="not(child::*) and not(child::text())">
+            <xsl:text>FM: </xsl:text>
+            <xsl:choose>
+              <xsl:when test="@xml:lang='he' or @xml:lang='heb' or @xml:lang='hbo'">
+                <xsl:text>hebräisch</xsl:text>
+              </xsl:when>
+              <xsl:when test="@xml:lang='el' or @xml:lang='grc' or @xml:lang='ell'">
+                <xsl:text>griechisch</xsl:text>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="@xml:lang"/>
+              </xsl:otherwise>
+            </xsl:choose> 
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates/>  
+          </xsl:otherwise>
         </xsl:choose>
-        </span>
       </xsl:when>
-      <xsl:otherwise>
-        <xsl:apply-templates/>
-      </xsl:otherwise>
-    </xsl:choose>
+       <xsl:otherwise>
+         <xsl:apply-templates/>
+       </xsl:otherwise>
+     </xsl:choose>
+    </span>
   </xsl:template>
   
   <!-- TODO: -->
