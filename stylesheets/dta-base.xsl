@@ -271,13 +271,12 @@
           <xsl:when test="local-name(current())='stage' and not(local-name(current()/preceding-sibling::*[1])='p') and current()/following-sibling::tei:p and not(local-name(current()/following-sibling::*[1])='lb') ">
              <!-- OPEN_P_AT_STAGE -->
             <xsl:text disable-output-escaping="yes">&lt;p class="dta-sp-p"&gt;</xsl:text>
-            <span class="dta-stage">
-              <xsl:apply-templates/>
-            </span> 
+            <xsl:apply-templates select="."/>
           </xsl:when>
           <xsl:when test="local-name(current())='p' and local-name(current()/preceding-sibling::*[1])='stage'">
             <!-- P_AFTER_STAGE -->
-            <xsl:apply-templates/> 
+            <xsl:text> </xsl:text>
+            <xsl:apply-templates select="."/>
             <xsl:if test="local-name(current()/following-sibling::*[1])='lb' or not(current()/following-sibling::tei:p or current()/following-sibling::tei:stage)">
               <!-- CLOSE_P_AT_P -->
               <xsl:text disable-output-escaping="yes">&lt;/p&gt;</xsl:text>
@@ -286,13 +285,12 @@
           <xsl:when test="local-name(current())='p' and local-name(current()/following-sibling::*[1])='stage'">
             <!-- OPEN_P_BEFORE_STAGE -->
             <xsl:text disable-output-escaping="yes">&lt;p class="dta-sp-p"&gt;</xsl:text>
-            <xsl:apply-templates/> 
+            <xsl:apply-templates select="."/>
+            <xsl:text> </xsl:text>
           </xsl:when>
           <xsl:when test="local-name(current())='stage' and local-name(current()/preceding-sibling::*[1])='p'">
             <!-- STAGE_AFTER_P -->
-            <span class="dta-stage">
-              <xsl:apply-templates/>
-            </span>               
+            <xsl:apply-templates select="."/>             
             <xsl:if test="local-name(current()/following-sibling::*[1])='lb' or not(current()/following-sibling::tei:p or current()/following-sibling::tei:stage)">
               <!-- CLOSE_P_AT_STAGE -->
               <xsl:text disable-output-escaping="yes">&lt;/p&gt;</xsl:text>
@@ -300,17 +298,14 @@
           </xsl:when>
           <xsl:when test="local-name(current())='stage'">
             <!-- STAGE_SINGLE -->
-            <span class="dta-stage">
-              <xsl:apply-templates/>
-            </span> 
+            <xsl:apply-templates select="."/>
           </xsl:when>
           <xsl:when test="local-name(current())='p'">
             <!-- P_SINGLE -->
-            <p class="dta-sp-p">
-              <xsl:apply-templates/> 
+            <p class="dta-sp-p">  
+              <xsl:apply-templates select="."/>
             </p>
-          </xsl:when>
-          
+          </xsl:when>          
           <xsl:otherwise>
             <!-- OTHER  -->
             <xsl:apply-templates select="current()"/>
@@ -355,23 +350,13 @@
   </xsl:template>
   
   <!-- stage direction -->
-  <!-- todo: right place? (no certain structure) -->
-  <xsl:template match="tei:stage">
-    <xsl:choose>
-      <!-- if embedded in a speech act... -->
-      <xsl:when test="ancestor::tei:sp">
-        <span class="dta-stage">
-          <xsl:text> </xsl:text>
-          <xsl:apply-templates/>
-          <xsl:text> </xsl:text>
-        </span>
-      </xsl:when>
-      <xsl:otherwise>
+  <xsl:template match="tei:stage">    
         <div class="dta-stage">
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class" select="'dta-stage'"/>
+          </xsl:call-template>            
           <xsl:apply-templates/>
         </div>
-      </xsl:otherwise>
-    </xsl:choose>
   </xsl:template>
   <!-- end drama -->
   
@@ -534,8 +519,31 @@
   <!-- TODO: restructure <p> -->
   <!-- p as speech act vs. real paragraph -->
   <!-- indent vs. no indent -->
+  <xsl:template match="tei:p" mode="in-sp">
+    <xsl:param name="class" select="'noClass'"/>
+    <xsl:choose>
+      <xsl:when test="$class != 'noClass'">
+        <xsl:call-template name="applyRendition">
+          <xsl:with-param name="class" select="$class"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="applyRendition"/>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:apply-templates/>
+  </xsl:template>
+  
   <xsl:template match="tei:p">
    <xsl:choose>
+     <xsl:when test="ancestor::tei:sp">
+       <span class="dta-p-in-sp">
+         <xsl:call-template name="applyRendition">
+           <xsl:with-param name="class" select="'dta-p-in-sp'"/>
+         </xsl:call-template>
+         <xsl:apply-templates/>
+       </span>
+     </xsl:when>
       <!-- <xsl:when test="ancestor::tei:sp and name(preceding-sibling::*[2]) != 'p'">
         <span class="dta-in-sp">
           <xsl:apply-templates/>
