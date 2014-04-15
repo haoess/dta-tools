@@ -1,0 +1,11 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<sp who="#THE"><speaker>speaker1</speaker> 
+				<p>line1</p>	
+				<stage>stage1</stage>
+				<p>line2</p>
+			</sp>
+		</body> 
+	</text>
+</TEI>
