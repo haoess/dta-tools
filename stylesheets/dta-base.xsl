@@ -256,7 +256,6 @@
     <xsl:apply-templates/>
   </xsl:template>
   
-  <!-- todo: right place? (no certain structure) -->
   <xsl:template match="tei:speaker">
     <span class="dta-speaker">
       <xsl:text> </xsl:text>
@@ -265,9 +264,61 @@
     </span>
   </xsl:template>
   
-  <xsl:template match="tei:sp">
-    <div class="dta-sp">
-      <xsl:apply-templates/>
+  <xsl:template match="tei:sp">    
+    <div class="dta-sp">      
+      <xsl:for-each select="child::*">
+        <xsl:choose>
+          <xsl:when test="local-name(current())='stage' and not(local-name(current()/preceding-sibling::*[1])='p') and current()/following-sibling::tei:p and not(local-name(current()/following-sibling::*[1])='lb') ">
+             <!-- OPEN_P_AT_STAGE -->
+            <xsl:text disable-output-escaping="yes">&lt;p class="dta-sp-p"&gt;</xsl:text>
+            <span class="dta-stage">
+              <xsl:apply-templates/>
+            </span> 
+          </xsl:when>
+          <xsl:when test="local-name(current())='p' and local-name(current()/preceding-sibling::*[1])='stage'">
+            <!-- P_AFTER_STAGE -->
+            <xsl:apply-templates/> 
+            <xsl:if test="local-name(current()/following-sibling::*[1])='lb' or not(current()/following-sibling::tei:p or current()/following-sibling::tei:stage)">
+              <!-- CLOSE_P_AT_P -->
+              <xsl:text disable-output-escaping="yes">&lt;/p&gt;</xsl:text>
+            </xsl:if>             
+          </xsl:when>
+          <xsl:when test="local-name(current())='p' and local-name(current()/following-sibling::*[1])='stage'">
+            <!-- OPEN_P_BEFORE_STAGE -->
+            <xsl:text disable-output-escaping="yes">&lt;p class="dta-sp-p"&gt;</xsl:text>
+            <xsl:apply-templates/> 
+          </xsl:when>
+          <xsl:when test="local-name(current())='stage' and local-name(current()/preceding-sibling::*[1])='p'">
+            <!-- STAGE_AFTER_P -->
+            <span class="dta-stage">
+              <xsl:apply-templates/>
+            </span>               
+            <xsl:if test="local-name(current()/following-sibling::*[1])='lb' or not(current()/following-sibling::tei:p or current()/following-sibling::tei:stage)">
+              <!-- CLOSE_P_AT_STAGE -->
+              <xsl:text disable-output-escaping="yes">&lt;/p&gt;</xsl:text>
+            </xsl:if>  
+          </xsl:when>
+          <xsl:when test="local-name(current())='stage'">
+            <!-- STAGE_SINGLE -->
+            <span class="dta-stage">
+              <xsl:apply-templates/>
+            </span> 
+          </xsl:when>
+          <xsl:when test="local-name(current())='p'">
+            <!-- P_SINGLE -->
+            <p class="dta-sp-p">
+              <xsl:apply-templates/> 
+            </p>
+          </xsl:when>
+          
+          <xsl:otherwise>
+            <!-- OTHER  -->
+            <xsl:apply-templates select="current()"/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:for-each>     
+      
+      <!-- <xsl:apply-templates/> -->
     </div>
   </xsl:template>
   
@@ -484,7 +535,7 @@
   <!-- p as speech act vs. real paragraph -->
   <!-- indent vs. no indent -->
   <xsl:template match="tei:p">
-    <xsl:choose>
+   <xsl:choose>
       <xsl:when test="ancestor::tei:sp and name(preceding-sibling::*[2]) != 'p'">
         <span class="dta-in-sp">
           <xsl:apply-templates/>
