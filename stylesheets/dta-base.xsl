@@ -531,22 +531,7 @@
     
   <!-- TODO: restructure <p> -->
   <!-- p as speech act vs. real paragraph -->
-  <!-- indent vs. no indent -->
-  <xsl:template match="tei:p" mode="in-sp">
-    <xsl:param name="class" select="'noClass'"/>
-    <xsl:choose>
-      <xsl:when test="$class != 'noClass'">
-        <xsl:call-template name="applyRendition">
-          <xsl:with-param name="class" select="$class"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:call-template name="applyRendition"/>
-      </xsl:otherwise>
-    </xsl:choose>
-    <xsl:apply-templates/>
-  </xsl:template>
-  
+  <!-- indent vs. no indent -->  
   <xsl:template match="tei:p">
    <xsl:choose>
      <xsl:when test="ancestor::tei:sp">
@@ -557,23 +542,6 @@
          <xsl:apply-templates/>
        </span>
      </xsl:when>
-      <!-- <xsl:when test="ancestor::tei:sp and name(preceding-sibling::*[2]) != 'p'">
-        <span class="dta-in-sp">
-          <xsl:apply-templates/>
-        </span>
-      </xsl:when>
-      <xsl:when
-        test="ancestor::tei:sp and local-name(preceding-sibling::node()[1]) != 'lb' and local-name(preceding-sibling::node()[1]) != 'pb'">
-        <span class="dta-in-sp">
-          <xsl:apply-templates/>
-        </span>
-      </xsl:when>
-      <xsl:when test="ancestor::tei:sp and local-name(preceding-sibling::node()[1]) = 'lb'">
-        <p class="dta-p-in-sp-really">
-          <xsl:apply-templates/>
-        </p>
-      </xsl:when>
-      -->
       <!-- TODO: check: if descendant::pb no @rendition is possible? (occurence found!) -->
       <xsl:when test="descendant::tei:pb">
         <p>
@@ -582,20 +550,19 @@
       </xsl:when>
       <!-- TODO: if descendant::pb no @prev is possible? (occurence found!) -->
       <!-- ->cascade! -->
-      <xsl:when test="@rendition">
-        <p>
-          <xsl:call-template name="applyRendition"/>
-          <xsl:apply-templates/>
-        </p>
-      </xsl:when>
-      <!-- ->cascade! -->
       <xsl:when test="@prev">
-        <p class="dta-no-indent">
+        <p>
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class" select="'dta-no-indent'"/>
+          </xsl:call-template>
           <xsl:apply-templates/>
         </p>
       </xsl:when>
       <xsl:otherwise>
-        <p class="dta-p">
+        <p>
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class" select="'dta-p'"/>
+          </xsl:call-template>
           <xsl:apply-templates/>
         </p>
       </xsl:otherwise>
