@@ -350,13 +350,26 @@
   </xsl:template>
   
   <!-- stage direction -->
-  <xsl:template match="tei:stage">    
+  <xsl:template match="tei:stage">  
+    <xsl:choose>
+      <xsl:when test="ancestor::tei:sp">
+        <span class="dta-stage">
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class" select="'dta-stage'"/>
+          </xsl:call-template>            
+          <xsl:apply-templates/>
+        </span>  
+      </xsl:when>
+      <xsl:otherwise>
         <div class="dta-stage">
           <xsl:call-template name="applyRendition">
             <xsl:with-param name="class" select="'dta-stage'"/>
           </xsl:call-template>            
           <xsl:apply-templates/>
-        </div>
+        </div>    
+      </xsl:otherwise>
+    </xsl:choose>
+
   </xsl:template>
   <!-- end drama -->
   
