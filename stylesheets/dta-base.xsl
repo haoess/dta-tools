@@ -536,7 +536,7 @@
   <!-- indent vs. no indent -->
   <xsl:template match="tei:p">
    <xsl:choose>
-      <xsl:when test="ancestor::tei:sp and name(preceding-sibling::*[2]) != 'p'">
+      <!-- <xsl:when test="ancestor::tei:sp and name(preceding-sibling::*[2]) != 'p'">
         <span class="dta-in-sp">
           <xsl:apply-templates/>
         </span>
@@ -552,6 +552,7 @@
           <xsl:apply-templates/>
         </p>
       </xsl:when>
+      -->
       <!-- TODO: check: if descendant::pb no @rendition is possible? (occurence found!) -->
       <xsl:when test="descendant::tei:pb">
         <p>
