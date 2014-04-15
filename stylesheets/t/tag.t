@@ -125,35 +125,35 @@ like( process($xsl, 't/xml/castgroup_castitem.xml'), qr{
 			</td>\s*
 		</tr>\s*
 	</table><br/>}x );
-	
+		
 # <spGrp>
 like( process($xsl, 't/xml/spGrp_stagebefore.xml'), qr{
-	<table><tr><td\s+style="vertical-align:middle"><div\s+class="dta-stage">\s*
+	<table><tr><td\s+style="vertical-align:middle"><div\s+class="dta-stage\s+rightBraced">\s*
 			<p\s+class="v">Sprechen\s+gleichzeitig</p>\s*
 		</div></td><td\s+class="dta-braced-base\s+dta-braced-left"><div\s+class="dta-sp">\s*
 			<span\s+class="dta-speaker">\s+S1\s+</span>\s*
-			<span\s+class="dta-in-sp">t1</span>\s*
-			<span\s+class="dta-stage">\s+to\s+S2\s+</span>\s+\s*
-			<span\s+class="dta-in-sp">t2</span><br/>\s*
+			<span\s+class="dta-p-in-sp">t1</span>\s*
+			<span\s+class="dta-stage">to\s+S2</span>\s*
+			<span\s+class="dta-p-in-sp">t2</span><br/>\s*
 		</div><div\s+class="dta-sp">\s*
 			<span\s+class="dta-speaker">\s+S2\s+</span>\s*
-			<span\s+class="dta-stage">\s+to\s+S3\s+</span>\s*
-			<span\s+class="dta-in-sp">t3</span><br/>\s*
+			<span\s+class="dta-stage">to\s+S3</span>\s*
+			<span\s+class="dta-p-in-sp">t3</span><br/>\s*
 		</div><div\s+class="dta-sp">\s*
 			<span\s+class="dta-speaker">\s+S3\s+</span>\s*
-			<span\s+class="dta-stage">\s+to\s+S1\s+</span>\s*
-			<span\s+class="dta-in-sp">t4</span><br/>\s*
+			<span\s+class="dta-stage">to\s+S1</span>\s*
+			<span\s+class="dta-p-in-sp">t4</span><br/>\s*
 		</div></td></tr></table>\s*
-	<br/>}x);
+			<br/>}x);
 	
 like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 	<table><tr><td\s+class="dta-braced-base\s+dta-braced-right"><div\s+class="dta-sp">\s*
-			<span\s+class="dta-speaker">\s+<span\s+class="g">S1</span>\s+</span>\s*
-			<span\s+class="dta-in-sp">t1</span>\s*
+			<span\s+class="dta-speaker">\s+S1\s+</span>\s*
+			<span\s+class="dta-p-in-sp">t1</span>\s*
 		</div><div\s+class="dta-sp">\s*
-			<span\s+class="dta-speaker">\s+<span\s+class="g">S2</span>\s+</span>\s*
-			<span\s+class="dta-in-sp">t2</span>\s*
-		</div></td><td\s+style="vertical-align:middle"><div\s+class="dta-stage">gleichzeitig</div></td></tr></table>\s*
+			<span\s+class="dta-speaker">\s+S2\s+</span>\s*
+			<span\s+class="dta-p-in-sp">t2</span>\s*
+		</div></td><td\s+style="vertical-align:middle"><div\s+class="dta-stage\s+leftBraced">gleichzeitig</div></td></tr></table>\s*
 	<br/>}x);
 	
 # <figure>
@@ -445,19 +445,19 @@ like( process($xsl, 't/xml/ref.xml'), qr{<p class="dta-p"><span class="dta-ref" 
 
 # <sp>
 # sp_p_single
-like( process($xsl, 't/xml/sp_p_single.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p">line1</p></div>});
+like( process($xsl, 't/xml/sp_p_single.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span></p></div>});
 # sp_stage_single
-like( process($xsl, 't/xml/sp_stage_single.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><span class="dta-stage">stage1</span></div>});
+like( process($xsl, 't/xml/sp_stage_single.xml'), qr{<div class="dta-sp"><span class="dta-stage">stage1</span></div>});
 # sp_stage_before_p
-like( process($xsl, 't/xml/sp_stage_before_p.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p"><span class="dta-stage">stage1</span>line1</p></div>});
+like( process($xsl, 't/xml/sp_stage_before_p.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span></p></div>});
 # sp_stage_behind_p
-like( process($xsl, 't/xml/sp_stage_behind_p.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p">line1<span class="dta-stage">stage1</span></p></div>});
+like( process($xsl, 't/xml/sp_stage_behind_p.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span> <span class="dta-stage">stage1</span></p></div>});
 # sp_stage_embedded
-like( process($xsl, 't/xml/sp_stage_embedded.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p">line1<span class="dta-stage">stage1</span>line2</p></div>});
+like( process($xsl, 't/xml/sp_stage_embedded.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span> <span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line2</span></p></div>});
 # sp_stage_embedded2
-like( process($xsl, 't/xml/sp_stage_embedded2.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p">line1<span class="dta-stage">stage1</span>line2<span class="dta-stage">stage1</span></p></div>});
+like( process($xsl, 't/xml/sp_stage_embedded2.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span> <span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line2</span><span class="dta-stage">stage2</span></p></div>});
 # sp_stage_embedded3
-like( process($xsl, 't/xml/sp_stage_embedded3.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p"><span class="dta-stage">stage1</span>line1<span class="dta-stage">stage2</span>line2</p></div>});
+like( process($xsl, 't/xml/sp_stage_embedded3.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span><span class="dta-stage">stage2</span> <span class="dta-p-in-sp">line2</span></p></div>});
 # linebreaks
-like( process($xsl, 't/xml/sp_stage_p_lb.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p"><span class="dta-stage">stage1</span>line1</p><br/><span class="dta-stage">stage2</span><br/><p class="dta-sp-p">line2</p></div>});
+like( process($xsl, 't/xml/sp_stage_p_lb.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span></p><br/><span class="dta-stage">stage2</span><br/><p class="dta-sp-p"><span class="dta-p-in-sp">line2</span></p></div>});
 		 

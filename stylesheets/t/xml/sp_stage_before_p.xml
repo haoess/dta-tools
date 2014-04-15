@@ -1,7 +1,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
 	<text>
 		<body>
-			<sp who="#THE"><speaker>speaker1</speaker> 
+			<sp>
 				<stage>stage1</stage>
 				<p>line1</p>				
 			</sp>
