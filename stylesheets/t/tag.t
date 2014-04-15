@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 88;
+use Test::More tests => 96;
 
 use DTAStyleSheets qw( process );
 
@@ -443,3 +443,21 @@ like( process($xsl, 't/xml/choice_corr_empty.xml'), qr{<p class="dta-p"><span ti
 # <ref>
 like( process($xsl, 't/xml/ref.xml'), qr{<p class="dta-p"><span class="dta-ref" data-target="#f0001">ref</span></p>});
 
+# <sp>
+# sp_p_single
+like( process($xsl, 't/xml/sp_p_single.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p">line1</p></div>});
+# sp_stage_single
+like( process($xsl, 't/xml/sp_stage_single.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><span class="dta-stage">stage1</span></div>});
+# sp_stage_before_p
+like( process($xsl, 't/xml/sp_stage_before_p.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p"><span class="dta-stage">stage1</span>line1</p></div>});
+# sp_stage_behind_p
+like( process($xsl, 't/xml/sp_stage_behind_p.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p">line1<span class="dta-stage">stage1</span></p></div>});
+# sp_stage_embedded
+like( process($xsl, 't/xml/sp_stage_embedded.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p">line1<span class="dta-stage">stage1</span>line2</p></div>});
+# sp_stage_embedded2
+like( process($xsl, 't/xml/sp_stage_embedded2.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p">line1<span class="dta-stage">stage1</span>line2<span class="dta-stage">stage1</span></p></div>});
+# sp_stage_embedded3
+like( process($xsl, 't/xml/sp_stage_embedded3.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p"><span class="dta-stage">stage1</span>line1<span class="dta-stage">stage2</span>line2</p></div>});
+# linebreaks
+like( process($xsl, 't/xml/sp_stage_p_lb.xml'), qr{<div class="dta-sp"><span class="dta-speaker"> speaker1 </span><p class="dta-sp-p"><span class="dta-stage">stage1</span>line1</p><br/><span class="dta-stage">stage2</span><br/><p class="dta-sp-p">line2</p></div>});
+		 
