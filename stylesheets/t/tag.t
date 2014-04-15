@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 97;
+use Test::More tests => 98;
 
 use DTAStyleSheets qw( process );
 
@@ -461,4 +461,6 @@ like( process($xsl, 't/xml/sp_stage_embedded3.xml'), qr{<div class="dta-sp"><p c
 # linebreaks
 like( process($xsl, 't/xml/sp_stage_p_lb.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span></p><br/><span class="dta-stage">stage2</span><br/><p class="dta-sp-p"><span class="dta-p-in-sp">line2</span></p></div>});
 # sp_p_p
-like( process($xsl, 't/xml/sp_p_p.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span></p><p class="dta-sp-p"><span class="dta-p-in-sp">line2</span></p></div>});		 
+like( process($xsl, 't/xml/sp_p_p.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span></p><p class="dta-sp-p"><span class="dta-p-in-sp">line2</span></p></div>});		
+# sp_stage_p_p_p_stage
+like( process($xsl, 't/xml/sp_stage_p_p_p_stage.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span></p><p class="dta-sp-p"><span class="dta-p-in-sp">line2</span></p><p class="dta-sp-p"><span class="dta-p-in-sp">line3</span> <span class="dta-stage">stage2</span></p></div>});
