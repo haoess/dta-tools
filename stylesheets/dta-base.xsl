@@ -277,7 +277,7 @@
             <!-- P_AFTER_STAGE -->
             <xsl:text> </xsl:text>
             <xsl:apply-templates select="."/>
-            <xsl:if test="local-name(current()/following-sibling::*[1])='lb' or not(current()/following-sibling::tei:p or current()/following-sibling::tei:stage)">
+            <xsl:if test="local-name(current()/following-sibling::*[1])='lb' or local-name(current()/following-sibling::*[1]) = 'p' or not(current()/following-sibling::tei:p or current()/following-sibling::tei:stage)">
               <!-- CLOSE_P_AT_P -->
               <xsl:text disable-output-escaping="yes">&lt;/p&gt;</xsl:text>
             </xsl:if>             
@@ -291,7 +291,7 @@
           <xsl:when test="local-name(current())='stage' and local-name(current()/preceding-sibling::*[1])='p'">
             <!-- STAGE_AFTER_P -->
             <xsl:apply-templates select="."/>             
-            <xsl:if test="local-name(current()/following-sibling::*[1])='lb' or not(current()/following-sibling::tei:p or current()/following-sibling::tei:stage)">
+            <xsl:if test="local-name(current()/following-sibling::*[1])='lb' or not(local-name(current()/following-sibling::*[1]) = 'p')">
               <!-- CLOSE_P_AT_STAGE -->
               <xsl:text disable-output-escaping="yes">&lt;/p&gt;</xsl:text>
             </xsl:if>  

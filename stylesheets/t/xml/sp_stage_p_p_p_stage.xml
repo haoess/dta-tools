@@ -1,0 +1,13 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<text>
+		<body>
+			<sp>
+				<stage>stage1</stage>
+				<p>line1</p>	
+				<p>line2</p>
+				<p>line3</p>
+				<stage>stage2</stage>
+			</sp>
+		</body> 
+	</text>
+</TEI>
