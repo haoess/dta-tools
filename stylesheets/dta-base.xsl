@@ -33,6 +33,10 @@
     </div>
   </xsl:template>
   
+  <xsl:template match="tei:docTitle">
+    <xsl:apply-templates/>
+  </xsl:template>
+  
   <xsl:template match="tei:titlePart">
     <xsl:element name="div">
       <xsl:attribute name="class">dta-titlepart dta-titlepart-<xsl:value-of select="@type"/></xsl:attribute>
@@ -58,14 +62,22 @@
     </span>
   </xsl:template>
   
-  <xsl:template match="tei:docImprint">
+  <xsl:template match="tei:docEdition">
     <xsl:apply-templates/>
   </xsl:template>
   
-  <xsl:template match="tei:docDate">
-    <!--  <xsl:call-template name="applyRendition"/>-->
+  <!-- begin imprint -->
+  <xsl:template match="tei:docImprint">
     <xsl:apply-templates/>
-  </xsl:template>
+  </xsl:template>  
+  
+  <xsl:template match="tei:docDate">
+    <xsl:apply-templates/>
+  </xsl:template> 
+  
+  <xsl:template match="tei:pubPlace">
+    <xsl:apply-templates/>
+  </xsl:template>  
     
   <xsl:template match="tei:publisher">
     <xsl:element name="span">
@@ -75,6 +87,7 @@
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
+  <!-- end imprint -->
   <!-- end titlepage -->
   
   <!-- end DOCUMENT STUCTURE ELEMENTS -->
