@@ -924,8 +924,17 @@
   <xsl:template match="tei:figure">
     <xsl:choose>
       <xsl:when
-        test="(local-name(preceding-sibling::*[1]) = 'lb' and not(normalize-space(preceding-sibling::*[1]/following-sibling::text()[1])) and local-name(following-sibling::*[1]) = 'lb' and not(normalize-space(following-sibling::*[1]/preceding-sibling::text()[1]))) or @rendition='#c'">
-        <xsl:call-template name="applyFigure"/>        
+        test="((local-name(preceding-sibling::*[1]) = 'lb' 
+            and not(normalize-space(preceding-sibling::*[1]/following-sibling::text()[1])) 
+          or not(preceding-sibling::* or normalize-space(preceding-sibling::text()))) 
+        and (local-name(following-sibling::*[1]) = 'lb' 
+            and not(normalize-space(following-sibling::*[1]/preceding-sibling::text()[1])) 
+            or not(following-sibling::* or normalize-space(following-sibling::text()))))               
+              or @rendition='#c'">
+        <xsl:call-template name="applyFigure">
+          <xsl:with-param name="node">div</xsl:with-param>
+          <xsl:with-param name="class">dta-phbl dta-figure</xsl:with-param>
+        </xsl:call-template>        
       </xsl:when>
       <xsl:otherwise>
         <xsl:call-template name="applyFigure">
@@ -937,8 +946,8 @@
   </xsl:template>
   
   <xsl:template name="applyFigure">
-    <xsl:param name="node" select="'div'"/>
-    <xsl:param name="class" select="'dta-phbl dta-figure'"/>
+    <xsl:param name="node"/>
+    <xsl:param name="class"/>
     <xsl:element name="{$node}">
       <xsl:attribute name="class"><xsl:value-of select="$class"/></xsl:attribute>
       <xsl:attribute name="type"><xsl:value-of select="count(preceding::tei:figure)+1"

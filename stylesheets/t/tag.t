@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 106;
+use Test::More tests => 111;
 
 use DTAStyleSheets qw( process );
 
@@ -188,30 +188,24 @@ like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 	<br/>}x);
 	
 # <figure>
-# TODO: simplify!
+# simple
+like( process($xsl, 't/xml/figure_simple.xml'), qr{<span class="dta-ph dta-figure" type="1"> [Abbildung] </span>});
+# @rendition="#c"
+like( process($xsl, 't/xml/figure_center.xml'), qr{<div class="dta-phbl dta-figure" type="1" style="text-align:center"> [Abbildung] </div>});
+# @type="notatedMusic"
+like( process($xsl, 't/xml/figure_music.xml'), qr{<span class="dta-ph dta-figure" type="1"> [Musik] </span>});
+# @facs
+like( process($xsl, 't/xml/figure_facs.xml'), qr{<span class="dta-ph dta-figure" type="1"><img src="3"/><br/> [Abbildung] </span>});
+# figure/figDesc
+like( process($xsl, 't/xml/figure_figdesc.xml'), qr{<span class="dta-ph dta-figure" type="1"> [Abbildung content] </span>});
+# div vs. span: <figure/><lb/><figure/><figure/><lb/><figure/><lb/><figure/>
 like( process($xsl, 't/xml/figure.xml'), qr{
-	<div>\s*
-		<p\s+class="dta-p">text1</p><br/>\s*
-		<div\s+class="dta-phbl[ ]dta-figure"\s+type="1"\s+style="text-align:center">\s+\[Abbildung\]\s+</div>\s*
-	</div>\s*
-	<div>\s*
-		<p\s+class="dta-p">text2</p>\s*
-		<span\s+class="dta-ph[ ]dta-figure"\s+type="2"><img\s+src="3"/><br/>\s+\[Abbildung\]\s+</span><br/>\s*
-		<p\s+class="dta-p">text3</p>\s*
-	</div>\s*
-	<div>\s*
-		<p\s+class="dta-p">text4</p><br/>\s*
-		<div\s+class="dta-phbl[ ]dta-figure"\s+type="3">\s+\[Musik\]\s+</div><br/>\s*
-		<p\s+class="dta-p">text5</p>\s*
-		<br/>\s*
-	</div>\s*
-	<div>\s*
-		<p\s+class="dta-p">text4<br/>text5\s*
-		<span\s+class="dta-ph[ ]dta-figure"\s+type="4">\s+\[Abbildung]\s+</span><br/>\s*
-		</p>\s*
-		<p\s+class="dta-p">text6</p>\s*
-		<br/>\s*
-	</div>}x);
+	<div\s+class="dta-phbl[ ]dta-figure"\s+type="1">[ ]\[Abbildung\][ ]</div><br/>\s*
+	<span\s+class="dta-ph[ ]dta-figure"\s+type="2">[ ]\[Abbildung\][ ]</span>\s*
+	<span\s+class="dta-ph[ ]dta-figure"\s+type="3">[ ]\[Abbildung\][ ]</span><br/>\s*
+	<div\s+class="dta-phbl[ ]dta-figure"\s+type="4">[ ]\[Abbildung\][ ]</div><br/>\s*
+	<div\s+class="dta-phbl[ ]dta-figure"\s+type="5">[ ]\[Abbildung\][ ]</div>});
+
 	
 # <table>
 like( process($xsl, 't/xml/table.xml'), qr{
