@@ -395,7 +395,7 @@ like( process($xsl, 't/xml/quote.xml'), qr{<q class="dta-quote">content</q>});
 like( process($xsl, 't/xml/q.xml'), qr{<q class="dta-quote">content</q>});
 
 # <hi> 
-# not(@rend)
+# @rendition and not(@rend)
 like( process($xsl, 't/xml/hi.xml'), qr{<p class="dta-p"><span class="aq b blue">content</span></p>});
 # @rend
 like( process($xsl, 't/xml/hi_rend.xml'), qr{<p class="dta-p"><span title="quer" class="dta-rend">content</span></p>});

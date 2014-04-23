@@ -15,7 +15,7 @@
     </xsl:if>
     <xsl:attribute name="class">
       <xsl:choose>
-        <xsl:when test="$class = 'noClass'"/>
+        <xsl:when test="$class = 'noClass' or $class=''"/>
         <xsl:otherwise>
           <xsl:value-of select="$class"/>
           <xsl:if test="@rendition or @rend">

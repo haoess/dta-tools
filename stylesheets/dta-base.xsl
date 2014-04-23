@@ -535,37 +535,35 @@
   <xsl:template match="tei:p">
    <xsl:choose>
      <xsl:when test="ancestor::tei:sp">
-       <span class="dta-p-in-sp">
+       <xsl:variable name="class">
+         <xsl:choose>
+           <xsl:when test="@prev">dta-p-in-sp dta-no-indent</xsl:when>
+           <xsl:otherwise>dta-p-in-sp</xsl:otherwise>
+         </xsl:choose>
+       </xsl:variable>
+       <span>
          <xsl:call-template name="applyRendition">
-           <xsl:with-param name="class" select="'dta-p-in-sp'"/>
+           <xsl:with-param name="class" select="$class"/>
          </xsl:call-template>
          <xsl:apply-templates/>
        </span>
      </xsl:when>
-      <!-- TODO: check: if descendant::pb no @rendition is possible? (occurence found!) -->
-      <xsl:when test="descendant::tei:pb">
-        <p>
-          <xsl:apply-templates/>
-        </p>
-      </xsl:when>
-      <!-- TODO: if descendant::pb no @prev is possible? (occurence found!) -->
-      <!-- ->cascade! -->
-      <xsl:when test="@prev">
-        <p>
-          <xsl:call-template name="applyRendition">
-            <xsl:with-param name="class" select="'dta-no-indent'"/>
-          </xsl:call-template>
-          <xsl:apply-templates/>
-        </p>
-      </xsl:when>
-      <xsl:otherwise>
-        <p>
-          <xsl:call-template name="applyRendition">
-            <xsl:with-param name="class" select="'dta-p'"/>
-          </xsl:call-template>
-          <xsl:apply-templates/>
-        </p>
-      </xsl:otherwise>
+     <xsl:otherwise>
+       <xsl:variable name="class">
+         <xsl:choose>         
+           <xsl:when test="descendant::tei:pb">dta-no-indent</xsl:when>
+           <xsl:when test="@prev">dta-no-indent</xsl:when>
+           <xsl:otherwise>dta-p</xsl:otherwise>
+         </xsl:choose>
+       </xsl:variable>
+       <p>
+         <xsl:call-template name="applyRendition">
+           <xsl:with-param name="class" select="$class"/>
+         </xsl:call-template>
+         <xsl:apply-templates/>
+       </p>
+       
+     </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
   
