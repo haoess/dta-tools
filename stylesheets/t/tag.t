@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 98;
+use Test::More tests => 99;
 
 use DTAStyleSheets qw( process );
 
@@ -442,6 +442,9 @@ like( process($xsl, 't/xml/choice_corr_empty.xml'), qr{<p class="dta-p"><span ti
 
 # <ref>
 like( process($xsl, 't/xml/ref.xml'), qr{<p class="dta-p"><span class="dta-ref" data-target="#f0001">ref</span></p>});
+
+# <date>
+like( process($xsl, 't/xml/date.xml'), qr{content});
 
 # <sp>
 # sp_p_single

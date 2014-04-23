@@ -530,14 +530,15 @@
   </xsl:template>
     
   <!-- TODO: restructure <p> -->
-  <!-- p as speech act vs. real paragraph -->
   <!-- indent vs. no indent -->  
   <xsl:template match="tei:p">
    <xsl:choose>
      <xsl:when test="ancestor::tei:sp">
        <xsl:variable name="class">
          <xsl:choose>
+           <!-- TODO: check classes!-->
            <xsl:when test="@prev">dta-p-in-sp dta-no-indent</xsl:when>
+           <xsl:when test="descendant::tei:pb">dta-p-in-sp dta-no-indent</xsl:when>
            <xsl:otherwise>dta-p-in-sp</xsl:otherwise>
          </xsl:choose>
        </xsl:variable>
@@ -551,8 +552,9 @@
      <xsl:otherwise>
        <xsl:variable name="class">
          <xsl:choose>         
-           <xsl:when test="descendant::tei:pb">dta-no-indent</xsl:when>
-           <xsl:when test="@prev">dta-no-indent</xsl:when>
+           <!-- TODO: check classes!-->
+           <xsl:when test="descendant::tei:pb">dta-p dta-no-indent</xsl:when>
+           <xsl:when test="@prev">dta-p dta-no-indent</xsl:when>
            <xsl:otherwise>dta-p</xsl:otherwise>
          </xsl:choose>
        </xsl:variable>
@@ -561,8 +563,7 @@
            <xsl:with-param name="class" select="$class"/>
          </xsl:call-template>
          <xsl:apply-templates/>
-       </p>
-       
+       </p>       
      </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -1061,6 +1062,10 @@
       </xsl:choose>
       <xsl:apply-templates/>
     </xsl:element>
+  </xsl:template>
+  
+  <xsl:template match="tei:date">
+    <xsl:apply-templates/>
   </xsl:template>
 
   <!-- end PHRASE STUCTURE ELEMENTS -->
