@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 111;
+use Test::More tests => 119;
 
 use DTAStyleSheets qw( process );
 
@@ -237,13 +237,33 @@ like( process($xsl, 't/xml/table.xml'), qr{
 
 # <gap>
 # TODO: simplify!
-like( process($xsl, 't/xml/gap.xml'), qr{	
-	<div>\s*
-		<p\s+class="dta-p">t1<span\s+class="dta-gap">\[verlorenes[ ]Material[ ]&#x2013;[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*<p\s+class="dta-p">t2<span\s+class="dta-gap">\[irrelevantes[ ]fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Seiten[ ]fehlen\]</span>t2</p>\s*<p\s+class="dta-p">t3<span\s+class="dta-gap">\[verlorenes[ ]irrelevantes[ ]unleserliches[ ]Material[ ]&#x2013;[ ]1[ ]Zeile[ ]fehlt\]</span>t3</p>\s*<p\s+class="dta-p">t4<span\s+class="dta-gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Zeilen[ ]fehlen\]</span>t4</p>\s*<p\s+class="dta-p">t5<span\s+class="dta-gap">\[unleserliches[ ]Material[ ]&#x2013;[ ]1[ ]Wort[ ]fehlt\]</span>t5</p>\s*<p\s+class="dta-p">t6<span\s+class="dta-gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Wörter[ ]fehlen\]</span>t6</p>\s*<p\s+class="dta-p">t7<span\s+class="dta-gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]1[ ]Zeichen[ ]fehlt\]</span>t7</p>\s*<p\s+class="dta-p">t8<span\s+class="dta-gap">\[1[ ]Zeichen[ ]fehlt\]</span>t8</p>\s*<p\s+class="dta-p">t9<span\s+class="dta-gap">\[fremdsprachliches[ ]Material\]</span>t9</p>\s*<p\s+class="dta-p">t10<span\s+class="dta-gap">\[Wort[ ]fehlt\]</span>t10</p>\s*</div>}x);	
-like( process($xsl, 't/xml/gap_simple.xml'), qr{	
-	<div>\s*
-		<p\s+class="dta-p">t1<span\s+class="dta-gap">\[verlorenes[ ]Material[ ]&#x2013;[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*</div>}x);	
-
+#like( process($xsl, 't/xml/gap.xml'), qr{	
+#	<div>\s*
+#		<p\s+class="dta-p">t1<span\s+class="dta-gap">\[verlorenes[ ]Material[ ]&#x2013;[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*<p\s+class="dta-p">t2<span\s+class="dta-gap">\[irrelevantes[ ]fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Seiten[ ]fehlen\]</span>t2</p>\s*<p\s+class="dta-p">t3<span\s+class="dta-gap">\[verlorenes[ ]irrelevantes[ ]unleserliches[ ]Material[ ]&#x2013;[ ]1[ ]Zeile[ ]fehlt\]</span>t3</p>\s*<p\s+class="dta-p">t4<span\s+class="dta-gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Zeilen[ ]fehlen\]</span>t4</p>\s*<p\s+class="dta-p">t5<span\s+class="dta-gap">\[unleserliches[ ]Material[ ]&#x2013;[ ]1[ ]Wort[ ]fehlt\]</span>t5</p>\s*<p\s+class="dta-p">t6<span\s+class="dta-gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]2[ ]Wörter[ ]fehlen\]</span>t6</p>\s*<p\s+class="dta-p">t7<span\s+class="dta-gap">\[fremdsprachliches[ ]Material[ ]&#x2013;[ ]1[ ]Zeichen[ ]fehlt\]</span>t7</p>\s*<p\s+class="dta-p">t8<span\s+class="dta-gap">\[1[ ]Zeichen[ ]fehlt\]</span>t8</p>\s*<p\s+class="dta-p">t9<span\s+class="dta-gap">\[fremdsprachliches[ ]Material\]</span>t9</p>\s*<p\s+class="dta-p">t10<span\s+class="dta-gap">\[Wort[ ]fehlt\]</span>t10</p>\s*</div>}x);	
+#like( process($xsl, 't/xml/gap_simple.xml'), qr{	
+#	<div>\s*
+#		<p\s+class="dta-p">t1<span\s+class="dta-gap">\[verlorenes[ ]Material[ ]&#x2013;[ ]1[ ]Seite[ ]fehlt\]</span>t1</p>\s*</div>}x);	
+# lost_page		
+like( process($xsl, 't/xml/gap_lost_page.xml'), qr{<span class="dta-gap">[verlorenes Material &#x2013; 1 Seite fehlt]</span>});
+# fm_insignificant_pages		
+like( process($xsl, 't/xml/gap_fm_insignificant_pages.xml'), qr{<span class="dta-gap">[irrelevantes fremdsprachliches Material &#x2013; 2 Seiten fehlen]</span>});
+# illegible_insignificant_lost_line	
+like( process($xsl, 't/xml/gap_illegible_insignificant_lost_line.xml'), qr{<span class="dta-gap">[verlorenes irrelevantes unleserliches Material &#x2013; 1 Zeile fehlt]</span>});
+# fm_lines	
+like( process($xsl, 't/xml/gap_fm_lines.xml'), qr{<span class="dta-gap">[fremdsprachliches Material &#x2013; 2 Zeilen fehlen]</span>});
+# illegible_word
+like( process($xsl, 't/xml/gap_illegible_word.xml'), qr{<span class="dta-gap">[unleserliches Material &#x2013; 1 Wort fehlt]</span>});
+# fm_words
+like( process($xsl, 't/xml/gap_fm_words.xml'), qr{<span class="dta-gap">[fremdsprachliches Material &#x2013; 2 Wörter fehlen]</span>});
+# fm_char
+like( process($xsl, 't/xml/gap_fm_char.xml'), qr{<span class="dta-gap">[fremdsprachliches Material &#x2013; 1 Zeichen fehlt]</span>});
+# char
+like( process($xsl, 't/xml/gap_char.xml'), qr{<span class="dta-gap">[1 Zeichen fehlt]</span>});
+# fm
+like( process($xsl, 't/xml/gap_fm.xml'), qr{<span class="dta-gap">[fremdsprachliches Material]</span>});
+# word
+like( process($xsl, 't/xml/gap_word.xml'), qr{<span class="dta-gap">[Wort fehlt]</span>});	
+	
 # <item>
 like( process($xsl, 't/xml/item_simple_p_pb.xml'), qr{		
 	<div\s+class="dta-list-item">i1</div><br/>\s*
