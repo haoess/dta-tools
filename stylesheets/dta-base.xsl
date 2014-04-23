@@ -153,6 +153,10 @@
     </xsl:choose>
   </xsl:template>   
   
+  <xsl:template match="tei:imprimatur">
+      <xsl:apply-templates/>    
+  </xsl:template>
+  
   <xsl:template match="tei:argument">
     <div class="dta-argument">
       <xsl:apply-templates/>

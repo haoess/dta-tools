@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 100;
+use Test::More tests => 102;
 
 use DTAStyleSheets qw( process );
 
@@ -94,6 +94,9 @@ like( process($xsl, 't/xml/head_no_lb.xml'), qr{
 # <actor>
 like( process($xsl, 't/xml/actor.xml'), qr{<span class="dta-actor">content</span>});
 
+# <speaker>
+like( process($xsl, 't/xml/speaker.xml'), qr{<span class="dta-speaker"> content </span>});
+
 # <castList>
 like( process($xsl, 't/xml/castlist.xml'), qr{
 	<div\s+class="dta-castlist">\s*         
@@ -128,6 +131,31 @@ like( process($xsl, 't/xml/castgroup_castitem.xml'), qr{
 			</td>\s*
 		</tr>\s*
 	</table><br/>}x );
+	
+# <stage>
+like( process($xsl, 't/xml/stage.xml'), qr{<div class="dta-stage">content</div>});
+		
+# <sp>
+# sp_p_single
+like( process($xsl, 't/xml/sp_p_single.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span></p></div>});
+# sp_stage_single
+like( process($xsl, 't/xml/sp_stage_single.xml'), qr{<div class="dta-sp"><span class="dta-stage">stage1</span></div>});
+# sp_stage_before_p
+like( process($xsl, 't/xml/sp_stage_before_p.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span></p></div>});
+# sp_stage_behind_p
+like( process($xsl, 't/xml/sp_stage_behind_p.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span> <span class="dta-stage">stage1</span></p></div>});
+# sp_stage_embedded
+like( process($xsl, 't/xml/sp_stage_embedded.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span> <span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line2</span></p></div>});
+# sp_stage_embedded2
+like( process($xsl, 't/xml/sp_stage_embedded2.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span> <span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line2</span><span class="dta-stage">stage2</span></p></div>});
+# sp_stage_embedded3
+like( process($xsl, 't/xml/sp_stage_embedded3.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span><span class="dta-stage">stage2</span> <span class="dta-p-in-sp">line2</span></p></div>});
+# linebreaks
+like( process($xsl, 't/xml/sp_stage_p_lb.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span></p><br/><span class="dta-stage">stage2</span><br/><p class="dta-sp-p"><span class="dta-p-in-sp">line2</span></p></div>});
+# sp_p_p
+like( process($xsl, 't/xml/sp_p_p.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span></p><p class="dta-sp-p"><span class="dta-p-in-sp">line2</span></p></div>});		
+# sp_stage_p_p_p_stage
+like( process($xsl, 't/xml/sp_stage_p_p_p_stage.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span></p><p class="dta-sp-p"><span class="dta-p-in-sp">line2</span></p><p class="dta-sp-p"><span class="dta-p-in-sp">line3</span> <span class="dta-stage">stage2</span></p></div>});		
 		
 # <spGrp>
 like( process($xsl, 't/xml/spGrp_stagebefore.xml'), qr{
@@ -449,24 +477,3 @@ like( process($xsl, 't/xml/ref.xml'), qr{<p class="dta-p"><span class="dta-ref" 
 # <date>
 like( process($xsl, 't/xml/date.xml'), qr{content});
 
-# <sp>
-# sp_p_single
-like( process($xsl, 't/xml/sp_p_single.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span></p></div>});
-# sp_stage_single
-like( process($xsl, 't/xml/sp_stage_single.xml'), qr{<div class="dta-sp"><span class="dta-stage">stage1</span></div>});
-# sp_stage_before_p
-like( process($xsl, 't/xml/sp_stage_before_p.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span></p></div>});
-# sp_stage_behind_p
-like( process($xsl, 't/xml/sp_stage_behind_p.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span> <span class="dta-stage">stage1</span></p></div>});
-# sp_stage_embedded
-like( process($xsl, 't/xml/sp_stage_embedded.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span> <span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line2</span></p></div>});
-# sp_stage_embedded2
-like( process($xsl, 't/xml/sp_stage_embedded2.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span> <span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line2</span><span class="dta-stage">stage2</span></p></div>});
-# sp_stage_embedded3
-like( process($xsl, 't/xml/sp_stage_embedded3.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span><span class="dta-stage">stage2</span> <span class="dta-p-in-sp">line2</span></p></div>});
-# linebreaks
-like( process($xsl, 't/xml/sp_stage_p_lb.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span></p><br/><span class="dta-stage">stage2</span><br/><p class="dta-sp-p"><span class="dta-p-in-sp">line2</span></p></div>});
-# sp_p_p
-like( process($xsl, 't/xml/sp_p_p.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-p-in-sp">line1</span></p><p class="dta-sp-p"><span class="dta-p-in-sp">line2</span></p></div>});		
-# sp_stage_p_p_p_stage
-like( process($xsl, 't/xml/sp_stage_p_p_p_stage.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span></p><p class="dta-sp-p"><span class="dta-p-in-sp">line2</span></p><p class="dta-sp-p"><span class="dta-p-in-sp">line3</span> <span class="dta-stage">stage2</span></p></div>});
