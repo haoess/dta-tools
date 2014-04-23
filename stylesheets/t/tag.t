@@ -38,10 +38,10 @@ like( process($xsl, 't/xml/p.xml'), qr{<p class="dta-p">X</p>} );
 
 # <head>
 like( process($xsl, 't/xml/head_figure.xml'), qr{
-		<span\s+class="dta-ph\s+dta-figure"\s+type="1"><img\s+src="http://dummy.org/dmmy.jpg"/><br/>\s+\[Abbildung\]\s* 
+		<div\s+class="dta-phbl\s+dta-figure"\s+type="1"><img\s+src="http://dummy.org/dmmy.jpg"/><br/>\s+\[Abbildung\]\s* 
 			<span\s+class="dta-figdesc">HEAD</span><br/>\s*
 			<p\s+class="dta-p">caption</p>\s*
-		</span>}x );
+		</div>}x );
 like( process($xsl, 't/xml/head_lg.xml'), qr{		
 	  <div>\s*
         <div\s+class="dta-poem">\s*
@@ -189,22 +189,22 @@ like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 	
 # <figure>
 # simple
-like( process($xsl, 't/xml/figure_simple.xml'), qr{<span class="dta-ph dta-figure" type="1"> [Abbildung] </span>});
+like( process($xsl, 't/xml/figure_simple.xml'), qr{<div class="dta-phbl dta-figure" type="1"> \[Abbildung\] </div>});
 # @rendition="#c"
-like( process($xsl, 't/xml/figure_center.xml'), qr{<div class="dta-phbl dta-figure" type="1" style="text-align:center"> [Abbildung] </div>});
+like( process($xsl, 't/xml/figure_center.xml'), qr{<div class="dta-phbl dta-figure" type="1" style="text-align:center"> \[Abbildung\] </div>});
 # @type="notatedMusic"
-like( process($xsl, 't/xml/figure_music.xml'), qr{<span class="dta-ph dta-figure" type="1"> [Musik] </span>});
+like( process($xsl, 't/xml/figure_music.xml'), qr{<div class="dta-phbl dta-figure" type="1"> \[Musik\] </div>});
 # @facs
-like( process($xsl, 't/xml/figure_facs.xml'), qr{<span class="dta-ph dta-figure" type="1"><img src="3"/><br/> [Abbildung] </span>});
+like( process($xsl, 't/xml/figure_facs.xml'), qr{<div class="dta-phbl dta-figure" type="1"><img src="3"/><br/> \[Abbildung\] </div>});
 # figure/figDesc
-like( process($xsl, 't/xml/figure_figdesc.xml'), qr{<span class="dta-ph dta-figure" type="1"> [Abbildung content] </span>});
+like( process($xsl, 't/xml/figure_figdesc.xml'), qr{<div class="dta-phbl dta-figure" type="1"> \[Abbildung content\] </div>});
 # div vs. span: <figure/><lb/><figure/><figure/><lb/><figure/><lb/><figure/>
-like( process($xsl, 't/xml/figure.xml'), qr{
+like( process($xsl, 't/xml/figure_div_span.xml'), qr{
 	<div\s+class="dta-phbl[ ]dta-figure"\s+type="1">[ ]\[Abbildung\][ ]</div><br/>\s*
 	<span\s+class="dta-ph[ ]dta-figure"\s+type="2">[ ]\[Abbildung\][ ]</span>\s*
 	<span\s+class="dta-ph[ ]dta-figure"\s+type="3">[ ]\[Abbildung\][ ]</span><br/>\s*
 	<div\s+class="dta-phbl[ ]dta-figure"\s+type="4">[ ]\[Abbildung\][ ]</div><br/>\s*
-	<div\s+class="dta-phbl[ ]dta-figure"\s+type="5">[ ]\[Abbildung\][ ]</div>});
+	<div\s+class="dta-phbl[ ]dta-figure"\s+type="5">[ ]\[Abbildung\][ ]</div>}x); 
 
 	
 # <table>
