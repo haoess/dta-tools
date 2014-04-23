@@ -1098,6 +1098,26 @@
   <xsl:template match="tei:date">
     <xsl:apply-templates/>
   </xsl:template>
+  
+  
+  <xsl:template match="tei:name">
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  
+  <xsl:template match="tei:orgName">
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  
+  <xsl:template match="tei:persName">
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  
+  <xsl:template match="tei:placeName">
+    <xsl:apply-templates/>
+  </xsl:template>
 
   <!-- end PHRASE STUCTURE ELEMENTS -->
   
