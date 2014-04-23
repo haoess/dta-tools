@@ -820,7 +820,6 @@
       <xsl:if test="@rendition='#et'">
         <xsl:attribute name="style">padding-left:2em</xsl:attribute>
       </xsl:if>
-      <xsl:call-template name="applyRendition"/>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
