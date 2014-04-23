@@ -13,37 +13,39 @@
         <xsl:value-of select="@rend"/>
       </xsl:attribute>  
     </xsl:if>
-    <xsl:attribute name="class">
-      <xsl:choose>
-        <xsl:when test="$class = 'noClass' or $class=''"/>
-        <xsl:otherwise>
-          <xsl:value-of select="$class"/>
-          <xsl:if test="@rendition or @rend">
-            <xsl:text> </xsl:text>
-          </xsl:if>
-        </xsl:otherwise>
-      </xsl:choose>
-      <xsl:if test="@rend">
-        <xsl:value-of select="'dta-rend'"/>
-        <xsl:if test="@rendition"><xsl:text> </xsl:text></xsl:if>        
-      </xsl:if>
-      <xsl:choose>
-        <xsl:when test="@rendition and contains(normalize-space(@rendition),' ')">
-          <xsl:call-template name="splitRendition">
-            <xsl:with-param name="value">
-              <xsl:value-of select="normalize-space(@rendition)"/>
-            </xsl:with-param>
-          </xsl:call-template>
-        </xsl:when>
-        <xsl:when test="@rendition">
-          <xsl:call-template name="findRendition">
-            <xsl:with-param name="value">
-              <xsl:value-of select="@rendition"/>
-            </xsl:with-param>
-          </xsl:call-template>
-        </xsl:when>
-      </xsl:choose>
-    </xsl:attribute>
+    <xsl:if test="@rend or @rendition or ($class != 'noClass' and normalize-space($class)!='')">
+      <xsl:attribute name="class">
+        <xsl:choose>
+          <xsl:when test="$class = 'noClass' or normalize-space($class)=''"/>
+          <xsl:otherwise>
+            <xsl:value-of select="$class"/>
+            <xsl:if test="@rendition or @rend">
+              <xsl:text> </xsl:text>
+            </xsl:if>
+          </xsl:otherwise>
+        </xsl:choose>
+        <xsl:if test="@rend">
+          <xsl:value-of select="'dta-rend'"/>
+          <xsl:if test="@rendition"><xsl:text> </xsl:text></xsl:if>        
+        </xsl:if>
+        <xsl:choose>
+          <xsl:when test="@rendition and contains(normalize-space(@rendition),' ')">
+            <xsl:call-template name="splitRendition">
+              <xsl:with-param name="value">
+                <xsl:value-of select="normalize-space(@rendition)"/>
+              </xsl:with-param>
+            </xsl:call-template>
+          </xsl:when>
+          <xsl:when test="@rendition">
+            <xsl:call-template name="findRendition">
+              <xsl:with-param name="value">
+                <xsl:value-of select="@rendition"/>
+              </xsl:with-param>
+            </xsl:call-template>
+          </xsl:when>
+        </xsl:choose>
+      </xsl:attribute>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="splitRendition">
