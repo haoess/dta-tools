@@ -205,6 +205,14 @@
       <xsl:apply-templates/>
     </div>
   </xsl:template>
+  
+  <xsl:template match="tei:signed">
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  <xsl:template match="tei:postscript">
+    <xsl:apply-templates/>
+  </xsl:template>  
   <!-- end letter -->
   
   <!-- begin drama -->
@@ -269,6 +277,10 @@
     <xsl:apply-templates/>
   </xsl:template>
   
+  <xsl:template match="tei:roleDesc">
+    <xsl:apply-templates/>
+  </xsl:template>
+  
   <xsl:template match="tei:speaker">
     <span class="dta-speaker">
       <xsl:text> </xsl:text>
@@ -278,7 +290,7 @@
   </xsl:template>
   
   <xsl:template match="tei:sp">    
-    <div class="dta-sp">      
+    <div class="dta-sp"> 
       <xsl:for-each select="child::*">
         <xsl:choose>
           <xsl:when test="local-name(current())='stage' and not(local-name(current()/preceding-sibling::*[1])='p') and current()/following-sibling::tei:p and not(local-name(current()/following-sibling::*[1])='lb') ">
@@ -337,6 +349,7 @@
           <tr>
             <td style="vertical-align:middle"><xsl:apply-templates select="child::*[1]"/></td>
             <td class="dta-braced-base dta-braced-left">
+              <!-- TODO: doesnt uses sp-template. appropriate? -->
               <xsl:for-each select="tei:sp">
                 <div class="dta-sp"><xsl:apply-templates/></div>
               </xsl:for-each>
@@ -349,6 +362,7 @@
           <tr>
             <td class="dta-braced-base dta-braced-right">
               <xsl:for-each select="tei:sp">
+                <!-- TODO: doesnt uses sp-template. appropriate? -->
                 <div class="dta-sp"><xsl:apply-templates/></div>
               </xsl:for-each>
             </td>
