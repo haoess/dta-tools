@@ -101,13 +101,19 @@
     <xsl:choose>
       <!-- if embedded in a <figure>: create span (figdesc) -->
       <xsl:when test="ancestor::tei:figure">
-        <span class="dta-figdesc">
+        <span>
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class" select="'dta-figdesc'"/>
+          </xsl:call-template>
           <xsl:apply-templates/>
         </span>
       </xsl:when>
       <!-- if embedded in a <list> or child of <lg>: create div-block (dta-head) -->
       <xsl:when test="ancestor::tei:list or parent::tei:lg">
-        <div class="dta-head">
+        <div>
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class" select="'dta-head'"/>
+          </xsl:call-template>
           <xsl:apply-templates/>
         </div>
       </xsl:when>
@@ -117,12 +123,15 @@
         <xsl:apply-templates/>
       </xsl:when>
       <xsl:otherwise> 
-        <xsl:choose> <!-- why the second choose? -->          
+        <xsl:choose> <!-- TODO: why the second choose? -->          
           <xsl:when test="parent::tei:div/@n or parent::tei:div">
             <xsl:choose>
               <!-- if the embedding div-block's n-attribute is greater 6 or does not exist: create div-block (dta-head)  -->
               <xsl:when test="parent::tei:div/@n > 6 or not(parent::tei:div/@n)">
-                <div class="dta-head">
+                <div>
+                  <xsl:call-template name="applyRendition">
+                    <xsl:with-param name="class" select="'dta-head'"/>
+                  </xsl:call-template>
                   <xsl:apply-templates/>
                 </div>
               </xsl:when>
@@ -130,6 +139,7 @@
               <xsl:otherwise>
                 <xsl:text disable-output-escaping="yes">&lt;h</xsl:text>
                 <xsl:value-of select="parent::tei:div/@n"/>
+                <!-- TODO: add applyRendition -->
                 <xsl:text disable-output-escaping="yes"> class="dta-head"&gt;</xsl:text>
                 <xsl:apply-templates/>
                 <xsl:text disable-output-escaping="yes">&lt;/h</xsl:text>
@@ -145,6 +155,7 @@
           <!-- default -->
           <xsl:otherwise>
             <h2>
+              <xsl:call-template name="applyRendition"/>
               <xsl:apply-templates/>
             </h2>
           </xsl:otherwise>
@@ -435,19 +446,28 @@
   </xsl:template>
   
   <xsl:template match='tei:lg[@type="poem"]/tei:head'>
-    <div class="dta-head">
+    <div>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-head'"/>
+      </xsl:call-template>
       <xsl:apply-templates/>
     </div>
   </xsl:template>
   
   <xsl:template match='tei:lg[@type="poem"]'>
-    <div class="dta-poem">
+    <div>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-poem'"/>
+      </xsl:call-template>
       <xsl:apply-templates/>
     </div>
   </xsl:template>
   
   <xsl:template match='tei:lg[not(@type="poem")]'>
-    <div class="dta-lg">
+    <div>
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-lg'"/>
+      </xsl:call-template>
       <xsl:apply-templates/>
     </div>
   </xsl:template>
@@ -800,6 +820,7 @@
       <xsl:if test="@rendition='#et'">
         <xsl:attribute name="style">padding-left:2em</xsl:attribute>
       </xsl:if>
+      <xsl:call-template name="applyRendition"/>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
@@ -827,7 +848,9 @@
     <xsl:choose>
       <xsl:when test="@place='top'">
         <div>
-          <xsl:attribute name="class">dta-fw-top dta-fw-<xsl:value-of select="@type"/></xsl:attribute>
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class">dta-fw-top dta-fw-<xsl:value-of select="@type"/></xsl:with-param>
+          </xsl:call-template>
           <xsl:apply-templates/>
         </div>
       </xsl:when>
@@ -1015,8 +1038,7 @@
             <xsl:attribute name="style">display:block; text-align:center</xsl:attribute>
           </xsl:if>
           <xsl:element name="img">
-            <xsl:attribute name="style">vertical-align:middle; -moz-transform:scale(0.7);
-              -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
+            <xsl:attribute name="style">vertical-align:middle; -moz-transform:scale(0.7); -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
             <!--          <xsl:choose>
             <xsl:when test="@rendition">
               <xsl:call-template name="applyRendition"/>
@@ -1038,12 +1060,15 @@
         </xsl:element>
       </xsl:when>
       <xsl:when test="string-length(.) &gt; 0">
+        <!-- TODO: no span? (applyRendition) -->
         <xsl:apply-templates/>
       </xsl:when>
       <xsl:otherwise>
         <xsl:element name="span">
-          <xsl:attribute name="class">dta-ph dta-formula-<xsl:value-of
-            select="count(preceding::tei:formula)+1"/></xsl:attribute>
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class">dta-ph dta-formula-<xsl:value-of
+              select="count(preceding::tei:formula)+1"/></xsl:with-param>
+          </xsl:call-template>
           <xsl:attribute name="onclick">editFormula(<xsl:value-of
             select="count(preceding::tei:formula)+1"/>)</xsl:attribute>
           <xsl:attribute name="style">cursor:pointer</xsl:attribute> [Formel <xsl:value-of
