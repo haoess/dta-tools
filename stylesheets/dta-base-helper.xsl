@@ -8,12 +8,12 @@
 
   <xsl:template name="applyRendition">
     <xsl:param name="class" select="'noClass'"/>
-    <xsl:if test="@rend">
-      <xsl:attribute name="title">
-        <xsl:value-of select="@rend"/>
-      </xsl:attribute>  
-    </xsl:if>
     <xsl:if test="@rend or @rendition or ($class != 'noClass' and normalize-space($class)!='')">
+      <xsl:if test="@rend">
+        <xsl:attribute name="title">
+          <xsl:value-of select="@rend"/>
+        </xsl:attribute>  
+      </xsl:if>
       <xsl:attribute name="class">
         <xsl:choose>
           <xsl:when test="$class = 'noClass' or normalize-space($class)=''"/>
