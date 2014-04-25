@@ -273,10 +273,6 @@
                   <xsl:apply-templates select="../tei:roleDesc"/>
                 </xsl:element>
               </xsl:if>
-              <!-- <xsl:if test="tei:actor">
-                <td class="dta-actor"><xsl:apply-templates select="tei:actor"/></td>
-              </xsl:if>
-              -->
             </tr>
           </xsl:for-each>
         </table>
@@ -1155,7 +1151,7 @@
   
   
   <xsl:template match="tei:orgName">
-    <span class="dta-origname">
+    <span class="dta-orgname">
       <xsl:apply-templates/>
     </span>
   </xsl:template>

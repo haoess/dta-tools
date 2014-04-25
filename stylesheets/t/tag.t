@@ -119,7 +119,8 @@ like( process($xsl, 't/xml/castgroup_castitem.xml'), qr{
 	<table\s+class="dta-castgroup">
 		<tr>
 			<td\s+class="dta-castitem">\s*
-				R1a\s*<span\s+class="dta-actor">A3a</span>\s*
+				<span\s+class="dta-role">R1a</span>\s*
+				<span\s+class="dta-actor">A3a</span>\s*
 			</td>\s*
 			<td\s+rowspan="2">\s*
 				<span\s+class="dta-roledesc">R1Desc</span>\s*
@@ -127,7 +128,8 @@ like( process($xsl, 't/xml/castgroup_castitem.xml'), qr{
 		</tr>\s*
 		<tr>\s*
 			<td\s+class="dta-castitem">\s*
-				R1b\s*<span\s+class="dta-actor">A3b</span>\s*
+				<span\s+class="dta-role">R1b</span>\s*
+				<span\s+class="dta-actor">A3b</span>\s*
 			</td>\s*
 		</tr>\s*
 	</table><br/>}x );
@@ -349,7 +351,7 @@ like( process($xsl, 't/xml/docimprint.xml'), qr{<div class="dta-titlepage">\s*<s
 like( process($xsl, 't/xml/doctitle.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-doctitle">title</span>\s*</div>});
 
 # <publisher>
-like( process($xsl, 't/xml/publisher.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-publisher">publisher</span>\s*</div>});
+like( process($xsl, 't/xml/publisher.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docimprint">\s*<span class="dta-publisher">publisher</span>\s*</span>\s*</div>});
 
 # <pubPlace>
 like( process($xsl, 't/xml/pubplace.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docimprint">\s*<span class="dta-pubplace">place</span>\s*</span>\s*</div>});
