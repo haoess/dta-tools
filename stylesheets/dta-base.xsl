@@ -379,7 +379,6 @@
           <tr>
             <td style="vertical-align:middle"><xsl:apply-templates select="child::*[1]"/></td>
             <td class="dta-braced-base dta-braced-left">
-              <!-- TODO: doesnt uses sp-template. appropriate? -->
               <xsl:for-each select="tei:sp">
                 <xsl:apply-templates select="current()"/>
               </xsl:for-each>
@@ -392,7 +391,6 @@
           <tr>
             <td class="dta-braced-base dta-braced-right">
               <xsl:for-each select="tei:sp">
-                <!-- TODO: doesnt uses sp-template. appropriate? -->
                 <xsl:apply-templates select="current()"/>
               </xsl:for-each>
             </td>
@@ -588,8 +586,7 @@
     <!--  <xsl:call-template name="close-cb"/>-->
   </xsl:template>
     
-  <!-- TODO: restructure <p> -->
-  <!-- indent vs. no indent -->  
+  <!-- TODO: indent vs. no indent -->  
   <xsl:template match="tei:p">
    <xsl:choose>
      <xsl:when test="ancestor::tei:sp">
@@ -1067,7 +1064,7 @@
         </xsl:element>
       </xsl:when>
       <xsl:when test="string-length(.) &gt; 0">
-        <!-- TODO: no span? (applyRendition) -->
+        <!-- TODO: no span? (applyRendition) no occurences found!! -->
         <xsl:apply-templates/>
       </xsl:when>
       <xsl:otherwise>
