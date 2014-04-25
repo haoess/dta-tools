@@ -6,11 +6,7 @@
 				<div n="7">
 					<head>p1</head><lb/>
 					<p>text1</p>
-				</div><lb/>
-				<div n="3">
-					<head>p2</head><lb/>
-					<p>text2</p>
-				</div><lb/>
+				</div>
 			</div>			
 		</body>
 	</text>

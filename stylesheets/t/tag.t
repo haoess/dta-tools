@@ -76,11 +76,7 @@ like( process($xsl, 't/xml/head_div_n.xml'), qr{
 		<div>\s*
 			<div\s+class="dta-head">p1</div><br/>\s*
 			<p\s+class="dta-p">text1</p>\s*
-		</div><br/>\s*
-		<div>\s*
-			<div\s+class="dta-head">p2</div><br/>\s*
-			<p\s+class="dta-p">text2</p>\s*
-		</div><br/>\s*
+		</div>\s*
 	</div>}x );	
 like( process($xsl, 't/xml/head_no_lb.xml'), qr{
 	<div>\s*
