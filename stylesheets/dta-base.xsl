@@ -146,15 +146,13 @@
                 </div>
               </xsl:when>
               <!-- if the embedding div-block's n-attribute is lesser than 7: create h(@n)-block -->
-              <xsl:otherwise>
-                <xsl:text disable-output-escaping="yes">&lt;h</xsl:text>
-                <xsl:value-of select="parent::tei:div/@n"/>
-                <!-- TODO: add applyRendition -->
-                <xsl:text disable-output-escaping="yes"> class="dta-head"&gt;</xsl:text>
-                <xsl:apply-templates/>
-                <xsl:text disable-output-escaping="yes">&lt;/h</xsl:text>
-                <xsl:value-of select="parent::tei:div/@n"/>
-                <xsl:text disable-output-escaping="yes">&gt;</xsl:text>
+              <xsl:otherwise> 
+                <xsl:element name="h{parent::tei:div/@n}">
+                  <xsl:call-template name="applyRendition">
+                    <xsl:with-param name="class" select="'dta-head'"/>
+                  </xsl:call-template>
+                  <xsl:apply-templates/>
+                </xsl:element>
               </xsl:otherwise>
             </xsl:choose>
           </xsl:when>
@@ -569,16 +567,22 @@
     <xsl:element name="div">
       <xsl:choose>
         <xsl:when test="@type='advertisment' or @type='advertisement'">
-          <div class="dta-anzeige">
+          <div>
+            <xsl:call-template name="applyRendition">
+              <xsl:with-param name="class" select="'dta-anzeige'"/>
+            </xsl:call-template>
             <xsl:apply-templates/>
           </div>
         </xsl:when>
         <xsl:when test="@type">
-          <xsl:attribute name="class">dta-<xsl:value-of select="@type"/></xsl:attribute>
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class">dta-<xsl:value-of select="@type"/></xsl:with-param>
+          </xsl:call-template>
           <xsl:apply-templates/>
         </xsl:when>
         <xsl:otherwise>
           <!-- assign no class if no type-attribute is given -->
+          <xsl:call-template name="applyRendition"/>
           <xsl:apply-templates/>
         </xsl:otherwise>
       </xsl:choose>
