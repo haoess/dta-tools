@@ -34,7 +34,9 @@
   </xsl:template>
   
   <xsl:template match="tei:docTitle">
-    <xsl:apply-templates/>
+    <span class="dta-doctitle">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>
   
   <xsl:template match="tei:titlePart">
@@ -63,20 +65,28 @@
   </xsl:template>
   
   <xsl:template match="tei:docEdition">
-    <xsl:apply-templates/>
+    <span class="dta-docedition">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>
   
   <!-- begin imprint -->
   <xsl:template match="tei:docImprint">
-    <xsl:apply-templates/>
+    <span class="dta-docimprint">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>  
   
   <xsl:template match="tei:docDate">
-    <xsl:apply-templates/>
+    <span class="dta-docdate">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template> 
   
   <xsl:template match="tei:pubPlace">
-    <xsl:apply-templates/>
+    <span class="dta-pubplace">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>  
     
   <xsl:template match="tei:publisher">
@@ -165,7 +175,9 @@
   </xsl:template>   
   
   <xsl:template match="tei:imprimatur">
-      <xsl:apply-templates/>    
+    <span class="dta-imprimatur">
+      <xsl:apply-templates/>   
+    </span>
   </xsl:template>
   
   <xsl:template match="tei:argument">
@@ -222,11 +234,15 @@
   </xsl:template>
   
   <xsl:template match="tei:signed">
-    <xsl:apply-templates/>
+    <span class="dta-signed">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>
   
   <xsl:template match="tei:postscript">
-    <xsl:apply-templates/>
+    <span class="dta-postscript">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>  
   <!-- end letter -->
   
@@ -243,7 +259,7 @@
       <xsl:when test="tei:castGroup">
         <table class="dta-castgroup">
           <td><xsl:apply-templates/></td>
-          <td class="dta-roledesc"><xsl:apply-templates select="tei:roleDesc"/></td>
+          <td><xsl:apply-templates select="tei:roleDesc"/></td>
         </table>
       </xsl:when>
       <xsl:otherwise>
@@ -252,8 +268,7 @@
             <tr>
               <td class="dta-castitem"><xsl:apply-templates/></td>
               <xsl:if test="position()=1">
-                <xsl:element name="td">
-                  <xsl:attribute name="class">dta-roledesc</xsl:attribute>
+                <xsl:element name="td">                  
                   <xsl:attribute name="rowspan"><xsl:value-of select="count(../tei:castItem)"/></xsl:attribute>
                   <xsl:apply-templates select="../tei:roleDesc"/>
                 </xsl:element>
@@ -289,11 +304,15 @@
   </xsl:template>
   
   <xsl:template match="tei:role">
-    <xsl:apply-templates/>
+    <span class="dta-role">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>
   
   <xsl:template match="tei:roleDesc">
-    <xsl:apply-templates/>
+    <span class="dta-roledesc">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>
   
   <xsl:template match="tei:speaker">
@@ -392,26 +411,19 @@
   </xsl:template>
   
   <!-- stage direction -->
-  <xsl:template match="tei:stage">  
-    <xsl:choose>
-      <xsl:when test="ancestor::tei:sp">
-        <span class="dta-stage">
-          <xsl:call-template name="applyRendition">
-            <xsl:with-param name="class" select="'dta-stage'"/>
-          </xsl:call-template>            
-          <xsl:apply-templates/>
-        </span>  
-      </xsl:when>
-      <xsl:otherwise>
-        <div class="dta-stage">
-          <xsl:call-template name="applyRendition">
-            <xsl:with-param name="class" select="'dta-stage'"/>
-          </xsl:call-template>            
-          <xsl:apply-templates/>
-        </div>    
-      </xsl:otherwise>
-    </xsl:choose>
-
+  <xsl:template match="tei:stage"> 
+    <xsl:variable name="nodetype">
+      <xsl:choose>
+        <xsl:when test="ancestor::tei:sp">span</xsl:when>
+        <xsl:otherwise>div</xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:element name="{$nodetype}">
+      <xsl:call-template name="applyRendition">
+        <xsl:with-param name="class" select="'dta-stage'"/>
+      </xsl:call-template>            
+      <xsl:apply-templates/>
+    </xsl:element>
   </xsl:template>
   <!-- end drama -->
   
@@ -1129,27 +1141,37 @@
   </xsl:template>
   
   <xsl:template match="tei:date">
-    <xsl:apply-templates/>
+    <span class="dta-date">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>
   
   
   <xsl:template match="tei:name">
-    <xsl:apply-templates/>
+    <span class="dta-name">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>
   
   
   <xsl:template match="tei:orgName">
-    <xsl:apply-templates/>
+    <span class="dta-origname">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>
   
   
   <xsl:template match="tei:persName">
-    <xsl:apply-templates/>
+    <span class="dta-persname">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>
   
   
   <xsl:template match="tei:placeName">
-    <xsl:apply-templates/>
+    <span class="dta-placename">
+      <xsl:apply-templates/>
+    </span>
   </xsl:template>
 
   <!-- end PHRASE STUCTURE ELEMENTS -->

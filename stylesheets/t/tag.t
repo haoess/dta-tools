@@ -108,8 +108,8 @@ like( process($xsl, 't/xml/castlist_castitem.xml'), qr{
 	<div\s+class="dta-castlist">\s*         
 		<h2\s+class="dta-head">Personen<br/></h2>\s*
 		<div\s+class="dta-castitem">\s*
-			R1\s*
-			R1desc\s*
+			<span\s+class="dta-role">R1</span>\s*
+			<span\s+class="dta-roledesc">R1desc</span>\s*
 			<span\s+class="dta-actor">A1</span>\s*
 		</div><br/>\s*
 	</div><br/>}x );
@@ -121,8 +121,8 @@ like( process($xsl, 't/xml/castgroup_castitem.xml'), qr{
 			<td\s+class="dta-castitem">\s*
 				R1a\s*<span\s+class="dta-actor">A3a</span>\s*
 			</td>\s*
-			<td\s+class="dta-roledesc"\s+rowspan="2">\s*
-				R1Desc\s*
+			<td\s+rowspan="2">\s*
+				<span\s+class="dta-roledesc">R1Desc</span>\s*
 			</td>\s*
 		</tr>\s*
 		<tr>\s*
@@ -328,7 +328,7 @@ like( process($xsl, 't/xml/supplied.xml'), qr{<p class="dta-p">te<span class="dt
 like( process($xsl, 't/xml/frontBodyBack.xml'), qr{<p class="dta-p">front</p>\s*<p class="dta-p">body</p>\s*<p class="dta-p">back</p>});
 
 # <titlePage>
-like( process($xsl, 't/xml/titlepage.xml'), qr{<div class="dta-titlepage">\s*<p class="dta-p">titlePage</p>\s*</div>});
+like( process($xsl, 't/xml/titlepage.xml'), qr{<div class="dta-titlepage">\s*titlePage\s*</div>});
 
 # <titlePart>
 like( process($xsl, 't/xml/titlepart.xml'), qr{<div class="dta-titlepart dta-titlepart-main">Title</div>});
@@ -337,22 +337,22 @@ like( process($xsl, 't/xml/titlepart.xml'), qr{<div class="dta-titlepart dta-tit
 like( process($xsl, 't/xml/docauthor.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docauthor">author</span>\s*</div>});
 
 # <docDate>
-like( process($xsl, 't/xml/docdate.xml'), qr{<div class="dta-titlepage">\s*date\s*</div>});
+like( process($xsl, 't/xml/docdate.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docdate">date</span>\s*</div>});
 
 # <docEdition>
-like( process($xsl, 't/xml/docedition.xml'), qr{<div class="dta-titlepage">\s*edition\s*</div>});
+like( process($xsl, 't/xml/docedition.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docedition">edition</span> \s*</div>});
 
 # <docImprint>
-like( process($xsl, 't/xml/docimprint.xml'), qr{<div class="dta-titlepage">\s*imprint\s*</div>});
+like( process($xsl, 't/xml/docimprint.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docimprint">imprint</span>\s*</div>});
 
 # <docTitle>
-like( process($xsl, 't/xml/doctitle.xml'), qr{<div class="dta-titlepage">\s*title\s*</div>});
+like( process($xsl, 't/xml/doctitle.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-doctitle">title</span>\s*</div>});
 
 # <publisher>
 like( process($xsl, 't/xml/publisher.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-publisher">publisher</span>\s*</div>});
 
 # <pubPlace>
-like( process($xsl, 't/xml/pubplace.xml'), qr{<div class="dta-titlepage">\s*place\s*</div>});
+like( process($xsl, 't/xml/pubplace.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docimprint">\s*<span class="dta-pubplace">place</span>\s*</span>\s*</div>});
 
 # <dateline>
 like( process($xsl, 't/xml/dateline.xml'), qr{<span class="dta-dateline">content</span>});
@@ -367,13 +367,13 @@ like( process($xsl, 't/xml/salute.xml'), qr{<div class="dta-salute">content</div
 like( process($xsl, 't/xml/closer.xml'), qr{<div class="dta-closer">content</div>}); 
 
 # <signed>
-like( process($xsl, 't/xml/signed.xml'), qr{content});
+like( process($xsl, 't/xml/signed.xml'), qr{<span class="dta-signed">content</span>});
 
 # <postscript>
-like( process($xsl, 't/xml/postscript.xml'), qr{content});
+like( process($xsl, 't/xml/postscript.xml'), qr{<span class="dta-postscript">content</span>});
 
 # <role>
-like( process($xsl, 't/xml/role.xml'), qr{content});
+like( process($xsl, 't/xml/role.xml'), qr{<span class="dta-role">content</span>});
 
 # <roleDesc>
 like( process($xsl, 't/xml/roledesc.xml'), qr{content});
@@ -415,7 +415,7 @@ like( process($xsl, 't/xml/lb.xml'), qr{<p class="dta-p">text1<br/>text2</p>});
 like( process($xsl, 't/xml/lb_n.xml'), qr{<p class="dta-p">text1<span class="dta-lb-n">1</span><br/>text2</p>});
 
 # <imprimatur>
-like( process($xsl, 't/xml/imprimatur.xml'), qr{content});
+like( process($xsl, 't/xml/imprimatur.xml'), qr{<span class="dta-imprimatur">content</span>});
 
 # <space>
 # @dim="horizontal"
@@ -482,16 +482,16 @@ like( process($xsl, 't/xml/choice_corr_empty.xml'), qr{<p class="dta-p"><span ti
 like( process($xsl, 't/xml/ref.xml'), qr{<p class="dta-p"><span class="dta-ref" data-target="#f0001">ref</span></p>});
 
 # <date>
-like( process($xsl, 't/xml/date.xml'), qr{content});
+like( process($xsl, 't/xml/date.xml'), qr{<span class="dta-date">content</span>});
 
 # <name>
-like( process($xsl, 't/xml/name.xml'), qr{content});
+like( process($xsl, 't/xml/name.xml'), qr{<span class="dta-name">content</span>});
 
 # <orgName>
-like( process($xsl, 't/xml/orgname.xml'), qr{content});
+like( process($xsl, 't/xml/orgname.xml'), qr{<span class="dta-orgname">content</span>});
 
 # <persName>
-like( process($xsl, 't/xml/persname.xml'), qr{content});
+like( process($xsl, 't/xml/persname.xml'), qr{<span class="dta-persname">content</span>});
 
 # <placeName>
-like( process($xsl, 't/xml/placename.xml'), qr{content});
+like( process($xsl, 't/xml/placename.xml'), qr{<span class="dta-placename">content</span>});
