@@ -381,7 +381,7 @@
             <td class="dta-braced-base dta-braced-left">
               <!-- TODO: doesnt uses sp-template. appropriate? -->
               <xsl:for-each select="tei:sp">
-                <div class="dta-sp"><xsl:apply-templates/></div>
+                <xsl:apply-templates select="current()"/>
               </xsl:for-each>
             </td>
           </tr>
@@ -393,7 +393,7 @@
             <td class="dta-braced-base dta-braced-right">
               <xsl:for-each select="tei:sp">
                 <!-- TODO: doesnt uses sp-template. appropriate? -->
-                <div class="dta-sp"><xsl:apply-templates/></div>
+                <xsl:apply-templates select="current()"/>
               </xsl:for-each>
             </td>
             <td style="vertical-align:middle"><xsl:apply-templates select="child::*[last()]"/></td>

@@ -161,31 +161,55 @@ like( process($xsl, 't/xml/sp_stage_p_p_p_stage.xml'), qr{<div class="dta-sp"><p
 		
 # <spGrp>
 like( process($xsl, 't/xml/spGrp_stagebefore.xml'), qr{
-<table><tr><td\s+style="vertical-align:middle"><div\s+class="dta-stage\s+rightBraced">\s*
-					<p\s+class="dta-p\s+v">Sprechen\s+gleichzeitig</p>\s*
-				</div></td><td\s+class="dta-braced-base\s+dta-braced-left"><div\s+class="dta-sp">\s*
-					<span\s+class="dta-speaker">\s+S1\s+</span>\s*
+<table>\s*
+	<tr>\s*
+		<td\s+style="vertical-align:middle">
+			<div\s+class="dta-stage\s+rightBraced">\s*
+				<p\s+class="dta-p\s+v">Sprechen\s+gleichzeitig</p>\s*
+			</div>
+		</td>
+		<td\s+class="dta-braced-base\s+dta-braced-left">
+			<div\s+class="dta-sp">\s*
+				<span\s+class="dta-speaker">\s+S1\s+</span>\s*
+				<p\s+class="dta-sp-p">\s*
 					<span\s+class="dta-p-in-sp">t1</span>\s*
 					<span\s+class="dta-stage">to\s+S2</span>\s*
-					<span\s+class="dta-p-in-sp">t2</span><br/>\s*
-				</div><div\s+class="dta-sp">\s*
-					<span\s+class="dta-speaker">\s+S2\s+</span>\s*
+					<span\s+class="dta-p-in-sp">t2</span>\s*
+				</p>\s*
+				<br/>\s*
+			</div>
+			<div\s+class="dta-sp">\s*
+				<span\s+class="dta-speaker">\s+S2\s+</span>\s*
+				<p\s+class="dta-sp-p">\s*
 					<span\s+class="dta-stage">to\s+S3</span>\s*
-					<span\s+class="dta-p-in-sp">t3</span><br/>\s*
-				</div><div\s+class="dta-sp">\s*
-					<span\s+class="dta-speaker">\s+S3\s+</span>\s*
+					<span\s+class="dta-p-in-sp">t3</span>\s*
+				</p>\s*
+				<br/>\s*
+			</div>\s*
+			<div\s+class="dta-sp">\s*
+				<span\s+class="dta-speaker">\s+S3\s+</span>\s*
+				<p\s+class="dta-sp-p">\s*									
 					<span\s+class="dta-stage">to\s+S1</span>\s*
-					<span\s+class="dta-p-in-sp">t4</span><br/>\s*
-				</div></td></tr></table>\s*
-			<br/>}x);
+					<span\s+class="dta-p-in-sp">t4</span>\s*
+				</p>\s*
+				<br/>\s*
+			</div>\s*
+		</td>\s*
+	</tr>\s*
+</table>\s*
+<br/>}x);
 	
 like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 	<table><tr><td\s+class="dta-braced-base\s+dta-braced-right"><div\s+class="dta-sp">\s*
 			<span\s+class="dta-speaker">\s+S1\s+</span>\s*
-			<span\s+class="dta-p-in-sp">t1</span>\s*
+			<p\s+class="dta-sp-p">\s*
+				<span\s+class="dta-p-in-sp">t1</span>\s*
+			</p>\s*
 		</div><div\s+class="dta-sp">\s*
 			<span\s+class="dta-speaker">\s+S2\s+</span>\s*
-			<span\s+class="dta-p-in-sp">t2</span>\s*
+			<p\s+class="dta-sp-p">\s*
+				<span\s+class="dta-p-in-sp">t2</span>\s*
+			</p>\s*
 		</div></td><td\s+style="vertical-align:middle"><div\s+class="dta-stage\s+leftBraced">gleichzeitig</div></td></tr></table>\s*
 	<br/>}x);
 	
