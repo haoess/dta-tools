@@ -867,6 +867,7 @@
     </xsl:choose>    
   </xsl:template>
   
+  <!-- begin notes -->
   <!-- editorial notes -->
   <xsl:template match='tei:note[@type="editorial"]'/>
   
