@@ -305,7 +305,7 @@ like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 ## Elements in Poems	
 
 ### <l>
-TODO
+# TODO
 
 ### <lg>
 like( process($xsl, 't/xml/lg.xml'), qr{<div class="dta-lg">\s*<span class="dta-l">V1</span>\s*<br/>\s*<span class="dta-l">V2</span>\s*<br/>\s*</div>} );
