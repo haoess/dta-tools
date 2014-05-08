@@ -688,7 +688,7 @@ like( process($xsl, 't/xml/choice_abbr.xml'), qr{<span title="expan" class="dta-
 # corrected form and reproduced, incorrect form
 like( process($xsl, 't/xml/choice_corr.xml'), qr{<span title="Schreibfehler: sic" class="dta-corr">corr</span>});
 # corrected form (empty) and reproduced, incorrect form
-like( process($xsl, 't/xml/choice_corr_empty.xml'), qr{<span title="Schreibfehler: sic" class="dta-corr">\[\&\#x2026;\]</span>});
+like( process($xsl, 't/xml/choice_corr_empty.xml'), qr{<span title="Schreibfehler: sic" class="dta-corr">\[&#x2026;\]</span>});
 	
 
 
