@@ -1,9 +1,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
 	<text>
 		<body>
-			<castList>         
-				<p>Besetzung</p>
-			</castList>
+			<castList>castlist</castList>
 		</body>
 	</text>
 </TEI>

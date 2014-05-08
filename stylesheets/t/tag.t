@@ -124,28 +124,26 @@ like( process($xsl, 't/xml/div_otherType.xml'), qr{<div class="dta-edition">cont
 like( process($xsl, 't/xml/p.xml'), qr{<p class="dta-p">X</p>} );
 
 ### <head>
-# head in <figure>
+# <head> in <figure>
 like( process($xsl, 't/xml/head_figure.xml'), qr{
 		<div\s+class="dta-phbl\s+dta-figure"\s+type="1">\s*
 			<img\s+src="http://dummy.org/dmmy.jpg"/><br/>\s+\[Abbildung\]\s* 
 			<span\s+class="dta-figdesc">HEAD</span><br/>\s*
 			<p\s+class="dta-p">caption</p>\s*
 		</div>}x );
-# head in <lg>
+# <head> with parent <lg>
 like( process($xsl, 't/xml/head_lg.xml'), qr{		
 	  <div>\s*
         <div\s+class="dta-poem">\s*
-          <div\s+class="dta-head">DIE[ ]RABEN</div>\s*
+          <div\s+class="dta-head">HEAD</div>\s*
           <br/>\s*
           <div\s+class="dta-lg">\s*
-            <span\s+class="dta-l">v1a</span><br/>\s*
-            <span\s+class="dta-l">v1b</span><br/>\s*
-          </div>\s*
-          <div\s+class="dta-lg">\s*
-            <span\s+class="dta-l">v2a</span><br/>\s*
+            <span\s+class="dta-l">v1</span><br/>\s*
+            <span\s+class="dta-l">v2</span><br/>\s*
           </div>\s*
         </div>\s*
       </div>}x );
+# <head> with ancestor <list>
 like( process($xsl, 't/xml/head_list.xml'), qr{		  
 	<div>\s*
 		<div\s+class="dta-list">\s*
@@ -154,20 +152,22 @@ like( process($xsl, 't/xml/head_list.xml'), qr{
 			<div\s+class="dta-list-item">AB</div>\s*
 		</div>\s*
 	</div>}x );
+# <head> in a <div>
 like( process($xsl, 't/xml/head_div.xml'), qr{
 	<div>\s*
 		<div\s+class="dta-head">HEAD</div><br/>\s*
 		<p\s+class="dta-p">text3</p>\s*
 	</div>}x );	
-
+# <head> in a <div> with @n (n > 6: create a <div>, otherwise a <h_@n_>)
 like( process($xsl, 't/xml/head_div_n.xml'), qr{
 	<div>\s*
-		<h6\s+class="dta-head">1.[ ]Kapitel<br/>Kapitelname</h6><br/>\s*
+		<h6\s+class="dta-head">HEAD1</h6><br/>\s*
 		<div>\s*
-			<div\s+class="dta-head">p1</div><br/>\s*
+			<div\s+class="dta-head">HEAD2</div><br/>\s*
 			<p\s+class="dta-p">text1</p>\s*
 		</div>\s*
 	</div>}x );	
+# if no <lb> at the end or after the head: directly embed the head 
 like( process($xsl, 't/xml/head_no_lb.xml'), qr{
 	<div>\s*
 		HEAD[ ]text\s*
@@ -184,7 +184,7 @@ like( process($xsl, 't/xml/imprimatur.xml'), qr{<span class="dta-imprimatur">con
 like( process($xsl, 't/xml/argument.xml'), qr{<div class="dta-argument">content</div>}); 
 
 ### <trailer>
-like( process($xsl, 't/xml/trailer.xml'), qr{<p class="dta-p">p</p>\s*<span class="dta-trailer">content</span>});
+like( process($xsl, 't/xml/trailer.xml'), qr{<span class="dta-trailer">content</span>});
 	
 ## Elements in Letters
 
@@ -209,10 +209,7 @@ like( process($xsl, 't/xml/postscript.xml'), qr{<span class="dta-postscript">con
 ## Elements in Dramas
 
 ### <castList>
-like( process($xsl, 't/xml/castlist.xml'), qr{
-	<div\s+class="dta-castlist">\s*         
-		<p\s+class="dta-p">Besetzung</p>\s*
-	</div>}x );
+like( process($xsl, 't/xml/castlist.xml'), qr{<div class="dta-castlist">castlist</div>});
 
 ### <castList/castItem>
 like( process($xsl, 't/xml/castlist_castitem.xml'), qr{
@@ -249,13 +246,14 @@ like( process($xsl, 't/xml/castgroup_castitem.xml'), qr{
 like( process($xsl, 't/xml/actor.xml'), qr{<span class="dta-actor">content</span>});
 
 ### <speaker>
+# Notice the _content_ surrounding whitespace.
 like( process($xsl, 't/xml/speaker.xml'), qr{<span class="dta-speaker"> content </span>});
 	
 ### <role>
 like( process($xsl, 't/xml/role.xml'), qr{<span class="dta-role">content</span>});
 
 ### <roleDesc>
-like( process($xsl, 't/xml/roledesc.xml'), qr{content});	
+like( process($xsl, 't/xml/roledesc.xml'), qr{<span class="dta-roledesc">content</span>});	
 	
 ### <stage>
 like( process($xsl, 't/xml/stage.xml'), qr{<div class="dta-stage">content</div>});

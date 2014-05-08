@@ -3,14 +3,11 @@
 	<body>
       <div n="1">
         <lg type="poem">
-          <head>DIE RABEN</head>
+          <head>HEAD</head>
           <lb/>
           <lg n="1">
-            <l>v1a</l><lb/>
-            <l>v1b</l><lb/>
-          </lg>
-          <lg n="2">
-            <l>v2a</l><lb/>
+            <l>v1</l><lb/>
+            <l>v2</l><lb/>
           </lg>
         </lg>
       </div>

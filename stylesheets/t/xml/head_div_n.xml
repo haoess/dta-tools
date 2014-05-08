@@ -2,9 +2,9 @@
 	<text>
 		<body>
 			<div n="6">
-				<head>1. Kapitel<lb/>Kapitelname</head><lb/>
+				<head>HEAD1</head><lb/>
 				<div n="7">
-					<head>p1</head><lb/>
+					<head>HEAD2</head><lb/>
 					<p>text1</p>
 				</div>
 			</div>			
