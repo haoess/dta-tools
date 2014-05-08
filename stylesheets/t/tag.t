@@ -84,8 +84,7 @@ like( process($xsl, 't/xml/docdate.xml'), qr{
 # not(@n)
 like( process($xsl, 't/xml/lb.xml'), qr{<p class="dta-p">text1<br/>text2</p>});
 # @n
-like( process($xsl, 't/xml/lb_n.xml'), qr{
-<p\s+class="dta-p">text1<span\s+class="dta-lb-n">1</span><br/>text2</p>});
+like( process($xsl, 't/xml/lb_n.xml'), qr{<p\s+class="dta-p">text1<span\s+class="dta-lb-n">1</span><br/>text2</p>});
 
 ### <cb>
 like( process($xsl, 't/xml/cb.xml'), qr{
