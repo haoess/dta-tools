@@ -289,7 +289,7 @@ like( process($xsl, 't/xml/sp_stage_behind_p.xml'), qr{
 like( process($xsl, 't/xml/sp_stage_embedded.xml'), qr{
 	<div\s+class="dta-sp">\s*
 		<p\s+class="dta-sp-p">\s*
-			<span\s+class="dta-p-in-sp">line1</span>[ ]<span\s+class="dta-stage">stage1</span>[ ]<span class="dta-p-in-sp">line2</span>\s*
+			<span\s+class="dta-p-in-sp">line1</span>[ ]<span\s+class="dta-stage">stage1</span>[ ]<span\s+class="dta-p-in-sp">line2</span>\s*
 		</p>\s*
 	</div>}x);
 # <p> <stage> <p> <stage>
