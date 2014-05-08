@@ -567,12 +567,10 @@
     <xsl:element name="div">
       <xsl:choose>
         <xsl:when test="@type='advertisment' or @type='advertisement'">
-          <div>
-            <xsl:call-template name="applyRendition">
-              <xsl:with-param name="class" select="'dta-anzeige'"/>
-            </xsl:call-template>
-            <xsl:apply-templates/>
-          </div>
+          <xsl:call-template name="applyRendition">
+            <xsl:with-param name="class" select="'dta-anzeige'"/>
+          </xsl:call-template>
+          <xsl:apply-templates/>
         </xsl:when>
         <xsl:when test="@type">
           <xsl:call-template name="applyRendition">

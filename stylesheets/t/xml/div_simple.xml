@@ -1,9 +1,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <text>
     <body>
-      <div>
-        <p>Das ist ein Absatz.</p>
-      </div>
+      <div>content</div>
     </body>
   </text>
 </TEI>

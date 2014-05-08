@@ -12,8 +12,10 @@ public class WikiBuilder {
     public static void main(String[] args) {
         // path to the test file ("tag.t")
         String testFN = args[0];
+        System.out.println("use test file: "+testFN);
         // folder which contains /t/xml
         stylesheetsFN = args[1];
+        System.out.println("contains /t/xml: "+stylesheetsFN);
         String outFN = args[2];
         System.out.println("write output to " + outFN);
         boolean writeSeparatorLine = false;

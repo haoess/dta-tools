@@ -1,9 +1,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <text>
     <body>
-      <div type="advertisement">
-        <p>Anzeige</p>
-      </div>
+      <div type="advertisement">Anzeige</div>
     </body>
   </text>
 </TEI>

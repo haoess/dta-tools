@@ -10,19 +10,28 @@ my $xsl = 'dta-base.xsl';
 #--- Document Structure Elements
 
 ### <front> <body> <back>
-like( process($xsl, 't/xml/frontBodyBack.xml'), qr{<p class="dta-p">front</p>\s*<p class="dta-p">body</p>\s*<p class="dta-p">back</p>});
+like( process($xsl, 't/xml/frontBodyBack.xml'), qr{
+	<p\s+class="dta-p">front</p>\s*
+	<p\s+class="dta-p">body</p>\s*
+	<p\s+class="dta-p">back</p>}x);
 
 ### <pb>
 # No transformation will be done.
 like( process($xsl, 't/xml/pb.xml'), qr{});
 
 ### <titlePage>
-like( process($xsl, 't/xml/titlepage.xml'), qr{<div class="dta-titlepage">\s*titlePage\s*</div>});
+like( process($xsl, 't/xml/titlepage.xml'), qr{
+	<div\s+class="dta-titlepage">\s*
+		titlePage\s*
+	</div>}x);
 
 ## Elements of Titlepage
 
 ### <docTitle>
-like( process($xsl, 't/xml/doctitle.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-doctitle">title</span>\s*</div>});
+like( process($xsl, 't/xml/doctitle.xml'), qr{
+	<div\s+class="dta-titlepage">\s*
+		<span\s+class="dta-doctitle">title</span>\s*
+	</div>}x);
 
 ### <titlePart>
 like( process($xsl, 't/xml/titlepart.xml'), qr{<div class="dta-titlepart dta-titlepart-main">Title</div>});
@@ -31,10 +40,16 @@ like( process($xsl, 't/xml/titlepart.xml'), qr{<div class="dta-titlepart dta-tit
 like( process($xsl, 't/xml/byline.xml'), qr{<div class="dta-byline">content</div>}); 
 
 ### <docAuthor>
-like( process($xsl, 't/xml/docauthor.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docauthor">author</span>\s*</div>});
+like( process($xsl, 't/xml/docauthor.xml'), qr{
+	<div\s+class="dta-titlepage">\s*
+		<span\s+class="dta-docauthor">author</span>\s*
+	</div>}x);
 
 ### <docEdition>
-like( process($xsl, 't/xml/docedition.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docedition">edition</span> \s*</div>});
+like( process($xsl, 't/xml/docedition.xml'), qr{
+	<div\s+class="dta-titlepage">\s*
+		<span\s+class="dta-docedition">edition</span>\s*
+	</div>}x);
 
 ### <docImprint>
 like( process($xsl, 't/xml/docimprint.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docimprint">imprint</span>\s*</div>});
@@ -42,13 +57,26 @@ like( process($xsl, 't/xml/docimprint.xml'), qr{<div class="dta-titlepage">\s*<s
 ## Elements of Imprint
 
 ### <publisher>
-like( process($xsl, 't/xml/publisher.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docimprint">\s*<span class="dta-publisher">publisher</span>\s*</span>\s*</div>});
+like( process($xsl, 't/xml/publisher.xml'), qr{
+	<div\s+class="dta-titlepage">\s*
+		<span\s+class="dta-docimprint">\s*
+			<span\s+class="dta-publisher">publisher</span>\s*
+		</span>\s*
+	</div>}x);
 
 ### <pubPlace>
-like( process($xsl, 't/xml/pubplace.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docimprint">\s*<span class="dta-pubplace">place</span>\s*</span>\s*</div>});
+like( process($xsl, 't/xml/pubplace.xml'), qr{
+	<div\s+class="dta-titlepage">\s*
+		<span\s+class="dta-docimprint">\s*
+			<span\s+class="dta-pubplace">place</span>\s*
+		</span>\s*
+	</div>}x);
 
 ### <docDate>
-like( process($xsl, 't/xml/docdate.xml'), qr{<div class="dta-titlepage">\s*<span class="dta-docdate">date</span>\s*</div>});
+like( process($xsl, 't/xml/docdate.xml'), qr{
+	<div\s+class="dta-titlepage">\s*
+		<span\s+class="dta-docdate">date</span>\s*
+	</div>}x);
 
 #--- Text Structure Elements 
 
@@ -56,16 +84,17 @@ like( process($xsl, 't/xml/docdate.xml'), qr{<div class="dta-titlepage">\s*<span
 # not(@n)
 like( process($xsl, 't/xml/lb.xml'), qr{<p class="dta-p">text1<br/>text2</p>});
 # @n
-like( process($xsl, 't/xml/lb_n.xml'), qr{<p class="dta-p">text1<span class="dta-lb-n">1</span><br/>text2</p>});
+like( process($xsl, 't/xml/lb_n.xml'), qr{
+<p\s+class="dta-p">text1<span\s+class="dta-lb-n">1</span><br/>text2</p>});
 
 ### <cb>
 like( process($xsl, 't/xml/cb.xml'), qr{
     <p\s+class="dta-p">a</p>\s*
     <span\s+class="dta-cb">\[Beginn[ ]Spaltensatz\]</span>\s*
     <p\s+class="dta-p">\s*
-    S1\s*
-    <span\s+class="dta-cb">\[Spaltenumbruch\]</span>\s*
-    S2\s*
+		S1\s*
+		<span\s+class="dta-cb">\[Spaltenumbruch\]</span>\s*
+		S2\s*
     </p>\s*
     <span\s+class="dta-cb">\[Ende[ ]Spaltensatz\]</span>\s*
     <p\s+class="dta-p">b</p>}x );
@@ -77,27 +106,33 @@ like( process($xsl, 't/xml/space_horizontal.xml'), qr{&nbsp;&nbsp;&nbsp;});
 like( process($xsl, 't/xml/space_vertical.xml'), qr{<br class="dta-space"/>});
 	
 ### <milestone>
-# rendition="#hr"
+# @rendition="#hr"
 like( process($xsl, 't/xml/milestone_hr.xml'), qr{<hr/>});
-# rendition="#hrRed"
+# @rendition="#hrRed"
 like( process($xsl, 't/xml/milestone_hrred.xml'), qr{<hr class="dta-red"/>});
-# rendition="#hrBlue"
+# @rendition="#hrBlue"
 like( process($xsl, 't/xml/milestone_hrblue.xml'), qr{<hr class="dta-blue"/>});
 	
 ### <div>
-like( process($xsl, 't/xml/div_simple.xml'), qr{<div>\s*<p class="dta-p">Das ist ein Absatz.</p>\s*</div>} );
-like( process($xsl, 't/xml/div_advertisement.xml'), qr{<div><div class="dta-anzeige">\s*<p class="dta-p">Anzeige</p>\s*</div></div>});
-like( process($xsl, 't/xml/div_otherType.xml'), qr{<div class="dta-edition">\s*<p class="dta-p">Anzeige</p>\s*</div>});
+# simple
+like( process($xsl, 't/xml/div_simple.xml'), qr{<div>content</div>});
+# advertisement
+like( process($xsl, 't/xml/div_advertisement.xml'), qr{<div class="dta-anzeige">Anzeige</div>});
+# other type (the new class: "dta-_@type_")
+like( process($xsl, 't/xml/div_otherType.xml'), qr{<div class="dta-edition">content</div>});
 	
 ### <p>
 like( process($xsl, 't/xml/p.xml'), qr{<p class="dta-p">X</p>} );
 
 ### <head>
+# head in <figure>
 like( process($xsl, 't/xml/head_figure.xml'), qr{
-		<div\s+class="dta-phbl\s+dta-figure"\s+type="1"><img\s+src="http://dummy.org/dmmy.jpg"/><br/>\s+\[Abbildung\]\s* 
+		<div\s+class="dta-phbl\s+dta-figure"\s+type="1">\s*
+			<img\s+src="http://dummy.org/dmmy.jpg"/><br/>\s+\[Abbildung\]\s* 
 			<span\s+class="dta-figdesc">HEAD</span><br/>\s*
 			<p\s+class="dta-p">caption</p>\s*
 		</div>}x );
+# head in <lg>
 like( process($xsl, 't/xml/head_lg.xml'), qr{		
 	  <div>\s*
         <div\s+class="dta-poem">\s*
@@ -249,6 +284,7 @@ like( process($xsl, 't/xml/sp_p_p.xml'), qr{<div class="dta-sp"><p class="dta-sp
 like( process($xsl, 't/xml/sp_stage_p_p_p_stage.xml'), qr{<div class="dta-sp"><p class="dta-sp-p"><span class="dta-stage">stage1</span> <span class="dta-p-in-sp">line1</span></p><p class="dta-sp-p"><span class="dta-p-in-sp">line2</span></p><p class="dta-sp-p"><span class="dta-p-in-sp">line3</span> <span class="dta-stage">stage2</span></p></div>});		
 		
 ### <spGrp>
+# stage before the speech acts
 like( process($xsl, 't/xml/spGrp_stagebefore.xml'), qr{
 <table>\s*
 	<tr>\s*
@@ -287,7 +323,7 @@ like( process($xsl, 't/xml/spGrp_stagebefore.xml'), qr{
 	</tr>\s*
 </table>\s*
 <br/>}x);
-	
+# stage after the speech acts
 like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 	<table><tr><td\s+class="dta-braced-base\s+dta-braced-right"><div\s+class="dta-sp">\s*
 			<span\s+class="dta-speaker">\s+S1\s+</span>\s*
@@ -365,7 +401,7 @@ like( process($xsl, 't/xml/note_marginals.xml'), qr{
 	<p\s+class="dta-p">text3<span\s+class="dta-marginal[ ]dta-marginal-right">marginalRight</span>text4</p>}x);		
 
 ## Floats
-# These elemnts interrupt the running text.
+# These elements interrupt the running text.
 	
 ### <floatingText>
 like( process($xsl, 't/xml/floatingtext.xml'), qr{<div class="dta-floatingtext">content</div>});
