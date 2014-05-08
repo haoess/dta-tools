@@ -594,30 +594,36 @@ like( process($xsl, 't/xml/figure_div_span.xml'), qr{
 	
 ### <hi> 
 # @rendition and not(@rend)
-like( process($xsl, 't/xml/hi.xml'), qr{<p class="dta-p"><span class="aq b blue">content</span></p>});
+like( process($xsl, 't/xml/hi.xml'), qr{<span class="aq b blue">content</span>});
 # @rend
-like( process($xsl, 't/xml/hi_rend.xml'), qr{<p class="dta-p"><span title="quer" class="dta-rend">content</span></p>});
+like( process($xsl, 't/xml/hi_rend.xml'), qr{<span title="quer" class="dta-rend">content</span>});
 # @rend and @rendition
-like( process($xsl, 't/xml/hi_rend_rendition.xml'), qr{<p class="dta-p"><span title="quer" class="dta-rend aq b blue">content</span></p>});	
+like( process($xsl, 't/xml/hi_rend_rendition.xml'), qr{<span title="quer" class="dta-rend aq b blue">content</span>});	
 	
 ### <formula>
 like( process($xsl, 't/xml/formula.xml'), qr{<span class="dta-ph dta-formula-1" onclick="editFormula\(1\)" style="cursor:pointer"> \[Formel 1\] </span>} );
-like( process($xsl, 't/xml/formula_tex.xml'), qr{<span class="dta-formula"><img style="vertical-align:middle; -moz-transform:scale\(0.7\); -webkit-transform:scale\(0.7\); transform:scale\(0.7\)" src="http://dinglr.de/formula/%5Cfrac%7B1%7D%7B2%7D"/></span>} );
-like( process($xsl, 't/xml/formula_utf8.xml'), qr{<span class="dta-formula"><img style="vertical-align:middle; -moz-transform:scale\(0.7\); -webkit-transform:scale\(0.7\); transform:scale\(0.7\)" src="http://dinglr.de/formula/%FC%20%2B%20%3F"/></span>});
+like( process($xsl, 't/xml/formula_tex.xml'), qr{
+	<span\s+class="dta-formula">\s*
+		<img\s+style="vertical-align:middle;[ ]-moz-transform:scale\(0.7\);[ ]-webkit-transform:scale\(0.7\);[ ]transform:scale\(0.7\)"\s+src="http://dinglr.de/formula/%5Cfrac%7B1%7D%7B2%7D"/>\s*
+	</span>}x);
+like( process($xsl, 't/xml/formula_utf8.xml'), qr{
+	<span\s+class="dta-formula">\s*
+		<img\s+style="vertical-align:middle;[ ]-moz-transform:scale\(0.7\);[ ]-webkit-transform:scale\(0.7\);[ ]transform:scale\(0.7\)"\s+src="http://dinglr.de/formula/%FC%20%2B%20%3F"/>\s*
+	</span>}x);
 
 ### <foreign>
-# no content, @xml:lang="he"
-like( process($xsl, 't/xml/foreign_no_content_he.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material" xml:lang="he">FM: hebräisch</span></p>});
-# no content, @xml:lang="zh"
-like( process($xsl, 't/xml/foreign_no_content_zh.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material" xml:lang="zh">FM: zh</span></p>});
+# no content, @xml:lang="he" (as showcase, "heb" and "hbo" cause the same result. "el", "grc" and "ell" are mapped to the span content "griechisch".)
+like( process($xsl, 't/xml/foreign_no_content_he.xml'), qr{<span class="dta-foreign" title="fremdsprachliches Material" xml:lang="he">FM: hebräisch</span>});
+# no content, @xml:lang="zh" (as showcase for an unknown xml:lang code)
+like( process($xsl, 't/xml/foreign_no_content_zh.xml'), qr{<span class="dta-foreign" title="fremdsprachliches Material" xml:lang="zh">FM: zh</span>});
 # no content, not(@xml:lang)
-like( process($xsl, 't/xml/foreign_no_content_no_lang.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material"/></p>});
+like( process($xsl, 't/xml/foreign_no_content_no_lang.xml'), qr{<span class="dta-foreign" title="fremdsprachliches Material"/>});
 # content, @xml:lang="he"
-like( process($xsl, 't/xml/foreign_content_he.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material" xml:lang="he">content</span></p>});
+like( process($xsl, 't/xml/foreign_content_he.xml'), qr{<span class="dta-foreign" title="fremdsprachliches Material" xml:lang="he">content</span>});
 # content, @xml:lang="zh"
-like( process($xsl, 't/xml/foreign_content_zh.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material" xml:lang="zh">content</span></p>});
+like( process($xsl, 't/xml/foreign_content_zh.xml'), qr{<span class="dta-foreign" title="fremdsprachliches Material" xml:lang="zh">content</span>});
 # content, not(@xml:lang)
-like( process($xsl, 't/xml/foreign_content_no_lang.xml'), qr{<p class="dta-p"><span class="dta-foreign" title="fremdsprachliches Material">content</span></p>});
+like( process($xsl, 't/xml/foreign_content_no_lang.xml'), qr{<span class="dta-foreign" title="fremdsprachliches Material">content</span>});
 
 ### <q>
 like( process($xsl, 't/xml/q.xml'), qr{<q class="dta-quote">content</q>});
@@ -626,7 +632,7 @@ like( process($xsl, 't/xml/q.xml'), qr{<q class="dta-quote">content</q>});
 like( process($xsl, 't/xml/quote.xml'), qr{<q class="dta-quote">content</q>});
 
 ### <ref>
-like( process($xsl, 't/xml/ref.xml'), qr{<p class="dta-p"><span class="dta-ref" data-target="#f0001">ref</span></p>});
+like( process($xsl, 't/xml/ref.xml'), qr{<span class="dta-ref" data-target="#f0001">ref</span>});
 
 ### <date>
 like( process($xsl, 't/xml/date.xml'), qr{<span class="dta-date">content</span>});
@@ -653,35 +659,35 @@ like( process($xsl, 't/xml/placename.xml'), qr{<span class="dta-placename">conte
 like( process($xsl, 't/xml/supplied.xml'), qr{<p class="dta-p">te<span class="dta-supplied">\[x\]</span>t</p>});
 
 ### <gap>
-# lost_page		
+# one lost page		
 like( process($xsl, 't/xml/gap_lost_page.xml'), qr{<span class="dta-gap">\[verlorenes Material &#x2013; 1 Seite fehlt\]</span>});
-# fm_insignificant_pages		
+# @reason="fm insignificant", two pages	missing	
 like( process($xsl, 't/xml/gap_fm_insignificant_pages.xml'), qr{<span class="dta-gap">\[irrelevantes fremdsprachliches Material &#x2013; 2 Seiten fehlen\]</span>});
-# illegible_insignificant_lost_line	
+# @reason="illegible insignificant lost", one line missing	
 like( process($xsl, 't/xml/gap_illegible_insignificant_lost_line.xml'), qr{<span class="dta-gap">\[verlorenes irrelevantes unleserliches Material &#x2013; 1 Zeile fehlt\]</span>});
-# fm_lines	
+# @reason="fm", two lines missing	
 like( process($xsl, 't/xml/gap_fm_lines.xml'), qr{<span class="dta-gap">\[fremdsprachliches Material &#x2013; 2 Zeilen fehlen\]</span>});
-# illegible_word
+# @reason="illegible", one word missing
 like( process($xsl, 't/xml/gap_illegible_word.xml'), qr{<span class="dta-gap">\[unleserliches Material &#x2013; 1 Wort fehlt\]</span>});
-# fm_words
+# @reason="fm", two words missing
 like( process($xsl, 't/xml/gap_fm_words.xml'), qr{<span class="dta-gap">\[fremdsprachliches Material &#x2013; 2 Wörter fehlen\]</span>});
-# fm_char
+# @reason="fm", one char missing
 like( process($xsl, 't/xml/gap_fm_char.xml'), qr{<span class="dta-gap">\[fremdsprachliches Material &#x2013; 1 Zeichen fehlt\]</span>});
-# char
+# one char missing (no reason)
 like( process($xsl, 't/xml/gap_char.xml'), qr{<span class="dta-gap">\[1 Zeichen fehlt\]</span>});
-# fm
+# @reason="fm" (no unit, no quantity)
 like( process($xsl, 't/xml/gap_fm.xml'), qr{<span class="dta-gap">\[fremdsprachliches Material\]</span>});
-# word
+# word(s) missing (no reason, no quantity) 
 like( process($xsl, 't/xml/gap_word.xml'), qr{<span class="dta-gap">\[Wort fehlt\]</span>});	
 	
 ### <choice>
-# reg and orig
+# regularized form and original spelling
 like( process($xsl, 't/xml/choice_reg.xml'), qr{<p class="dta-p"><span title="Original: orig" class="dta-reg">reg</span></p>});
-# abbr and expand
+# abbreviation and expansion of the abbreviation
 like( process($xsl, 't/xml/choice_abbr.xml'), qr{<p class="dta-p"><span title="expan" class="dta-abbr">abbr</span></p>});
-# corr and sic
+# corrected form and reproduced, incorrect form
 like( process($xsl, 't/xml/choice_corr.xml'), qr{<p class="dta-p"><span title="Schreibfehler: sic" class="dta-corr">corr</span></p>});
-#corr(empty) and sic
+# corrected form (empty) and reproduced, incorrect form
 like( process($xsl, 't/xml/choice_corr_empty.xml'), qr{<p class="dta-p"><span title="Schreibfehler: sic" class="dta-corr">\[\&\#x2026;\]</span></p>});
 	
 
