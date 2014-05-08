@@ -308,7 +308,7 @@ like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 # simple
 like( process($xsl, 't/xml/l.xml'), qr{<span class="dta-l">V</span>});
 # @rendition contains _#c_, _#et_ or _#right_
-like( process($xsl, 't/xml/l2.xml'), qr{<div class="dta-l et"><span>V</span></div>);
+like( process($xsl, 't/xml/l2.xml'), qr{<div class="dta-l et"><span>V</span></div>});
 
 ### <lg>
 # simple
