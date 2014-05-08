@@ -7,6 +7,7 @@ Format requirements for the test file:
  - The "# " at the beginning of other Comments (which start with just a single "#") is omitted, the rest of the comment is copied.
 
 Needed arguments:
+
 1. Path to the test file
 2. Path to the folder which contains _t/xml_
 3. Output folder
