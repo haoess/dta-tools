@@ -1,9 +1,14 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
 	<text>
 		<body>
-			<item>i1</item><lb/>
-			<p><item>i2</item></p><lb/>
-			<item>i3a<pb/>i3b</item><lb/>
+			<item>i1</item>
+			<lb/>
+			<p>
+				<item>i2</item>
+			</p>
+			<lb/>
+			<item>i3a<pb/>i3b</item>
+			<lb/>
 		</body>
 	</text>
 </TEI>

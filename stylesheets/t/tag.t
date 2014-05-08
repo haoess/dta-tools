@@ -158,7 +158,7 @@ like( process($xsl, 't/xml/head_div.xml'), qr{
 		<div\s+class="dta-head">HEAD</div><br/>\s*
 		<p\s+class="dta-p">text3</p>\s*
 	</div>}x );	
-# <head> in a <div> with @n (n > 6: create a <div>, otherwise a <h_@n_>)
+# <head> in a <div> with @n (n > 6: create a <div>, otherwise a <h{@n}>)
 like( process($xsl, 't/xml/head_div_n.xml'), qr{
 	<div>\s*
 		<h6\s+class="dta-head">HEAD1</h6><br/>\s*
@@ -446,13 +446,25 @@ like( process($xsl, 't/xml/note_foot.xml'), qr{
 	<p\s+class="dta-p">text1<span\s+class="dta-fn-intext">\(a\)</span>[ ]text2</p>\s*
 		<p\s+class="dta-p">text3<span\s+class="dta-fn-intext">\(b\)</span>[ ]text4</p>\s*
 		<p\s+class="dta-p">text5<span\s+class="dta-fn-intext">\(c\)</span>[ ]text6</p>\s*	
-	<div\s+class="dta-footnotesep"/><div\s+class="dta-footnote"><span\s+class="dta-fn-sign">\(a\)</span>[ ]footnotea</div><div\s+class="dta-footnote"><span\s+class="dta-fn-sign">\(b\)</span>[ ]footnoteb</div><div\s+class="dta-footnote">[ ]footnotebCont</div><div\s+class="dta-footnote"><span\s+class="dta-fn-sign">\(c\)</span>[ ]footnotec</div>}x);
+	<div\s+class="dta-footnotesep"/>\s*
+	<div\s+class="dta-footnote">\s*
+		<span\s+class="dta-fn-sign">\(a\)</span>[ ]footnotea\s*
+	</div>\s*
+	<div\s+class="dta-footnote">\s*
+		<span\s+class="dta-fn-sign">\(b\)</span>[ ]footnoteb\s*
+	</div>\s*
+	<div\s+class="dta-footnote">[ ]footnotebCont</div>\s*
+	<div\s+class="dta-footnote">\s*
+		<span\s+class="dta-fn-sign">\(c\)</span>[ ]footnotec\s*
+	</div>}x);
 	
 # endnote
 like( process($xsl, 't/xml/note_end.xml'), qr{	
 	<p\s+class="dta-p">text1<span\s+class="dta-fn-sign">\(a\)</span>text2</p>\s*
 	<p\s+class="dta-p">text3<span\s+class="dta-fn-sign">\(b\)</span>text4</p>\s*
-	<div\s+class="dta-endnote\s+dta-endnote-indent"><span\s+class="dta-fn-sign">\(a\)</span>[ ]endnotea</div>\s*
+	<div\s+class="dta-endnote\s+dta-endnote-indent">\s*
+		<span\s+class="dta-fn-sign">\(a\)</span>[ ]endnotea\s*
+	</div>\s*
 	<div\s+class="dta-endnote">endnotebendnotebCont</div>}x);	
 
 # marginals
@@ -467,11 +479,13 @@ like( process($xsl, 't/xml/note_marginals.xml'), qr{
 like( process($xsl, 't/xml/floatingtext.xml'), qr{<div class="dta-floatingtext">content</div>});
 	
 ### <list>
+# simple
 like( process($xsl, 't/xml/list_simple.xml'), qr{	
 	<div\s+class="dta-list">\s*
 		<div\s+class="dta-list-item">t1a<br/>t1b</div>\s*
 		<div\s+class="dta-list-item">t2</div>\s*
 	</div>}x);
+# left braced
 like( process($xsl, 't/xml/list_leftbraced.xml'), qr{	
 	<div\s+class="dta-list">\s*
 		<div\s+class="dta-list-item">gemeinsamer[ ]Textbaustein[ ]vorn\s*
@@ -482,6 +496,7 @@ like( process($xsl, 't/xml/list_leftbraced.xml'), qr{
 			</span>\s*
 		</div>\s*
 	</div>}x);
+# right braced
 like( process($xsl, 't/xml/list_rightbraced.xml'), qr{	
 	<div\s+class="dta-list">\s*
 		<div\s+class="dta-list-item">\s*
@@ -492,6 +507,7 @@ like( process($xsl, 't/xml/list_rightbraced.xml'), qr{
 			</span>\s*
 			gemeinsamer[ ]Textbaustein[ ]hinten</div><br/>\s*
 	</div>}x);
+# left and right braced
 like( process($xsl, 't/xml/list_leftrightbraced.xml'), qr{	
 	<div\s+class="dta-list">\s*
 		<div\s+class="dta-list-item">gemeinsamer[ ]Textbaustein[ ]vorn\s*
@@ -506,9 +522,14 @@ like( process($xsl, 't/xml/list_leftrightbraced.xml'), qr{
 
 ### <item>
 like( process($xsl, 't/xml/item_simple_p_pb.xml'), qr{		
-	<div\s+class="dta-list-item">i1</div><br/>\s*
-	<p\s+class="dta-p"><span\s+class="dta-list-item">i2</span></p><br/>\s*
-	<div\s+class="dta-list-item-noindent">i3ai3b</div><br/>}x);		
+	<div\s+class="dta-list-item">i1</div>\s*
+	<br/>\s*
+	<p\s+class="dta-p">\s*
+		<span\s+class="dta-list-item">i2</span>\s*
+	</p>\s*
+	<br/>\s*
+	<div\s+class="dta-list-item-noindent">i3ai3b</div>\s*
+	<br/>}x);		
 
 ### <table>
 like( process($xsl, 't/xml/table.xml'), qr{
@@ -540,12 +561,13 @@ like( process($xsl, 't/xml/table.xml'), qr{
 
 ### <fw>
 # @place="top" (@type="header")
-like( process($xsl, 't/xml/fw_top.xml'), qr{<p class="dta-p"><div class="dta-fw-top dta-fw-header">content</div></p>});
+like( process($xsl, 't/xml/fw_top.xml'), qr{<div class="dta-fw-top dta-fw-header">content</div>});
 # @place="bottom" and @type="sig"
-like( process($xsl, 't/xml/fw_bottom_sig.xml'), qr{<p class="dta-p"/>\s*<div class="dta-fw-bottom-sig">content</div>});
+like( process($xsl, 't/xml/fw_bottom_sig.xml'), qr{<div class="dta-fw-bottom-sig">content</div>});
 # @place="bottom" and @type="catch"
-like( process($xsl, 't/xml/fw_bottom_catch.xml'), qr{<p class="dta-p"/>\s*<div class="dta-fw-bottom-catch">content</div>});
+like( process($xsl, 't/xml/fw_bottom_catch.xml'), qr{<div class="dta-fw-bottom-catch">content</div>});
 # @place="bottom" and @type="pageNum"
+# TODO: correct?
 like( process($xsl, 't/xml/fw_bottom_pagenum.xml'), qr{<p class="dta-p"/>});
 
 	
