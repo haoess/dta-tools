@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 120;
+use Test::More tests => 122;
 
 use DTAStyleSheets qw( process );
 
@@ -305,11 +305,24 @@ like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 ## Elements in Poems	
 
 ### <l>
-# TODO
+# simple
+like( process($xsl, 't/xml/l.xml'), qr{<span class="dta-l">V</span>});
+# @rendition contains _#c_, _#et_ or _#right_
+like( process($xsl, 't/xml/l2.xml'), qr{<div class="dta-l et"><span>V</span></div>);
 
 ### <lg>
-like( process($xsl, 't/xml/lg.xml'), qr{<div class="dta-lg">\s*<span class="dta-l">V1</span>\s*<br/>\s*<span class="dta-l">V2</span>\s*<br/>\s*</div>} );
-like( process($xsl, 't/xml/lg2.xml'), qr{<div class="dta-lg">\s*<div class="dta-l et"><span>V1</span></div>\s*<br/>\s*<div class="dta-l et aq"><span>V2</span></div>\s*<br/>\s*</div>} );
+# simple
+like( process($xsl, 't/xml/lg.xml'), qr{
+	<div\s+class="dta-lg">\s*
+		<span\s+class="dta-l">V1</span><br/>\s*
+		<span\s+class="dta-l">V2</span><br/>\s*
+	</div>}x );
+# @type="poem"
+like( process($xsl, 't/xml/lg2.xml'), qr{
+	<div\s+class="dta-poem">\s*
+		<span\s+class="dta-l">V1</span><br/>\s*
+		<span\s+class="dta-l">V2</span><br/>\s*
+	</div>}x);
 
 ## Elements concerning Citations
 
