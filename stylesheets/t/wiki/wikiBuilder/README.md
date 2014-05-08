@@ -12,5 +12,5 @@ For a working example take a look into _tag.t_.
 Needed arguments:
 
 1. Path to the test file
-2. Path to the folder which contains _t/xml_
+2. Path to the folder which contains _/t/xml_
 3. Output folder
