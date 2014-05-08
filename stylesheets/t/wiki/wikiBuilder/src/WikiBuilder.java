@@ -1,6 +1,8 @@
 import java.io.*;
 
 /**
+ * This program builds simple wiki pages from test files.
+ *
  * Created by binder on 07.05.14.
  */
 public class WikiBuilder {
@@ -8,35 +10,41 @@ public class WikiBuilder {
     static String nl = "\r\n";
 
     public static void main(String[] args) {
+        // path to the test file ("tag.t")
         String testFN = args[0];
         // folder which contains /t/xml
         stylesheetsFN = args[1];
         String outFN = args[2];
         System.out.println("write output to " + outFN);
-        boolean testAlreadyRead = false;
+        boolean writeSeparatorLine = false;
         try {
             BufferedReader in = new BufferedReader(new FileReader(testFN));
             BufferedWriter out = null;
-            String line = null;
+            String line;
             while ((line = in.readLine()) != null) {
-                if (line.startsWith("#---")) {
-                    out = readFileBreak(line, outFN);
-                    testAlreadyRead = false;
-                } else if (line.startsWith("##")) {
-                    readCaption(out, line);
-                    testAlreadyRead = false;
-                } else if (line.startsWith("#")) {
-                    if(testAlreadyRead){
-                        out.write("-"+nl);
-                        testAlreadyRead = false;
+                try {
+                    if (line.startsWith("#---")) {
+                        out = readFileBreak(line, outFN);
+                        writeSeparatorLine = false;
+                    } else if (line.startsWith("##")) {
+                        readCaption(out, line);
+                        writeSeparatorLine = false;
+                    } else if (line.startsWith("#")) {
+                        if (writeSeparatorLine) {
+                            out.write("-" + nl);
+                            writeSeparatorLine = false;
+                        }
+                        readComment(out, line);
+                    } else if (line.startsWith("like")) {
+                        if (writeSeparatorLine) {
+                            out.write("-" + nl);
+                        }
+                        readTest(in, out, line);
+                        writeSeparatorLine = true;
                     }
-                    readComment(out, line);
-                } else if (line.startsWith("like")) {
-                    if(testAlreadyRead){
-                        out.write("-"+nl);
-                    }
-                    readTest(in, out, line);
-                    testAlreadyRead = true;
+                }catch(NullPointerException e){
+                    System.out.println("ERROR: no initial filename found! (has to be marked by '#--- <filename>'");
+                    e.printStackTrace();
                 }
             }
         } catch (IOException e) {
@@ -60,12 +68,12 @@ public class WikiBuilder {
 
     private static void readTest(BufferedReader in, BufferedWriter out, String currentLine) throws IOException {
         String tmp = currentLine;
-        String line = null;
+        String line;
         while (!tmp.contains(");") && (line = in.readLine()) != null) {
             tmp += nl + line;
         }
 
-        out.write("input:" + nl);
+        //out.write("input:" + nl);
         out.write("```xml" + nl);
         String input = getXML(stylesheetsFN + File.separator + getFileName(tmp));
         out.write(cleanNewLines(input) + nl);
@@ -98,7 +106,7 @@ public class WikiBuilder {
 
     private static String getXML(String xmlFN) throws IOException {
         BufferedReader in = new BufferedReader(new FileReader(xmlFN));
-        String line = null;
+        String line;
         String xml = "";
         while ((line = in.readLine()) != null) {
             xml += line + nl;

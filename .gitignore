@@ -18,3 +18,5 @@ pm_to_blib
 .*.swo
 temp
 .gitignore
+/stylesheets/t/wiki/wikiBuilder/*.iml
+/stylesheets/t/wiki/wikiBuilder/.idea
