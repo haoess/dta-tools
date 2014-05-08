@@ -682,13 +682,13 @@ like( process($xsl, 't/xml/gap_word.xml'), qr{<span class="dta-gap">\[Wort fehlt
 	
 ### <choice>
 # regularized form and original spelling
-like( process($xsl, 't/xml/choice_reg.xml'), qr{<p class="dta-p"><span title="Original: orig" class="dta-reg">reg</span></p>});
+like( process($xsl, 't/xml/choice_reg.xml'), qr{<span title="Original: orig" class="dta-reg">reg</span>});
 # abbreviation and expansion of the abbreviation
-like( process($xsl, 't/xml/choice_abbr.xml'), qr{<p class="dta-p"><span title="expan" class="dta-abbr">abbr</span></p>});
+like( process($xsl, 't/xml/choice_abbr.xml'), qr{<span title="expan" class="dta-abbr">abbr</span>});
 # corrected form and reproduced, incorrect form
-like( process($xsl, 't/xml/choice_corr.xml'), qr{<p class="dta-p"><span title="Schreibfehler: sic" class="dta-corr">corr</span></p>});
+like( process($xsl, 't/xml/choice_corr.xml'), qr{<span title="Schreibfehler: sic" class="dta-corr">corr</span>});
 # corrected form (empty) and reproduced, incorrect form
-like( process($xsl, 't/xml/choice_corr_empty.xml'), qr{<p class="dta-p"><span title="Schreibfehler: sic" class="dta-corr">\[\&\#x2026;\]</span></p>});
+like( process($xsl, 't/xml/choice_corr_empty.xml'), qr{<span title="Schreibfehler: sic" class="dta-corr">\[\&\#x2026;\]</span>});
 	
 
 

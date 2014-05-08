@@ -1,10 +1,10 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <text>
     <body>
-      <p><choice>
+      <choice>
         <orig>orig</orig>
         <reg>reg</reg>        
-      </choice></p>
+      </choice>
     </body>
   </text>
 </TEI>
