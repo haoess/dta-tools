@@ -7,6 +7,8 @@ Format requirements for the test file:
  - A Comment which starts with "#--- " introduces a new file. The rest of the comment will be the file name. This kind of comment has to be read before any other writing action can be performed!
  - The "# " at the beginning of other Comments (which start with just a single "#") is omitted, the rest of the comment is copied.
 
+For a working example take a look into _tag.t_.
+
 Needed arguments:
 
 1. Path to the test file
