@@ -70,23 +70,63 @@ public class WikiBuilder {
 
     private static void readTest(BufferedReader in, BufferedWriter out, String currentLine) throws IOException {
         String tmp = currentLine;
+        int minTabCount = Integer.MAX_VALUE;
+        int currTabCount;
         String line;
-        while (!tmp.contains(");") && (line = in.readLine()) != null) {
+        while (!(tmp.trim() + "\n").contains(");\n") && (line = in.readLine()) != null) {
+            //currTabCount = getCharCountFromStart('\t', line);
+            //System.out.println(currTabCount);
+            //if(currTabCount < minTabCount){
+            //    minTabCount = currTabCount;
+            //}
             tmp += nl + line;
         }
+        //System.out.println(tmp);
+        //tmp = tmp.replaceFirst("\t{"+minTabCount+"}","").replaceAll("\n\t{"+minTabCount+"}","\n");
 
+        //System.out.println(minTabCount);
+        //System.out.println(tmp);
         //out.write("input:" + nl);
         out.write("```xml" + nl);
         String input = getXML(stylesheetsFN + File.separator + getFileName(tmp));
-        out.write(cleanNewLines(input) + nl);
+        out.write(correctIndent(cleanNewLines(input)) + nl);
         out.flush();
         out.write("```" + nl);
         out.write("output:" + nl);
         out.write("```xml" + nl);
-        out.write(cleanNewLines(clearHTML(getHTML(tmp))) + nl);
+        //System.out.println(cleanNewLines(clearHTML(getHTML(tmp))));
+        //System.out.println();
+        out.write(correctIndent(cleanNewLines(clearHTML(getHTML(tmp)))) + nl);
         out.flush();
         out.write("```" + nl);
         out.flush();
+    }
+
+    private static int getCharCountFromStart(char chr, String str){
+        for (int i = 0; i < str.length(); i++) {
+            if(str.charAt(i)!=chr){
+                return i;
+            }
+        }
+        return str.length();
+    }
+
+    private static String correctIndent(String str){
+        String[] lines = str.split(nl);
+        String result = "";
+        int minTabCount = Integer.MAX_VALUE;
+        int currTabCount;
+        for(String line: lines) {
+            currTabCount = getCharCountFromStart('\t', line);
+            //System.out.println(currTabCount);
+            if (currTabCount < minTabCount) {
+                minTabCount = currTabCount;
+            }
+        }
+        for(String line: lines) {
+           result += nl + line.replaceFirst("\t{"+minTabCount+"}","");
+        }
+        return result.replaceFirst(nl, "");
     }
 
     private static String getFileName(String test) {
