@@ -77,17 +77,24 @@
     <xsl:param name="value"/>
     <xsl:choose>
       <xsl:when test="starts-with($value,'#')">
-        <xsl:choose>
-          <xsl:when test="contains($value,'Braced')">
-            <xsl:value-of select="concat('dta-braced-',substring-before(substring-after($value,'#'), 'Braced'))"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="concat('dta-',substring-after($value,'#'))"/>
-          </xsl:otherwise>
-        </xsl:choose>  
+        <xsl:call-template name="transformRendition">
+          <xsl:with-param name="value" select="substring-after($value,'#')"/>         
+        </xsl:call-template>
       </xsl:when>
     </xsl:choose>
   </xsl:template>  
+  
+  <xsl:template name="transformRendition">
+    <xsl:param name="value"/>
+    <xsl:choose>
+      <xsl:when test="contains($value,'Braced')">
+        <xsl:value-of select="concat('dta-braced-',substring-before($value, 'Braced'))"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="concat('dta-', $value)"/>
+      </xsl:otherwise>
+    </xsl:choose>  
+  </xsl:template>
   
   <!-- @prev/@next stuff -->
   <xsl:template name="applyPrev">

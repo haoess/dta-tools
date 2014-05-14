@@ -1,7 +1,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 122;
+use Test::More tests => 123;
 
 use DTAStyleSheets qw( process );
 
@@ -143,6 +143,12 @@ like( process($xsl, 't/xml/head_lg.xml'), qr{
           </div>\s*
         </div>\s*
       </div>}x );
+# <head> with parent <castList>
+like( process($xsl, 't/xml/head_castlist.xml'), qr{
+	<div\s+class="dta-castlist">\s*
+		<h2\s+class="dta-head">HEAD</h2>\s*			
+	</div>}x);  
+
 # <head> with ancestor <list>
 like( process($xsl, 't/xml/head_list.xml'), qr{		  
 	<div>\s*

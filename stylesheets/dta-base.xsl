@@ -172,6 +172,12 @@
     </xsl:choose>
   </xsl:template>   
   
+  <xsl:template match="tei:castList/tei:head">
+    <h2 class="dta-head">
+      <xsl:apply-templates/>
+    </h2>
+  </xsl:template>
+  
   <xsl:template match="tei:imprimatur">
     <span class="dta-imprimatur">
       <xsl:apply-templates/>   
@@ -282,13 +288,6 @@
     <div class="dta-castitem">
       <xsl:apply-templates/>
     </div>
-  </xsl:template>
-  
-  <!-- todo: right place? -->
-  <xsl:template match="tei:castList/tei:head">
-    <h2 class="dta-head">
-      <xsl:apply-templates/>
-    </h2>
   </xsl:template>
   
   <xsl:template match="tei:actor">
@@ -588,13 +587,12 @@
     <!--  <xsl:call-template name="close-cb"/>-->
   </xsl:template>
     
-  <!-- TODO: indent vs. no indent -->  
+  <!-- embedded in sp vs. not and indent vs. no indent -->  
   <xsl:template match="tei:p">
    <xsl:choose>
      <xsl:when test="ancestor::tei:sp">
        <xsl:variable name="class">
          <xsl:choose>
-           <!-- TODO: check classes!-->
            <xsl:when test="@prev">dta-p-in-sp dta-no-indent</xsl:when>
            <xsl:when test="descendant::tei:pb">dta-p-in-sp dta-no-indent</xsl:when>
            <xsl:otherwise>dta-p-in-sp</xsl:otherwise>
@@ -610,7 +608,6 @@
      <xsl:otherwise>
        <xsl:variable name="class">
          <xsl:choose>         
-           <!-- TODO: check classes!-->
            <xsl:when test="descendant::tei:pb">dta-p dta-no-indent</xsl:when>
            <xsl:when test="@prev">dta-p dta-no-indent</xsl:when>
            <xsl:otherwise>dta-p</xsl:otherwise>
