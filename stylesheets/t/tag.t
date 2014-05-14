@@ -350,7 +350,7 @@ like( process($xsl, 't/xml/spGrp_stagebefore.xml'), qr{
 	<tr>\s*
 		<td\s+style="vertical-align:middle">
 			<div\s+class="dta-stage\s+dta-braced-right">\s*
-				<p\s+class="dta-p\s+v">Sprechen\s+gleichzeitig</p>\s*
+				<p\s+class="dta-p\s+dta-v">Sprechen\s+gleichzeitig</p>\s*
 			</div>
 		</td>
 		<td\s+class="dta-braced-base\s+dta-braced-left">
@@ -404,7 +404,7 @@ like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 # simple
 like( process($xsl, 't/xml/l.xml'), qr{<span class="dta-l">V</span>});
 # @rendition contains _#c_, _#et_ or _#right_
-like( process($xsl, 't/xml/l2.xml'), qr{<div class="dta-l et"><span>V</span></div>});
+like( process($xsl, 't/xml/l2.xml'), qr{<div class="dta-l dta-et"><span>V</span></div>});
 
 ### <lg>
 # simple
@@ -598,7 +598,7 @@ like( process($xsl, 't/xml/hi.xml'), qr{<span class="dta-aq dta-b dta-blue">cont
 # @rend
 like( process($xsl, 't/xml/hi_rend.xml'), qr{<span title="quer" class="dta-rend">content</span>});
 # @rend and @rendition
-like( process($xsl, 't/xml/hi_rend_rendition.xml'), qr{<span title="quer" class="dta-rend aq b blue">content</span>});	
+like( process($xsl, 't/xml/hi_rend_rendition.xml'), qr{<span title="quer" class="dta-rend dta-aq dta-b dta-blue">content</span>});	
 	
 ### <formula>
 like( process($xsl, 't/xml/formula.xml'), qr{<span class="dta-ph dta-formula-1" onclick="editFormula\(1\)" style="cursor:pointer"> \[Formel 1\] </span>} );
