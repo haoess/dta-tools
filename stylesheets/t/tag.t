@@ -133,16 +133,16 @@ like( process($xsl, 't/xml/head_figure.xml'), qr{
 		</div>}x );
 # <head> with parent <lg>
 like( process($xsl, 't/xml/head_lg.xml'), qr{		
-	  <div>\s*
-        <div\s+class="dta-poem">\s*
-          <div\s+class="dta-head">HEAD</div>\s*
-          <br/>\s*
-          <div\s+class="dta-lg">\s*
-            <span\s+class="dta-l">v1</span><br/>\s*
-            <span\s+class="dta-l">v2</span><br/>\s*
-          </div>\s*
-        </div>\s*
-      </div>}x );
+	<div>\s*
+		<div\s+class="dta-poem">\s*
+			<div\s+class="dta-head">HEAD</div>\s*
+			<br/>\s*
+			<div\s+class="dta-lg">\s*
+				<span\s+class="dta-l">v1</span><br/>\s*
+				<span\s+class="dta-l">v2</span><br/>\s*
+			</div>\s*
+		</div>\s*
+	</div>}x );
 # <head> with parent <castList>
 like( process($xsl, 't/xml/head_castlist.xml'), qr{
 	<div\s+class="dta-castlist">\s*
