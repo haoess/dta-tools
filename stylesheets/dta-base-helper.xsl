@@ -77,7 +77,14 @@
     <xsl:param name="value"/>
     <xsl:choose>
       <xsl:when test="starts-with($value,'#')">
-        <xsl:value-of select="concat('dta-',substring-after($value,'#'))"/>
+        <xsl:choose>
+          <xsl:when test="contains($value,'Braced')">
+            <xsl:value-of select="concat('dta-braced-',substring-before(substring-after($value,'#'), 'Braced'))"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="concat('dta-',substring-after($value,'#'))"/>
+          </xsl:otherwise>
+        </xsl:choose>  
       </xsl:when>
     </xsl:choose>
   </xsl:template>  

@@ -349,7 +349,7 @@ like( process($xsl, 't/xml/spGrp_stagebefore.xml'), qr{
 <table>\s*
 	<tr>\s*
 		<td\s+style="vertical-align:middle">
-			<div\s+class="dta-stage\s+rightBraced">\s*
+			<div\s+class="dta-stage\s+dta-braced-right">\s*
 				<p\s+class="dta-p\s+v">Sprechen\s+gleichzeitig</p>\s*
 			</div>
 		</td>
@@ -395,7 +395,7 @@ like( process($xsl, 't/xml/spGrp_stageafter.xml'), qr{
 			<p\s+class="dta-sp-p">\s*
 				<span\s+class="dta-p-in-sp">t2</span>\s*
 			</p>\s*
-		</div></td><td\s+style="vertical-align:middle"><div\s+class="dta-stage\s+leftBraced">gleichzeitig</div></td></tr></table>\s*
+		</div></td><td\s+style="vertical-align:middle"><div\s+class="dta-stage\s+dta-braced-left">gleichzeitig</div></td></tr></table>\s*
 	<br/>}x);
 	
 ## Elements in Poems	
