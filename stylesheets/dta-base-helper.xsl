@@ -77,7 +77,7 @@
     <xsl:param name="value"/>
     <xsl:choose>
       <xsl:when test="starts-with($value,'#')">
-        <xsl:value-of select="substring-after($value,'#')"/>
+        <xsl:value-of select="concat('dta-',substring-after($value,'#'))"/>
       </xsl:when>
     </xsl:choose>
   </xsl:template>  

@@ -594,7 +594,7 @@ like( process($xsl, 't/xml/figure_div_span.xml'), qr{
 	
 ### <hi> 
 # @rendition and not(@rend)
-like( process($xsl, 't/xml/hi.xml'), qr{<span class="aq b blue">content</span>});
+like( process($xsl, 't/xml/hi.xml'), qr{<span class="dta-aq dta-b dta-blue">content</span>});
 # @rend
 like( process($xsl, 't/xml/hi_rend.xml'), qr{<span title="quer" class="dta-rend">content</span>});
 # @rend and @rendition
