@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This program builds simple wiki pages from test files.
@@ -10,6 +12,14 @@ public class WikiBuilder {
     static String nl = "\r\n";
 
     public static void main(String[] args) {
+        /*String test = "like( process($xsl, 't/xml/frontBodyBack.xml'), qr{\n" +
+                "\t<p\\s+class=\"dta-p\">front</p>\\s*\n" +
+                "\t<p\\s+class=\"dta-p\">body</p>\\s*\n" +
+                "\t<p\\s+class=\"dta-p\">back</p>}x);\n";
+        System.out.println(test);
+        System.out.println();
+        System.out.println(correctIndent(cleanNewLines(clearHTML(getHTML(test)))));
+        System.out.println();*/
         // path to the test file ("tag.t")
         String testFN = args[0];
         System.out.println("use test file: "+testFN);
@@ -70,22 +80,11 @@ public class WikiBuilder {
 
     private static void readTest(BufferedReader in, BufferedWriter out, String currentLine) throws IOException {
         String tmp = currentLine;
-        int minTabCount = Integer.MAX_VALUE;
-        int currTabCount;
         String line;
         while (!(tmp.trim() + "\n").contains(");\n") && (line = in.readLine()) != null) {
-            //currTabCount = getCharCountFromStart('\t', line);
-            //System.out.println(currTabCount);
-            //if(currTabCount < minTabCount){
-            //    minTabCount = currTabCount;
-            //}
             tmp += nl + line;
         }
-        //System.out.println(tmp);
-        //tmp = tmp.replaceFirst("\t{"+minTabCount+"}","").replaceAll("\n\t{"+minTabCount+"}","\n");
 
-        //System.out.println(minTabCount);
-        //System.out.println(tmp);
         //out.write("input:" + nl);
         out.write("```xml" + nl);
         String input = getXML(stylesheetsFN + File.separator + getFileName(tmp));
@@ -94,8 +93,6 @@ public class WikiBuilder {
         out.write("```" + nl);
         out.write("output:" + nl);
         out.write("```xml" + nl);
-        //System.out.println(cleanNewLines(clearHTML(getHTML(tmp))));
-        //System.out.println();
         out.write(correctIndent(cleanNewLines(clearHTML(getHTML(tmp)))) + nl);
         out.flush();
         out.write("```" + nl);
@@ -111,20 +108,33 @@ public class WikiBuilder {
         return str.length();
     }
 
-    private static String correctIndent(String str){
-        String[] lines = str.split(nl);
+    private static String correctIndent(String[] lines){
+        //String[] lines = str.split(nl);
         String result = "";
         int minTabCount = Integer.MAX_VALUE;
         int currTabCount;
+        int minBlankCount = Integer.MAX_VALUE;
+        int currBlankCount;
         for(String line: lines) {
             currTabCount = getCharCountFromStart('\t', line);
+            currBlankCount = getCharCountFromStart(' ', line);
             //System.out.println(currTabCount);
             if (currTabCount < minTabCount) {
                 minTabCount = currTabCount;
             }
+            if (currBlankCount < minBlankCount) {
+                minBlankCount = currBlankCount;
+            }
+        }
+
+        int minCount = minTabCount;
+        char replaceChar = '\t';
+        if(minBlankCount > minTabCount) {
+            minCount = minBlankCount;
+            replaceChar = ' ';
         }
         for(String line: lines) {
-           result += nl + line.replaceFirst("\t{"+minTabCount+"}","");
+           result += nl + line.replaceFirst(replaceChar+"{"+minCount+"}","");
         }
         return result.replaceFirst(nl, "");
     }
@@ -143,7 +153,6 @@ public class WikiBuilder {
 
     private static String commentHTML(String html) {
         return html.replaceAll("<", "\\\\<").replaceAll(">", "\\\\>");
-
     }
 
     private static String getXML(String xmlFN) throws IOException {
@@ -165,19 +174,14 @@ public class WikiBuilder {
         return "error";
     }
 
-    private static String cleanNewLines(String input) {
-        int start = 0;
-        int end = input.length() - 1;
-        while (start < input.length() && "\r\n".contains("" + input.charAt(start))) {
-            start++;
+    private static String[] cleanNewLines(String input) {
+        List<String> tmp = new ArrayList<String>();
+        for (String line: input.replaceAll("\r","").split("\n")){
+            if(!(line.equals("") || (line.matches("\\s+"))))
+                tmp.add(line);
         }
-        while (end >= 0 && "\r\n \t".contains("" + input.charAt(end))) {
-            end--;
-        }
+        return tmp.toArray(new String[]{});
 
-        if (start <= end)
-            return input.substring(start, end + 1);
-        else return "";
     }
 
 }

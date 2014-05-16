@@ -2,12 +2,12 @@
 	<text>
 		<body>
 			<div>
-                <list>
-                    <head>A</head>
-                    <item>AA</item>
-                    <item>AB</item>
-                </list>
-            </div>
+				<list>
+					<head>A</head>
+					<item>AA</item>
+					<item>AB</item>
+				</list>
+			</div>
 		</body>
 	</text>
 </TEI>

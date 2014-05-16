@@ -88,15 +88,15 @@ like( process($xsl, 't/xml/lb_n.xml'), qr{<p\s+class="dta-p">text1<span\s+class=
 
 ### <cb>
 like( process($xsl, 't/xml/cb.xml'), qr{
-    <p\s+class="dta-p">a</p>\s*
-    <span\s+class="dta-cb">\[Beginn[ ]Spaltensatz\]</span>\s*
-    <p\s+class="dta-p">\s*
+	<p\s+class="dta-p">a</p>\s*
+	<span\s+class="dta-cb">\[Beginn[ ]Spaltensatz\]</span>\s*
+	<p\s+class="dta-p">\s*
 		S1\s*
 		<span\s+class="dta-cb">\[Spaltenumbruch\]</span>\s*
 		S2\s*
-    </p>\s*
-    <span\s+class="dta-cb">\[Ende[ ]Spaltensatz\]</span>\s*
-    <p\s+class="dta-p">b</p>}x );
+	</p>\s*
+	<span\s+class="dta-cb">\[Ende[ ]Spaltensatz\]</span>\s*
+	<p\s+class="dta-p">b</p>}x );
 
 ### <space>
 # @dim="horizontal"
@@ -450,8 +450,8 @@ like( process($xsl, 't/xml/epigraph.xml'), qr{<blockquote class="dta-quote">cont
 # footnote
 like( process($xsl, 't/xml/note_foot.xml'), qr{	
 	<p\s+class="dta-p">text1<span\s+class="dta-fn-intext">\(a\)</span>[ ]text2</p>\s*
-		<p\s+class="dta-p">text3<span\s+class="dta-fn-intext">\(b\)</span>[ ]text4</p>\s*
-		<p\s+class="dta-p">text5<span\s+class="dta-fn-intext">\(c\)</span>[ ]text6</p>\s*	
+	<p\s+class="dta-p">text3<span\s+class="dta-fn-intext">\(b\)</span>[ ]text4</p>\s*
+	<p\s+class="dta-p">text5<span\s+class="dta-fn-intext">\(c\)</span>[ ]text6</p>\s*	
 	<div\s+class="dta-footnotesep"/>\s*
 	<div\s+class="dta-footnote">\s*
 		<span\s+class="dta-fn-sign">\(a\)</span>[ ]footnotea\s*
@@ -695,15 +695,3 @@ like( process($xsl, 't/xml/choice_abbr.xml'), qr{<span title="expan" class="dta-
 like( process($xsl, 't/xml/choice_corr.xml'), qr{<span title="Schreibfehler: sic" class="dta-corr">corr</span>});
 # corrected form (empty) and reproduced, incorrect form
 like( process($xsl, 't/xml/choice_corr_empty.xml'), qr{<span title="Schreibfehler: sic" class="dta-corr">\[&#x2026;\]</span>});
-	
-
-
-
-
-
-
-
-
-
-
-
