@@ -7,7 +7,7 @@ extract-meta.pl
 
 =head1 INVOCATION
 
-$ perl extract-meta.pl $INFILE [id_book=$id_book]
+$ perl extract-meta.pl --file=<filename> --id=<id_book> --source=<source>
 
 =head1 VERSION
 
@@ -44,6 +44,10 @@ use File::Basename;
 use List::Util qw/reduce/;
 use utf8;
 
+use constant EMPTY => "emptydummy";
+
+binmode(STDOUT, ":utf8");
+
 my %parameter;
 my %data;
 my @warnings;
@@ -60,28 +64,18 @@ or die("Error in command line arguments\n");
 
 my $sql = SQL::Abstract->new();
 
-use constant EMPTY => "emptydummy";
-
-
-
-#DEBUG
-#print "PARAMETER:\n";
-#printMap(%parameter);
-
-#my $id = pop;
-
 my $parser = XML::LibXML->new(line_numbers => 1);
 
-open( my $fh, '<', $parameter{file} ) or die $!;
+open( my $fh, '<:utf8', $parameter{file} ) or die $!;
 my $xml = do { local $/; <$fh> };
 close $fh;
 my ( $header ) = $xml =~ /(<teiHeader>.*<\/teiHeader>)/s;
 my $dom = $parser->parse_string( $header );
 
 #my $dom = $parser->parse_file($parameter{file});
-my $root = $dom->documentElement;
-my $xc = XML::LibXML::XPathContext->new( $root );
-$xc->registerNs('tei', 'http://www.tei-c.org/ns/1.0');
+#my $root = $dom->documentElement;
+#my $xc = XML::LibXML::XPathContext->new( $root );
+#$xc->registerNs('tei', 'http://www.tei-c.org/ns/1.0');
 
 # set id
 if(exists $parameter{id_book}){
@@ -137,8 +131,16 @@ $data{band_zaehlung} = getAttributeValue('//teiHeader/fileDesc/titleStmt/title[@
 
 #TODO: dta_reihe... correct?
 $data{dta_reihe_titel} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/title[@type="main"]'));
-$data{dta_reihe_jahrgang} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="volume"]'));
-$data{dta_reihe_band} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="issue"]'));
+
+$data{type} = getAttributeValue('//teiHeader/fileDesc/sourceDesc/bibl','type');
+if($data{type} =~ /^(MM|DS|MS|MMS)$/){
+	$data{dta_reihe_band} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="volume"]'));
+}else{
+	$data{dta_reihe_jahrgang} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="volume"]'));
+	$data{dta_reihe_band} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="issue"]'));
+}
+$data{type} = qut($data{type});
+
 $data{dta_seiten} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="pages"]'));
 $data{dta_comment2} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/notesStmt/note'));
 
@@ -153,7 +155,7 @@ if($data{language} ne 'deu'){
 ($data{dirname}) = basename($parameter{file}) =~ /(^[^\.]*)/;
 $data{dirname} = qut($data{dirname});
 
-$data{type} = qut(getAttributeValue('//teiHeader/fileDesc/sourceDesc/bibl','type'));
+
 $data{schriftart} = qut(getContent('//teiHeader/fileDesc/sourceDesc/msDesc/physDesc/typeDesc/p'));
 
 #TODO: Priorität korrekt?
@@ -175,10 +177,9 @@ $data{source} = qut($parameter{source});
 $data{resp} = '';
 my @respStmts = getNodes('//teiHeader/fileDesc/titleStmt/respStmt');
 while(@respStmts > 1){
-	$data{resp} = $data{resp}.shift(@respStmts)."\n";
+	$data{resp} .= shift(@respStmts)."\n";
 }
 
-#TODO: just one editorialDecl?? without <editorialDecl> </editorialDecl>!!!
 my @editorialDecls = getNodes('//teiHeader/encodingDesc/editorialDecl');
 if(@editorialDecls){
 	($data{txt}) = $editorialDecls[0] =~ /<editorialDecl>(.*)<\/editorialDecl>/s;
@@ -199,14 +200,11 @@ if(@licence){
 #printMap(%data);
 #print "\n";
 
-
+# construct SQL statements
 $data{sql} = generateSqlInsert('book', 'id_book', 'title', 'subtitle', 'autor1_prename', 'autor1_lastname', 'autor1_syn_names', 'autor2_prename', 'autor2_lastname', 'autor2_syn_names', 'autor3_prename', 'autor3_lastname', 'autor3_syn_names', 'availability ', 'year', 'dta_pub_date', 'dta_pub_location', 'dta_pub_verlag','umfang', 'umfang_normiert', 'band_zaehlung', 'band_alphanum', 'autor1_pnd','autor2_pnd','autor3_pnd', 'dta_reihe_titel', 'dta_reihe_jahrgang', 'dta_reihe_band', 'dta_seiten', 'dta_bibl_angabe', 'ready', 'uebersetzer', 'dta_uebersetzer', 'publisher', 'dta_comment2');
 $data{sql} = $data{sql}.";\n".generateSqlInsert('metadaten','id_book', 'genre', 'type', 'untergenre', 'dirname', 'schriftart', 'prioritaet', 'planung', 'startseite', 'dwds_kategorie1', 'dwds_unterkategorie1');
 $data{sql} = $data{sql}.";\n".generateSqlInsert('sources','id_book', 'source'); 
 $data{sql} = $data{sql}.";\n".'INSERT INTO open_tasks (id_book, id_task, createdate) SELECT '.$data{id_book}.', max(id_task) +1, '.qut($data{createdate}).' FROM open_tasks;';
-
-#DEBUG
-#print generateSqlInsert('book', 'id_book', 'title', 'subtitle', 'autor1_prename', 'autor1_lastname', 'prioritaet');
 
 
 if(not @warnings){
@@ -233,14 +231,12 @@ sub printMap{
 	my (%map) = @_;
 	if( !keys %map ){
 		return;
-	}
-	
+	}	
 	foreach my $name (sort keys %map) {
 		if($map{$name} ne qut(EMPTY) and $map{$name} ne EMPTY){
 			printf "%-20s => %s\n", $name, $map{$name};
 		}
-    }
-	
+    }	
 	print "\n";
 }
 
@@ -258,8 +254,7 @@ sub getContent{
 		return $result;
 	}
 	if(@_ > 1){
-		shift;
-		return(shift);
+		return $_[1];
 	}
 	return EMPTY;
 }
@@ -284,15 +279,13 @@ sub getAttributeValue{
 		return $result;
 	}
 	if(@_ > 2){
-		shift;
-		shift;
-		return(shift);
+		return $_[2];
 	}
 	return EMPTY;
 }
 
 sub getNodes{
-	my $xpath = shift;
+	my ($xpath) = @_;
 	my @nodes;
 	if(length($xpath) > 0){	
 		@nodes= $dom->findnodes($xpath);
@@ -301,7 +294,7 @@ sub getNodes{
 }
 
 sub getPersonData{
-	my $node = shift;
+	my ($node) = @_;
 	
 	my %personData;
 	my @nodes;
@@ -339,7 +332,7 @@ sub getPersonData{
 	if(@nodes){
 		my $temp = shift(@nodes)->textContent;
 		while(@nodes){
-			$temp = $temp.'; '.shift(@nodes)->textContent;
+			$temp .= '; '.shift(@nodes)->textContent;
 		}
 		$personData{addName} = $temp;
 	}
@@ -355,21 +348,21 @@ sub constructName{
 	}
 	if(exists $personData{forename}){
 		if($result ne ''){
-			$result = $result.', '.$personData{forename};
+			$result .= ', '.$personData{forename};
 		}else{
 			$result = $personData{forename};
 		}
 	}	
 	if(exists $personData{pnd}){
 		if($result ne ''){
-			$result = $result.' #'.$personData{pnd};
+			$result .= ' #'.$personData{pnd};
 		}else{
 			$result = '#'.$personData{pnd};
 		}
 	}
 	if(exists $personData{addName}){
 		if($result ne ''){
-			$result = $result.' '.$personData{addName};
+			$result .= ' '.$personData{addName};
 		}else{
 			$result = $personData{addName};
 		}
@@ -385,6 +378,7 @@ sub writeData{
 		while(@_){
 			my $dataIndex = shift;
 			open(FILE, '>'.unqut($data{dirname}).'.'.$dataIndex) or die $!;
+			binmode(FILE, ":utf8");
 			print FILE $data{$dataIndex} or die $!;
 			close(FILE) or die $!;
 		}
@@ -394,7 +388,7 @@ sub writeData{
 }
 
 sub qut{
-	my $s = shift;
+	my ($s) = @_;
 	if($s ne 'null'){
 		$s =~ s/\\/\\\\/g;
 		$s =~ s/'/\\'/g;
@@ -405,7 +399,7 @@ sub qut{
 }
 
 sub unqut{
-	my $s = shift;
+	my ($s) = @_;
 	if(length ($s) >= 2 and $s ne 'null'){
 		$s =~ s/^'//;
 		$s =~ s/'$//;
@@ -417,26 +411,27 @@ sub unqut{
 }
 
 sub generateSqlInsert{
-	my $table = shift;
+	my ($table) = @_;
 	my @table_fields = @_;
 	my %table_data;
-	#@table_data{@table_fields} = @data{ @table_fields };
-	#my %table_data = map {$_=>$data{$_}} @table_fields;
+	
+	
 	foreach my $key (@table_fields){
 		if(exists $data{$key} and not ($data{$key} eq EMPTY or $data{$key} eq qut(EMPTY))){
 			$table_data{$key} = $data{$key};
 		}
 	}
+	
 	my($stmt, @bind) = $sql->insert($table, \%table_data);
 	$stmt =~ s/\([\?, ]*\)$//;
 	{
 		no warnings; # Keine Warnungen in diesem Block
 		my $vals = reduce {$a.', '.$b} @bind;
-		$stmt = $stmt."(".$vals.")";	
+		$stmt .= "(".$vals.")";	
 	}
 	
-	#$stmt =~ s/\)$//;
-	#my $stmt_and_val = $sql->generate('INSERT INTO', \$table, \%table_data);
+
+	#return $sql->generate('INSERT INTO', \$table, \%table_data);
 	return $stmt;
 }
 
@@ -447,11 +442,13 @@ sub generateSqlInsert{
 __DATA__
 #TODO:
 #	- elements not in example (mueller_hellenische02_1824)
-#		- übersetzer ect.
+#		- übersetzer ect.	DONE
 #	- filedata:				DONE
-#		- <respStmt>		$dirname.resp	
-#		- <editorialDecl>	$dirname.txt
-#		- <availability xml:id="availability-textsource-1" corresp="#textsource-1">		$dirname.license
-#		- <msIdentifier>	$dirname.msidentifier
+#		- <respStmt>		$dirname.resp		DONE
+#		- <editorialDecl>	$dirname.txt		DONE
+#		- <availability xml:id="availability-textsource-1" corresp="#textsource-1">		$dirname.license								DONE
+#		- <msIdentifier>	$dirname.msidentifier	DONE
 #	- print files			DONE
-#	- sql statements
+#	- sql statements		DONE
+#
+#	- quoting
