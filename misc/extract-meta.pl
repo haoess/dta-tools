@@ -253,7 +253,7 @@ sub unqut{
 		$s =~ s/'$//;
 		$s =~ s/\\'/'/g;
 		$s =~ s/\\\\/\\/g;
-		return substr $s, 1, -1;
+		return $s;
 	}
 	return $s;
 }
@@ -290,7 +290,7 @@ if(exists $parameter{id_book}){
 }
 
 # get authors
-my @authorNodes = getNodes('/teiHeader/fileDesc/titleStmt/author');
+my @authorNodes = getNodes('//teiHeader/fileDesc/titleStmt/author');
 if(@authorNodes){
 	if(@authorNodes > 3){
 		push(@warnings, 'more than 3 authors found');
@@ -307,45 +307,45 @@ if(@authorNodes){
 }
 
 # get translator
-my @translatorNodes = getNodes('/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/editor[@role="translator"]');
+my @translatorNodes = getNodes('//teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/editor[@role="translator"]');
 if(@translatorNodes){
 	$data{uebersetzer} = qut(constructName(getPersonData($translatorNodes[0])));
 }
 
 # get publisher
-my @publisherNodes = getNodes('/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/editor[not(@role="translator")]');
+my @publisherNodes = getNodes('//teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/editor[not(@role="translator")]');
 if(@publisherNodes){
 	$data{publisher} = qut(constructName(getPersonData($publisherNodes[0])));
 }
 
 
 
-$data{title} = qut(getContent('/teiHeader/fileDesc/titleStmt/title[@type="main"]'));
-$data{subtitle} = qut(getContent('/teiHeader/fileDesc/titleStmt/title[@type="sub"]'));
+$data{title} = qut(getContent('//teiHeader/fileDesc/titleStmt/title[@type="main"]'));
+$data{subtitle} = qut(getContent('//teiHeader/fileDesc/titleStmt/title[@type="sub"]'));
 
-$data{dta_pub_date} = getContent('/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/date[@type="publication"]');
-$data{dta_pub_location} = qut(getContent('/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/pubPlace'));
-$data{dta_pub_verlag} = qut(getContent('/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/publisher/name'));
+$data{dta_pub_date} = getContent('//teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/date[@type="publication"]');
+$data{dta_pub_location} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/pubPlace'));
+$data{dta_pub_verlag} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/publisher/name'));
 
-$data{dta_bibl_angabe} = qut(getContent('/teiHeader/fileDesc/sourceDesc/bibl'));
+$data{dta_bibl_angabe} = qut(getContent('//teiHeader/fileDesc/sourceDesc/bibl'));
 
-$data{year} = getContent('/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/date[@type="creation"]', $data{'dta_pub_date'});
-$data{umfang} = qut(getContent('/teiHeader/fileDesc/sourceDesc/biblFull/extent/measure[@type="pages"]'));
-$data{umfang_normiert} = getContent('/teiHeader/fileDesc/extent/measure[@type="images"]');
+$data{year} = getContent('//teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/date[@type="creation"]', $data{'dta_pub_date'});
+$data{umfang} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/extent/measure[@type="pages"]'));
+$data{umfang_normiert} = getContent('//teiHeader/fileDesc/extent/measure[@type="images"]');
 
-$data{band_alphanum} = getContent('/teiHeader/fileDesc/titleStmt/title[@type="volume"]'); 
-$data{band_zaehlung} = getAttributeValue('/teiHeader/fileDesc/titleStmt/title[@type="volume"]','n'); 
+$data{band_alphanum} = getContent('//teiHeader/fileDesc/titleStmt/title[@type="volume"]'); 
+$data{band_zaehlung} = getAttributeValue('//teiHeader/fileDesc/titleStmt/title[@type="volume"]','n'); 
 
 #TODO: dta_reihe... correct?
-$data{dta_reihe_titel} = qut(getContent('/teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/title[@type="main"]'));
-$data{dta_reihe_jahrgang} = qut(getContent('/teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="volume"]'));
-$data{dta_reihe_band} = qut(getContent('/teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="issue"]'));
-$data{dta_seiten} = qut(getContent('/teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="pages"]'));
-$data{dta_comment2} = qut(getContent('/teiHeader/fileDesc/sourceDesc/biblFull/notesStmt/note'));
+$data{dta_reihe_titel} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/title[@type="main"]'));
+$data{dta_reihe_jahrgang} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="volume"]'));
+$data{dta_reihe_band} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="issue"]'));
+$data{dta_seiten} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="pages"]'));
+$data{dta_comment2} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/notesStmt/note'));
 
 $data{ready} = qut(getContent(''));
 
-$data{language} = getAttributeValue('/teiHeader/profileDesc/langUsage/language', 'ident', 'deu');
+$data{language} = getAttributeValue('//teiHeader/profileDesc/langUsage/language', 'ident', 'deu');
 if($data{language} ne 'deu'){
 	push(@warnings, 'language not german');
 }
@@ -353,43 +353,43 @@ if($data{language} ne 'deu'){
 $parameter{path} =~ m!/?([^\/]+?)\.!;
 $data{dirname} = qut($1);
 
-$data{type} = qut(getAttributeValue('/teiHeader/fileDesc/sourceDesc/bibl','type'));
-$data{schriftart} = qut(getContent('/teiHeader/fileDesc/sourceDesc/msDesc/physDesc/typeDesc/p'));
+$data{type} = qut(getAttributeValue('//teiHeader/fileDesc/sourceDesc/bibl','type'));
+$data{schriftart} = qut(getContent('//teiHeader/fileDesc/sourceDesc/msDesc/physDesc/typeDesc/p'));
 
 #TODO: Priorität korrekt?
 $data{prioritaet} = '1';
 $data{planung} = qut('');
 $data{startseite} = '0';
 
-$data{genre} = qut(getContent('/teiHeader/profileDesc/textClass/classCode[@scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dtamain"]','null'));
-$data{untergenre} = qut(getContent('/teiHeader/profileDesc/textClass/classCode[@scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dtasub"]','null'));
-$data{dwds_kategorie1} = qut(getContent('/teiHeader/profileDesc/textClass/classCode[@scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dwds1main"]'));
-$data{dwds_unterkategorie1} = qut(getContent('/teiHeader/profileDesc/textClass/classCode[@scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dwds1sub"]'));
+$data{genre} = qut(getContent('//teiHeader/profileDesc/textClass/classCode[@scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dtamain"]','null'));
+$data{untergenre} = qut(getContent('//teiHeader/profileDesc/textClass/classCode[@scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dtasub"]','null'));
+$data{dwds_kategorie1} = qut(getContent('//teiHeader/profileDesc/textClass/classCode[@scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dwds1main"]'));
+$data{dwds_unterkategorie1} = qut(getContent('//teiHeader/profileDesc/textClass/classCode[@scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dwds1sub"]'));
 
 $data{createdate} = `date +'%d-%m-%Y %H:%M:%S'`;
 $data{createdate} =~ s/\n//g;
 
 
 $data{resp} = '';
-my @respStmts = getNodes('/teiHeader/fileDesc/titleStmt/respStmt');
+my @respStmts = getNodes('//teiHeader/fileDesc/titleStmt/respStmt');
 while(@respStmts > 1){
 	$data{resp} = $data{resp}.shift(@respStmts)."\n";
 }
 
 #TODO: just one editorialDecl??
-my @editorialDecls = getNodes('/teiHeader/encodingDesc/editorialDecl');
+my @editorialDecls = getNodes('//teiHeader/encodingDesc/editorialDecl');
 if(@editorialDecls){
 	$data{txt} = $editorialDecls[0];
 }
 
 #TODO: just one msIdentifier??
-my @msIdentifiers = getNodes('/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier');
+my @msIdentifiers = getNodes('//teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier');
 if(@msIdentifiers){
 	$data{msidentifier} = $msIdentifiers[0];
 }
 
 #TODO: all in <licence>?
-my @licence = getNodes('/teiHeader/fileDesc/publicationStmt/availability/licence');
+my @licence = getNodes('//teiHeader/fileDesc/publicationStmt/availability/licence');
 if(@licence){
 	$data{license} = $licence[0];
 }
