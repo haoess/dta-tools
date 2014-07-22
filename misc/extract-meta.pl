@@ -52,15 +52,16 @@ my %parameter;
 my %data;
 my @warnings;
 
-$parameter{file} = 'file';
-$parameter{id_book} = 0;
-$parameter{source} = 'source';
+$parameter{source} = 'dtae';
 
-GetOptions ("id=i" => \$parameter{id_book},    
-            "file=s"   => \$parameter{file},      
-            "source=s"  => \$parameter{source})   
-or die("Error in command line arguments\n");
+GetOptions(
+    "id=i"     => \$parameter{id_book},
+    "file=s"   => \$parameter{file},
+    "source=s" => \$parameter{source},
+) or die("Error in command line arguments\n");
 
+die "no input file given\n" unless $parameter{file};
+die "no id_book given\n" unless $parameter{id_book};
 
 my $sql = SQL::Abstract->new();
 
@@ -72,46 +73,37 @@ close $fh;
 my ( $header ) = $xml =~ /(<teiHeader>.*<\/teiHeader>)/s;
 my $dom = $parser->parse_string( $header );
 
-#my $dom = $parser->parse_file($parameter{file});
-#my $root = $dom->documentElement;
-#my $xc = XML::LibXML::XPathContext->new( $root );
-#$xc->registerNs('tei', 'http://www.tei-c.org/ns/1.0');
-
 # set id
-if(exists $parameter{id_book}){
-	$data{id_book} = $parameter{id_book};
-}
+$data{id_book} = $parameter{id_book};
 
 # get authors
 my @authorNodes = getNodes('//teiHeader/fileDesc/titleStmt/author');
-if(@authorNodes){
-	if(@authorNodes > 3){
-		push(@warnings, 'more than 3 authors found');
+if (@authorNodes) {
+	if (@authorNodes > 3){
+		push @warnings, 'more than 3 authors found';
 	}
 	my $i = 0;
-	while(@authorNodes){
+	while (@authorNodes) {
 		$i++;
 		my %authorData = getPersonData(shift(@authorNodes));
-		if(exists $authorData{surname}){ $data{'autor'.$i.'_prename'} = qut($authorData{surname});}
-		if(exists $authorData{forename}){ $data{'autor'.$i.'_lastname'} = qut($authorData{forename});}
-		if(exists $authorData{addName}){ $data{'autor'.$i.'_syn_names'} = qut($authorData{addName});}
-		if(exists $authorData{pnd}){ $data{'autor'.$i.'_pnd'} = qut($authorData{pnd});}
-	}	
+		if (exists $authorData{surname})  { $data{'autor'.$i.'_prename'} = qut($authorData{surname}) }
+		if (exists $authorData{forename}) { $data{'autor'.$i.'_lastname'} = qut($authorData{forename}) }
+		if (exists $authorData{addName})  { $data{'autor'.$i.'_syn_names'} = qut($authorData{addName}) }
+		if (exists $authorData{pnd})      { $data{'autor'.$i.'_pnd'} = qut($authorData{pnd}) }
+	}
 }
 
 # get translator
 my @translatorNodes = getNodes('//teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/editor[@role="translator"]');
-if(@translatorNodes){
+if (@translatorNodes) {
 	$data{uebersetzer} = qut(constructName(getPersonData($translatorNodes[0])));
 }
 
 # get publisher
 my @publisherNodes = getNodes('//teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/editor[not(@role="translator")]');
-if(@publisherNodes){
+if (@publisherNodes) {
 	$data{publisher} = qut(constructName(getPersonData($publisherNodes[0])));
 }
-
-
 
 $data{title} = qut(getContent('//teiHeader/fileDesc/titleStmt/title[@type="main"]'));
 $data{subtitle} = qut(getContent('//teiHeader/fileDesc/titleStmt/title[@type="sub"]'));
@@ -126,16 +118,17 @@ $data{year} = getContent('//teiHeader/fileDesc/sourceDesc/biblFull/publicationSt
 $data{umfang} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/extent/measure[@type="pages"]'));
 $data{umfang_normiert} = getContent('//teiHeader/fileDesc/extent/measure[@type="images"]');
 
-$data{band_alphanum} = getContent('//teiHeader/fileDesc/titleStmt/title[@type="volume"]'); 
-$data{band_zaehlung} = getAttributeValue('//teiHeader/fileDesc/titleStmt/title[@type="volume"]','n'); 
+$data{band_alphanum} = getContent('//teiHeader/fileDesc/titleStmt/title[@type="volume"]');
+$data{band_zaehlung} = getAttributeValue('//teiHeader/fileDesc/titleStmt/title[@type="volume"]','n');
 
 #TODO: dta_reihe... correct?
 $data{dta_reihe_titel} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/title[@type="main"]'));
 
 $data{type} = getAttributeValue('//teiHeader/fileDesc/sourceDesc/bibl','type');
-if($data{type} =~ /^(MM|DS|MS|MMS)$/){
+if ($data{type} =~ /^(MM|DS|MS|MMS)$/) {
 	$data{dta_reihe_band} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="volume"]'));
-}else{
+}
+else {
 	$data{dta_reihe_jahrgang} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="volume"]'));
 	$data{dta_reihe_band} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="issue"]'));
 }
@@ -147,8 +140,8 @@ $data{dta_comment2} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/n
 $data{ready} = qut(getContent(''));
 
 $data{language} = getAttributeValue('//teiHeader/profileDesc/langUsage/language', 'ident', 'deu');
-if($data{language} ne 'deu'){
-	push(@warnings, 'language not german');
+if ($data{language} ne 'deu') {
+	push @warnings, 'language not german';
 }
 
 #$parameter{file} =~ m!/?([^\/]+?)\.!;
@@ -176,22 +169,22 @@ $data{source} = qut($parameter{source});
 
 $data{resp} = '';
 my @respStmts = getNodes('//teiHeader/fileDesc/titleStmt/respStmt');
-while(@respStmts > 1){
+while (@respStmts > 1) {
 	$data{resp} .= shift(@respStmts)."\n";
 }
 
 my @editorialDecls = getNodes('//teiHeader/encodingDesc/editorialDecl');
-if(@editorialDecls){
+if (@editorialDecls) {
 	($data{txt}) = $editorialDecls[0] =~ /<editorialDecl>(.*)<\/editorialDecl>/s;
 }
 
 my @msIdentifiers = getNodes('//teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier');
-if(@msIdentifiers){
+if (@msIdentifiers) {
 	$data{msidentifier} = $msIdentifiers[0];
 }
 
 my @licence = getNodes('//teiHeader/fileDesc/publicationStmt/availability/licence');
-if(@licence){
+if (@licence) {
 	$data{license} = $licence[0];
 }
 
@@ -203,22 +196,23 @@ if(@licence){
 # construct SQL statements
 $data{sql} = generateSqlInsert('book', 'id_book', 'title', 'subtitle', 'autor1_prename', 'autor1_lastname', 'autor1_syn_names', 'autor2_prename', 'autor2_lastname', 'autor2_syn_names', 'autor3_prename', 'autor3_lastname', 'autor3_syn_names', 'availability ', 'year', 'dta_pub_date', 'dta_pub_location', 'dta_pub_verlag','umfang', 'umfang_normiert', 'band_zaehlung', 'band_alphanum', 'autor1_pnd','autor2_pnd','autor3_pnd', 'dta_reihe_titel', 'dta_reihe_jahrgang', 'dta_reihe_band', 'dta_seiten', 'dta_bibl_angabe', 'ready', 'uebersetzer', 'dta_uebersetzer', 'publisher', 'dta_comment2');
 $data{sql} = $data{sql}.";\n".generateSqlInsert('metadaten','id_book', 'genre', 'type', 'untergenre', 'dirname', 'schriftart', 'prioritaet', 'planung', 'startseite', 'dwds_kategorie1', 'dwds_unterkategorie1');
-$data{sql} = $data{sql}.";\n".generateSqlInsert('sources','id_book', 'source'); 
+$data{sql} = $data{sql}.";\n".generateSqlInsert('sources','id_book', 'source');
 $data{sql} = $data{sql}.";\n".'INSERT INTO open_tasks (id_book, id_task, createdate) SELECT '.$data{id_book}.', max(id_task) +1, '.qut($data{createdate}).' FROM open_tasks;';
 
 
-if(not @warnings){
+if (not @warnings) {
 	# could add warning...
-	writeData('resp', 'txt', 'msidentifier', 'license', 'sql');	
+	writeData('resp', 'txt', 'msidentifier', 'license', 'sql');
 }
 
-if(@warnings){
+if (@warnings) {
 	print "WARNINGS:\n";
 	while(@warnings){
-		print shift(@warnings)."\n";		
+		print shift(@warnings)."\n";
 	}
-}else{
-	print $data{sql};	
+}
+else {
+	print $data{sql};
 }
 
 
@@ -227,16 +221,16 @@ if(@warnings){
 #       Functions       #
 #########################
 
-sub printMap{
+sub printMap {
 	my (%map) = @_;
-	if( !keys %map ){
+	if ( !keys %map ) {
 		return;
-	}	
+	}
 	foreach my $name (sort keys %map) {
-		if($map{$name} ne qut(EMPTY) and $map{$name} ne EMPTY){
+		if ($map{$name} ne qut(EMPTY) and $map{$name} ne EMPTY) {
 			printf "%-20s => %s\n", $name, $map{$name};
 		}
-    }	
+    }
 	print "\n";
 }
 
@@ -245,21 +239,21 @@ sub getContent{
 	my ($xpath) = @_;
 	my $result = 'null';
 	my @nodes;
-	if(length($xpath) > 0){	
+	if (length($xpath) > 0) {
 		@nodes= $dom->findnodes($xpath);
 	}
-	if(@nodes){
+	if (@nodes) {
 		$result = $nodes[0]->textContent;
 		$result =~ s/^\s+|\s+$//g;
 		return $result;
 	}
-	if(@_ > 1){
+	if (@_ > 1) {
 		return $_[1];
 	}
 	return EMPTY;
 }
 
-sub getNodeContent{
+sub getNodeContent {
 	my ($node) = @_;
 	my $result = $node->getContent;
 	$result =~ s/^\s+|\s+$//g;
@@ -270,15 +264,15 @@ sub getAttributeValue{
 	my ($xpath, $attribute) = @_;
 	my $result = 'null';
 	my @nodes;
-	if(length($xpath) > 0){	
+	if (length($xpath) > 0) {
 		@nodes= $dom->findnodes($xpath);
 	}
-	if(@nodes){
+	if (@nodes){
 		$result = $nodes[0]->getAttribute($attribute);
 		$result =~ s/^\s+|\s+$//g;
 		return $result;
 	}
-	if(@_ > 2){
+	if( @_ > 2) {
 		return $_[2];
 	}
 	return EMPTY;
@@ -287,7 +281,7 @@ sub getAttributeValue{
 sub getNodes{
 	my ($xpath) = @_;
 	my @nodes;
-	if(length($xpath) > 0){	
+	if (length($xpath) > 0) {
 		@nodes= $dom->findnodes($xpath);
 	}
 	return @nodes;
@@ -295,112 +289,117 @@ sub getNodes{
 
 sub getPersonData{
 	my ($node) = @_;
-	
+
 	my %personData;
 	my @nodes;
-	
+
 	@nodes = $node->findnodes('.//roleName');
-	if(@nodes){
-		push(@warnings, 'roleName in personData');
+	if (@nodes) {
+		push @warnings, 'roleName in personData';
 	}
 	@nodes = $node->findnodes('.//genName');
-	if(@nodes){
-		push(@warnings, 'genName in personData');
+	if (@nodes) {
+		push @warnings, 'genName in personData';
 	}
 	@nodes = $node->findnodes('.//nameLink');
-	if(@nodes){
-		push(@warnings, 'nameLink in personData');
+	if (@nodes) {
+		push @warnings, 'nameLink in personData';
 	}
-	
+
 	@nodes = $node->findnodes('persName');
-	if(@nodes){
+	if (@nodes) {
 		my $temp = $nodes[0]->getAttribute('ref');
-		if($temp){
+		if ($temp) {
 			$temp =~ /.*\/(.+)$/;
 			$personData{pnd} = $1;
 		}
 	}
 	@nodes = $node->findnodes('persName/surname');
-	if(@nodes){
+	if (@nodes) {
 		$personData{surname} = $nodes[0]->textContent;
 	}
 	@nodes = $node->findnodes('persName/forename');
-	if(@nodes){
+	if (@nodes) {
 		$personData{forename} = $nodes[0]->textContent;
 	}
 	@nodes = $node->findnodes('persName/addName');
-	if(@nodes){
+	if (@nodes) {
 		my $temp = shift(@nodes)->textContent;
-		while(@nodes){
+		while (@nodes) {
 			$temp .= '; '.shift(@nodes)->textContent;
 		}
 		$personData{addName} = $temp;
 	}
-	
-	return %personData;	
+
+	return %personData;
 }
 
 sub constructName{
 	my (%personData) = @_;
 	my $result = '';
-	if(exists $personData{surname}){
+	if (exists $personData{surname}) {
 		$result = $personData{surname};
 	}
-	if(exists $personData{forename}){
-		if($result ne ''){
+	if (exists $personData{forename}) {
+		if ($result ne '') {
 			$result .= ', '.$personData{forename};
-		}else{
+		}
+        else{
 			$result = $personData{forename};
 		}
-	}	
-	if(exists $personData{pnd}){
-		if($result ne ''){
+	}
+	if (exists $personData{pnd}) {
+		if ($result ne '') {
 			$result .= ' #'.$personData{pnd};
-		}else{
+		}
+        else{
 			$result = '#'.$personData{pnd};
 		}
 	}
-	if(exists $personData{addName}){
-		if($result ne ''){
+	if (exists $personData{addName}) {
+		if ($result ne '') {
 			$result .= ' '.$personData{addName};
-		}else{
+		}
+        else {
 			$result = $personData{addName};
 		}
 	}
-	if($result eq ''){
+	if ($result eq '') {
 		return EMPTY;
 	}
-	return $result;	
+	return $result;
 }
 
-sub writeData{
-	if(exists $data{dirname}){
-		while(@_){
+sub writeData {
+	if (exists $data{dirname}) {
+		while (@_) {
 			my $dataIndex = shift;
-			open(FILE, '>'.unqut($data{dirname}).'.'.$dataIndex) or die $!;
+			open(FILE, '>', unqut($data{dirname}).'.'.$dataIndex) or die $!;
 			binmode(FILE, ":utf8");
 			print FILE $data{$dataIndex} or die $!;
-			close(FILE) or die $!;
+			close FILE or die $!;
 		}
-	}else{
-		push(@warnings, "dirname not set.")
-	}	
+	}
+    else {
+		push @warnings, "dirname not set.";
+	}
 }
 
-sub qut{
+sub qut {
 	my ($s) = @_;
-	if($s ne 'null'){
+	if ($s ne 'null') {
 		$s =~ s/\\/\\\\/g;
 		$s =~ s/'/\\'/g;
 		return q/'/.$s.q/'/;
-	}else{
+	}
+    else {
 		return $s;
 	}
 }
 
-sub unqut{
+sub unqut {
 	my ($s) = @_;
-	if(length ($s) >= 2 and $s ne 'null'){
+	if (length ($s) >= 2 and $s ne 'null') {
 		$s =~ s/^'//;
 		$s =~ s/'$//;
 		$s =~ s/\\'/'/g;
@@ -410,34 +409,28 @@ sub unqut{
 	return $s;
 }
 
-sub generateSqlInsert{
+sub generateSqlInsert {
 	my ($table) = @_;
 	my @table_fields = @_;
 	my %table_data;
-	
-	
-	foreach my $key (@table_fields){
-		if(exists $data{$key} and not ($data{$key} eq EMPTY or $data{$key} eq qut(EMPTY))){
+
+	foreach my $key (@table_fields) {
+		if (exists $data{$key} and not ($data{$key} eq EMPTY or $data{$key} eq qut(EMPTY))) {
 			$table_data{$key} = $data{$key};
 		}
 	}
-	
-	my($stmt, @bind) = $sql->insert($table, \%table_data);
+
+	my ($stmt, @bind) = $sql->insert($table, \%table_data);
 	$stmt =~ s/\([\?, ]*\)$//;
 	{
 		no warnings; # Keine Warnungen in diesem Block
 		my $vals = reduce {$a.', '.$b} @bind;
-		$stmt .= "(".$vals.")";	
+		$stmt .= "(".$vals.")";
 	}
-	
 
 	#return $sql->generate('INSERT INTO', \$table, \%table_data);
 	return $stmt;
 }
-
-
-
-
 
 __DATA__
 #TODO:
