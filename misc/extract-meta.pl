@@ -168,7 +168,7 @@ $data{untergenre} = qut(getContent('//teiHeader/profileDesc/textClass/classCode[
 $data{dwds_kategorie1} = qut(getContent('//teiHeader/profileDesc/textClass/classCode[@scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dwds1main"]'));
 $data{dwds_unterkategorie1} = qut(getContent('//teiHeader/profileDesc/textClass/classCode[@scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dwds1sub"]'));
 
-$data{createdate} = `date +'%d-%m-%Y %H:%M:%S'`;
+$data{createdate} = `date +'%Y-%m-%d %H:%M:%S'`;
 $data{createdate} =~ s/\n//g;
 
 $data{source} = qut($parameter{source});
