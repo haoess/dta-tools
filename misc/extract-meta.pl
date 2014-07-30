@@ -114,16 +114,15 @@ $data{dta_pub_verlag} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull
 
 $data{dta_bibl_angabe} = qut(getContent('//teiHeader/fileDesc/sourceDesc/bibl'));
 
+#TODO: put year in quotes? it's a string in the database...
 $data{year} = getContent('//teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/date[@type="creation"]', $data{'dta_pub_date'});
 $data{umfang} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/extent/measure[@type="pages"]'));
 $data{umfang_normiert} = getContent('//teiHeader/fileDesc/extent/measure[@type="images"]');
-
+#TODO: put band_alphanum in quotes? it's a string in the database...
 $data{band_alphanum} = getContent('//teiHeader/fileDesc/titleStmt/title[@type="volume"]');
 $data{band_zaehlung} = getAttributeValue('//teiHeader/fileDesc/titleStmt/title[@type="volume"]','n');
 
-#TODO: dta_reihe... correct?
 $data{dta_reihe_titel} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/title[@type="main"]'));
-
 $data{type} = getAttributeValue('//teiHeader/fileDesc/sourceDesc/bibl','type');
 if ($data{type} =~ /^(MM|DS|MS|MMS)$/) {
 	$data{dta_reihe_band} = qut(getContent('//teiHeader/fileDesc/sourceDesc/biblFull/seriesStmt/biblScope[@unit="volume"]'));
@@ -145,8 +144,8 @@ if ($data{language} ne 'deu') {
 }
 
 #$parameter{file} =~ m!/?([^\/]+?)\.!;
-($data{dirname}) = basename($parameter{file}) =~ /(^[^\.]*)/;
-$data{dirname} = qut($data{dirname});
+($parameter{dirname}) = basename($parameter{file}) =~ /(^[^\.]*)/;
+$data{dirname} = qut($parameter{dirname});
 
 
 $data{schriftart} = qut(getContent('//teiHeader/fileDesc/sourceDesc/msDesc/physDesc/typeDesc/p'));
@@ -371,10 +370,10 @@ sub constructName{
 }
 
 sub writeData {
-	if (exists $data{dirname}) {
+	if (exists $parameter{dirname}) {
 		while (@_) {
 			my $dataIndex = shift;
-			open(FILE, '>', unqut($data{dirname}).'.'.$dataIndex) or die $!;
+			open(FILE, '>', $parameter{dirname}.'.'.$dataIndex) or die $!;
 			binmode(FILE, ":utf8");
 			print FILE $data{$dataIndex} or die $!;
 			close FILE or die $!;
@@ -395,18 +394,6 @@ sub qut {
     else {
 		return $s;
 	}
-}
-
-sub unqut {
-	my ($s) = @_;
-	if (length ($s) >= 2 and $s ne 'null') {
-		$s =~ s/^'//;
-		$s =~ s/'$//;
-		$s =~ s/\\'/'/g;
-		$s =~ s/\\\\/\\/g;
-		return $s;
-	}
-	return $s;
 }
 
 sub generateSqlInsert {
