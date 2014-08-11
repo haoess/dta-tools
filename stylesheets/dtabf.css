@@ -24,7 +24,7 @@ TEI * {
 /*  layout options     */
 
 /* hide comments */
-oxy|comment:before {
+/*oxy|comment:before {
 	color:grey !important;
 	content:'Kommentar: ';
 }
@@ -33,7 +33,7 @@ oxy|comment {
 	color:silver;
 	background-color:#F7F8E0 !important;
 	font-size:0.7em;
-}
+} */
 note[place="left"]:before{
 	color:silver;
 	content:'Marg. links: ';
@@ -44,7 +44,11 @@ note[place="right"]:before{
 }
 note[place="foot"]:before{
 	color:silver;
-	content:'Fußnote: ';	
+	content:"[Fußnote] " attr(n) " ";	
+}
+note[place="foot"] {
+	vertical-align: 4px;
+	font-size : 60%;
 }
 note[place="end"] {
 	color:silver;
@@ -86,6 +90,10 @@ cell[rendition="#c"]{
 }
 
 /*  rendition value visualisation	*/
+*[rendition]{
+	font-size:inherit;
+	font-family:inherit;
+}
 *[rendition~="#aq"]{
 	/*Antiqua*/
 	font-family:"Arial Unicode MS", Arial;
@@ -93,30 +101,25 @@ cell[rendition="#c"]{
 *[rendition~="#b"] {
 	/*Fettdruck*/
 	font-weight:bold;
-    font-family:inherit;
 }
 *[rendition~="#c"]{
 	/*zentrierter Text*/
 	display:block; 
 	text-align:center;
-    font-family:inherit;
 }
 *[rendition~="#blue"]{
 	/*blaue Einfaerbung*/
 	color:blue;
-    font-family:inherit;
 }
 *[rendition~="#blue"] *{
 	/*blaue Einfaerbung fuer Unterlemente*/
 	color:blue;
-    font-family:inherit;
 }
 *[rendition~="#et"]{
 	/*eingerueckter Text*/
 	display:block; 
 	margin-left:2em; 
 	text-indent:2em;
-    font-family:inherit;
 }
 *[rendition~="#fr"]{
 	/*Frakturwechsel*/
@@ -125,66 +128,57 @@ cell[rendition="#c"]{
 }
 *[rendition~="#g"]{
 	/*Sperrdruck*/
-	border:1px dashed black;
-    font-family:inherit;
+	/* border:1px dashed black;
+	*/
+	letter-spacing: 0.3em;
 }
 *[rendition~="#i"]{
 	/*Kursivdruck*/
 	font-style:italic;
-    font-family:inherit;
 }
 *[rendition~="#in"]{
 	/*Initiale*/
 	font-size:150%;
-    font-family:inherit;
 }
 *[rendition~="#k"]{
 	/*Kapitaelchen*/
-	border:1px solid black;
-    font-family:inherit;
+	/*border:1px solid black;*/
+	font-variant:small-caps;
 }
 *[rendition~="#red"]{
 	/*rote Einfaerbung*/
 	color:#F60535;
-    font-family:inherit;
 }
 *[rendition~="#red"] *{
 	/*rote Einfaerbung fuer Unterlemente*/
 	color:#F60535;
-    font-family:inherit;
 }
 *[rendition~="#right"]{
 	/*Rechtsbuendigkeit*/
 	display:block; 
 	text-align:right;
-    font-family:inherit;
 }
 *[rendition~="#sub"]{
 	/*Tiefstellung*/
 	vertical-align:sub; 
 	font-size:.8em;
-    font-family:inherit;
 }
 *[rendition~="#sup"]{
 	/*Hochstellung*/
 	vertical-align:super; 
 	font-size:.8em;
-    font-family:inherit;
 }
 *[rendition~="#u"]{
 	/*gedruckte Unterstreichung*/
 	text-decoration:underline;
-    font-family:inherit;
 }
 *[rendition~="#uu"]{
 	/*doppelte Unterstreichung*/
 	text-decoration:underline;
-    font-family:inherit;
 }
 *[rendition~="#s"]{
 	/*doppelte Unterstreichung*/
 	text-decoration:line-through;
-    font-family:inherit;
 }
 
 
@@ -322,10 +316,13 @@ list  {
 note {
 	display:inline;
 }
+
+p + * + p, p + p {
+    text-indent:15px;
+}
 p {
 	display:block;
-    margin-top:10px;
-    text-indent:15px;
+    /*margin-top:10px;*/
 }
 pb {
 	text-align:center;

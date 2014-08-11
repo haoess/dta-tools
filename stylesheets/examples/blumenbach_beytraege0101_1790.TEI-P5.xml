@@ -1,0 +1,3047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../dtabf.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de-DE"> 	  <teiHeader>
+<fileDesc>
+<titleStmt>
+<title type="main">Beyträge zur Naturgeschichte</title>
+<title type="volume" n="1">Erster Theil</title>
+<author>
+<persName ref="http://d-nb.info/gnd/116208503">
+<surname>Blumenbach</surname>
+<forename>Johann Friedrich</forename>
+</persName>
+</author>
+<editor corresp="#DTACorpusPublisher">
+<persName ref="http://d-nb.info/gnd/115266127">
+<surname>Geyken</surname>
+<forename>Alexander</forename>
+</persName>
+</editor>
+<editor corresp="#DTACorpusPublisher">
+<persName ref="http://d-nb.info/gnd/1018099549">
+<surname>Haaf</surname>
+<forename>Susanne</forename>
+</persName>
+</editor>
+<editor corresp="#DTACorpusPublisher">
+<persName ref="http://d-nb.info/gnd/1019062681">
+<surname>Jurish</surname>
+<forename>Bryan</forename>
+</persName>
+</editor>
+<editor corresp="#DTACorpusPublisher">
+<persName>
+<surname>Schulz</surname>
+<forename>Matthias</forename>
+</persName>
+</editor>
+<editor corresp="#DTACorpusPublisher">
+<persName>
+<surname>Steinmann</surname>
+<forename>Jakob</forename>
+</persName>
+</editor>
+<editor corresp="#DTACorpusPublisher">
+<persName>
+<surname>Thomas</surname>
+<forename>Christian</forename>
+</persName>
+</editor>
+<editor corresp="#DTACorpusPublisher">
+<persName>
+<surname>Wiegand</surname>
+<forename>Frank</forename>
+</persName>
+</editor>
+<respStmt>
+<orgName>Akademie der Wissenschaften zu Göttingen</orgName>
+<resp>
+<note type="remarkResponsibility">Projektträger</note>
+<ref target="http://adw-goe.de/"/>
+</resp>
+</respStmt>
+<respStmt>
+<orgName>Editura GmbH &amp; Co.KG, Berlin</orgName>
+<resp>
+<note type="remarkResponsibility">Volltexterstellung und Basis-TEI-Auszeichung</note>
+<ref target="http://www.editura.de/"/>
+</resp>
+</respStmt>
+<respStmt>
+<orgName>Bearbeiter des Projekts Johann Friedrich Blumenbach – online</orgName>
+<resp>
+<note type="remarkResponsibility">Bearbeitung</note>
+<ref target="http://www.blumenbach-online.de/"/>
+</resp>
+</respStmt>
+<respStmt>
+<orgName>Johann Friedrich Blumenbach – online</orgName>
+<resp>
+<note type="remarkResponsibility">Bereitstellung der Bilddigitalisate</note>
+<ref target="http://www.blumenbach-online.de/fileadmin/wikiuser/Daten_Digitalisierung/ID%2000111/00111.pdf"/>
+<date type="importDTA">2013-08-26T09:00:15Z</date>
+</resp>
+</respStmt>
+<respStmt>
+<persName>
+<surname>Wiegand</surname>
+<forename>Frank</forename>
+</persName>
+<resp>
+<note type="remarkResponsibility">Konvertierung nach DTA-Basisformat</note>
+<date type="importDTA">2013-08-26T09:00:15Z</date>
+</resp>
+</respStmt>
+<respStmt>
+<orgName ref="http://www.clarin-d.de">CLARIN-D</orgName>
+<resp>
+<note type="remarkResponsibility">Langfristige Bereitstellung der DTA-Ausgabe</note>
+<ref target="http://fedora.dwds.de"/>
+</resp>
+</respStmt>
+</titleStmt>
+<editionStmt><edition>Vollständige digitalisierte Ausgabe.</edition></editionStmt>
+<extent>
+<measure type="images">144</measure>
+<measure type="tokens">0</measure>
+<measure type="types">0</measure>
+<measure type="characters">100024</measure>
+</extent>
+<publicationStmt>
+<publisher xml:id="DTACorpusPublisher">
+<email>dta@bbaw.de</email>
+<orgName role="project">Deutsches Textarchiv</orgName>
+<orgName role="hostingInstitution" xml:lang="en">Berlin-Brandenburg Academy of Sciences and Humanities</orgName>
+<orgName role="hostingInstitution" xml:lang="de">Berlin-Brandenburgische Akademie der Wissenschaften (BBAW)</orgName>
+<address>
+<addrLine>Jägerstr. 22/23, 10117 Berlin</addrLine>
+<country>Germany</country>
+</address>
+</publisher>
+<pubPlace>Berlin</pubPlace>
+<date type="publication">2014-02-25T16:25:24Z</date>
+<availability>
+<licence target="http://creativecommons.org/licenses/by-nc/3.0/">
+<p>Distributed under the Creative Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0) license.</p>
+</licence>
+</availability>
+<idno>
+<idno type="URLWeb">http://www.deutschestextarchiv.de/blumenbach_beytraege0101_1790</idno>
+<idno type="URLXML">http://www.deutschestextarchiv.de/dtaq/book/download_xml/blumenbach_beytraege0101_1790</idno>
+<idno type="URLHTML">http://www.deutschestextarchiv.de/dtaq/book/download_html/blumenbach_beytraege0101_1790</idno>
+<idno type="URLText">http://www.deutschestextarchiv.de/dtaq/book/download_text/blumenbach_beytraege0101_1790</idno>
+<idno type="DTADirName">blumenbach_beytraege0101_1790</idno>
+<idno type="DTAID">30451</idno>
+</idno>
+</publicationStmt>
+<sourceDesc>
+<bibl type="MM">Blumenbach, Johann Friedrich: Beyträge zur Naturgeschichte. Bd. 1. Göttingen, 1790.</bibl>
+<biblFull>
+<titleStmt>
+<title level="m" type="main">Beyträge zur Naturgeschichte</title>
+<title level="m" type="volume" n="1">Erster Theil</title>
+<author>
+<persName ref="http://d-nb.info/gnd/116208503">
+<surname>Blumenbach</surname>
+<forename>Johann Friedrich</forename>
+</persName>
+</author>
+</titleStmt>
+<editionStmt>
+<edition n="1"/>
+</editionStmt>
+<publicationStmt>
+<publisher><name>Johann Christian Dieterich</name></publisher>
+<pubPlace>Göttingen</pubPlace>
+<date type="publication">1790</date>
+</publicationStmt>
+</biblFull>
+<msDesc>
+<msIdentifier>
+</msIdentifier>
+<physDesc>
+<typeDesc>
+<p>Antiqua</p>
+</typeDesc>
+</physDesc>
+</msDesc>
+</sourceDesc>
+</fileDesc>
+<encodingDesc>
+<editorialDecl>
+<p/>
+<p>
+<![CDATA[
+<p>Anmerkungen zur Transkription:</p>
+<ul>
+<li>Nicht erfasst: Bogensignaturen und Kustoden, Kolumnentitel.</li>
+<li>Auf Titelblättern wurde auf die Auszeichnung der Schriftgrößenunterschiede zugunsten der Identifizierung von &lt;titlePart&gt;s verzichtet.</li>
+<li>Keine Auszeichnung der Initialbuchstaben am Kapitelanfang.</li>
+<li>Langes ſ: als s transkribiert.</li>
+<li>Hochgestellte e über Vokalen: in moderner Schreibweise erfasst.</li>
+</ul>
+]]>
+</p>
+</editorialDecl>
+</encodingDesc>
+<profileDesc>
+<langUsage>
+<language ident="deu">German</language>
+</langUsage>
+<textClass>
+<classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dwds1main">Wissenschaft</classCode>
+<classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dwds1sub">Naturgeschichte</classCode>
+<classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#DTACorpus">blumenbach</classCode>
+</textClass>
+</profileDesc>
+</teiHeader>
+<text xml:id="blume000111"> 		<front>
+<pb n="binding_recto" facs="#f0001" xml:id="pbbinding_0001"/>
+<pb n="interleaf" facs="#f0002" xml:id="pbinterleaf_0001"/>
+<pb n="interleaf" facs="#f0003" xml:id="pbinterleaf_0002"/>
+<pb n="interleaf" facs="#f0004" xml:id="pbinterleaf_0003"/>
+<pb n="[I]" facs="#f0005" xml:id="pbI_0001"/>
+<titlePart type="main" rendition="#c"><hi rendition="#g">Beyträge<lb/>
+zur<lb/>
+Naturgeschichte</hi></titlePart> 				<milestone unit="section" rendition="#hr"/><lb/>
+<pb n="[II]" facs="#f0006" xml:id="pbII_0002"/>
+<titlePage>
+<pb n="titlePage_recto" facs="#f0007" xml:id="pbtitlePage_0001"/>
+<docTitle><titlePart type="main" rendition="#c"><hi rendition="#g">Beyträge<lb/>
+zur<lb/>
+Naturgeschichte</hi></titlePart></docTitle> 				<byline rendition="#c"><hi rendition="#g">von</hi><lb/>
+<docAuthor><hi rendition="#g">Joh. Fr. Blumenbach</hi></docAuthor> Prof. zu Gött. und Königl. Grossbrit. Hofrath.</byline> 				<figure xml:id="tx000111_007a" rendition="#c"> 					<graphic url="images/tx000111_007a"/> 					<head rendition="#c">1te Menschen Varietät</head><lb/>
+<figDesc>Titelblattillustration</figDesc></figure> 				<titlePart type="sub" rendition="#c">Erster Theil.</titlePart> 				<milestone unit="section" rendition="#hr"/><lb/>
+<docImprint rendition="#c"> 					<hi rendition="#g">Göttingen</hi>,<lb/>
+bey Johann Christian Dieterich, <docDate>1790.</docDate></docImprint>
+<pb n="titlePage_verso" facs="#f0008" xml:id="pbtitlePage_0002"/>
+<hi rendition="#k">Ex<lb/>
+Bibliotheca<lb/>
+Regia Acad.<lb/>
+Georgiæ<lb/>
+Aug:</hi> 			</titlePage> 			<div n="1" type="preface">
+<pb n="V" facs="#f0009" xml:id="pbV_0001"/>
+<figure xml:id="tx000111_009a"> 					<graphic url="images/tx000111_009a"/> 					<head rendition="#c">2te Menschen Varietät</head><lb/>
+<figDesc>Textabbildung, S. V.</figDesc></figure> 				<head rendition="#c">Vorrede.</head><lb/>
+<p rendition="#no_indent">Ich liefere in diesen Beyträgen<lb/>
+lauter eigne Aufsätze und zwar<lb/>
+blos solche von denen ich glau-<lb/>
+ben konnte dass sie auch ande-<lb/>
+re Leser als die eigentliches<lb/>
+Studium aus Naturgeschichte<lb/>
+machen, nicht uninteressant und<lb/>
+<pb n="VI" facs="#f0010" xml:id="pbVI_0001"/>
+nicht langweilig finden werden.<lb/>
+Sie sind grösstentheils ganz neu<lb/>
+und was von einigen der übri-<lb/>
+gen schon in andern meiner<lb/>
+Schriften vorkommt ist doch<lb/>
+hier weiter ausgeführt, berich-<lb/>
+tigt u. s. w. so viel sich thun<lb/>
+lies habe ich gesucht die Auf-<lb/>
+sätze in eine Art zusammenhän-<lb/>
+gender Folge zu ordnen, und<lb/>
+da die in diesem ersten Bänd-<lb/>
+chen mehrentheils die Naturge-<lb/>
+schichte des Menschenge-<lb/>
+schlechts betreffen, so sind auf<lb/>
+den beygefügten Vignetten die<lb/>
+<hi rendition="#i">fünf</hi> Spielarten vorgestellt wor-<lb/>
+den, worein sich das ganze Men-<lb/>
+schengeschlecht meines Bedün-<lb/>
+kens am füglichsten eintheilen<lb/>
+lässt. Sie brauchen nur weni-<lb/>
+ge Worte zur Erläuterung.</p> 				<div n="2" type="tablist">
+<pb n="VII" facs="#f0011" xml:id="pbVII_0001"/>
+<p>I. Die Titel-Vignette. <ref target="#tx000111_007a">1ste <hi rendition="#i">Men-<lb/>
+schenvarietät.</hi></ref> (– vergl. S. 82 –)<lb/>
+eine Morgenländische schon für sich<lb/>
+ganz verständliche Scene.</p> 				<p>II. Die Anfangsleiste der Vorrede.<lb/>
+<ref target="#tx000111_009a">2te <hi rendition="#i">Menschenvarietät</hi></ref> (– S. 82 –)<lb/>
+Schinesen. In der Ferne Reisfelder<lb/>
+mit Büffeln gepflügt. (gewöhnlich<lb/>
+zieht aber immer nur <hi rendition="#i">einer.</hi>)</p> 				<p>III. Die Schluss-Vignette der Vor-<lb/>
+rede. <ref target="#tx000111_012a">3te <hi rendition="#i">Menschenvarietät.</hi></ref> (– S.<lb/>
+83 –) Negern am Gambia. Ihre Fi-<lb/>
+scherey, Moor – Hirsenfelder ꝛc.<lb/>
+Auch ist hier so wie auf den beiden<lb/>
+folgenden Kupfern die eigne Form<lb/>
+der Hütten bey den vorgestellten<lb/>
+Völkern genau abgebildet.</p> 				<p>IV. Die Anfangsleiste. S. 1. <ref target="#tx000111_013a">4te <hi rendition="#i">Men-<lb/>
+schenvarietät.</hi></ref> (– S. 83 –) Brasilia-<lb/>
+ner. Der Mann kommt von der Jagd.</p> 				<p>V. Die Schluss-Vignette, <ref target="#tx000111_138a">5te <hi rendition="#i">Men-<lb/>
+schenvarietät.</hi></ref> (– S. 83 –) Südlän-<lb/>
+der von <hi rendition="#i">Anamocka</hi> oder <hi rendition="#i">Neu-Rotter-<lb/>
+<pb n="VIII" facs="#f0012" xml:id="pbVIII_0001"/>
+dam</hi>, einer der Freundschafts-Inseln.<lb/>
+Ihre Viehzucht, Gartenbau ꝛc. (der<lb/>
+Zaun ist vielleicht ein wenig zu re-<lb/>
+gelmässig vorgestellt. Aber die in<lb/>
+Reihen gepflanzten Bäume u. dergl.<lb/>
+bemerkte schon der berühmte Ent-<lb/>
+decker dieser glückseeligen Inseln<lb/>
+<hi rendition="#k">Abel Tasman</hi>,)</p></div> 				<closer rendition="#l1em"><dateline><name type="place">Göttingen</name>, d. <date>24. April 1790</date>.</dateline></closer> 				<figure xml:id="tx000111_012a"> 					<graphic url="images/tx000111_012a"/> 					<head rendition="#c">3te Menschen Varietät</head><lb/>
+<figDesc>Textabbildung, S. VIII.</figDesc></figure></div></front> 		<body><div n="1" type="part" xml:id="bl000111_01">
+<pb n="1" facs="#f0013" xml:id="pb001_0001"/>
+<figure xml:id="tx000111_013a"> 					<graphic url="images/tx000111_013a"/> 					<head rendition="#c">4te Menschen Varietät</head><lb/>
+<figDesc>Textabbildung, S. 1</figDesc></figure> 				<head rendition="#c">I.<lb/>
+Ueber die Veränderlichkeit in<lb/>
+der Schöpfung.</head><lb/>
+<p rendition="#no_indent">Ja so geht's in der Welt, sagt <hi rendition="#k">Vol-<lb/>
+taire</hi>, da haben wir nun keinen<lb/>
+Purpur mehr, denn der <hi rendition="#i">Murex</hi> ist<lb/>
+längst ausgerottet. Das arme kleine<lb/>
+<pb n="2" facs="#f0014" xml:id="pb002_0001"/>
+Schneckchen wird von andern grös-<lb/>
+sern Thieren aufgefressen worden<lb/>
+seyn. –</p> 				<p>Gott bewahre, antworten die <hi rendition="#i">Phy-<lb/>
+sicotheologen,</hi> unmöglich kan die<lb/>
+Vorsehung eine Thiergattung aus-<lb/>
+sterben lassen.</p> 				<p>Denn, sagt der ehrliche <hi rendition="#i">Savoyi-<lb/>
+sche Landgeistliche</hi> im Emil, es ist<lb/>
+kein Wesen im Universum, das man<lb/>
+nicht gleichsam als den gemeinschaft-<lb/>
+lichen Mittelpunkt für alle übrige<lb/>
+ansehen könnte.</p> 				<p>Und, setzt ein andrer vollends<lb/>
+hinzu, keines, was nicht so zu sa-<lb/>
+gen, <hi rendition="#i">das</hi> für die ganze übrige Schö-<lb/>
+pfung wäre, was <hi rendition="#k">Phidias</hi> Bild am<lb/>
+Schild seiner künstlichen Minerva<lb/>
+war, das man nicht ausheben durfte<lb/>
+wenn nicht das ganze grosse Werk<lb/>
+zusammenfallen sollte!</p> 				<p>Eher, sagt <hi rendition="#k">Linné</hi>, lässt die Na-<lb/>
+tur neue Arten entstehn. – So<lb/>
+<pb n="3" facs="#f0015" xml:id="pb003_0001"/>
+hat sie z. B. da nicht weit von Up-<lb/>
+sala auf Södra-Gässkiaeret ein Pflänz-<lb/>
+chen hervor gebracht, die <hi rendition="#i">Peloria,</hi><lb/>
+das wirklich so was von einer neuen<lb/>
+Schöpfung ist.</p> 				<p>Ach, antwortet man ihm, die Na-<lb/>
+tur ist eine alte Henne, die euch<lb/>
+warlich heutiges Tages nichts neues<lb/>
+mehr legen wird.</p> 				<p>Freylich nicht, sagt <hi rendition="#k">Haller,</hi> und<lb/>
+man muss solche Irthümer rügen,<lb/>
+weil sie von den Atheisten begierig<lb/>
+ausgeschnappt werden, die aus der<lb/>
+Entstehung neuer Gattungen so gut<lb/>
+wie aus der vorgeblichen Vertilgung<lb/>
+alter Arten gar zu gerne eine Unbe-<lb/>
+ständigkeit der Natur erweisen möch-<lb/>
+ten: und das darf nicht seyn; denn<lb/>
+fällt die Ordnung in der physischen<lb/>
+Welt weg, so ist es um die Ordnung<lb/>
+in der moralischen Welt, und zu-<lb/>
+letzt um die ganze Religion gethan.</p> 				<milestone unit="section" rendition="#hr"/><lb/>
+<pb n="4" facs="#f0016" xml:id="pb004_0001"/>
+<p>Wenn auch ich ein Wort drein<lb/>
+reden darf; so glaube ich es ist hier<lb/>
+von allen Seiten der Sache zu viel<lb/>
+geschehn.</p> 				<p>Der Murex findet sich heute noch<lb/>
+eben so wohl als zu den Zeiten der<lb/>
+alten Phönicier und Griechen; –<lb/>
+Die Peloria aber ist eine krankhafte<lb/>
+Monstrosität und keine eigne neu<lb/>
+entstandne Gattung. – Genau ge-<lb/>
+nommen ist die Natur aber auch in<lb/>
+der That keine alte Henne, – und<lb/>
+die Schöpfung was solideres als jene<lb/>
+Statue der Minerva, – und sie fällt<lb/>
+nicht zusammen wenn gleich eine<lb/>
+Gattung von Geschöpfen ausstürbe<lb/>
+oder eine andre neu erzeugt würde,<lb/>
+– und es ist mehr als blos wahr-<lb/>
+scheinlich dass beides auch wirk-<lb/>
+lich schon wohl eher erfolgt ist, –<lb/>
+nud diess alles ohne die mindeste Ge-<lb/>
+fährde weder für die Ordnung in<lb/>
+der physischen noch in der morali-<lb/>
+<pb n="5" facs="#f0017" xml:id="pb005_0001"/>
+schen Welt, noch für die ganze Re-<lb/>
+ligion.</p> 				<p>Vielmehr finde ich gerade darin<lb/>
+die Lenkung durch eine höhere Hand<lb/>
+am unverkennbarsten, dass trotz die-<lb/>
+ser sogenannten Unbeständigkeit der<lb/>
+Natur dennoch die Schöpfung ihren<lb/>
+ewigen stillen Gang geht, und schon<lb/>
+darum glaube ich lohnt sichs der<lb/>
+Mühe, nachdem so unendlich viel<lb/>
+über die vermeinte unveränderliche<lb/>
+Ordnung in der Schöpfung geschrie-<lb/>
+ben worden, auch einmal an aller-<lb/>
+hand Beweise von der grossen Ver-<lb/>
+änderlichkeit in derselben zu erin-<lb/>
+nern. Freylich muss ich dabey et-<lb/>
+was weit ausholen.</p> 				<milestone unit="section" rendition="#hr"/><lb/>
+</div> 			<div n="1" type="part" xml:id="bl000111_02">
+<pb n="6" facs="#f0018" xml:id="pb006_0001"/>
+<head rendition="#c">II.<lb/>
+Ein Blick in die Vorwelt.</head><lb/>
+<p rendition="#no_indent">Fast jeder Pflasterstein in <hi rendition="#i">Göttingen</hi><lb/>
+zeugt davon, dass Gattungen – ja<lb/>
+sogar ganze Geschlechter von Thie-<lb/>
+ren untergegangen seyn müssen.<lb/>
+Unser Kalkboden wimmelt gleichsam<lb/>
+von den mannigfaltigsten Arten ver-<lb/>
+steinter Seegeschöpfe, unter welchen<lb/>
+meines wissens nur eine einzige Gat-<lb/>
+tung ist, wozu wir noch gegenwär-<lb/>
+tig ein <hi rendition="#i">wahres</hi> ganz damit überein-<lb/>
+kommendes Original kennen; und<lb/>
+das ist diejenige Art von so genannten<lb/>
+Bohrmuscheln (<hi rendition="#i">Terebrateln</hi>) aus dem<lb/>
+mitländischen und atlantischen Mee-<lb/>
+re, die wegen ihrer Bildung (– da<lb/>
+die eine der beiden zarten bauchich-<lb/>
+ten Schalen am Schloss über die<lb/>
+andre hinüber ragt, und so von der<lb/>
+<pb n="7" facs="#f0019" xml:id="pb007_0001"/>
+Seite angesehen einige Aehnlichkeit<lb/>
+mit einem Hahne zeigt, der die Henne<lb/>
+tritt, –) den Namen <hi rendition="#i">le coq et la<lb/>
+poule</hi> erhalten hat<note place="foot" anchored="true" n="*)"> 												<p><hi rendition="#i">Anomia vitrea. s</hi>. <hi rendition="#k">Chemnitz</hi> Conchylien-<lb/>
+Cabinet VIII. B. tab. LXXVIII. fig. 707. 709.</p></note>.</p> 				<p>Unter dem fast unübersehlichen<lb/>
+Heer der andern versteinten See-<lb/>
+thiere, die ihr Grab in unserm Boden<lb/>
+gefunden haben, sind freylich noch<lb/>
+viele (z. B. unter den Mytiliten,<lb/>
+Chamiten, Pectiniten ꝛc.) zu wel-<lb/>
+chen die mehrsten Naturforscher eben-<lb/>
+falls bestimmte Originale angeben:<lb/>
+allein ich habe bey diese das Petre-<lb/>
+fact mit dem vorgeblichen Original<lb/>
+oft genug verglichen, und es ist meine<lb/>
+Schuld nicht, dass ich beide dann<lb/>
+unverkennbar specifisch von einan-<lb/>
+der verschieden gefunden habe<note place="foot" anchored="true" n="**)"> 												<p>Der beynahe einzige, aber dafür desto wich-<lb/>
+tigere Nutze der Versteinerungskunde ist<lb/>
+<pb n="8" facs="#f0020" xml:id="pb008_0001"/>
+der Aufschluss, den die Geschichte der<lb/>
+Veränderungen des Erdbodens durch sie er-<lb/>
+hält, aber dazu ist schlechterdings äusser-<lb/>
+ste Genauigkeit im Beobachten nothwen-<lb/>
+dig; zumal wo es auf Vergleichung der<lb/>
+Petrefacten mit ihren vermeinten Origi-<lb/>
+nalen, ankommt. Der Mangel dieser Ge-<lb/>
+nauigkeit hat schon die seltsamsten cos-<lb/>
+mogenischen Irrthümer veranlast.</p></note>.</p> 								<p>Bey einer sehr grossen Menge der<lb/>
+übrigen hieländischen Versteinerun-<lb/>
+gen ist endlich die Bildung so ganz<lb/>
+auffallend von allen jetzt bekannten<lb/>
+Geschöpfen abweichend, dass sie<lb/>
+hoffentlich niemand mehr im Ernst<lb/>
+unter diese letztern suchen wird<note place="foot" anchored="true" n="*)"> 												<p>Hr. Superint. <hi rendition="#k">Schröter</hi> rechnet es zu dem<lb/>
+Hauptnutzen, den wir vom Studium der<lb/>
+Petrefacten ziehen können, dass sie die<lb/>
+Lücken in der Stufenfolge der Natur aus-<lb/>
+füllen helfen. – <q>„Ohne sie„</q> (sagt er<lb/>
+im IIIten B. seiner Einleitung in die Ge-<lb/>
+schichte der Steine ꝛc. S. 94) <q type="preline">„würden<lb/>
+<pb n="9" facs="#f0021" xml:id="pb009_0001"/>
+wir in dieser Stufenfolge und in der Kette<lb/>
+der Natur erstaunende Lücken finden,<lb/>
+die uns durch die Versteinerungskunde<lb/>
+glücklich ausgefüllt werden.„</q> –</p> 						<p>Wenn man diess bey einem andern<lb/>
+Schriftsteller läse, so würde man es für<lb/>
+einen bittern, aber treffenden Spott über<lb/>
+die vorgegebne Stufenfolge der Natur <hi rendition="#i">in<lb/>
+Rücksicht der Bildung</hi> ihrer Geschöpfe an-<lb/>
+sehen: denn was heisst das anders als:<lb/>
+was uns der Schöpfer nicht <hi rendition="#i">in natura</hi> ge-<lb/>
+gegeben, das hat er doch wenigstens zum<lb/>
+Behuf der Physicotheologen und ihrer alle-<lb/>
+gorischen Bilder von Ketten und Leitern in<lb/>
+seiner Schöpfung <hi rendition="#i">in essigie</hi> eingeschaltet!</p></note>.</p> 								<p>Ich nenne nur zwey Geschlechter<lb/>
+derselben statt aller, die Belemni-<lb/>
+ten<note place="foot" anchored="true" n="*)"> 												<p>Die Belemniten gehören noch jetzt zu<lb/>
+den gemeinsten Versteinerungen. Und dass<lb/>
+wir sie doch nicht in noch weit grössrer<lb/>
+Menge finden, darüber giebt der Hr. <hi rendition="#i">Che-<lb/>
+valier</hi> <hi rendition="#k">D'Hancarville</hi> in seinen <hi rendition="#i">Recherches 							<lb/>
+<pb n="10" facs="#f0022" xml:id="pb010_0001"/>
+sur l'origine des arts de la Grèce</hi> dem ein-<lb/>
+zigen Buch in seiner Art! (im Iten B. S.<lb/>
+2 u. f.) folgenden Aufschluss: – es sind<lb/>
+ihrer nemlich, wenn wir seiner Versiche-<lb/>
+rung glauben wollen, in der Kindheit des<lb/>
+Menschengeschlechts so viele <hi rendition="#i">verschossen</hi><lb/>
+worden. Denn, sagt er, <q type="preline"><hi rendition="#i">„avant de se ser-<lb/>
+vir de l'airain, an du fer pour armer les<lb/>
+pointes des Fleches, on y employoit de ces<lb/>
+pierres</hi> Belemnites. – <hi rendition="#i">Le marbre d'Arun-<lb/>
+del met l'epoque de la découverte du fer à<lb/>
+l'an 87 après l'arrivée de Cadmus en Grèce.<lb/>
+– avant cette époque les Fleches des Grecs<lb/>
+étoient</hi> <hi rendition="#g">nécessairement</hi> <hi rendition="#i">armées de ces<lb/>
+pierres</hi> Belemnites, <hi rendition="#i">dont le nom conservé<lb/>
+jusqu' à nous exprime encore l'usage.</hi>„</q></p></note> nemlich und die Ammoniten<lb/>
+von welchen beiden ich mannig-<lb/>
+faltige verschiedne Gattungen aus den<lb/>
+mehresten Ländern von Europa und<lb/>
+selbst aus Asien vor mir habe, und<lb/>
+die sich wahrscheinlich auch in den<lb/>
+übrigen Welttheilen (– den fünf-<lb/>
+ten ausgenommen<note place="foot" anchored="true" n="*)"> 												<p>s. Hrn. D. und Prof. <hi rendition="#k">Forsters</hi> Bemerkun-<lb/>
+gen auf seiner Reise um die Welt. S. 19.</p></note> –) finden wer-<lb/>
+<pb n="11" facs="#f0023" xml:id="pb011_0001"/>
+den. Man rechnet gegenwärtig auf<lb/>
+200 verschiedne Gattungen im Am-<lb/>
+monitengeschlechte, und ich halte<lb/>
+das nicht für übertrieben, ohngeach-<lb/>
+tet ich es nie der Mühe werth ge-<lb/>
+funden habe absichtlich nachzuzäh-<lb/>
+len. Und zu keiner einzigen dieser<lb/>
+200 Gattungen ist auch nur je in<lb/>
+der jetzigen Schöpfung ein wahres<lb/>
+Original gefunden worden. Und<lb/>
+da man an gut erhaltnen Ammoniten<lb/>
+offenbar sieht, dass diess (bey aller<lb/>
+ihrer theils colossalischen Grösse)<lb/>
+doch sehr dünnschaalige leichte und<lb/>
+nicht fest sitzende Conchylien gewe-<lb/>
+sen seyn müssen, die nicht, wie man<lb/>
+sonst zur Ausflucht brauchte, in den<lb/>
+Tiefen unsrer Meere versteckt leben,<lb/>
+können; und wir nun, nach den<lb/>
+grossen Seereisen wodurch <hi rendition="#i">Se. Ma-<lb/>
+jestät der König</hi> den fünften Welt-<lb/>
+theil grösstentheils entdecken und<lb/>
+die Grenzen unsrer Erde bestimmen<lb/>
+lassen, den Ocean fast besser kennen<lb/>
+<pb n="12" facs="#f0024" xml:id="pb012_0001"/>
+als das feste Land unsers Planeten,<lb/>
+– so muss man nach allem diesen<lb/>
+der Hoffnung wohl entsagen, dass<lb/>
+die Originale zu diesem weitläufti-<lb/>
+gen Thiergeschlechte, so wie zu tau-<lb/>
+senderley andern Petrefacten, noch<lb/>
+in unsern Weltmeeren versteckt le-<lb/>
+ben Sollten.</p> 				<p>Alles diess zusammen genommen<lb/>
+so wird es meines Bedünkens mehr als<lb/>
+blos wahrscheinlich, dass schon ein-<lb/>
+mal nicht blos eine oder die andre<lb/>
+Gattung sondern eine ganze organi-<lb/>
+sirte präadamitische Schöpfung auf<lb/>
+unserm Erdboden untergegangen ist.<lb/>
+Unter allen mir bekannten son-<lb/>
+stigen Theorien der Erde ist keine<lb/>
+einzige, mit welcher sich die gedach-<lb/>
+ten augenscheinlichen Eigenheiten<lb/>
+der Petrefacten in unsern Kalkflözen<lb/>
+zusammen reimen liessen; die hinge-<lb/>
+gen Sehr begreiflich werden, so bald<lb/>
+man, wie gesagt, annimmt, dass unsre<lb/>
+<pb n="13" facs="#f0025" xml:id="pb013_0001"/>
+Erde schon einmal eine Totalrevolu-<lb/>
+tion erlitten, einen jüngsten Tag<lb/>
+erlebt hat. Versteht sich dass man<lb/>
+schlechterdings andre sogenannte cos-<lb/>
+mogenische Phänomene, wie z. B. die<lb/>
+Menge von fossilen Knochen der Ele-<lb/>
+phanten und Rhinocerosse und andrer<lb/>
+Thiere der heissen Erdstriche, die in<lb/>
+unsern Gegenden ausgegraben wer-<lb/>
+den, u. dergl. mehr von jener Total-<lb/>
+revolution genau unterscheiden und<lb/>
+absondern muss. Denn das ist, wo<lb/>
+ich nicht irre, bisher immer eine<lb/>
+Klippe gewesen, woran auch selbst<lb/>
+die scharfsinnigsten Theorien der<lb/>
+Erde gescheitert sind, so bald sie alle<lb/>
+jene so sehr von einander verschiedne<lb/>
+Phänomene auf eine einzige gemein-<lb/>
+schaftliche Revolution haben zurück-<lb/>
+bringen, alles aus einer und eben<lb/>
+derselben Catastrophe haben erklären<lb/>
+wollen. Ein eben so scharfsinniger<lb/>
+als liebenswürdiger Naturforscher hat<lb/>
+neuerlich den Ursprung jener hielän-<lb/>
+<pb n="14" facs="#f0026" xml:id="pb014_0001"/>
+dischen fossilen Knochen ausländi-<lb/>
+scher Landthiere und die wirklichen<lb/>
+Versteinerungen von See-Geschöpfen<lb/>
+in unsern Kalkflözen dadurch mit<lb/>
+einander verbinden wollen, dass er<lb/>
+annimmt, die jetzige Lagerstätte jener<lb/>
+Landthiere sey nicht ihre ehemalige<lb/>
+Heimat gewesen sondern sie seyen<lb/>
+nach ihrem Tode in Flüsse gerathen<lb/>
+und so nach und nach auf den da-<lb/>
+maligen Meeresboden durch die Strö-<lb/>
+mungen zusammen getrieben wor-<lb/>
+den. Allein diejenigen Gegenden<lb/>
+wenigstens, wo ich selbst die Lager-<lb/>
+stätte der grossen exotischen Knochen<lb/>
+untersucht habe, lassen sich schwer-<lb/>
+lich mit jener Hypothese vereinen.<lb/>
+So habe ich z. B. bey Burgtonna im<lb/>
+Gothaischen das Bette des vor bey-<lb/>
+nahe hundert Jahren daselbst ausge-<lb/>
+grabnen von <hi rendition="#k">Tenzel</hi> beschriebnen<lb/>
+Elephanten untersucht und gefunden,<lb/>
+dass es so ganz durchaus aus mäch-<lb/>
+tigen Mergel-Lagen besteht die vol-<lb/>
+<pb n="15" facs="#f0027" xml:id="pb015_0001"/>
+ler kleinen, zarten und grösstentheils<lb/>
+so unversehrten Land- und Fluss-<lb/>
+Schneckchen u. dergl. sind, dass ich<lb/>
+dieses Bette selbst unmöglich für ehe-<lb/>
+maligen Meeresboden halten kan:<lb/>
+sondern dass wahrscheinlich die Ele-<lb/>
+phanten und Rhinocerosse und Schild-<lb/>
+kröten, von welchen allen ich aus<lb/>
+den Tonnaischen Mergelgruben in-<lb/>
+structive Stücke für meine Sammlung<lb/>
+mitgebracht habe<note place="foot" anchored="true" n="*)"> 												<p>s. Hr. Prof. <hi rendition="#k">Voigt</hi> <hi rendition="#i">über einige physical.<lb/>
+Merkwürdigkeiten der Gegend von Burg-<lb/>
+tonna im Herzogthum Gotha</hi> in dessen Ma-<lb/>
+gazin für Physik und Naturgeschichte III. B.<lb/>
+4. St.</p></note> in jener Ge-<lb/>
+gend zu irgend einer Zeit (wer weis<lb/>
+wie lange nach der gedachten grossen<lb/>
+Totalrevolution,) einheimisch ge-<lb/>
+wesen seyn müssen.</p> 				<p>Diese Totalrevolution von der sich<lb/>
+die unzähligen untergegangnen orga-<lb/>
+nisirten Geschöpfe in den Kalkflözen<lb/>
+<pb n="16" facs="#f0028" xml:id="pb016_0001"/>
+herschreiben, bleibt also für sich,<lb/>
+von den nachherigen spätern, die mit<lb/>
+der umgeschaffnen Erde vorgegangen<lb/>
+seyn mögen, ganz verschieden.</p> 				<p>Wie und wodurch jene frühere<lb/>
+Revolution bewirkt worden, lässt<lb/>
+sich wohl schwerlich je mit Zuver-<lb/>
+lässigkeit bestimmen. Inzwischen<lb/>
+kommen doch meines wissens alle<lb/>
+wahrscheinlichen d. h. den Phäno-<lb/>
+menen angemessne Theorien der<lb/>
+Erde überhaupt darin miteinander<lb/>
+überein, dass die Wirkung von<lb/>
+unterirdischem Feuer, einem mehr<lb/>
+oder weniger <hi rendition="#i">allgemeinen Erdbrande,</hi><lb/>
+einen Hauptantheil daran gehabt ha-<lb/>
+ben müsse. Sey's nun dass das Feuer<lb/>
+die vormalige Erdrinde untergraben,<lb/>
+und dadurch den Einsturz derselben<lb/>
+in tiefe Schlünde veranlasst<note place="foot" anchored="true" n="*)"> 												<p>Nach der Meinung unsers seel <hi rendition="#k">Hollmann</hi><lb/>
+und Herrn <hi rendition="#k">de Luc</hi>. – s. des erstern Ab-<lb/>
+<pb n="17" facs="#f0029" xml:id="pb017_0001"/>
+handlung hierüber in den <hi rendition="#i">Comment. soc.<lb/>
+reg. scient Gotting.</hi> T. III. vom J. 1753.<lb/>
+S. 358 u. f. und des letztern <hi rendition="#i">Lettres phy-<lb/>
+siques et morales</hi> an mehrern Orten.</p></note> oder<lb/>
+auch wohl zum Theil den vormaligen<lb/>
+Meeresboden empor getrieben<note place="foot" anchored="true" n="*)"> 												<p>Vgl Hrn. O. C. R. <hi rendition="#k">Silberschlag's</hi> <hi rendition="#i">Geo-<lb/>
+genie</hi> im I und III Th und Hr. D. <hi rendition="#k">Hutton'</hi>s<lb/>
+<hi rendition="#i">Theory of the Earth</hi> in den <hi rendition="#i">Transactions of<lb/>
+the roy. Soc. of Edinburgh</hi> T. I. 1788. Zu-<lb/>
+mal im 3ten Abschnitt.</p></note>,<lb/>
+so begreift sich dadurch, wie das Meer<lb/>
+sein ehemaliges Bette habe verlassen<lb/>
+müssen, und wie dasselbe mit samt<lb/>
+seinen Bewohnern, den nunmehri-<lb/>
+gen Petrefacten, aufs trockne ver-<lb/>
+setzt und zu jetzigen Flözgebirge<lb/>
+worden.<note place="foot" anchored="true" n="**)"> 												<p>Es war eine Zeit wo man ganz allgemein<lb/>
+den Ursprung der Petrefacten, und die To-<lb/>
+talrevolution der Erde selbst von der Noa-<lb/>
+chischen Sündflut ableitete. – So wenig<lb/>
+es aber (wie mir einer der einsichtsvollsten,<lb/>
+<pb n="18" facs="#f0030" xml:id="pb018_0001"/>
+und doch gewiss rechtglaubigsten Gottes-<lb/>
+gelehrten, unser seel. Cons. R. <hi rendition="#k">Walch</hi><lb/>
+versichert hat) der Würde der heil. Schrift<lb/>
+den allermindesten Eintrag thut, wenn<lb/>
+man die <hi rendition="#i">Noachische</hi> Flut für nicht allge-<lb/>
+mein hält, so wenig habe ich mir nach<lb/>
+dem, was auch selbst die Thiergeschichte<lb/>
+lehrt, von einer solchen Allgemeinheit<lb/>
+<hi rendition="#i">jener</hi> Flut eine befriedigende Vorstellung<lb/>
+machen können. So bleibt mir z. B. die<lb/>
+Wallfahrt die dann das <hi rendition="#i">Faulthier</hi> (das be-<lb/>
+kanntlich eine volle Stunde braucht um<lb/>
+nur 6 Fus weit zu kriechen,) vom Ara-<lb/>
+rat nach Südamerica hätte machen müssen,<lb/>
+immer ein wenig unbegreiflich.</p></note></p> 				</div> 			<div n="1" type="part" xml:id="bl000111_03">
+<pb n="19" facs="#f0031" xml:id="pb019_0001"/>
+<head rendition="#c">III.<lb/>
+Beyläufig ein Wort über den<lb/>
+Basalt.</head><lb/>
+<p rendition="#no_indent">Ueber die neuerlich so sehr rege<lb/>
+gewordene Streitfrage von der Ent-<lb/>
+stehungsart des Basalts, lässt sich<lb/>
+zwar vor der Hand noch nicht leicht<lb/>
+ein entscheidender Aufschluss erwar-<lb/>
+ten<note place="foot" anchored="true" n="*)"> 												<p>Es gilt auch hier was <hi rendition="#k">Cicero</hi> sagt: <q type="preline"><hi rendition="#i">„Se-<lb/>
+quimur probabilia nec ultra id quam quod<lb/>
+verisimile occurrerit progredi possumus.</hi>„</q> und<lb/>
+wie sehr wäre nur zu wünschen, dass<lb/>
+manche der Verfechter der einen oder an-<lb/>
+dern Meinung auch den gleich drauf fol-<lb/>
+genden Nachsatz immer befolgten: <q type="preline"> 								<hi rendition="#i">„et<lb/>
+refellere sine pertinacia et refelli sine iracun-<lb/>
+dia parati sumus.„</hi></q></p></note>. Inzwischen deucht mir, dass<lb/>
+mau bey der ganzen Untersuchung<lb/>
+die cosmogenischen Data wovon<lb/>
+im vorigen Abschnitt die Rede war,<lb/>
+<pb n="20" facs="#f0032" xml:id="pb020_0001"/>
+nie aus den Augen verlieren dürfe.<lb/>
+Denn wenn der Basalt im Feuer ent-<lb/>
+standen ist, so geschah das nach al-<lb/>
+ler Wahrscheinlichkeit eben bey dem<lb/>
+gedachten <hi rendition="#i">allgemeinen Erdbrande</hi>;<lb/>
+folglich ist er dann älter als die gan-<lb/>
+ze nachherige Umschaffung unsers<lb/>
+Planeten; und aller dieser Basalt ist<lb/>
+dann zu gleicher Zeit entstanden,<lb/>
+und er ist (wenigstens dem grössten<lb/>
+Theil nach) im Wasser selbst, ohne<lb/>
+Zutritt der äusern Luft ausgeflossen<lb/>
+und erhärtet.</p> 				<p>Folglich wird es dann nieman-<lb/>
+den befremden, wenn er bey der<lb/>
+Vergleichung des Basalts, (von ei-<lb/>
+nem solchen unermesslichen Alter,<lb/>
+und einer solchen Entstehungsart,)<lb/>
+mit einer Lava die ein brennender<lb/>
+Vulcan an die Luft strömt, manchen<lb/>
+Unterschied bemerken sollte, – so<lb/>
+wenig als es jemanden befremden<lb/>
+wird zwischen Bernstein und fri-<lb/>
+schen Baumharz Unterschied zu fin-<lb/>
+<pb n="21" facs="#f0033" xml:id="pb021_0001"/>
+den, da jenes vermutlich auch bey<lb/>
+irgend einer gewaltsamen Erdrevo-<lb/>
+lution und folglich unter sehr eignen<lb/>
+mitwirkenden Umständen entstanden<lb/>
+zu seyn scheint. Eher ist es zu be-<lb/>
+wundern, dass sich demohngeach-<lb/>
+tet noch so viele und grosse unerwar-<lb/>
+tete Uebereinstimmung zwischen<lb/>
+so vielen Basaltbergen, und den paar<lb/>
+uns näher bekannten europäischen<lb/>
+Vulcanen, so wie zwischen so man-<lb/>
+chem Basalt und manchen Laven<lb/>
+zeigt. Denn wer Gelegenheit hat<lb/>
+ansehnliche Sammlungen von beiden<lb/>
+letztern zu untersuchen, dem kan<lb/>
+die auffallende Aehnlichkeit zwischen<lb/>
+vielen der derbern dichtern Laven<lb/>
+und dem gewöhnlichen Basalt, so wie<lb/>
+zwischen vielem bläsrichten Basalt<lb/>
+und den gewöhnlichen frischen La-<lb/>
+ven in Rücksicht ihres Ansehens und<lb/>
+ihres Gemenges nichtentgangen seyn.<lb/>
+So besitze ich selbst mancherley sehr<lb/>
+dichte <hi rendition="#i">wahre</hi> Laven vom Vesuv: und<lb/>
+<pb n="22" facs="#f0034" xml:id="pb022_0001"/>
+sehr bläsrichen <hi rendition="#i">wahren</hi> Basalt von<lb/>
+unsern Dransberg; und unter den<lb/>
+grossen Geschenken womit der Hr.<lb/>
+Baron von <hi rendition="#k">Asch</hi> das academische<lb/>
+Museum so unermüdet bereichert,<lb/>
+finden sich in der Sammlung soge-<lb/>
+nannter vulcanischer Produkte, wel-<lb/>
+che der berühmte und gelehrte Rei-<lb/>
+sende Hr. D. <hi rendition="#k">Reineggs</hi> vom Ara-<lb/>
+rat und aus Erzerum mitgebracht,<lb/>
+verschiedne derselben die wiederum<lb/>
+gerade so viele Aehnlichkeit mit man-<lb/>
+chem Basalt als mit Laven haben; so<lb/>
+wie auch glasartige Stücken die in<lb/>
+Rücksicht des ganzen Ansehens, zwi-<lb/>
+schen dem sogenannten Isländischen<lb/>
+Achat und den gleichfalls unter den<lb/>
+Aschischen Geschenken im Museum<lb/>
+befindlichen vulcanischen Glas-Tro-<lb/>
+pfen aus Kamtschatka völlig in der<lb/>
+Mitte stehen.</p> 				<p>So wenig man indess, wie schon<lb/>
+gesagt, vor der Hand auf eine voll-<lb/>
+<pb n="23" facs="#f0035" xml:id="pb023_0001"/>
+kommne Entscheidung der Frage<lb/>
+über die Entstehungsart des Basalts<lb/>
+wird rechnen können, so natürlich<lb/>
+ist es dennoch dass man in so einem<lb/>
+noch unentschiedenen Falle bey Prü-<lb/>
+fung des <hi rendition="#i">pro</hi> und <hi rendition="#i">contra</hi> sich auf die eine<lb/>
+oder die andere Seite geneigt fühlt;<lb/>
+und so sind mir denn freylich bis jetzt<lb/>
+die Gründe für die Entstehung des Ba-<lb/>
+salts durch einen Erdbrand bey jener<lb/>
+Totalrevolution unsrer Erde noch<lb/>
+immer überwiegend. Ich kan darin<lb/>
+irren, aber dann irre ich wenigstens<lb/>
+(– wie der grosse <hi rendition="#k">Edm. Halley</hi><lb/>
+einmal bey einem ähnlichen cosmo-<lb/>
+genischen Problem sagt –) in sehr<lb/>
+guter Gesellschaft.<note place="foot" anchored="true" n="*)"> 												<p><q>„– <hi rendition="#i">wherein, if I err,</hi>“</q> – sind seine Wor-<lb/>
+te –  <q>„<hi rendition="#i">I shall find myself in very good<lb/>
+Company. –</hi>“</q></p></note></p></div> 			<div n="1" type="part" xml:id="bl000111_04">
+<pb n="24" facs="#f0036" xml:id="pb024_0001"/>
+<head rendition="#c">IV.<lb/>
+Umschaffung der Vorwelt.</head><lb/>
+<p rendition="#no_indent"> 					<hi rendition="#i">Wenn</hi> die Vorwelt eine Totalre-<lb/>
+volution erlitten hat, wie es wohl<lb/>
+unverkennbar scheint; und <hi rendition="#i">wenn</hi><lb/>
+diese Revolution wahrscheinlicher<lb/>
+weise durch einen allgemeinen Erd-<lb/>
+brand bewirkt worden ist; so muss<lb/>
+wohl nachher ein sehr langer Zeit-<lb/>
+raum verstrichen seyn, ehe die neu-<lb/>
+veränderte Rinde unsers Planeten<lb/>
+nun wieder abgekühlt und überhaupt<lb/>
+ihre Oberfläche wiederum geschickt<lb/>
+ward, mit neuer Vegetation belebt<lb/>
+und mit neuer thierischer Schö-<lb/>
+pfung beseelt zu werden.</p> 				<p>Wie sie zu dieser Reife gediehen<lb/>
+war, dann hat der Schöpfer wohl im<lb/>
+ganzen die gleichen Naturkräfte zur<lb/>
+Hervorbringung der neuen organi-<lb/>
+schen Schöpfung wirken lassen, die <lb/>
+<pb n="25" facs="#f0037" xml:id="pb025_0001"/>
+auch in der Vorwelt diese Absicht<lb/>
+erfüllt hatten.</p> 				<p>Nur dass der <hi rendition="#i">Bildungstrieb</hi> nach<lb/>
+dem durch eine solche Totalrevolu-<lb/>
+tion freylich wohl anders modificirten<lb/>
+Stoffe auch wohl bey Erzeugung der<lb/>
+neuen Gattungen eine von der vor-<lb/>
+maligen mehr oder weniger abwei-<lb/>
+chende Richtung hat nehmen müssen.<lb/>
+Daher finden wir freylich nur zu<lb/>
+sehr wenigen Versteinerungen aus der<lb/>
+Vorwelt ein ganz ähnliches Geschöpf<lb/>
+in der jetzigen Schöpfung, wie z. B.<lb/>
+zu dem oben angeführten Terebratu-<lb/>
+lit in den hiesigen Kalkbergen die<lb/>
+Bohrmuschel aus dem atlantischen<lb/>
+Ocean. Hingegen eine Menge von<lb/>
+solchen Petrefacten die den jetzigen<lb/>
+organisirten Körpern zu ähneln <hi rendition="#i">schei-<lb/>
+nen,</hi> und daher wie schon gesagt bey<lb/>
+blos flüchtiger Vergleichung oft für<lb/>
+einerley mit denselben angesehen<lb/>
+werden, die aber bey genauer Prü-<lb/>
+fung unverkennbare specifische Ver-<lb/>
+<pb n="26" facs="#f0038" xml:id="pb026_0001"/>
+schiedenheit in ihrer Bildung zeigen<lb/>
+und zum Erweis dienen können, wie<lb/>
+der Bildungstrieb in diese beiden<lb/>
+Schöpfungen zwar auf eine ähnliche –<lb/>
+aber nicht auf die gleiche Weise ge-<lb/>
+wirkt hat.</p> 				<p>Und die etwanige Einwendung,<lb/>
+ob nicht dieser Unterschied auch<lb/>
+wohl durch blose <hi rendition="#i">Degeneration</hi> in<lb/>
+einer langen Reihe von Jahrtausen-<lb/>
+den habe bewirkt werden können,<lb/>
+wird sehr leicht durch diejenigen Bey-<lb/>
+spiele widerlegt, wo die Verschie-<lb/>
+denheit zwischen fossilen und fri-<lb/>
+schen, einander im Ganzen ziemlich<lb/>
+ähnelnden Conchylien doch von <hi rendition="#i">der</hi><lb/>
+Beschaffenheit ist, dass sie schlechter-<lb/>
+dings weder für eine Folge der Ab-<lb/>
+artung, noch für eine zufällige Mon-<lb/>
+strosität, sondern schwerlich für et-<lb/>
+was anders als für eine veränderte<lb/>
+Richtung des Bildungstriebes gehal-<lb/>
+ten werden kan. Nur gleich eins<lb/>
+dieser Beyspiele, statt aller:</p>
+<pb n="27" facs="#f0039" xml:id="pb027_0001"/>
+<p>In den nordischen Meeren lebt ei-<lb/>
+ne Schnecke deren ansehnliches Haus<lb/>
+unter dem Namen von <hi rendition="#i">Murex despe-<lb/>
+ctus</hi> allgemein bekannt ist; und am<lb/>
+Ufer von Harwich gräbt man eine<lb/>
+<hi rendition="#i">fossile</hi> Schnecke in Menge aus die im<lb/>
+Totalhabitus so grosse Aehnlichkeit<lb/>
+mit jenem <hi rendition="#i">Murex</hi> hat, dass man auf<lb/>
+den ersten Blick eine mit der andern<lb/>
+verwechseln könnte. Allein – die<lb/>
+frische Gattung ist, wie gewöhnlich,<lb/>
+<hi rendition="#i">rechts gewunden</hi>: bey der fossilen hin-<lb/>
+gegen laufen die Gewinde gerade um-<lb/>
+gekehrt, <hi rendition="#i">links:</hi> 					<note place="foot" anchored="true" n="*)"> 												<p><hi rendition="#i">Anfractibus sinistris</hi> s. <hi rendition="#i">contrariis</hi> – s. <hi rendition="#k">Chem-<lb/>
+nitz</hi> Conchyliencabient IX. B. I. Th. tab. CV.<lb/>
+fig. 894. u. f.</p></note> und es ist eben so<lb/>
+unerhört diesen fossilen Muriciten<lb/>
+rechts gewunden, als jenen frischen<lb/>
+Murex linksgewunden zu sehen. –<lb/>
+so was ist nicht Folge der Ausartung,<lb/>
+sondern Umschaffung durch veränder-<lb/>
+te Richtung des Bildungstriebes.</p></div> 			<div n="1" type="part" xml:id="bl000111_05">
+<pb n="28" facs="#f0040" xml:id="pb028_0001"/>
+<head rendition="#c">V.<lb/>
+Veränderlichkeit in der jetzigen<lb/>
+Schöpfung.</head><lb/>
+<p rendition="#no_indent">Eine ganze Schöpfung organisirter<lb/>
+Körper ist also einst nach aller Wahr-<lb/>
+scheinlichkeit untergegangen, und<lb/>
+eine neue ist ihr succedirt. Allein<lb/>
+auch selbst in <hi rendition="#i">dieser neuen</hi> zeigt sich<lb/>
+so viele Veränderlichkeit oder wie<lb/>
+es Hr. von <hi rendition="#k">Haller</hi> nannte, Unbe-<lb/>
+ständigkeit der Natur, dass einem<lb/>
+schon <hi rendition="#i">à priori</hi> wie man sagt, auch<lb/>
+hier das Aussterben ganzer Gattun-<lb/>
+gen und die neue Entstehung von<lb/>
+andern nicht unbegreiflich fallen<lb/>
+dürfte, wenn auch nich beides durch<lb/>
+wirkliche <hi rendition="#i">data</hi> mehr als blos wahr-<lb/>
+scheinlich gemacht würde.</p> 				<p>So fand sich z. B. noch zu unsrer<lb/>
+Väter Zeit auf <hi rendition="#i">Isle de France</hi> und<lb/>
+einigen benachbarten kleinen Inseln,<lb/>
+<pb n="29" facs="#f0041" xml:id="pb029_0001"/>
+aber sonst, soviel bekannt, nirgend<lb/>
+in der Welt, eine Gattung grosser<lb/>
+plumper träger Landvögel, von wi-<lb/>
+derlichen Fleisch, die <hi rendition="#i">Dudus,</hi> deren<lb/>
+Aufenthalt um so eingeschränkter<lb/>
+war, da sie so wenig als der Casuar<lb/>
+fliegen konnten. Nach den Versi-<lb/>
+cherungen des Hrn. <hi rendition="#k">Morel</hi> aber,<lb/>
+der deshalb an Ort und Stelle Unter-<lb/>
+suchungen angestellt hat, existirt die-<lb/>
+ser Vogel jetzt nicht mehr. Er ist<lb/>
+allgemach ausgerottet. – Und das<lb/>
+ist nicht unbegreiflicher und nicht<lb/>
+unwahrscheinlicher, als dass, wie<lb/>
+bekannt a. 1680. der letzte Wolf in<lb/>
+Schottland erschossen worden, wo<lb/>
+noch hundert Jahr vorher grosse<lb/>
+Wolfsjagden gehalten wurden. So<lb/>
+wie schon früher diele Raubthiere<lb/>
+aus England, und 30 Jahre Später<lb/>
+auch aus Irland vertilgt worden sind.<lb/>
+So bleiben sich überhaupt weder die<lb/>
+<hi rendition="#i">Faunen</hi> noch die <hi rendition="#i">Floren</hi> (wie man<lb/>
+diese Verzeichnisse einheimischer<lb/>
+<pb n="30" facs="#f0042" xml:id="pb030_0001"/>
+Thiere und Pflanzen nennt) in ei-<lb/>
+nem Lande beständig gleich! Genug<lb/>
+Geschöpfe verlieren (ich aus einer<lb/>
+Gegend, andre werden hinwiederum<lb/>
+verpflanzt und verbreitet. Seys ab-<lb/>
+sichtlich, so wie z. B. die Karpen nun<lb/>
+in vielen nordlichen Ländern durch<lb/>
+die Kunst naturalisirt worden; oder<lb/>
+zufällig so wie sich die Ratten aus der<lb/>
+alten Welt auch in die neue einge-<lb/>
+nistelt haben.</p> 				<p>Und so hat es gar nichts wider<lb/>
+sich, dass auch in der grossen Uni-<lb/>
+versal-Faune oder Flore der Schö-<lb/>
+pfung (zumal aber in der erstern)<lb/>
+einmal wie gesagt eine Gat-<lb/>
+tung aussterben, dagegen aber auch<lb/>
+wohl eine neue zuweilen gleichsam<lb/>
+<hi rendition="#i">nacherschaffen</hi> werden kan.</p> 				<p>Der <hi rendition="#i">Finnenwurm</hi> Schweinefleisch<lb/>
+den <hi rendition="#k">Malpighi</hi> zuerst entdeckt<lb/>
+hat, ist in seiner Art ein eben so<lb/>
+<pb n="31" facs="#f0043" xml:id="pb031_0001"/>
+vollkommnes wahres Thier als der<lb/>
+Mensch und der Elephant in der ih-<lb/>
+rigen. Nun aber findet sich, soviel<lb/>
+bekannt, dieses Thier blos beym zah-<lb/>
+men Hausschwein; und niemalen<lb/>
+hingegen bey der wilden Sau, von<lb/>
+der doch jenes abstammt. Dieser<lb/>
+Wurm scheint also eben so wenig<lb/>
+der Stammrace der Schweine aner-<lb/>
+schaffen, als es glaublich ist, dass<lb/>
+die ähnlichen Gattungen von <hi rendition="#i">Blasen-<lb/>
+würmern</hi> die man neuerlich eben so<lb/>
+wie jene Finnen mitten im Fleisch und<lb/>
+an den Eingeweiden <hi rendition="#i">menschlicher</hi> Lei-<lb/>
+chen gefunden, den Stammeltern des<lb/>
+Menschengeschlechts sollten aner-<lb/>
+schaffen gewesen Seyn. <hi rendition="#i">Wie</hi> sie<lb/>
+freylich nacherschaffen worden, das<lb/>
+Weis ich eben so wenig als <hi rendition="#i">wie</hi> in<lb/>
+den Jünglingsjahren die ersten Saa-<lb/>
+menthierchen entstehen: <hi rendition="#i">dass</hi> sie<lb/>
+aber nacherschaffen worden, scheint<lb/>
+mir unverkennbar, und ich rechne<lb/>
+das zur grossen Veränderlichkeit in<lb/>
+<pb n="32" facs="#f0044" xml:id="pb032_0001"/>
+der Natur, und diese grosse Verän-<lb/>
+derlichkeit selbst zu den wohlthätig-<lb/>
+sten weisesten Einrichtungen des<lb/>
+Schöpfers.</p> 				<p>Wie eingeschränkt wäre selbst der<lb/>
+Wirkungskreis des Menschen ohne<lb/>
+diese selbst durch ihn zu bewirkende<lb/>
+Veränderbarkeit der Natur. Und<lb/>
+wie wird er nun hingegen gerade<lb/>
+durch dieselbe recht Herr und Mei-<lb/>
+ster der übrigen Schöpfung. Um das<lb/>
+zu fühlen erinnere man sich blos der<lb/>
+erstaunenswürdigen Umschaffung die<lb/>
+er seit Entdeckung der neuen Welt<lb/>
+zwischen ihr und der Alten vorge-<lb/>
+nommen und ausgeführt hat.</p> 				<milestone unit="section" rendition="#hr"/><lb/>
+</div> 			<div n="1" type="part" xml:id="bl000111_06">
+<pb n="33" facs="#f0045" xml:id="pb033_0001"/>
+<head rendition="#c">VI.<lb/>
+Die Ausartung der organisirten<lb/>
+Körper.</head><lb/>
+<p rendition="#no_indent">Auch die Degeneration der Thiere<lb/>
+und Pflanzen von ihrer ursprüngli-<lb/>
+chen Stammrace in Spielarten, ge-<lb/>
+hört zu den auffallenden Erweisen<lb/>
+der Veränderlichkeit in der Schö-<lb/>
+pfung.</p> 				<p>In der Mitte des XVI<hi rendition="#sup">ten</hi> Jahrhun-<lb/>
+derts kannte man keine andere Tul-<lb/>
+pe in Europa als die gemeine gelbe<lb/>
+Stammart. Und keine 200 Jahre<lb/>
+nachher hatte schon ein leidenschaft-<lb/>
+licher Liebhaber dieser Blumen, der<lb/>
+damalige Marggraf von Baden Dur-<lb/>
+lach bey dreytausend Abbildungen<lb/>
+Von verschiedenen Spielarten dersel-<lb/>
+ben zusammen gebracht.<note place="foot" anchored="true" n="*)"> 												<p><hi rendition="#i">Biblioth. raisonnée</hi>. T. XXXIV. p. 284.</p></note></p>
+<pb n="34" facs="#f0046" xml:id="pb034_0001"/>
+<p>Es ist nicht viel länger seit die er-<lb/>
+sten wilden grünen Canarienvögel<lb/>
+aus ihrer Heimat nach Europa ge-<lb/>
+bracht worden, und wie sind schon<lb/>
+längst diese Thiere in die mannich-<lb/>
+faltigsten Verschiedenheiten – nicht<lb/>
+blos der Farbe, sondern auch selbst<lb/>
+der Gestaltung – ausgeartet.</p> 				<p>Man hat die Ursachen dieser Aus-<lb/>
+artung vorzüglich im Einfluss des<lb/>
+Clima, der Nahrung und der Lebens-<lb/>
+art gesucht, und freylich scheinen<lb/>
+manche Wirkungen dieser drey Din-<lb/>
+ge auf die Degeneration unverkenn-<lb/>
+bar. Dass z. B. im ganzen genom-<lb/>
+men, das Wachsthum durch die<lb/>
+Kälte zurückgehalten wird, oder<lb/>
+dass das individuelle Clima einer oder<lb/>
+der andern Weltgegend auch gewisse<lb/>
+auszeichnende Wirkungen auf die<lb/>
+in ihr einheimischen organisirten<lb/>
+Körper äusert. Dass z. B. in Syrien<lb/>
+vielerley Säugthiere ein so auffallend<lb/>
+<pb n="35" facs="#f0047" xml:id="pb035_0001"/>
+langes und seidenartiges Haar haben<lb/>
+u. dergl. m.</p> 				<p>Aber freylich können auch sehr<lb/>
+oft mehrere der angegebenen Haupt-<lb/>
+ursachen der Degeneration entwe-<lb/>
+der zusammentreffen und einander<lb/>
+unterstützen oder aber auch die eine<lb/>
+der andern gleichsam entgegenwir-<lb/>
+ken und sie aufheben; daher dann<lb/>
+freylich von tausend Phänomenen der<lb/>
+Ausartung keine bestimmte Ursache<lb/>
+angegeben werden kan. Genug,<lb/>
+dass die Phänomene selbst nun ein-<lb/>
+mal als unverkennbare Folgen der<lb/>
+Veränderlichkeit der Natur so sind.</p> 				<milestone unit="section" rendition="#hr"/><lb/>
+</div> 			<div n="1" type="part" xml:id="bl000111_07">
+<pb n="36" facs="#f0048" xml:id="pb036_0001"/>
+<head rendition="#c">VII.<lb/>
+Besonders unter den Haus-<lb/>
+thieren.</head><lb/>
+<p rendition="#no_indent">Natürlicher Weise haben die Ursa-<lb/>
+chen der Degeneration auf <hi rendition="#i">diejenigen</hi><lb/>
+Hausthiere am tiefsten und mannich-<lb/>
+faltigsten wirken müssen, die der<lb/>
+Mensch sich schon seit langen Gene-<lb/>
+rationen und so unterjocht hat, dass<lb/>
+sie sich auch dabey fortpflanzen, nicht<lb/>
+wie beym Elephanten jedes Indivi-<lb/>
+duum erst aus der Wildniss einge-<lb/>
+fangen werden muss: und die zu-<lb/>
+gleich fremder Climate gewohnen,<lb/>
+nicht wie das Rennthier in ein ein-<lb/>
+geschränktes Vaterland wie gebannt<lb/>
+sind.</p> 				<p>Das gemeine Hausschwein kan<lb/>
+hierzu einem Beyspiel statt aller die-<lb/>
+nen, das ich um so lieber wähle, da<lb/>
+die Abstammung dieses Thiers weit<lb/>
+<pb n="37" facs="#f0049" xml:id="pb037_0001"/>
+unbezweifelter ist als bey vielen an-<lb/>
+dern. Der Hund z. B. artet zwar<lb/>
+auch selbst unter unsern Augen man-<lb/>
+nichfaltig aus, allein, es ist auch<lb/>
+nicht völlig ausgemacht, und schwer-<lb/>
+lich jemals ganz auszumachen, ob<lb/>
+alle Hunde blosse Spielarten von ei-<lb/>
+ner und eben derselben Gattung sind<lb/>
+oder nicht. Manche grosse Natur-<lb/>
+forscher haben bekanntlich den Schä-<lb/>
+ferhund als die gemeinschaftliche<lb/>
+Stammrace für alle übrigen angese-<lb/>
+hen: andere haben sogar den Wolf<lb/>
+und Schackal mit zu den Hunden ge-<lb/>
+zählt: noch andere hingegen finden<lb/>
+es nicht unwahrscheinlich, mehr als<lb/>
+eine Stammrace von Hunden selbst,<lb/>
+anzunehmen. Und allerdings hat<lb/>
+meines Bedünkens die letztere Mei-<lb/>
+nung viel für sich. Nicht zwar die<lb/>
+Verschiedenheit der Bildung unter<lb/>
+den Hunderacen <hi rendition="#i">an und für sich:</hi><lb/>
+denn wie sehr kan die nicht seit den<lb/>
+laugen Jahrtausenden, da der Mensch<lb/>
+<pb n="38" facs="#f0050" xml:id="pb038_0001"/>
+schon dieses Thier, (das sich vielleicht<lb/>
+nirgend mehr <hi rendition="#i">ursprünglich wild</hi> 					<note place="foot" anchored="true" n="*)"> 												<p>Der Unterschied zwischen <hi rendition="#i">ursprünglich wild</hi><lb/>
+und blos <hi rendition="#i">verwildert</hi> muss bey Untersuchun-<lb/>
+gen dieser Art auf das sorgfältigste beob-<lb/>
+achtet werden. So giebts in beiden Wel-<lb/>
+ten verwilderte Pferde in unsäglicher<lb/>
+Menge: aber niemand kennt das ursprüng-<lb/>
+lichwilde Pferd. so fanden sich noch zu<lb/>
+Anfang dieses Jahrhunderts auf der klei-<lb/>
+nen Insel <hi rendition="#i">Ivan Fernandez</hi> (dem vierjäh-<lb/>
+rigen einsamen Aufenthalt des armen Selkirk<lb/>
+dessen wahre Geschichte bekanntlich zum<lb/>
+Robinson Crusoë umgearbeitet worden)<lb/>
+verwilderte Ziegen so gut wie verwilder-<lb/>
+tes Getraide, die aber beide eben so we-<lb/>
+nig daselbst ursprünglich zu Hause gehör-<lb/>
+ten, als die verwilderten Affen, die sich<lb/>
+bis jetzt auf den Felsen von Gibraltar<lb/>
+fortgepflanzt haben.</p></note> fin-<lb/>
+det,) mehr als irgend ein anderes in<lb/>
+seinen nähern Umgang gezogen und<lb/>
+theils mit sich in fremde Climate ver-<lb/>
+pflanzt hat, abgeändert worden seyn:<lb/>
+aber <hi rendition="#i">das s</hi>cheint mir ein Grund für<lb/>
+<pb n="39" facs="#f0051" xml:id="pb039_0001"/>
+mehr als eine ursprüngliche Race der<lb/>
+Hunde abzugeben, dass manche,<lb/>
+wie z. B. der Dachshund, einen so<lb/>
+ausgezeichneten und zu bestimmten<lb/>
+Verrichtungen abzweckenden Kör-<lb/>
+perbau haben, dass ich mich schwer-<lb/>
+lich überzeugen kan, diese merk-<lb/>
+würdige Bildung für eine zufällige<lb/>
+Folge der Degeneration und nicht<lb/>
+vielmehr für eine absichtliche Einrich-<lb/>
+tung des weisen Schöpfers<note place="foot" anchored="true" n="*)"> 												<p>Wenige Behauptungen in der Welt sind<lb/>
+mit so unglaublichen Vorurtheil von der<lb/>
+einen Seite verfochten und von der andern<lb/>
+bestritten worden, als die von den <hi rendition="#i">End-<lb/>
+ursachen</hi> des Schöpfers. – Die Physico-<lb/>
+theologen haben dadurch theils seltsame<lb/>
+Blösen gegeben, dass sie es für ihren Be-<lb/>
+ruf hielten, von jeder Einrichtung in der<lb/>
+Schöpfung Zweck und Absicht rein dar-<lb/>
+zuthum. So glaubten sie z. B. bey einer<lb/>
+Bienengattung an den Vorderfüssen der<lb/>
+Männchen eine durchlöcherte Scheibe zu<lb/>
+<pb n="40" facs="#f0052" xml:id="pb040_0001"/>
+finden, und ermangelten nun nicht diesen<lb/>
+Bau einen Nutzen anzudemonstriren. Das<lb/>
+hat die weise Natur gethan, hies es, damit<lb/>
+die Biene Blumenstaub durchsieben und<lb/>
+dadurch die Befruchtung der Pflanzen be-<lb/>
+fördern soll, und von Stund an hies nur<lb/>
+das Insect die <hi rendition="#i">Siebbiene</hi> (<hi rendition="#i">Sphex cribraria.</hi>)<lb/>
+Es gereicht einem Geistlichen der sich über-<lb/>
+haupt viel Verdienst um die Naturgeschich-<lb/>
+te erworben hat, dem Hrn. Hofdlac. <hi rendition="#k">Göë</hi><lb/>
+zur Ehre, dass er diesen Irthum aus der Na-<lb/>
+tur selbst widerlegt und gezeigt hat, dass<lb/>
+die Scheiben an den Füssen jenes Thiers<lb/>
+gar nicht durchlöchert sind; und folglich<lb/>
+wohl an die dem Schöpfer aus guter Mei-<lb/>
+nung angedichtete weise Absicht nicht zu<lb/>
+denken ist.</p> 						<p>Umgekehrt haben zuweilen Andere die<lb/>
+Wirklichkeit einer Einrichtung in der Na-<lb/>
+tur blos deshalb bezweifelt, weil sie keine<lb/>
+Endursache des Schöpfers darin finden konn-<lb/>
+ten. Als ich meinem unvergesslichen Freun-<lb/>
+de dem seel. <hi rendition="#k">Camper</hi> in der Natur zeigte,<lb/>
+<pb n="41" facs="#f0053" xml:id="pb041_0001"/>
+dass, gegen die allgemeine sonstige Mei-<lb/>
+nung, auch die Kaulquappen der Surina-<lb/>
+mischen Kröte <hi rendition="#i">Pipa</hi> allerdings geschwänzt<lb/>
+sind, wollte er, wie er selbst gesteht (in<lb/>
+den <hi rendition="#i">commentation. soc. reg. scientiar. Got-<lb/>
+tingens.</hi> T. IX. p. 119 u. f.) das Exemplar<lb/>
+das ich ihm wies anfangs eher für eine<lb/>
+widernatürliche Monstrosität halten, weil<lb/>
+er nicht absehen könne, wozu diesen klei-<lb/>
+nen Geschöpfen die in ihrer Mutter Rücken<lb/>
+eingenistelt sitzen der Schwimm-Schwanz<lb/>
+nutzen sollte.</p> 						<p>Wieder Andere haben hingegen fein reine<lb/>
+Bahn gefegt und alle Endursachen in der<lb/>
+Schöpfung geradezu geläugnet. – Noch<lb/>
+in unsern Tagen versicherte ein berühmtes<lb/>
+Mitglied der königl. Acad. der Wiss. zu<lb/>
+Paris, es sey eben so lächerlich zu glau-<lb/>
+ben, dass das Auge zum sehen bestimmt<lb/>
+wäre, als zu behaupten, die Steine seyen<lb/>
+bestimmt einem damit den Kopf einzu-<lb/>
+schlagen. In der That vermuthe ich, das<lb/>
+berühmte Mitglied hat da es dieses schrieb,<lb/>
+<pb n="42" facs="#f0054" xml:id="pb042_0001"/>
+ein wenig – – – ich will nur sagen, sich<lb/>
+übereilt. –</p> 						<p>Ernstlich gesprochen: – ohngeachtet ich<lb/>
+bis dato nicht weis wozu dem <hi rendition="#i">Babirursa</hi><lb/>
+seine langen, dünnen, fast zirkelförmigen<lb/>
+Eckzähne im Oberkiefer gegeben sind, so<lb/>
+bezweifle ich doch deswegen ihren mir<lb/>
+noch unbekannten Nutzen so wenig als<lb/>
+den Nutzen von zehnerley Theilen im<lb/>
+menschlichen Körper, der Brustdrüse, den<lb/>
+Neben-Nierchen &amp;c. oder den zwekmäsi-<lb/>
+gen Nutzen irgend eines andern Dinges<lb/>
+in der Schöpfung, wenn ich ihn gleich<lb/>
+vor der Hand noch nicht absehe.</p> 						<p>Hingegen dünkt mich bedarf es zum<lb/>
+evidentsten Erweis der Endursachen des<lb/>
+Schöpfers überhaupt weiter nichts, als dass<lb/>
+man das nächste liebste <hi rendition="#i">solche</hi> Thier wählt,<lb/>
+das sich durch auffallende Eigenheiten in<lb/>
+seiner thierischen Oekonomie auszeichnet,<lb/>
+und nun den Körperbau desselben mit sei-<lb/>
+ner Lebensart vergleicht, und fühlt wie<lb/>
+<pb n="43" facs="#f0055" xml:id="pb043_0001"/>
+erstaunenswürdig der erstere der letztern<lb/>
+angemessen ist. Wer z. B. nur irgend die<lb/>
+Naturgeschichte des Maulwurfs kennt,<lb/>
+und nun ein Maulwurfsgerippe mit einiger<lb/>
+Ueberlegung betrachtet, und dann noch<lb/>
+die Endursachen läugnen könnte, von dem<lb/>
+dürfte man argwohnen das er wohl gar<lb/>
+im Fall jenes berühmten Mitglieds der Pa-<lb/>
+riser Academie wäre.</p> 						<p>Manchem Leser wird es auffallen, wenn<lb/>
+er hört dass ein philosophischer Naturfor-<lb/>
+scher von Profession wie <hi rendition="#k">Buffon</hi> sich gegen<lb/>
+die Endursachen erklären konnte, und man-<lb/>
+chen wird es nicht minder unerwartet<lb/>
+seyn, wenn ich ihm einen Philosophen nen-<lb/>
+ne, der ohne Naturforscher von Profession<lb/>
+zu seyn viel wahres und schönes zum Er-<lb/>
+weis der unverkennbaren Endursachen des<lb/>
+Schöpfers geschrieben hat – <hi rendition="#k">Voltaire</hi><lb/>
+im <hi rendition="#i">Dictionn. philosoph.</hi> art. <hi rendition="#i">causes finales.</hi><lb/>
+im XXXVIII. B. der Ettingerschen Asug.</p></note> zu<lb/>
+halten.</p> 								<p>Beym Schwein hingegen ist die<lb/>
+Stärke der blosen Degeneration siche-<lb/>
+rer zu übersehen; da meines wissen<lb/>
+noch kein Naturforscher mit seinem<lb/>
+Scepticismus dahin verfallen ist,<lb/>
+zu bezweifeln, dass unsre Haus-<lb/>
+schweine vom wilden Eber abstam-<lb/>
+men; und über dem diess eins von<lb/>
+den Thieren ist die vor Ankunft der<lb/>
+Spanier in America, daselbst unbe-<lb/>
+<pb n="44" facs="#f0056" xml:id="pb044_0001"/>
+kannt waren, und erst aus Europa da-<lb/>
+hin verpflanzt worden; mithin sich<lb/>
+hier die Kürze der Zeit unwiderred-<lb/>
+lich bedocumentiren lässt, binnen<lb/>
+welcher die nun in jenen Welttheil<lb/>
+verpflanzten Schweine theils zum<lb/>
+Wunder in die sonderbarsten Spiel-<lb/>
+arten degenerirt sind. Diejenigen z.<lb/>
+B. die a. 1509 aus Spanien auf die<lb/>
+wegen der Perlenfischerey damals<lb/>
+allgemein berühmte westindische In-<lb/>
+sel <hi rendition="#i">Cubagua</hi> gebracht wurden, arte-<lb/>
+ten in eine abentheuerliche Race aus,<lb/>
+mit Klauen die auf eine halbe Spanne<lb/>
+lang waren<note place="foot" anchored="true" n="*)"> 												<p>s. <hi rendition="#k">Herrera</hi> <hi rendition="#i">hechos de los Castellanos en las<lb/>
+Islas i tierra firme del mar oceano.</hi> vol. I.<lb/>
+pag. 239. der Madriter Ausg. v. 1601.</p></note>.</p> 				<p>Die auf <hi rendition="#i">Cuba</hi> wurden mehr als<lb/>
+noch einmal so gross, als ihre Euro-<lb/>
+päischen Stammeltern<note place="foot" anchored="true" n="**)"> 												<p>s. <hi rendition="#k">Calvigero</hi> <hi rendition="#i">storia antica del Messico.</hi> T.<lb/>
+IV. pag. 145.</p></note> u. s. w.</p>
+<pb n="45" facs="#f0057" xml:id="pb045_0001"/>
+<p>Nun und wie ist nicht vorher in<lb/>
+der alten Welt das zahme Schwein<lb/>
+vom wilden ausgeartet; in seinen<lb/>
+Bedeckungen, besonders in Rücksicht<lb/>
+der Wollhaare zwischen den Borden;<lb/>
+in der so auffallend verschiedenen<lb/>
+Form des Schedels; selbst im ganzen<lb/>
+Wuchs &amp;c.</p> 				<p>Und wie verschieden endlich wie-<lb/>
+derum die Varietäten des Haus-<lb/>
+schweins selbst, das z. B. im Piemon-<lb/>
+tesischen fast ohne Ausnahme schwarz<lb/>
+ist; in Bayern rothbraun; in der Nor-<lb/>
+mandie weiss u. s. w. – wie sehr<lb/>
+anders der Wuchs der Schweine in<lb/>
+England mit dem ausgeschweiften Rü-<lb/>
+cken und hangenden Bauch von de-<lb/>
+nen im nordlichen Frankreich, die<lb/>
+sich von jenen durch die hochempor-<lb/>
+stehende Croupe und niederhängen-<lb/>
+den Kopf, und beide sich wieder von<lb/>
+dem Schwein in Deutschland aus-<lb/>
+zeichnen. Des Schweins mit unge-<lb/>
+<pb n="46" facs="#f0058" xml:id="pb046_0001"/>
+spaltenen Klauen, dergleichen sich<lb/>
+in Ungern und Schweden Herden-<lb/>
+weis finden und das schon <hi rendition="#k">Aristo-<lb/>
+teles</hi> kannte, so wie anderer selt-<lb/>
+nerer Spielarten zu geschweigen.</p> 				<milestone unit="section" rendition="#hr"/><lb/>
+</div> 			<div n="1" type="part" xml:id="bl000111_08">
+<pb n="47" facs="#f0059" xml:id="pb047_0001"/>
+<head rendition="#c">VIII.<lb/>
+Ausartung des vollkommensten<lb/>
+aller Hausthiere, –<lb/>
+<hi rendition="#i">des Menschen.</hi></head><lb/>
+<p rendition="#no_indent">Warum aber artet gerade das<lb/>
+Schwein so auffallend aus? warum<lb/>
+so weit mehr als doch manches an-<lb/>
+dre Hausthier? Die Lösung dieses<lb/>
+Problems fliesst aus dem obgesagten<lb/>
+von selbst. Eben darum weil gera-<lb/>
+de jenes Thier den Ursachen der De-<lb/>
+generation weit mehr als manche<lb/>
+andre ausgesetzt ist. Kein anderes<lb/>
+unsrer insgemein sogenannten Haus-<lb/>
+thiere ist einem so vielfachen Ein-<lb/>
+fluss der Climate ausgesetzt als das<lb/>
+Schwein; denn keines derselben ist<lb/>
+so wie dieses in alle fünf Welttheile<lb/>
+verbreitet. Keins ist so der Einwir-<lb/>
+kung der verschiedensten Nahrungs-<lb/>
+<pb n="48" facs="#f0060" xml:id="pb048_0001"/>
+mittel unterworfen; denn keins ist<lb/>
+so wie das Schwein <hi rendition="#i">animal omniuo-<lb/>
+rum</hi> u. s. w.</p> 				<p>Nur ein Hausthier giebt es noch<lb/>
+(– ein Hauschier im wahren <hi rendition="#i">Sinn</hi><lb/>
+wenn gleich nicht im gewöhnlichen.<lb/>
+<hi rendition="#i">Gebrauche</hi> dieses Worts –) das<lb/>
+auch hierin alle andere Übertrift<lb/>
+und das ist <hi rendition="#i">der Mensch. –</hi></p> 				<p>Der Unterschied zwischen ihm und<lb/>
+andern Hausthieren ist nur der, dass<lb/>
+diese nicht so wie er von der Natur<lb/>
+selbst gleich zum Hausthier erschaf-<lb/>
+fen ganz dazu gebühren sind. Man<lb/>
+kennt den bestimmten natürlichen<lb/>
+wilden Zustand der allermehresten<lb/>
+Hausthiere. Aber man kennt nicht<lb/>
+einen bestimmten natürlichen wilden<lb/>
+Zustand des Menschen. Denn es<lb/>
+giebt keinen, weil ihn die Natur in<lb/>
+nichts beschränkt, sondern für jede<lb/>
+Lebensart für jedes Clima und für<lb/>
+<pb n="49" facs="#f0061" xml:id="pb049_0001"/>
+die mannichfaltigste Nahrung ge-<lb/>
+schaffen, ihm die ganze weite Welt<lb/>
+zur Heimat, und beide organisirte<lb/>
+Reiche zur Nahrung freygestellt hat.</p> 				<p>Folglich ist aber auch auser ihm<lb/>
+kein zweytes Thier in der Schöpfung,<lb/>
+auf dessen <hi rendition="#i">solidum viuum</hi> so unend-<lb/>
+lich mannichfaltige <hi rendition="#i">stimuli</hi> 					<note place="foot" anchored="true" n="*)"> 												<p>Ich bediene mich dieser beiden in der Phy-<lb/>
+siologie der organisirten Körper jetzt so<lb/>
+allgemein angenommenen und allgemein<lb/>
+verständlichen Kunstwörter ohne sie zu<lb/>
+verdeutschen, da sie so wie das Wort <hi rendition="#i">or-<lb/>
+ganisirte Körper</hi> selbst u. a.m. gewiss durch<lb/>
+die Verdeutschung an Deutlichkeit verlie-<lb/>
+ren würden.</p></note> als<lb/>
+eben so unendlich mannichfaltig con-<lb/>
+currirende Ursachen der Ausartung<lb/>
+wirkten.</p> 				<milestone unit="section" rendition="#hr"/><lb/>
+</div> 			<div n="1" type="part" xml:id="bl000111_09">
+<pb n="50" facs="#f0062" xml:id="pb050_0001"/>
+<head rendition="#c">IX.<lb/>
+Eine hieher gehörige physiolo-<lb/>
+gische Eigenheit des mensch-<lb/>
+lichen Körpers.</head><lb/>
+<p rendition="#no_indent">Zur Empfänglichkeit für jene <hi rendition="#i">sti-<lb/>
+mulos</hi> wird das <hi rendition="#i">solidum viuum</hi> durch<lb/>
+die ihm beywohnenden <hi rendition="#i">Lebenskräfte</hi><lb/>
+geschickt gemacht, deren verschie-<lb/>
+dene, wenn gleich innig in einander<lb/>
+wirkende Arten ich schon anderswo<lb/>
+auseinander zu setzen und genauer<lb/>
+zu bestimmen gesucht habe.<note place="foot" anchored="true" n="*)"> 												<p><hi rendition="#i">Institut. physiolog</hi>. Sect. IV.</p></note></p> 				<p>Unter diesen ist die allerallgemein-<lb/>
+ste, die durch beide Reiche organi-<lb/>
+sirter Geschöpfe herrscht, die <hi rendition="#i">Con-<lb/>
+tractilität,</hi> ohngefähr das was sich<lb/>
+<hi rendition="#k">Stahl</hi> einer der tiefdenkendsten Phy-<lb/>
+siologen, unter seinem nur nicht ge-<lb/>
+nug bestimmten <hi rendition="#i">Tonus</hi> oder nachher<lb/>
+<pb n="51" facs="#f0063" xml:id="pb051_0001"/>
+die Leidner Schule unter dem Na-<lb/>
+men <hi rendition="#i">Actuositas</hi> dachte.</p> 				<p>Der Sitz dieser allgemeinsten Le-<lb/>
+benskraft ist das <hi rendition="#i">Zellgewebe</hi> das die<lb/>
+Grundlage fast des ganzen organisir-<lb/>
+ten Körpers macht, so dass z. B. im<lb/>
+menschlichen Körper auser dem<lb/>
+Schmelz der Zähne und etwa den<lb/>
+äussersten Bedeckungen der Haut,<lb/>
+alle übrige Theile hauptsächlich aus<lb/>
+Zellgewebe bestehen, das mit den<lb/>
+andren Stoffen so zu sagen nur wie<lb/>
+durchzogen und getränkt ist.</p> 				<p>Auch ist das Zellgewebe der erste<lb/>
+organische Stoff, den die Natur aus<lb/>
+den unorganischen Säfften bildet. so<lb/>
+formt sie z. B. die ausgeschwitzte pla-<lb/>
+stische Lymphe in Lungenentzün-<lb/>
+dungen erst zum lockern Zellgewe-<lb/>
+be, und dieses dann zu sogenannten<lb/>
+Pseudomembranen mit wahren Blut-<lb/>
+gefässen ꝛc.</p>
+<pb n="52" facs="#f0064" xml:id="pb052_0001"/>
+<p>Die grössere oder mindere Ge-<lb/>
+schmeidigkeit des Zellgewebes ist<lb/>
+aber sowohl nach dem verschiedenen<lb/>
+Lebensalter, als nach der specifischen<lb/>
+Verschiedenheit der Gattungen von<lb/>
+organisirten Körpern selbst gar sehr<lb/>
+verschieden. Beym Aal ist es z. B. un-<lb/>
+endlich zäher als bey der Forelle ꝛc.</p> 				<p>Nun aber ist es eine Bemerkung<lb/>
+die schon vorlängst von scharfsichti-<lb/>
+gen Zootomen, z. B. von unsern seel.<lb/>
+<hi rendition="#k">Zinn</hi> gemacht worden, dass <hi rendition="#i">der<lb/>
+Mensch,</hi> in Vergleich zu andern Ge-<lb/>
+schöpfen, die ihm in Rücksicht der<lb/>
+körperlichen Oekonomie zunächst<lb/>
+verwandt sind, zu den übrigen Säug-<lb/>
+thieren nemlich, <hi rendition="#i">ceteris paribus</hi> das<lb/>
+feinste, geschmeidigste Zellgewebe<lb/>
+hat. Wohlverstanden, <hi rendition="#i">ceteris pari-<lb/>
+bus,</hi> d. h. man muss nicht etwa einen<lb/>
+alten Zigeuner mit einem ungebohr-<lb/>
+nen Lamme vergleichen wollen.</p>
+<pb n="53" facs="#f0065" xml:id="pb053_0001"/>
+<p>Diese ausnehmende Geschmeidig-<lb/>
+keit des Zellgewebes und die davon<lb/>
+abhängende vorzügliche Beschaffen-<lb/>
+heit der allgemeinsten Lebenskraft<lb/>
+ist, wie mir deucht, eine der aller-<lb/>
+auszeichnendsten und grössten Vor-<lb/>
+züge des Menschen. Der Vorzug,<lb/>
+wodurch er gerade zu seiner grossen<lb/>
+Bestimmung, die ganze Erde bewoh-<lb/>
+nen zu können, geschikt wird. Ohn-<lb/>
+gefähr so wie die Getraidearten bey<lb/>
+ihrem zärtern geschmeidigen Zellge-<lb/>
+webe, eher der verschiedensten Cli-<lb/>
+mate gewohnen als die festere Ce-<lb/>
+der und Eiche.</p> 				<p>Da aber auch zugleich dieses beym<lb/>
+Menschen so ausnehmend geschmei-<lb/>
+dige Zellgewebe, wie gesagt, die erste<lb/>
+und wichtigste Hauptwerkstätte des<lb/>
+Bildungstriebes ist, so begreift sich aus<lb/>
+allem diesen zusammengenommen,<lb/>
+warum der Mensch folglich auch in<lb/>
+Bildung seines Körpers und der Thei-<lb/>
+<pb n="54" facs="#f0066" xml:id="pb054_0001"/>
+le desselben so mannichfaltiger De-<lb/>
+generation in. Spielarten, ausge-<lb/>
+setzt ist.</p> 				<p>Nicht unwahrscheinlich liegt auch<lb/>
+darin die Ursache, warum das<lb/>
+Schwein fast wie der Mensch in den<lb/>
+mannichfaltigsten Zonen lebt, aber<lb/>
+auch folglich, fast wie er, mannich-<lb/>
+faltig ausartet; wenigstens zeigt sich<lb/>
+eben in Rücklicht des Zellgewebes<lb/>
+beider Geschöpfe manche merkwür-<lb/>
+dige Aehnlichkeit, die z. B. bey der<lb/>
+eigentlichen Haut (<hi rendition="#i">corium</hi>) die im<lb/>
+Grunde doch nichts andres ist, als<lb/>
+das verdichtete, mit Nerven und Ge-<lb/>
+fässen durchwebte, <hi rendition="#i">Zellgewebe</hi> der<lb/>
+äusern Oberfläche des Körpers, recht<lb/>
+auffallend scheint. Vielleicht liegt<lb/>
+auch darin die seit <hi rendition="#k">Galen'</hi>s Zeiten<lb/>
+so oft versicherte Aehnlichkeit des<lb/>
+Geschmacks zwischen Menschen-<lb/>
+und Schweinefleisch u. dergl. m.<lb/>
+<pb n="55" facs="#f0067" xml:id="pb055_0001"/>
+Warum hingegen diese beiden<lb/>
+Geschöpfe von tausend andern Sei-<lb/>
+ten, auch auser der körperlichen<lb/>
+Bildung, so sehr von einander ver-<lb/>
+schieden sind, wird niemand fragen,<lb/>
+der die auszeichnenden eigenthümli-<lb/>
+chen Vorzüge aus der Physiologie<lb/>
+kennt, wodurch der Mensch, beson-<lb/>
+ders auch in Rücksicht der übrigen<lb/>
+edlern Arten von Lebenskräften,<lb/>
+der <hi rendition="#i">Reaction des Sensorii</hi> u. s. w. über<lb/>
+die ganze übrige thierische Schöpfung<lb/>
+erhaben wird.</p> 				<milestone unit="section" rendition="#hr"/><lb/>
+</div> 			<div n="1" type="part" xml:id="bl000111_10">
+<pb n="56" facs="#f0068" xml:id="pb056_0001"/>
+<head rendition="#c">X.<lb/>
+Ein Wort zur Beruhigung in<lb/>
+einer allgemeinen Familien-<lb/>
+Angelegenheit.</head><lb/>
+<p rendition="#no_indent">Es hat Leute gegeben, die ganz<lb/>
+ernstlich dawider protestirt haben<lb/>
+ihr eignes werthes ich mit Negern<lb/>
+und Hottentotten in eine gemein-<lb/>
+schaftliche Gattung (<hi rendition="#i">Species</hi>) im<lb/>
+Natursystem gesetzt zu sehen. Und<lb/>
+wiederum hats andere Leute gege-<lb/>
+ben, die gar kein Bedenken getragen<lb/>
+haben sich und den Orangutang für<lb/>
+Geschöpfe einer und eben derselben<lb/>
+Gattung zu erklären.</p> 				<p>Denn so sagt z. B. der berühmte<lb/>
+Philosoph und kreuzbrave Grillen-<lb/>
+fänger, Lord <hi rendition="#k">Monboddo</hi> mit dür-<lb/>
+ren Worten: <q type="preline">„Es ist meines Bedün-<lb/>
+kens unwiderredlich erwiesen, dass<lb/>
+<pb n="57" facs="#f0069" xml:id="pb057_0001"/>
+die Orangutangs mit unser einem<lb/>
+zu einerley <hi rendition="#i">Species</hi> gehören.“</q> 					<note place="foot" anchored="true" n="*)"> 												<p>– <q type="preline">„<hi rendition="#i">the ouran-outangs are profed to be of our<lb/>
+species by marks of humanity that I think<lb/>
+are incontestable</hi>. –“</q></p></note></p> 				<p>Hingegen konnte ein andrer (nur<lb/>
+nicht so kreuzbraver) Grillenfänger,<lb/>
+der weltberühmte <hi rendition="#i">philosophus per<lb/>
+ignem</hi> <hi rendition="#k">Theophrastvs Paracelsvs<lb/>
+Bombastvs</hi> nicht begreifen, dass al-<lb/>
+le Menschenkinder zu einer und der-<lb/>
+selben Stammrace gehören sollten,<lb/>
+und schuf sich daher zur Lösung die-<lb/>
+ses Zweifels auf dem Papier seine<lb/>
+<hi rendition="#i">zwey</hi> Adame.</p> 				<p>Nun könnte es zwar wohl schon<lb/>
+für manchen etwas zur Beruhigung<lb/>
+über diese allgemeine Familienange-<lb/>
+legenheit beytragen, wenn ich drey<lb/>
+Philosophen ganz anderer Art nenn-<lb/>
+te, die, so sehr verschieden  sie auch<lb/>
+sonst in manchen ihrer übrigen Mei-<lb/>
+<pb n="58" facs="#f0070" xml:id="pb058_0001"/>
+nungen waren, doch in diesem Punkt<lb/>
+vollkommen miteinander überein-<lb/>
+stimmten; vermuthlich weil es ein<lb/>
+Gegenstand der Naturgeschichte ist,<lb/>
+und alle dreye die grössten Natur-<lb/>
+kenner waren, die die Welt neuer-<lb/>
+lich verloren hat: <hi rendition="#k">Haller, Lin-<lb/>
+né</hi> und <hi rendition="#k">Büffon.</hi></p> 				<p>Alle dreye hielten den Menschen<lb/>
+vom Orangutang himmelweit ver-<lb/>
+schieden, und hingegen alle wahre<lb/>
+Menschen, Europäer, Neger ꝛc. für<lb/>
+blose Spielarten einer und eben-<lb/>
+derselben Stammgattung.</p> 				<p>Aber den mehresten Lesern ist wohl<lb/>
+mehr damit gedient, wenn sie hier<lb/>
+statt dreyer Namen, die drey Haupt-<lb/>
+regeln finden, die ich bey meinen.<lb/>
+Untersuchungen über diesen Gegen-<lb/>
+stand immer, und wie ich zu glauben<lb/>
+Ursache habe, mit dem grössten Nu-<lb/>
+tzen befolgt, und dadurch manchen<lb/>
+<pb n="59" facs="#f0071" xml:id="pb059_0001"/>
+sonst ziemlich gemeinen Fehlschluss<lb/>
+dabey glüklich vermieden habe.</p> 				<p>I. Man muss bey dieser Untersu-<lb/>
+chung durchaus immer die Physiolo-<lb/>
+gie der organisirten Körper über-<lb/>
+haupt vor Augen haben: darf nicht<lb/>
+blos am Menschen haften bleiben,<lb/>
+und thun, als wenn er der einzige<lb/>
+organisirte Körper in der Natur wä-<lb/>
+re; und etwa die Verschiedenheiten<lb/>
+in seinem Geschlecht befremdend und<lb/>
+räthselhaft finden, ohne zu beden-<lb/>
+ken, dass alle diese Verschiedenhei-<lb/>
+ten nicht um ein Haar auffallender<lb/>
+oder ungewöhnlicher sind, als die,<lb/>
+worin so tausend andre Gattungen<lb/>
+von organisirten Körpern, gleichsam<lb/>
+unter unsern Augen ausarten!</p> 				<p>II. Man darf nie blos ein paar<lb/>
+recht auffallend gegen einander ab-<lb/>
+<pb n="60" facs="#f0072" xml:id="pb060_0001"/>
+stechende Menschenracen ausheben,<lb/>
+und diese nun, mit Uebergehung<lb/>
+der Mittelracen, die die Verbindung<lb/>
+zwischen jenen machen, so allein<lb/>
+gegen einander aufstellen: sondern,<lb/>
+man muss nie vergessen, dass auch<lb/>
+nicht eine einzige der körperlichen<lb/>
+Verschiedenheiten bey irgend einer<lb/>
+Menschenvarietät sey, die nicht<lb/>
+durch so unendliche Nüancen all-<lb/>
+mählich in der andern ihre über-<lb/>
+fliesst, dass derjenige Naturforscher<lb/>
+oder Physiologe wohl noch gebohren<lb/>
+werden soll, der es mit Grund der<lb/>
+Wahrheit wagen dürfte eine be-<lb/>
+stimmte Grenze zwischen diesen<lb/>
+Nüancen und folglich selbst zwischen<lb/>
+ihren Extremen festzusetzen.</p> 				<p>III. Da bey Bestimmung der Va-<lb/>
+rietäten im Menschengeschlecht, so<lb/>
+gut wie in der übrigen Naturge-<lb/>
+schichte ohne <hi rendition="#i">anschauliche Kennt-<lb/>
+<pb n="61" facs="#f0073" xml:id="pb061_0001"/>
+nisse</hi> kein sicherer fester Tritt gedacht<lb/>
+werden kan, so ist es seit den 15 Jah-<lb/>
+ren, da ich mich mit dieser Unter-<lb/>
+suchung abgebe, die dritte Hauptre-<lb/>
+gel für mich gewesen, alles anzuwen-<lb/>
+den, um mir immer mehr und mehr<lb/>
+Subsidien zu diesem Behuf aus der<lb/>
+Natur selbst zu verschaffen.</p> 				<milestone unit="section" rendition="#hr"/><lb/>
+</div> 			<div n="1" type="part" xml:id="bl000111_11">
+<pb n="62" facs="#f0074" xml:id="pb062_0001"/>
+<head rendition="#c">XI.<lb/>
+* * *</head><lb/>
+<p rendition="#no_indent">Mein hochverehrter Herr College<lb/>
+der Hr. Hofr. <hi rendition="#k">Meiners</hi> hat hierin<lb/>
+manches anders eingesehen, das ich<lb/>
+meinen Leiern nicht vorenthalten<lb/>
+darf. Ich liefere also die Anmer-<lb/>
+kungen dieses berühmten Schriftstel-<lb/>
+lers, so wie er sie als Note zu einer<lb/>
+Abhandlung im Göttingischen histo-<lb/>
+rischen Magazin (VI. B. 3. St. S.<lb/>
+406-8) hat drucken lassen, und<lb/>
+schalte die meinigen behörigen Orts<lb/>
+zwischen ein.</p> 				<p>Der Hr. Hofrath sagt nemlich:</p> 				<p rendition="#l1em #small #gothic">Diese Abhandlung war schon zum Druck<lb/>
+fertig, als mir die Anzeige einer Vorle-<lb/>
+sung des Herrn Hofr. <hi rendition="#g">Blumenbach</hi><lb/>
+über die Schädel verschiedener Völker-<lb/>
+schaften im 3ten St. der Göttingischen ge-<lb/>
+lehrten Zeitungen zu Gesichte kam. In<lb/>
+<pb n="63" facs="#f0075" xml:id="pb063_0001"/>
+dieser Anzeige kommen mehrere Stellen<lb/>
+vor, die mich zu einigen Erklärungen<lb/>
+<hi rendition="#g">nöthigen</hi>. – Ich kann zwar das Jahr<lb/>
+nicht genau angeben, wann ich zuerst das<lb/>
+Studium der Geschichte des Menschen mit<lb/>
+Eifer zu treiben angefangen habe; allein<lb/>
+es ist doch schon sehr lange, seit ich be-<lb/>
+merkt habe, daß man ganze Völkerschaf-<lb/>
+ten eben so wenig, als einzelne Men-<lb/>
+schen, nach der Bildung eines einzigen<lb/>
+Theils des Cörpers, und wiederum daß<lb/>
+Man die eigenthümliche Bildung eines ge-<lb/>
+wissen Theils des Cörpers in ganzen Na-<lb/>
+tionen nicht nach einzelnen Knochen beur-<lb/>
+theilen könne: daß ferner nicht alle die<lb/>
+in den Türkischen Heeren dienen, oder den,<lb/>
+Namen der Neger tragen, wahre Türken<lb/>
+und Neger, seyen: und daß man endlich<lb/>
+aus einigen Neger-Schädeln gar nichts<lb/>
+sicheres und vollständiges für die Varietä-<lb/>
+ten der Neger, oder nur ihrer Köpfe<lb/>
+schließen könne, so lange es nicht ausge-<lb/>
+macht ist, ob die Neger, denen sie zuge-<lb/>
+hörten, in Afrika, oder West-Indien und<lb/>
+America geboren worden, und wenn in<lb/>
+Afrika, ob sie diesseits oder jenseits des<lb/>
+Aequators, und wenn diesseits, ob sie dies-<lb/>
+<pb n="64" facs="#f0076" xml:id="pb064_0001"/>
+seits oder jenseits des Sierra Liona gebo-<lb/>
+ren worden?</p> 				<p>Die eine dieser Bemerkungen, die<lb/>
+der Hr. Hofr. schon seit sehr lange<lb/>
+gemacht zu haben versichert, dass<lb/>
+nemlich nicht alle die in den türki-<lb/>
+schen Heeren dienen, wahre Türken<lb/>
+seyen, ist in der That eben so unbe-<lb/>
+zweifelt richtig, als dass nicht alle<lb/>
+die von der Insel <hi rendition="#i">Formosa</hi> geschrie-<lb/>
+ben haben, wahre Formosaner wa-<lb/>
+ren. –</p> 				<p>Wenn nun aber <hi rendition="#i">zuverlässige Be-<lb/>
+obachter,</hi> (wie sie der Hr. Hofr. un-<lb/>
+ten verlangt) den Köpfen der wah-<lb/>
+ren Türken eine auszeichnende durch<lb/>
+die Kunst bewirkte Form zuschrei-<lb/>
+ben, und ich erhalte ein paar Sche-<lb/>
+del aus dem türkischen Heer von<lb/>
+Oczakow, und diese Schedel haben<lb/>
+jene auszeichnende Form so, dass sie<lb/>
+auch ein Blinder schon auf den ersten<lb/>
+Griff durchs Gefühl anerkennen<lb/>
+<pb n="65" facs="#f0077" xml:id="pb065_0001"/>
+müsste, und sie kommen darin nicht<lb/>
+nur beide mit einander, sondern auch<lb/>
+mit einer dritten calvaria in meiner<lb/>
+Sammlung überein, die von einem<lb/>
+türkischen Officier ist, der hundert<lb/>
+Jahre vorher bey Fünfkirchen blieb,<lb/>
+und alle dreye wieder mit den Por-<lb/>
+trätmässigen Abbildungen wahrer<lb/>
+Türken von Meisterhand, die ich<lb/>
+vor mir habe; so muss ich entweder<lb/>
+glauben, dass meine Schedel auch<lb/>
+wahre Türkenschedel sind, – oder<lb/>
+aber, dass ein curioser Zufall, wie<lb/>
+der, der einst die sechs gekrönten<lb/>
+Häupter im <hi rendition="#i">Candide</hi> zusammen-<lb/>
+brachte, mir drey sceletirte Häupter<lb/>
+von Nicht-Türken, und doch mit<lb/>
+allen auszeichnenden Characteren<lb/>
+wahrer Türken, mitten aus den<lb/>
+türkischen Heeren, in meine Samm-<lb/>
+lung nach Göttingen gespielt hat.</p> 				<p>Was die Negerschedel in eben<lb/>
+dieser Sammlung betrift, so ist es<lb/>
+<pb n="66" facs="#f0078" xml:id="pb066_0001"/>
+nach den mir davon zugekommenen<lb/>
+Nachrichten so gut wie ausgemacht,<lb/>
+dass sie Sämtlich in America jung<lb/>
+worden. <hi rendition="#i">Zu meinem Zweck</hi> ist es<lb/>
+hinreichend, das ich weis, und bey<lb/>
+zweyen derselben, die ich mit Haut<lb/>
+und Haar bekommen, und die ge-<lb/>
+rade die mindst auffallende Gestal-<lb/>
+tung haben, durch die dabey in<lb/>
+Spiritus auf bewahrten weichen Thei-<lb/>
+le, Augen, Ohren ꝛc. zeigen kan,<lb/>
+dass sie wahren Negern, und nicht et-<lb/>
+wa Mulatten, oder Europäern mit<lb/>
+negerartiger Bildung des Kopfs, zu-<lb/>
+gehörten.</p> 				<p>Die übrigen Bemerkungen die der<lb/>
+Herr Hofr. in dem obigen Absatz<lb/>
+ebenfalls schon seit sehr lange ge-<lb/>
+macht zu haben versichert, sind mir,<lb/>
+wie man zu sagen pflegt, wie aus der<lb/>
+Seele geschrieben.</p>
+<pb n="67" facs="#f0079" xml:id="pb067_0001"/>
+<p>Es kan keinen eifrigern Freund der<lb/>
+natürlichen Methode in der Natur-<lb/>
+geschichte, und namentlich in dem-<lb/>
+jenigen Theil derselben, der das<lb/>
+Menschengeschlecht betrift, geben,<lb/>
+als mich, da ich so oft, und noch<lb/>
+gerade in der gedachten Societäts-<lb/>
+vorlesung selbst, für den Urtheilen<lb/>
+nach der Bildung eines einzigen<lb/>
+Theils des Körpers gewarnt; über-<lb/>
+haupt aber kein Stück in meiner<lb/>
+Sammlung zur Menschengeschichte<lb/>
+anders gebraucht habe, als wozu es<lb/>
+gut ist. Nimmermehr werde ich<lb/>
+z. B. mir einfallen lassen, aus meinen<lb/>
+Schedeln zu demonstriren, ob sie wei-<lb/>
+land gerne Schweinefleisch oder wirk-<lb/>
+liche Schweinereyen gegessen ꝛc. –<lb/>
+da ich alle <hi rendition="#i">solche</hi> Untersuchungen zur<lb/>
+Menschengeschichte ein für allemahl<lb/>
+dem philosophischen Sammler-Geist<lb/>
+der Herren <hi rendition="#k">Demeunier</hi> u. a. über-<lb/>
+lasse.</p>
+<pb n="68" facs="#f0080" xml:id="pb068_0001"/>
+<p>Hingegen wenn die Frage von<lb/>
+Nationalbildung der Menschenvarie-<lb/>
+täten ist, da thun sie, deucht mir,<lb/>
+ganz gute Dienste: so wie man denn<lb/>
+überhaupt meines wissens, des Glau-<lb/>
+bens ist, dass es im Studium der <hi rendition="#i">Na-<lb/>
+tur</hi>geschichte gar wohl gethan sey<lb/>
+die <hi rendition="#i">Natur</hi> selbst zu consultiren.</p> 				<p>Der Herr Hofr. selbst scheint das<lb/>
+zu fühlen, da er fortfährt:</p> 				<p rendition="#l1em #small #gothic">Ich gebe gerne zu, daß wir alle, die<lb/>
+wir uns mit dem Studio des Menschen<lb/>
+beschäfftigen, sicherere <hi rendition="#g">Tritte</hi> thun wür-<lb/>
+den, wenn wir uns von allen Völkern,<lb/>
+die wir untersuchen wollen, eine <hi rendition="#g">anschau-<lb/>
+liche</hi> Kenntniß verschaffen könnten; al-<lb/>
+lein da dieses nun einmal nicht möglich<lb/>
+ist, so müssen wir uns, wie andere Ge-<lb/>
+schichtforscher, und Geschichtschreiber, da,<lb/>
+wo unsere eigene Erfahrung uns verläßt,<lb/>
+mit den Nachrichten von fähigen und<lb/>
+glaubwürdigen Zeugen begnügen.</p>
+<pb n="69" facs="#f0081" xml:id="pb069_0001"/>
+<p>Richtig: <hi rendition="#i">wo</hi> unsere eigene Erfah-<lb/>
+rung uns verlässt, <hi rendition="#k">da</hi> müssen wir<lb/>
+uns mit den Nachrichten von fähi-<lb/>
+gen und glaubwürdigen Zeugen be-<lb/>
+gnügen. – So macht es wohl jeder<lb/>
+Naturforscher in der Welt, wenn<lb/>
+ihn die eigne Erfahrung über Wall-<lb/>
+fische und hundert andre Geschöpfe<lb/>
+verlässt.</p> 				<p>Aber gerade dieses hier so vortreff-<lb/>
+lich an seinem rechten Orte stehende<lb/>
+<hi rendition="#k">wenn,</hi> scheint doch die unabbittli-<lb/>
+che Verpflichtung des Naturforschers<lb/>
+vorauszusetzen, dass er auch alles<lb/>
+anwenden müsse, was in seinen Kräf-<lb/>
+ten ist, um vor allen Dingen sich so<lb/>
+viele eigene Erfahrung <hi rendition="#i">als möglich,</hi><lb/>
+zu verschaffen.</p> 				<p>Alle die Nachrichten von noch so<lb/>
+fähigen und glaubwürdigen Zeugen,<lb/>
+sind im Grunde doch für den Wahr-<lb/>
+heitsuchenden Naturforscher nichts<lb/>
+<pb n="70" facs="#f0082" xml:id="pb070_0001"/>
+mehr und nichs weniger als eine Art<lb/>
+symbolischer Bücher, die er mit gu-<lb/>
+ten Gewissen nie anders als <hi rendition="#i">quatenus</hi><lb/>
+unterschreiben kan, in so fern sie<lb/>
+nemlich mit dem geoffenbarten Wort<lb/>
+im Buch der Natur übereinstimmen,<lb/>
+und um diess zu beurtheilen muss<lb/>
+er sich in diesem Buch so viel Bele-<lb/>
+senheit und dadurch eben so viel Er-<lb/>
+fahrung als möglich, verschaffen,<lb/>
+und das habe ich denn meines wis-<lb/>
+sens in meinem Studium der Natur-<lb/>
+geschichte des Menschengeschlechts<lb/>
+auch nach besten Vermögen zu thun<lb/>
+gesucht.</p> 				<p>Da ich als Doctorand meine Dis-<lb/>
+sertation <hi rendition="#i">de generis humani varietate<lb/>
+nativa</hi> ausarbeitete, war alles was<lb/>
+damals in meinem Vermögen stand,<lb/>
+die dazu gehörigen Nachrichten von<lb/>
+Zeugen, die man für fähig und<lb/>
+glaubwürdig hielt, zusammen zu<lb/>
+schreiben und zu vergleichen. Aber<lb/>
+<pb n="71" facs="#f0083" xml:id="pb071_0001"/>
+schon damals habe ich das Unvoll-<lb/>
+kommene meiner zwar gutgemein-<lb/>
+ten jugendlichen Arbeit, den Man-<lb/>
+gel der nöthigen <hi rendition="#i">Avtopsie</hi> keineswe-<lb/>
+ges verkannt oder geläugnet. – Ich<lb/>
+hatte wenigstens gefürchtet dass den<lb/>
+Lesern der Fuchs mit den Trauben<lb/>
+beyfallen möchte.</p> 				<p>Ich habe seitdem diesem Mangel so<lb/>
+viel an mir gewesen ist, möglichst<lb/>
+abzuhelfen gesucht, ohne dabey den<lb/>
+unablässigen Gebrauch der Reisebe-<lb/>
+schreiber und andrer fähigen und<lb/>
+glaubwürdigen Zeugen im mindesten<lb/>
+zu vernachlässigen. Vielmehr habe<lb/>
+ich zu diesem Zweck etwas gethan,<lb/>
+was vielleicht nicht viele thun, dass<lb/>
+ich, nachdem ich ihrer schon eine<lb/>
+Menge gelesen hatte, vor ohngefähr<lb/>
+zehn Jahren anfing, die ganze sehr<lb/>
+beträchtliche Sammlung von Reise-<lb/>
+beschreibungen auf der hiesigen Uni-<lb/>
+versitäts-Bibliothek von vorne bis zu<lb/>
+<pb n="72" facs="#f0084" xml:id="pb072_0001"/>
+Ende durchzugehen, so dass ich meh-<lb/>
+rere Jahre hindurch immer ein halbes<lb/>
+Dutzend nach dem andern, so wie<lb/>
+sie der Ordnung nach im Fache<lb/>
+folgten, zu Hause hatte, und die, so<lb/>
+ich nicht vorher schon benutzt hatte,<lb/>
+zu meinem Gebrauch excerpirte, so<lb/>
+dass ich nun seitdem blos die immer<lb/>
+neu hinzukommenden gelegentlich<lb/>
+nachzuholen suche.</p> 				<p>Der Herr Hofr. sagt weiter:</p> 				<p rendition="#l1em #small #gothic">Nach der geringen Kenntniß, die ich<lb/>
+von der Kritik habe, sind die übereinstim-<lb/>
+menden Zeugnisse von zuverlässigen Beob-<lb/>
+achtern, die viele Hunderte oder Tausende<lb/>
+desselbigen Volks Jahre lang vor Augen<lb/>
+hatten, die also bey allen Verschiedenhei-<lb/>
+ten von Individuen das Uebereinstimmen-<lb/>
+de in der Bildung des Cörpers, und in<lb/>
+den Anlagen des Geistes und Herzens<lb/>
+wahrnehmen konnten, eine viel reichere<lb/>
+und bessere Quelle für das Studium des<lb/>
+Menschen, als einer, oder einige Schädel<lb/>
+von ungewisser Abkunft.</p>
+<pb n="73" facs="#f0085" xml:id="pb073_0001"/>
+<p>Nach der gleichfalls geringen<lb/>
+Kenntniss die auch ich von der Kri-<lb/>
+tik habe, unterschreibe ich diesen Pa-<lb/>
+ragraphen von ganzen Herzen, und<lb/>
+bin noch jetzt wie von je des festen<lb/>
+Glaubens, dass die <hi rendition="#i">übereinstimmenden</hi><lb/>
+Zeugnisse von <hi rendition="#i">zuverlässigen</hi> Beobach-<lb/>
+tern mehr sagen wollen, als einer<lb/>
+oder einige Schedel <hi rendition="#i">von ungewisser<lb/>
+Abkunft.</hi></p> 				<p>Daher kan man auch nicht behut-<lb/>
+samer seyn, als ich es bin, <hi rendition="#i">erstens,</hi><lb/>
+alle die Schedel in meiner Sammlung<lb/>
+die von <hi rendition="#i">ungewisser</hi> Abkunft scheinen,<lb/>
+schlechterdings von den unbezwei-<lb/>
+felten zu sondern: – und <hi rendition="#i">zweytens</hi><lb/>
+von diesen letztern selbst auch den<lb/>
+pertinenten Gebrauch zu machen,<lb/>
+und daher z. B. nicht leicht von ihrer<lb/>
+Form <hi rendition="#i">auf die Anlagen des Herzens</hi> zu<lb/>
+schliesen.</p>
+<pb n="74" facs="#f0086" xml:id="pb074_0001"/>
+<p rendition="#l1em #small #gothic">Keine Nation ist sich selbst so gleich in<lb/>
+allen ihren Mitgliedern, daß nicht unter<lb/>
+mehrern Individuen auch ohne Knochen-<lb/>
+Krankheiten, und andere gewaltsame Ver-<lb/>
+letzungen beträchtliche unterschiede in An-<lb/>
+sehung der ganzen Natur, und besonders<lb/>
+der Bildung einzelner Theile des Cörpers<lb/>
+eintreten sollten; und eben deßwegen ist es<lb/>
+nothwendig, daß wenn man sich eine <hi rendition="#g">an-<lb/>
+schauliche</hi> Kenntniß von den unterschei-<lb/>
+denden Eigenthümlichkeiten ganzer Natio-<lb/>
+nen verschaffen will, man nicht bloß eini-<lb/>
+ge Schädel, sondern viele Individua<lb/>
+beobachte, und mit einander vergleiche.</p> 				<p>Eben die unwiderredliche Wahr-<lb/>
+heit auch <hi rendition="#i">dieser</hi> vortreflichen Bemer-<lb/>
+kung ist längst Ursache gewesen,<lb/>
+dass ich mich bey meinen Sammlun-<lb/>
+gen bey leibe nicht blos auf Schedel<lb/>
+allein eingeschränkt, sondern alles<lb/>
+was zum Studium dieses Theils der<lb/>
+Thiergeschichte gehört, Embryonen&gt;<lb/>
+allerhand weiche Theile des Körpers,<lb/>
+Haare ꝛc. so wie auch Gypsabgüsse,<lb/>
+<pb n="75" facs="#f0087" xml:id="pb075_0001"/>
+porträtmäsige Abbildungen von man-<lb/>
+cherley Völkern u. dergl. m. zusam-<lb/>
+men zu bringen gesucht und noch<lb/>
+täglich mehr Suche, und dann diese<lb/>
+vielen Individua sorgfältig beobachte<lb/>
+und sowohl untereinander als mit<lb/>
+den Nachrichten von fähigen und<lb/>
+glaubwürdigen Zeugen auf unsrer<lb/>
+Universitäts-Bibliothek vergleiche.<lb/>
+Und darum habe ich nun auch ange-<lb/>
+fangen einen Theil dieser Sammlun-<lb/>
+gen in getreuen Abbildungen be-<lb/>
+kannt zu machen, um dadurch andern<lb/>
+Naturforschern und Physiologen Ge-<lb/>
+legenheit zur weitern Vergleichung<lb/>
+mit immer mehr und mehr Indivi-<lb/>
+duen zu geben.</p> 				<p rendition="#l1em #small #gothic">Wer Lust hat, das menschliche Geschlecht<lb/>
+nach seiner Art einzutheilen, der mag es<lb/>
+entweder nach den verschiedenen Schatti-<lb/>
+tirungen von Farbe, oder nach den Kö-<lb/>
+pfen, oder nach den verschiedenen Bildun-<lb/>
+gen von Nasen, oder Ohren thun; nur<lb/>
+muß es andern nicht verargt werden, wenn<lb/>
+<pb n="76" facs="#f0088" xml:id="pb076_0001"/>
+sie glauben, daß Eintheilungen, die sich<lb/>
+auf einzelne körperliche Merkmale grün-<lb/>
+den, nicht so sicher und fruchtbar sind, als<lb/>
+solche, in welchen man auf alle unterschei-<lb/>
+dende Merkmale des äussern und innern<lb/>
+Menschen, so weit sie bekannt sind, Rück-<lb/>
+sicht genommen hat.</p> 				<p>Eine wiederholte Bestätigung der<lb/>
+obigen, mir wie gesagt gleichsam aus<lb/>
+der Seele geschriebnen Warnung für<lb/>
+Eintheilung der Geschöpfe nach <hi rendition="#i">ein-<lb/>
+zelnen</hi> körperlichen Merkmalen.</p> 				<p>Auch wüsst ich nicht, dass es mir<lb/>
+je verargt worden wäre, dass ich in<lb/>
+meinem ganzen Studium der Natur-<lb/>
+geschichte immer am liebsten auf alle<lb/>
+unterscheidende Merkmale Rücksicht<lb/>
+nehme, – so weit ich sie mir zuför-<lb/>
+derst aus der <hi rendition="#i">Avtopsie,</hi> und wo mich,<lb/>
+wie obgedacht, <hi rendition="#i">meine Erfahrung ver-<lb/>
+lässt,</hi> aus den Nachrichten von fähi-<lb/>
+gen und glaubwürdigen Zeugen,<lb/>
+bekannt zu machen im Stande bin.</p>
+<pb n="77" facs="#f0089" xml:id="pb077_0001"/>
+<p>Der Herr Hofr. schliesst nun mit<lb/>
+den Worten:</p> 				<p rendition="#l1em #small #gothic">Wenn man sich auf ein einziges Merk-<lb/>
+mal einschränkt; so kann man leicht auf<lb/>
+den Einfall kommen, daß es nicht viel<lb/>
+mehr der Mühe werth sey, die ursprüng-<lb/>
+lichen Unterschiede von Menschen-Raçen,<lb/>
+als die Spiel-Arten von gewissen Blumen<lb/>
+aufzusuchen: ein Einfall, der den gerech-<lb/>
+ten Verdacht erwecken würde, daß sein Ur-<lb/>
+heber mit der ganzen Untersuchung selbst<lb/>
+nur gespielt habe.</p> 				<p>Ich hatte gesagt: <q type="preline">„<hi rendition="#k">so gut</hi> man<lb/>
+die Spielarten von Nelken und Tul-<lb/>
+pen classificirt, <hi rendition="#k">eben so füglich</hi><lb/>
+auch die Spielarten im Menschen-<lb/>
+geschlecht.“</q> – diess sind meine<lb/>
+Worte, und hierwider wird hoffent-<lb/>
+lich niemand etwas einzuwenden<lb/>
+haben.</p> 				<p>Ein verdächtiger Kunstgriff würde<lb/>
+es aber seyn, wenn mir jemand diese<lb/>
+<hi rendition="#i">meine</hi> Worte dahin verdrehen woll-<lb/>
+<pb n="78" facs="#f0090" xml:id="pb078_0001"/>
+te, als ob <hi rendition="#i">ich</hi> es nicht viel mehr der<lb/>
+Mühe werth hielte, die ursprüngli-<lb/>
+chen Unterschiede von Menschenra-<lb/>
+cen, als die Spielarten von gewissen<lb/>
+Blumen aufzusuchen: – ein Kunst-<lb/>
+griff, der den gerechten Wunsch er-<lb/>
+wecken würde, dass sein Urheber<lb/>
+lieber alles in der Welt <hi rendition="#i">gespielt</hi>, als<lb/>
+sich denselben erlaubt haben möchte.</p> 				<milestone unit="section" rendition="#hr"/><lb/>
+</div> 			<div n="1" type="part" xml:id="bl000111_12">
+<pb n="79" facs="#f0091" xml:id="pb079_0001"/>
+<head rendition="#c">XII.<lb/>
+Eintheilung des Menschenge-<lb/>
+schlechts in <hi rendition="#i">fünf</hi> Spielarten.</head><lb/>
+<p rendition="#no_indent">Nun wieder auf die obigen drey<lb/>
+Regeln zu kommen, die eben den<lb/>
+Anlass zu dieser kleinen Excursion<lb/>
+gegeben haben, so bin ich bey der<lb/>
+vieljährigen fleissigsten Beobachtung<lb/>
+derselben zwar zu keiner neuen<lb/>
+frappanten Entdeckung, aber was<lb/>
+mir für mein Studium eben so lieb<lb/>
+seyn muss, zur Ueberzeugung von<lb/>
+einer alten nur neuerlich hin und wie-<lb/>
+der bezweifelten naturhistorischen<lb/>
+Wahrheit gekommen.</p> 				<p>Ich finde nemlich nach allem was<lb/>
+ich, soviel möglich zuförderst durch<lb/>
+anschauliche Kenntniss, und wo ich<lb/>
+mir diese nicht verschaffen konnte, aus<lb/>
+den Nachrichten fähiger und glaub-<lb/>
+würdiger Zeugen, über die körperli-<lb/>
+<pb n="80" facs="#f0092" xml:id="pb080_0001"/>
+chen Verschiedenheiten im Menschen-<lb/>
+geschlecht, gelernt und mit den kör-<lb/>
+perlichen Verschiedenheiten bey an-<lb/>
+dern Gattungen von organisirten<lb/>
+Körpern, zumal unter den Hausthie-<lb/>
+ren verglichen habe, – keine einzi-<lb/>
+ge Verschiedenheit bey jenem die<lb/>
+man nicht auch bey manchen von<lb/>
+diesen und zwar als unverkennbar-<lb/>
+ste Folge der Ausartung, bemerken<lb/>
+sollte.</p> 				<p>Folglich sehe ich auch nicht den<lb/>
+mindsten Scheingrund, warum ich,<lb/>
+die Sache naturhistorisch und phy-<lb/>
+siologisch betrachtet, nur irgend be-<lb/>
+zweifeln dürfte, dass alle Völker al-<lb/>
+ler bekannten Himmelsstriche zu<lb/>
+einer und eben derselben gemein-<lb/>
+schaftlichen Stammgattung (<hi rendition="#i">Species</hi>)<lb/>
+gehören.</p> 				<p>So gut man aber, wie gesagt, doch<lb/>
+die Spielarten von Nelken und Tul-<lb/>
+pen classificirt, eben so füglich auch<lb/>
+<pb n="81" facs="#f0093" xml:id="pb081_0001"/>
+die Spielarten die im Menschenge-<lb/>
+schlecht aus dieser gemeinschaftli-<lb/>
+chen Stammgattung entstanden sind.</p> 				<p>Nur dass, da alle auf den ersten<lb/>
+Blick auch noch so auffallende Ver-<lb/>
+schiedenheiten im Menschenge-<lb/>
+schlecht bey näherer Beleuchtung<lb/>
+durch die unmerklichsten Uebergän-<lb/>
+ge und Mittel-Nüancen ineinander<lb/>
+fliesen, keine andere als sehr will-<lb/>
+kührliche Grenzen zwischen diesen<lb/>
+Spielarten gezogen werden können,<lb/>
+zumal, wenn man wie billig dabey<lb/>
+nicht blos auf eine oder die andere,<lb/>
+sondern nach den Eigenschaften ei-<lb/>
+nes natürlichen Systems auf alle kör-<lb/>
+perliche Kennzeichen zugleich, Rück-<lb/>
+sicht nimmt.</p> 				<p>so weit ich mir inzwischen die<lb/>
+Völker der Erde, zumal nach den<lb/>
+Heuerten Reisen nach dem stillen O-<lb/>
+cean bekannt zu machen gesucht ha-<lb/>
+<pb n="82" facs="#f0094" xml:id="pb082_0001"/>
+be, so lassen sie sich meines wissens<lb/>
+am allernatürlichsten unter folgende<lb/>
+fünf Spielarten bringen:</p> 				<p rendition="#indent-1">I. Die <hi rendition="#i">Europäer</hi> und <hi rendition="#i">westlichen A-<lb/>
+siaten,</hi> disseits des Obi, des Cas-<lb/>
+pischen Meers und des Ganges,<lb/>
+nebst den <hi rendition="#i">Nord-Africanern.</hi> Mit<lb/>
+einem Wort <hi rendition="#i">ohngefähr</hi> die Be-<lb/>
+wohner der den alten Griechen<lb/>
+und Römern bekannten Welt.<lb/>
+Sie sind von Farbe mehr oder<lb/>
+weniger weiss, und nach den<lb/>
+Europäischen Begriffen von<lb/>
+Schönheit die bestgebildetsten<lb/>
+Menschen.</p> 				<p rendition="#indent-1">II. Die <hi rendition="#i">übrigen Asiaten,</hi> jenseits<lb/>
+des Obi, des Ganges ꝛc. nebst<lb/>
+den <hi rendition="#i">nordlichsten Americanern</hi> (an<lb/>
+der weltlichen Küste nemlich<lb/>
+etwa bis nach Alashka und an<lb/>
+der ostlichen bis Labrador.) Sie<lb/>
+sind meist gelbbraun, dünnbe-<lb/>
+<pb n="83" facs="#f0095" xml:id="pb083_0001"/>
+haart, haben platte Gesichter<lb/>
+und enggeschlitzte Augenlieder.</p> 				<p rendition="#indent-1">III. Die <hi rendition="#i">übrigen Africaner;</hi> mehr<lb/>
+oder weniger schwarz, mit stär-<lb/>
+ker prominirenden Untertheil<lb/>
+des Gesichts, wulstigen Lippen,<lb/>
+stumpfer Nase, und meist krau-<lb/>
+sen Haar.</p> 				<p rendition="#indent-1">IV. Die <hi rendition="#i">übrigen Americaner;</hi> meist<lb/>
+von Kupferrother Farbe, man-<lb/>
+nichfaltiger meist durch Kunst<lb/>
+bewirkten Form des Kopfs, und<lb/>
+straffen schlichten Haar.</p> 				<p rendition="#indent-1">V. Die <hi rendition="#i">Südsee-Insulaner</hi> oder die<lb/>
+Bewohner des fünften Welt-<lb/>
+theils, bis wieder gen Ost-Indi-<lb/>
+en. Sie sind meist schwarzbraun,<lb/>
+breitnasicht, und grosmaulicht<lb/>
+mit dichten Haarwuchs und<lb/>
+starkausgewirkten Gesichtszü-<lb/>
+gen.</p></div> 			<div n="1" type="part" xml:id="bl000111_13">
+<pb n="84" facs="#f0096" xml:id="pb084_0001"/>
+<head rendition="#c">XIII.<lb/>
+Ueber die Negern insbesondre.</head><lb/>
+<p rendition="#no_indent">Auch Gottes Ebenbild, wie <hi rendition="#k">Ful-<lb/>
+ler</hi> sagt, wenn gleich aus Eben-<lb/>
+holz gearbeitet.</p> 				<p>Man hat diess zuweilen bezwei-<lb/>
+feln und dagegen behaupten wollen,<lb/>
+die Negern seyen in ihrem Körper-<lb/>
+bau specifisch von den übrigen Men-<lb/>
+schen verschieden und müssten die-<lb/>
+sen auch in der Anlage ihrer stum-<lb/>
+pfern Geistesfähigkeiten bey weiten<lb/>
+nachstehen.</p> 				<p>Eigne Beobachtung, verglichen<lb/>
+mit den Nachrichten glaubwürdiger<lb/>
+präjudizloser Zeugen, haben mich<lb/>
+aber längst vom Ungrund dieser dop-<lb/>
+pelten Behauptung überführt.</p>
+<pb n="85" facs="#f0097" xml:id="pb085_0001"/>
+<p>Ich brauche nicht alles das zu<lb/>
+wiederholen, was ich anderwärts<lb/>
+ausführlich zur Widerlegung dersel-<lb/>
+ben gesagt habe: nur eins und das<lb/>
+andre darf ich nicht ganz unberührt<lb/>
+lassen.</p> 				<p>Ich kenne z. B. keinen einzigen<lb/>
+auszeichnenden körperlichen Chara-<lb/>
+cter der den Negern eigenthümlich<lb/>
+wäre und sich nicht auch bey man-<lb/>
+chen andern noch so entfernten Völ-<lb/>
+kerschaften finden sollte: keinen, der<lb/>
+den Negern in gleichem Grade ge-<lb/>
+mein wäre, und worin sie nicht wie-<lb/>
+derum mit andern Völkern durch<lb/>
+unmerkliche Uebergänge gleichsam<lb/>
+zusammenfliessen sollten, so wie je-<lb/>
+de andre Menschenvarietät mit ihren<lb/>
+benachbarten Völkerschaften zusam-<lb/>
+men fliesst.</p> 				<p>Die Farbe der Haut z. B. haben<lb/>
+sie mit den Einwohnern von Mada-<lb/>
+<pb n="86" facs="#f0098" xml:id="pb086_0001"/>
+gascar, Neu-Guinea, Neu-Holland<lb/>
+ꝛc. mehr oder weniger gemein. Und<lb/>
+von den schwärzesten Negern in<lb/>
+Nord-Guinea geht das durch unmerk-<lb/>
+liche Nuancen, bis endlich zu den<lb/>
+Mauren, unter welchen manche, zu-<lb/>
+mal die Weiber, nach <hi rendition="#k">Shaw</hi>'s Ver-<lb/>
+sicherung die weisseste Haut haben,<lb/>
+die man sich vorstellen kan.</p> 				<p>Das krause Wollhaar ist erstens<lb/>
+bekanntlich nicht allen Negern ge-<lb/>
+mein, denn selbst von denen in<lb/>
+Nigritien sagt <hi rendition="#k">Barbot,</hi> dass sie theils<lb/>
+krauses, theils schlichtes Haar ha-<lb/>
+ben: und eben das bestätigt <hi rendition="#k">Ulloa</hi><lb/>
+von den Negern im Spanischen Ame-<lb/>
+rica. Zweytens aber ist das soge-<lb/>
+nannte Wollhaar auch bey weiten<lb/>
+nicht etwa den Negern eigen, son-<lb/>
+dern findet sich eben so bey manchen<lb/>
+Völkern der <hi rendition="#i">fünften</hi> Spielart wie z.<lb/>
+B. bey den Ygoloten auf den Phi-<lb/>
+lippinen, bey den Einwohnern der<lb/>
+<pb n="87" facs="#f0099" xml:id="pb087_0001"/>
+Charlotten-Inseln u. a.m. und<lb/>
+eben so auch bey manchen von der<lb/>
+<hi rendition="#i">dritten</hi> Varietät die doch nicht zu den<lb/>
+Negern gezählt werden. So bey<lb/>
+manchen Abissiniern wie z. B. beym<lb/>
+berühmten <hi rendition="#k">Abbas Gregorivs</hi> von<lb/>
+welchem ich das schöne Bildnis, das<lb/>
+<hi rendition="#k">Heiss</hi> im J. 1691 nach <hi rendition="#k">van Sand</hi><lb/>
+gestochen, vor mir habe<note place="foot" anchored="true" n="*)"> 												<p>– <q>„<hi rendition="#i">crispos capillos vt caeteri aethiopes habebat</hi>“</q><lb/>
+– sagt sein Freund <hi rendition="#k">Lvdolph</hi> in der Schil-<lb/>
+derung die er von ihm giebt.</p></note>. Und<lb/>
+so sagt auch <hi rendition="#k">Sparrmann</hi> von den<lb/>
+Hottentotten, dass ihr Haar noch mehr<lb/>
+Wollartig sey als der Neger ihres;<lb/>
+das ich durch die Gemälde von Hot-<lb/>
+tentotten und Caffern bestätigt fin-<lb/>
+de, die vor einigen Jahren mit dem<lb/>
+Pflanzentransport vom Cap an den<lb/>
+vorigen Kaiser geschickt worden,<lb/>
+und wovon ich durch die Güte des<lb/>
+Hrn. Berg R. <hi rendition="#k">von Jacquin</hi> genaue<lb/>
+Copien erhalten habe.</p>
+<pb n="88" facs="#f0100" xml:id="pb088_0001"/>
+<p>Was die Gesichtsbildung der Ne-<lb/>
+ger betrift, so ist freylich der Abstand<lb/>
+auffallend wenn man gerade einen<lb/>
+hässlichen Neger (deren es freylich<lb/>
+so gut giebt als häßliche Europäer)<lb/>
+einem griechischen Ideal entgegen<lb/>
+stellt. Aber diess ist eben gegen eine<lb/>
+der obigen Regeln gefehlt. Sobald man<lb/>
+hingegen auch hier die Uebergänge<lb/>
+verfolgt, so schwindet das Auffallen-<lb/>
+de zwischen zwey gegen einander<lb/>
+contrastirenden Extremen gar sehr,<lb/>
+– und freylich Extreme müssen hier<lb/>
+so gut seyn als bey allen andern Ge-<lb/>
+schöpfen die in mancherley Varietä-<lb/>
+ten ausarten. –</p> 				<p>Hingegen kan ich versichern, dass<lb/>
+unter den Negern und Negressen<lb/>
+die ich mit Aufmerksamkeit betrach-<lb/>
+ten können, und ich habe ihrer<lb/>
+nicht wenige gesehen, so wie unter<lb/>
+den porträtmässigen Abbildungen<lb/>
+und Silhouetten von andern, und<lb/>
+<pb n="89" facs="#f0101" xml:id="pb089_0001"/>
+unter den Negerschedeln in meiner<lb/>
+Sammlung und denen die ich sonst<lb/>
+gesehen und denen wovon ich Zeich-<lb/>
+nungen und Kupferstiche vor mir<lb/>
+habe, nicht <hi rendition="#i">zweye</hi> sind die einander<lb/>
+in der Bildung völlig glichen, son-<lb/>
+dern dass sie alle von einander ver-<lb/>
+schieden sind, und durch mancherley<lb/>
+Abstufungen mit der Gestaltung an-<lb/>
+drer Menschenkinder bis zur ange-<lb/>
+nehmsten Bildung unvermerkt zusam-<lb/>
+men fliessen. Von der Art war z. B.<lb/>
+eine Creole die ich in Yverdun<lb/>
+beym Hrn. Chevalier <hi rendition="#k">Treytor-<lb/>
+rens</hi> gesprochen, die derselbe mit<lb/>
+aus St. Domingo gebracht und deren<lb/>
+beide Eltern aus Congo waren.<lb/>
+Ein Gesicht, das durchaus – selbst<lb/>
+in der Nase und den etwas stärkern<lb/>
+Lippen, – doch so gar nichts auf-<lb/>
+fallendes, geschweige denn unan-<lb/>
+genehmes hatte, dass die gleichen<lb/>
+Züge bey einer weissen Haut, gewiss<lb/>
+allgemein gefallen haben müssten,<lb/>
+<pb n="90" facs="#f0102" xml:id="pb090_0001"/>
+gerade so wie <hi rendition="#k">le Maire</hi> in seiner<lb/>
+Reise nach Senegal und Gambien<lb/>
+sagt: dass es Negressen gebe, die,<lb/>
+von der Farbe abstrahirt, so wohl<lb/>
+gebildet seyen als unsre Europäi-<lb/>
+schen Damen. Auch <hi rendition="#k">Adanson,</hi><lb/>
+dieser genaue Naturforscher, be-<lb/>
+stätigt diess von den Senegambi-<lb/>
+schen Negressen: <q type="preline">„sie haben“</q> sagt er,<lb/>
+<q type="preline">„schöne Augen, kleinen Mund und<lb/>
+Lippen, und wohl proportionirte<lb/>
+Gesichtszüge: man findet welche<lb/>
+von einer vollkommenen Schön-<lb/>
+heit<note place="foot" anchored="true" n="*)"><p>– <q>„<hi rendition="#i">d'une beauté parfaite</hi>“</q> –</p></note>: sie sind voll Lebhaftig-<lb/>
+keit und haben vorzüglich einen<lb/>
+leichten freyen gefälligen Anstand.“</q><lb/>
+Nun gerade so war die Negresse in<lb/>
+Yverdun und mehrere andere Ne-<lb/>
+gressen und Negern, die ich seitdem<lb/>
+näher kennen zu lernen Gelegen-<lb/>
+heit gehabt, und die mich zugleich<lb/>
+von der Warheit dessen überführt<lb/>
+haben, was so viele unverdächtige<lb/>
+<pb n="91" facs="#f0103" xml:id="pb091_0001"/>
+Zeugen von den guten Geistesanla-<lb/>
+gen und Fähigkeiten dieser unsrer<lb/>
+schwarzen Brüder versichern, als<lb/>
+worin sie so gut wie in der <hi rendition="#i">natürlichen</hi><lb/>
+Gutherzigkeit schwerlich einer an-<lb/>
+dern Spielart im Menschengeschlech-<lb/>
+te im Ganzen genommen nachstehen.<lb/>
+Ich sage sehr bedächtlich im Ganzen<lb/>
+genommen, und <hi rendition="#i">natürliche</hi> Guther-<lb/>
+zigkeit, die nemlich nicht auf dem<lb/>
+Transportschiff und in den Westindi-<lb/>
+schen Zuckerplantagen durch die<lb/>
+viehische Brutalität ihrer weissen<lb/>
+Henker so betäubt oder erstickt<lb/>
+worden, dass diese weissen Henker,<lb/>
+so wie ohne Herz so auch obendrein<lb/>
+ohne Kopf seyn müssten, wenn sie<lb/>
+bey einer solchen Behandlung noch<lb/>
+Treue und Liebe von diesen Sclaven<lb/>
+verlangen wollten. Der grosse helle<lb/>
+Beobachter der Natur, <hi rendition="#k">Aublet,</hi> be-<lb/>
+ruft sich in seiner meisterhaften treu-<lb/>
+en Schilderung des natürlich-guten.<lb/>
+Characters der Neger, auf die Con-<lb/>
+<pb n="92" facs="#f0104" xml:id="pb092_0001"/>
+fessionen von Europäern die in der<lb/>
+Algirischen Gefangenschaft gewesen<lb/>
+waren und aufrichtig gestanden hat-<lb/>
+ten, das sie in dieser Lage gerade<lb/>
+eben so bösherzig und gegen ihre<lb/>
+damaligen Patrone gerade eben so<lb/>
+gesinnt gewesen wie ein Neger in<lb/>
+diesem Fall es nur irgend gegen den<lb/>
+seinigen in den Colonien seyn könne.<lb/>
+Hingegen habe ich nun seit einem<lb/>
+halben Jahre täglich eine brave Ne-<lb/>
+gresse unter meinen Augen, der ich<lb/>
+oft in Gedanken das sage, was <hi rendition="#k">Wie-<lb/>
+land'</hi>s Democrit seiner guten sanft-<lb/>
+herzigen krauslockigen Schwarzen<lb/>
+sagt, und was auch von andern prä-<lb/>
+judizlosen Beobachtern unverdorbe-<lb/>
+ner Schwarzen so oft bestätigt wor-<lb/>
+den, dass es sich nicht der Mühe<lb/>
+lohnt, die Zeugnisse darüber zusam-<lb/>
+menzuthürmen.</p> 				<p>Eher lohnt es sich wohl der<lb/>
+Mühe, einige nicht so allgemein<lb/>
+<pb n="93" facs="#f0105" xml:id="pb093_0001"/>
+bekannte merkwürdige Beyspiele<lb/>
+von der Perfectibilität der Geistes-<lb/>
+kräfte und den Talenten der Neger<lb/>
+hier aufzustellen, die freylich auch<lb/>
+niemanden unerwartet seyn werden,<lb/>
+wer in den Nachrichten der zuver-<lb/>
+lässigsten Reisenden von den natürli-<lb/>
+chen Anlagen der Neger bewandert<lb/>
+ist. So sagt z. B. der classische äus-<lb/>
+serst genaue <hi rendition="#k">Barbot</hi> in seinem gros-<lb/>
+sen Werke von Guinea: – <q>„die<lb/>
+Schwarzen haben grösstentheils<lb/>
+Kopf und Verstand genug; sie fassen<lb/>
+leicht und richtig, und ihr Gedächt-<lb/>
+nis ist von einer fast unbegreiflichen<lb/>
+Stärke: denn ob sie schon weder le-<lb/>
+sen noch schreiben können, so blei-<lb/>
+ben sie doch selbst in der grössten Ei-<lb/>
+le der Geschäfte und des Handels in<lb/>
+ihrer Ordnung und werden selten<lb/>
+irre.“</q> – <q>„Seit sie so oft von den Eu-<lb/>
+ropäern betrogen worden, sind sie<lb/>
+nun im Handel und Wandel mit<lb/>
+denselben beständig auf ihrer Hut,<lb/>
+<pb n="94" facs="#f0106" xml:id="pb094_0001"/>
+untersuchen sorgfältig alle unsre<lb/>
+Waaren, Stück für Stück, ob sie alle<lb/>
+in Güte und Maas die bedungene<lb/>
+Probe halten: z. B. ob die Tücher und<lb/>
+Zeuge dauerhaft sind, ob sie in Haar-<lb/>
+lem oder in Leiden gefärbt worden,<lb/>
+u. dergl. m.“</q> – <q>„kurz sie prüfen<lb/>
+jedes Ding mit so viel Klugheit und<lb/>
+Geschick als irgend nur ein Europäi-<lb/>
+scher Handelsmann es thun kan.“</q> –</p> 				<p>Ihr Geschick zu Erlernung aller<lb/>
+Art von feiner Handarbeit ist bekannt.<lb/>
+Man rechnet dass wohl 9/10 von den<lb/>
+gewöhnlichen Handwerksleuten in<lb/>
+Westindien, Neger sind.</p> 				<p>In Rücksicht ihrer Talente zur<lb/>
+Musik brauche ich mich nicht erst<lb/>
+auf die Beyspiele zu berufen, da Neger<lb/>
+in America durch dieselben so viel<lb/>
+verdient, dass sie sich für grosse Sum-<lb/>
+men frey kaufen können: da es selbst<lb/>
+in Europa nicht an Beyspielen von<lb/>
+<pb n="95" facs="#f0107" xml:id="pb095_0001"/>
+Schwarzen fehlt, die sich als wahre<lb/>
+Virtuosen gezeigt. Der junge <hi rendition="#k">Frei-<lb/>
+dig</hi> in Wien ist als ein meisterhaf-<lb/>
+ter Conzertist auf dem Violon und<lb/>
+der Violine sehr bekannt: und eben<lb/>
+dieser trefliche junge Mann ist ein<lb/>
+ausnehmender Zeichner der sich mit<lb/>
+dem grössten Glück auf der dortigen<lb/>
+Academie unter <hi rendition="#k">Schmutzer</hi> gebil-<lb/>
+det hat.</p> 				<p>Nun und ebenfalls in Wien lebt<lb/>
+ja der würdige und so sehr ausge-<lb/>
+bildete alte <hi rendition="#k">Angelo Soliman,</hi> Ge-<lb/>
+sellschafter beym Fürsten <hi rendition="#k">Alois<lb/>
+Lichtenstein.</hi></p> 				<p>Als Beyspiele von Anlagen der Ne-<lb/>
+ger zu mathematischen und physica-<lb/>
+lischen Wissenschaften, nenne ich<lb/>
+blos den Russischen Artillerie-Obri-<lb/>
+sten <hi rendition="#k">Hannibal</hi> und den Neger <hi rendition="#k">Lislet</hi><lb/>
+auf <hi rendition="#i">Isle de France,</hi> der wegen seiner<lb/>
+vortreflichen meteorologischen Be-<lb/>
+<pb n="96" facs="#f0108" xml:id="pb096_0001"/>
+obachtungen von der Pariser Acade-<lb/>
+mie der Wissenschaften zu ihrem Cor-<lb/>
+respondenten ernannt worden.</p> 				<p>Hr. D. <hi rendition="#k">Rush</hi> in Philadelphia ar-<lb/>
+beitet jetzt an der Geschichte des<lb/>
+Neger <hi rendition="#k">Fuller</hi> in Maryland, der we-<lb/>
+gen seiner ausnehmenden Fertigkeit<lb/>
+im Rechnen neulich so bekannt wor-<lb/>
+den. Um denselben auf die Probe<lb/>
+zu setzen fragte man ihn in einer Ge-<lb/>
+sellschaft, wie viel Secunden ein<lb/>
+Mann gelebt habe der 70 Jahr und<lb/>
+so und so viel Monate ꝛc. alt worden.<lb/>
+In anderthalb Minuten gab <hi rendition="#k">Fuller</hi><lb/>
+die Zahl an. Man rechnete nach,<lb/>
+aber das Resultat war nicht dasselbe.<lb/>
+– <q>„Sie haben doch nicht vergessen“</q><lb/>
+sagte der Neger, <q>„die Schalttage mit<lb/>
+in Anschlag zu bringen?“</q> diese wur-<lb/>
+den nun erst supplirt und nun traf<lb/>
+alles auf ein Haar zu.</p> 				<p>Von den nicht gemeinen Einsich-<lb/>
+ten der Neger in die practische Arz-<lb/>
+<pb n="97" facs="#f0109" xml:id="pb097_0001"/>
+neykunst haben <hi rendition="#k">Boerhaave</hi> und<lb/>
+<hi rendition="#k">de Haen</hi> die vortheilhaftesten Zeug-<lb/>
+nisse gegeben. Eben so sind Neger<lb/>
+als sehr geschickte Wundärzte be-<lb/>
+kannt worden. Und die gedachte<lb/>
+hübsche Negresse zu Yverdun kennt<lb/>
+man weit und breit in der welschen<lb/>
+Schweiz als eine vortrefliche Hebam-<lb/>
+me von soliden Kenntnissen und einer<lb/>
+feinen geübten Hand.</p> 				<p>Ich übergehe den Wesleyischen<lb/>
+Methodisten – Prediger <hi rendition="#k">Madoks</hi>, so<lb/>
+wie die Negern und Negressen die<lb/>
+Gedichte geschrieben haben. Herr<lb/>
+<hi rendition="#k">von Haller</hi> gedenkt einer Negresse<lb/>
+die Dichterin war, und von dreyen<lb/>
+Negern habe ich selbst englische,<lb/>
+holländische und lateinische Gedich-<lb/>
+te in Händen.</p> 				<p>Aber einiger andrer Neger die als<lb/>
+Schriftsteller berühmt worden sind,<lb/>
+und deren Werke ich besitze, darf<lb/>
+ich noch besonders gedenken:</p>
+<pb n="98" facs="#f0110" xml:id="pb098_0001"/>
+<p>Unser seel. <hi rendition="#k">Hollmann</hi> hat, da<lb/>
+er noch Prof. in Wittenberg war, a.<lb/>
+1734 den Neger A<hi rendition="#k">nt. Wilh. Amo</hi><lb/>
+zum D. der Weltweisheit creirt, der<lb/>
+sich sowohl in Schriften als auch als<lb/>
+Docent vortheilhaft gezeigt hat, und<lb/>
+von welchem ich zwey Abhandlun-<lb/>
+gen vor mir habe, wovon zumal die<lb/>
+eine viele unerwartete und wohl-<lb/>
+verdaute Belesenheit in den besten<lb/>
+physiologischen Werken jener Zeit<lb/>
+verrätht.<note place="foot" anchored="true" n="*)"> 											<p>Der Titel der einen ist: <hi rendition="#i">Diss. inaug. philo-<lb/>
+sophica de humanae mentis απαϑεια s. sen-<lb/>
+sionis ac facultatis sentiendi in mente humana<lb/>
+absentia, et earum in corpore nostro organico<lb/>
+ac vino praesentia, auctore</hi> <hi rendition="#k">Ant. Guil</hi>.<lb/>
+<hi rendition="#k">Amo</hi> <hi rendition="#i">Guinea-Afro.</hi> Die andere führt den<lb/>
+Titel: <hi rendition="#i">Disp. Philosophica continens ideam<lb/>
+distinctam eorum quae competunt vel menti<lb/>
+vel corpori nostro vino vel organico.</hi></p></note> In einer Nachricht von<lb/>
+<hi rendition="#k">Amo'</hi>s Leben, die bey dieser Gele-<lb/>
+genheit im Namen des academischen<lb/>
+Concilii gedruckt worden, wird sei-<lb/>
+<pb n="99" facs="#f0111" xml:id="pb099_0001"/>
+ner ausnehmenden Rechtschaffenheit,<lb/>
+so wie seinen Fähigkeiten, seinem Fleis<lb/>
+und seiner Gelehrsamkeit grosses Lob<lb/>
+ertheilt. Es heisst z. B. von seinen<lb/>
+philosophischen Vorlesungen <hi rendition="#i">excussis<lb/>
+tam veterum quam nouorum platitis,<lb/>
+optima quaeque selegit, selecta enucleate<lb/>
+ac dilucide interpretatus est</hi> u. s. w.</p> 				<p>In den 40<hi rendition="#sup">er</hi> Jahren studirte der<lb/>
+Neger I<hi rendition="#k">ac. Elisa Ioh. Capitein</hi> zu<lb/>
+Leiden Theologie, der als ein acht-<lb/>
+jähriger Knabe geraubt, an einen Scla-<lb/>
+venhändler am St. Andreas Fluss ver-<lb/>
+kauft worden, und so durch die dritte<lb/>
+Hand nach Holland gekommen war.<lb/>
+Ich habe mehrere Predigten<note place="foot" anchored="true" n="*)"> 												<p><hi rendition="#i">Uitgewrogte Predikatien in's Gravenhage en<lb/>
+t'Ouderkerk aan den Amstel gedaan door</hi><lb/>
+<hi rendition="#k">Iac. Elisa Io. Capiteein</hi>, <hi rendition="#i">Africaansche<lb/>
+Moor, beroepen Predikant op D'Elmina aan<lb/>
+bet Kasteel St. George,</hi> Amst. 1742.4.</p></note> und<lb/>
+Gedichte von ihm, die ich in ihrem<lb/>
+Werth beruhen lasse; interessanter<lb/>
+<pb n="100" facs="#f0112" xml:id="pb100_0001"/>
+aber und berühmter ist seine <hi rendition="#i">Disser-<lb/>
+tatio politico-theologica de seruitute li-<lb/>
+bertati christianae non contraria</hi> die er<lb/>
+den 10. März 1742 in Leiden öffent-<lb/>
+lich vertheidigte und wovon ich die<lb/>
+holländische Uebersetzung habe<note place="foot" anchored="true" n="*)"> 												<p><hi rendition="#i">staatkundig-Godgeleerd Onderzoekschrift over<lb/>
+de Slaverny, als niet strydig tegen de Chri-<lb/>
+stelyke Vryheid.</hi> Leiden, 1742. 4. mit dem<lb/>
+schön gestochenen Bildniss des Verf. von<lb/>
+F. v. <hi rendition="#k">Bleyswyck</hi>. Ein andres Portrait von<lb/>
+ihm besitze ich auf einem treflichen Blatt,<lb/>
+das <hi rendition="#k">Tanjé</hi> nach P. <hi rendition="#k">van Dyk</hi> gestochen hat.</p></note>,<lb/>
+wovon damals vier Auflagen gleich<lb/>
+hinter einander vergriffen worden.<lb/>
+Er ward hierauf in Amsterdam zum<lb/>
+Prediger nach D'Elmina ordinirt,<lb/>
+wohin er bald nachher abreisste. –<lb/>
+Der Herr Prof. <hi rendition="#k">Brugmans</hi> in Lei-<lb/>
+den der mir die Schriften dieses ordi-<lb/>
+nirten Negers verschaft hat, schreibt<lb/>
+mir dabey, dass nach der Hand von<lb/>
+seinem dortigen Schicksal eine dop-<lb/>
+pelte Sage gegangen: als ob er nem-<lb/>
+<pb n="101" facs="#f0113" xml:id="pb101_0001"/>
+lich entweder ermordet worden, oder<lb/>
+aber wieder unter seine wilden<lb/>
+Landsleute gezogen und dieser ihren<lb/>
+Glauben und Leben gegen das in Eu-<lb/>
+ropa erlernte vertauscht habe. –<lb/>
+Im letztern Fall gäbe seine Geschich-<lb/>
+te das Gegenstück zu des Europä-<lb/>
+isch erzognen und cultivirten Hotten-<lb/>
+totten seiner, dessen völlig gleichen<lb/>
+Patriotismus <hi rendition="#k">Rousseau</hi> verewigt<lb/>
+hat<note place="foot" anchored="true" n="*)"> 												<p>s. das Titelkupfer zu seinem <hi rendition="#i">Discours sur<lb/>
+l'inegalité parmi les hommes.</hi></p></note>; und dieser unwiderstehliche<lb/>
+Zug zu den väterlichen Penaten wä-<lb/>
+re wenigstens weit weniger befrem-<lb/>
+dend als dass wie bekannt, ehedem<lb/>
+da die Caraiben noch ein ansehnli-<lb/>
+ches und kriegerisches Volk aus-<lb/>
+machten, junge Engländer die von<lb/>
+ihnen geraubt worden, und eine<lb/>
+Zeitlang mit ihnen gelebt hatten und<lb/>
+eingewohnt waren, an diesem rohen<lb/>
+Stand der Natur so grossen Ge-<lb/>
+schmack fanden, dass sie gar nicht<lb/>
+<pb n="102" facs="#f0114" xml:id="pb102_0001"/>
+wieder ausgewechselt zu werden,<lb/>
+und zu ihren Landsleuten zurück-<lb/>
+zukehren verlangten.</p> 				<p>Neuerlich sind zwey vortrefliche<lb/>
+Neger in England als Schritsteller<lb/>
+berühmt worden. <hi rendition="#k">Sancho</hi> und<lb/>
+<hi rendition="#k">Vassa.</hi> Jener durch seine Briefe:<lb/>
+dieser durch seine eigne Lebensbe-<lb/>
+schreibung, die ich beide durch die<lb/>
+Güte meines Freundes des Hrn. D.<lb/>
+<hi rendition="#k">Crichton</hi> in London erhalten habe.</p> 				<p><hi rendition="#k">Ignatius Sancho</hi> war 1729 am<lb/>
+Bord eines Sclavenschiffs gebohren,<lb/>
+das von Guinea nach dem Spanischen<lb/>
+Westindien segelte. In Carthagena<lb/>
+ward er vom Bischof getauft, ver-<lb/>
+lohr aber seine Mutter sehr bald an<lb/>
+einer endemischen Krankheit, und<lb/>
+sein Vater befreyte sich vom Scla-<lb/>
+venjoch durch einen freywilligen<lb/>
+Tod. Der junge Ignaz kam schon<lb/>
+in seinem dritten Jahre nach Eng-<lb/>
+<pb n="103" facs="#f0115" xml:id="pb103_0001"/>
+land, wo sich durch glückliche Con-<lb/>
+juncturen der Herzog von <hi rendition="#i">Montagu,<lb/>
+s</hi>o wie die Herzogin von <hi rendition="#i">Queensber-<lb/>
+ry</hi> und die von <hi rendition="#i">Northumberland s</hi>ei-<lb/>
+ner annahmen und in den Stand<lb/>
+setzten, dass er eine glückliche Hei-<lb/>
+rath treffen und durch einen kleinen<lb/>
+Handel seine zahlreiche Familie an-<lb/>
+ständig erhalten und doch dabey sei-<lb/>
+ne Neigung zu den schönen Wissen-<lb/>
+schaften und Künsten (besonders<lb/>
+zur Musik und Zeichenkunst) befrie-<lb/>
+digen konnte. <hi rendition="#k">Sterne</hi> und <hi rendition="#k">Garrick</hi><lb/>
+waren seine Freunde. Vorzüglich<lb/>
+hatte er leidenschaftliche Liebe fürs<lb/>
+Theater, hat auch selbst ein paar<lb/>
+Stücke dafür verfertigt, und es war<lb/>
+blos ein Fehler in seiner Aussprache<lb/>
+Schuld, dass er nicht wie er wollte,<lb/>
+selbst als <hi rendition="#i">Othello</hi> und <hi rendition="#i">Oroonoko</hi> auf-<lb/>
+treten konnte. Er starb im Dec.<lb/>
+1780; und nach seinem Tode hat ein<lb/>
+Frauenzimmer von seiner Bekannt-<lb/>
+schaft anderthalbhundert: der interes-<lb/>
+<pb n="104" facs="#f0116" xml:id="pb104_0001"/>
+santsten Briefe aus den letzten 13<lb/>
+Jahren seines Lebens von seinen<lb/>
+Freunden an die sie geschrieben wa-<lb/>
+ren noch zusammen gebracht, und sie<lb/>
+zugleich nebst einigen seiner Aufsätze<lb/>
+die in englische Blätter wie z. B.<lb/>
+in den <hi rendition="#i">public Advertiser,</hi> in die <hi rendition="#i">Mor-<lb/>
+ning post</hi> u. a. eingerückt worden, her-<lb/>
+ausgegeben<note place="foot" anchored="true" n="*)"> 												<p>Die dritte Ausg. die ich vor mir habe, er-<lb/>
+schien in London bey Nichols unter dem<lb/>
+Titel: <hi rendition="#i">Letters of the late</hi> <hi rendition="#k">Ignatius San-<lb/>
+cho</hi>, <hi rendition="#i">an African. to which are prefixed Me-<lb/>
+moirs of his Life.</hi> 1784. in Octav.</p></note>. Unter den letztern<lb/>
+ist auch einer über den unglücklichen<lb/>
+D. <hi rendition="#k">Dodd</hi> dessen Predigten <hi rendition="#k">Sancho</hi><lb/>
+fleisig besucht hatte; so wie ein an-<lb/>
+derer zu Gunsten eines dürftigen<lb/>
+gebrechlichen 86jährigen Nachkom-<lb/>
+men von <hi rendition="#k">Hugo Grotius. –</hi> Da<lb/>
+kein einziger jener Briefe (die übri-<lb/>
+gens die mannichfaltigsten Gegen-<lb/>
+stände aus dem häuslichen Leben, so<lb/>
+wie aus Litteratur, politischen Ange-<lb/>
+<pb n="105" facs="#f0117" xml:id="pb105_0001"/>
+legenheiten ꝛc. betreffen) jemals<lb/>
+vom Verf. selbst zum Druck be-<lb/>
+stimmt war, so verlieht sich von<lb/>
+selbst dass sie nicht alle von gleichen<lb/>
+Gehalt und Politur seyn können.<lb/>
+Aber gerade um so besser lernt man<lb/>
+den braven <hi rendition="#k">Sancho</hi> daraus kennen.<lb/>
+Ein paar Stellen darf ich wohl als<lb/>
+Probe seiner Denkungs- und Schreib-<lb/>
+art hier ausheben:</p> 				<p>Im XIII<hi rendition="#sup">ten</hi> Br. vom 18. Jul. 1772<lb/>
+schreibt er einem jungen Freund un-<lb/>
+ter andern: –</p> 				<p><q type="preline">„Ich danke Ihnen für ihre Güte<lb/>
+gegen meine armen schwarzen Brü-<lb/>
+der. Ich schmeichle mir dass Sie<lb/>
+dieselben nie undankbar finden wer-<lb/>
+den: sie handeln gemeiniglich nach<lb/>
+ihren Gefühlen: liebt doch so-<lb/>
+gar ein Hund die so ihm gut<lb/>
+begegnen; und wenn man Ne-<lb/>
+gern eben das thut so werden sie<lb/>
+<pb n="106" facs="#f0118" xml:id="pb106_0001"/>
+sicherlich bey aller ihrer Unwissen-<lb/>
+heit und Knechtschaft diess eben so<lb/>
+erwiedern. Wenn ich nach meinen<lb/>
+eigenen Gefühlen urtheilen darf,<lb/>
+so sollte ich denken, gute Behand-<lb/>
+lung würde alles bey ihnen ausrich-<lb/>
+ten. <hi rendition="#i">Meine</hi> Seele wenigstens schmilzt<lb/>
+bey Güte; aber das gerade Gegen-<lb/>
+theil, ich gesteh es mit Beschämung,<lb/>
+macht mich wieder zum Wilden.“</q><lb/>
+u. s. w.</p> 				<p>An einen andern Freund schreibt<lb/>
+er im LIV. Br. vom 24. Oct. 77.</p> 				<p><q type="preline">„<hi rendition="#k">Mme Sancho</hi> und ihre Töchter<lb/>
+befinden sich so, so. – die gute Mut-<lb/>
+ter würde sich besser befinden wenn<lb/>
+sie nicht zu viel sorgte. Ich bin ihr<lb/>
+Barometer. Wenn meiner Brust<lb/>
+ein Seufzer entwischt, so wird er<lb/>
+immer durch eine Thräne in ihren<lb/>
+Augen beantwortet. Oft nehme<lb/>
+ich daher Munterkeit an um ihre<lb/>
+<pb n="107" facs="#f0119" xml:id="pb107_0001"/>
+Empfindsamkeit mit einem lächeln<lb/>
+aufzuheitern, ein lächeln das vor<lb/>
+20 Jahren mich bezauberte, und das,<lb/>
+– merken Sie wohl! – nachdem<lb/>
+ich es nun 20 Jahre genossen habe,<lb/>
+noch immer mein höchstes Ver-<lb/>
+gnügen ausmacht.“</q></p> 				<p>Der neueste, und für mich wenig-<lb/>
+stens, allerinteressantste Schriftsteller<lb/>
+unter den Negern ist endlich der<lb/>
+oben gedachte <hi rendition="#k">Gustav Vassa</hi><lb/>
+der seine überaus merkwürdige Le-<lb/>
+bensgeschichte im verwichnen Jahre<lb/>
+in London in zwey Bänden heraus-<lb/>
+gegeben hat, wovon auch ohngeach-<lb/>
+tet der 400 Subscribenten gleich zwey<lb/>
+Ausgaben hinter einander erschienen<lb/>
+sind.<note place="foot" anchored="true" n="*)"> 												<p>Die zweyte Ausg. die ich besitze führt den<lb/>
+Titel: <hi rendition="#i">the interesting Narrative of the Life 							<lb/>
+<pb n="108" facs="#f0120" xml:id="pb108_0001"/>
+of</hi> <hi rendition="#k">Olaudah Equiano</hi>, <hi rendition="#i">or</hi> <hi rendition="#k">Gustavus Vassa</hi>,<lb/>
+<hi rendition="#i">the African. written by himself.</hi></p></note> 					<hi rendition="#k">Vassa'</hi>s Character und<lb/>
+Temperament ist eben so von <hi rendition="#k">San-<lb/>
+cho's</hi> seinem verschieden als beider<lb/>
+ihre äusserst sprechenden Bildnisse<lb/>
+von einander verschieden sind: des<lb/>
+letztern seins von <hi rendition="#k">Bartolozzi</hi> nach<lb/>
+<hi rendition="#k">Gainsborough</hi>, und des ersten sei-<lb/>
+nes von <hi rendition="#k">Orme</hi> nach <hi rendition="#k">Denton</hi> gesto-<lb/>
+chen. Beides zwar herzlich gutmü-<lb/>
+thige brave Menschen; aber <hi rendition="#k">San-<lb/>
+cho</hi> doch weit mehr jovialisch auf-<lb/>
+geweckt, offen. Bey <hi rendition="#k">Vassa</hi> hinge-<lb/>
+gen mehr gesetzter Ernst der fast an<lb/>
+Trübsinn grenzt. Jener im vieljäh-<lb/>
+rigen Umgang mit der feinern aufge-<lb/>
+klärtern Welt und den Musen. Die-<lb/>
+ser ohne alle jene Politur und Auf-<lb/>
+klärung, vielmehr nicht frey von<lb/>
+manchem Aberglauben, dabey aber<lb/>
+voll der ungeheucheltsten Gottes-<lb/>
+furcht. Jener in einer ganz beque-<lb/>
+men häuslichen Lage. Dieser ein<lb/>
+Ball des Schicksals, der seit seinem<lb/>
+<pb n="109" facs="#f0121" xml:id="pb109_0001"/>
+II<hi rendition="#sup">ten</hi> Jahre in vier Welttheilen her-<lb/>
+umgeworfen und von vielen seiner<lb/>
+weissen Mitmenschen oft aufs grau-<lb/>
+samste gemishandelt und betrogen<lb/>
+worden. Der aber bey alle dem<lb/>
+jammervollen Unglück das er erfah-<lb/>
+ren dennoch gesteht: – <q type="preline">„wäre ich<lb/>
+ein Europäer so würde ich sagen,<lb/>
+ich habe viel gelitten; vergleiche<lb/>
+ich aber mein Loos mit der mehr-<lb/>
+sten meiner Landsleute ihrem, so<lb/>
+sehe ich mich als einen <hi rendition="#i">besondern<lb/>
+Günstling des Himmels</hi> an und er-<lb/>
+kenne die erbarmende Vorsehung<lb/>
+in jedem Vorfall meines Lebens.“</q> –</p> 				<p>Herr <hi rendition="#k">Vassa</hi> ist 1745 im König-<lb/>
+reich <hi rendition="#i">Benin</hi> gebohren, ward im 11<hi rendition="#sup">ten<lb/>
+</hi>Jahr nebst seiner Schwester geraubt<lb/>
+aber bald von ihr auf ewig getrennt,<lb/>
+dann von einer Hand in die andere<lb/>
+verkauft, bis er nach ohngefähr ei-<lb/>
+nem halben Jahr an die Küste und<lb/>
+von da auf ein Sclavenschiff gebracht<lb/>
+<pb n="110" facs="#f0122" xml:id="pb110_0001"/>
+und so nach <hi rendition="#i">Barbados</hi> transportirt<lb/>
+ward. 1757 kam er zum erstenmal<lb/>
+nach England wo sich zumal zwey<lb/>
+Mamsell <hi rendition="#k">Guerin</hi>, so wie nachher<lb/>
+da er sich in Montserrat frey gekauft<lb/>
+hatte, besonders der würdige (durch<lb/>
+seine Methode das Seewasser süss<lb/>
+zu machen allgemein berühmte) D.<lb/>
+<hi rendition="#k">Irving</hi> seiner annahmen. Mit letz-<lb/>
+tern machte er (unter den Comman-<lb/>
+do des damaligen Captn. <hi rendition="#k">Phipps</hi><lb/>
+nachherigen Ld. <hi rendition="#k">Mulgrave</hi>) die<lb/>
+merkwürdige Untersuchungsreise<lb/>
+nach Spitzbergen, und nachher eine<lb/>
+nicht minder interessante Reise zu<lb/>
+den <hi rendition="#i">Moskito-</hi>Indianern auf <hi rendition="#i">Terra fir-<lb/>
+ma,</hi> u. a.m. Mit einem natürlich<lb/>
+guten Beobachtungsgeiste verbindet<lb/>
+er eine brennende Wissbegierde, da-<lb/>
+her die seiner Lebensgeschichte ein-<lb/>
+geschalteten Auszüge aus seinen Rei-<lb/>
+sejournalen, zumal auch die naive<lb/>
+Schilderung die er von manchem, ei-<lb/>
+nem Neger freylich unerwarteten An-<lb/>
+<pb n="111" facs="#f0123" xml:id="pb111_0001"/>
+blick und Auftritt giebt, dieselbe<lb/>
+eben so interessant als unterhaltend<lb/>
+machen.</p> 				<p>Ich darf ein paar Stellen daraus<lb/>
+übersetzen: die eine aus dem 1sten B.<lb/>
+wie er im Aug. 59. der Seeschlacht<lb/>
+zwischen Admiral <hi rendition="#k">Boscawen</hi> und<lb/>
+<hi rendition="#k">le Clue</hi> bey Lagos an der Portugi-<lb/>
+sischen Küste auf dem Mitländischen<lb/>
+Meere beygewohnt.</p> 				<p>– <q type="preline">„Meine Stelle während des<lb/>
+Gefechtes war auf dem mittlern<lb/>
+Verdeck, wo ich nebst einem an-<lb/>
+dern Buben postirt war um das Pul-<lb/>
+ver nach der entferntsten Canone<lb/>
+zu bringen, und hier war ich Zeuge<lb/>
+von dem schrecklichen Schicksal<lb/>
+mehrerer meiner Cameraden, die<lb/>
+binnen einem Augenblik zerschmet-<lb/>
+tert und in die Ewigkeit versetzt<lb/>
+wurden. Ich kam zum Glück un-<lb/>
+versehrt durch, ob gleich die Zeit<lb/>
+<pb n="112" facs="#f0124" xml:id="pb112_0001"/>
+über, Kugeln und Splitter um mich<lb/>
+rum flogen. Gegen Ende der<lb/>
+Action ward mein Herr verwundet,<lb/>
+und ich musste zusehen wie er<lb/>
+runter zum Wundarzt getragen<lb/>
+ward und durfte doch so gern ich<lb/>
+ihm beygestanden hätte, meinen<lb/>
+Posten nicht verlassen. Bey diesem<lb/>
+Geschäffte riskirten mein Camera-<lb/>
+de und ich eine halbe Stunde hin-<lb/>
+durch alle Augenblicke das ganze<lb/>
+Schiff in die Luft zu sprengen.<lb/>
+Denn von den Patronen die wir<lb/>
+aus dem Kasten nahmen, waren<lb/>
+viele durchgescheuert so dass das<lb/>
+Pulver daraus aufs Verdeck bey die<lb/>
+Luntentonnen lief und wir zuletzt<lb/>
+kaum Wasser genug hatten es im-<lb/>
+mer darauf zu giesen. Auch wa-<lb/>
+ren wir bey diesem Geschäffte den<lb/>
+feindlichen Canonen sehr ausge-<lb/>
+setzt, da wir immer fast die Länge<lb/>
+des ganzen Schiffs durchpassiren<lb/>
+mussten um das Pulver an Ort und<lb/>
+<pb n="113" facs="#f0125" xml:id="pb113_0001"/>
+Stelle zu bringen. Ich musste da-<lb/>
+her gewärtig seyn dass jede Minute<lb/>
+meine letzte seyn könnte; zumal<lb/>
+wenn ich so um mich rum unsre<lb/>
+Leute stürzen sah. Um mich so<lb/>
+viel möglich zu schützen hielt ichs<lb/>
+anfangs für rathsam nicht eher nach<lb/>
+dem Pulver zu laufen als wenn die<lb/>
+Franzosen von der Seite her so<lb/>
+eben gefeuert hätten, um dann erst<lb/>
+während sie wieder ladeten mein<lb/>
+Pulver zu holen. Aber ich er-<lb/>
+kannte doch sogleich diese Vorsicht<lb/>
+für unnütz, und da ich mich mit<lb/>
+dem Gedanken ermunterte dass mir<lb/>
+eben so gut eine Todesstunde als<lb/>
+eine Geburtsstunde bestimmt sey,<lb/>
+so warf ich alle Furcht oder Todes-<lb/>
+gedanken ab, und that die ganze<lb/>
+Zeit durch mein Geschäfte muthig<lb/>
+und beherzt; und stellte mir dage-<lb/>
+gen das Vergnügen vor wenn ich<lb/>
+glücklich davon und wieder nach<lb/>
+London kommen sollte, wie ich da<lb/>
+<pb n="114" facs="#f0126" xml:id="pb114_0001"/>
+– den Miss <hi rendition="#k">Guerins</hi> meine über-<lb/>
+standnen Lebensgefahren erzählen<lb/>
+wollte.“</q> –</p> 				<p>Aus dem II<hi rendition="#sup">ten</hi> B. wähle ich seine<lb/>
+herzlich gut gemeynten Versuche den<lb/>
+Sohn des Moskiten-Königs zu bekeh-<lb/>
+ren mit dem er die Reise nach <hi rendition="#i">Terra<lb/>
+firma</hi> machte.</p> 				<p>– <q type="preline">„Ich machte mit dem jungen<lb/>
+Manne so gute Fortschritte, dass<lb/>
+wenn ich des Nachts zu Bette ging<lb/>
+und er schon zu Bette war, er im<lb/>
+blossen Hemde wieder aufstand<lb/>
+blos um mit mir zu bethen. Und<lb/>
+eben so kam er in dieser Absicht<lb/>
+allemal erst zu mir ehe er in die<lb/>
+Cajüte mit der Gesellschaft zu Ti-<lb/>
+sche ging. Das freute mich herz-<lb/>
+lich und ich bat Gott sehr um seine<lb/>
+Bekehrung. Auch schöpfte ich des-<lb/>
+halb die beste Hoffnung da ich täg-<lb/>
+lich allen Anschein zu einer er-<lb/>
+wünschten Aenderung bey ihm spür-<lb/>
+te, und mir die Lift des Satans noch<lb/>
+<pb n="115" facs="#f0127" xml:id="pb115_0001"/>
+unbekannt war, der viele seiner Bo-<lb/>
+then ausgeschickt hatte eben so ge-<lb/>
+schwind Unkraut auszustreuen als<lb/>
+ich guten Saamen säete, und eben<lb/>
+so bald wieder einzureisen als ich<lb/>
+aufbauete. So mochten wir etwa<lb/>
+4/5 unsrer Reise zurückgelegt haben,<lb/>
+als der Satan zuletzt die Oberhand<lb/>
+behielt. Einige seiner Abgesandten,<lb/>
+da sie sahen wie dieser arme Heide<lb/>
+an Frömmigkeit zunahm fragten<lb/>
+ihn, ob ich ihn nun bald bekehrt<lb/>
+hätte, lachten und spotteten sein,<lb/>
+das ich ihnen so viel ich konnte,<lb/>
+verwies: aber das machte doch dass<lb/>
+der Prinz nun zwischen beiden<lb/>
+Theilen schwankte. Einige von<lb/>
+den ächten Söhnen des Belials sag-<lb/>
+ten ihm gerade, er dürfe sich für<lb/>
+dem Teufel nicht fürchten denn es<lb/>
+gäbe keinen: und wenn er jemals<lb/>
+zu ihm kommen sollte, so möchte<lb/>
+er ihn doch auch zu ihnen schicken.<lb/>
+Und so vexirten sie den armen un-<lb/>
+<pb n="116" facs="#f0128" xml:id="pb116_0001"/>
+schuldigen Jungen so lange bis er<lb/>
+nichts mehr aus dem Buche das ich<lb/>
+ihm gegeben hatte, lernen wollte.<lb/>
+Er wollte zwar nicht mit jenen<lb/>
+ungöttlichen Menschen saufen und<lb/>
+zechen, aber auch nicht mehr sich<lb/>
+zu mir halten und bethen. Das<lb/>
+kränkte mich innig. Ich suchte<lb/>
+ihn so gut ich konnte wieder zu be-<lb/>
+reden, aber er wollte nicht kom-<lb/>
+men. Ich bestand darauf dass er<lb/>
+mir doch nur die Ursache seines<lb/>
+jetzigen Betragens sagen sollte.<lb/>
+Endlich fragte er mich: – <hi rendition="#i">wie<lb/>
+kommts dass alle die Weissen die am<lb/>
+Bord sind und die lesen und schreiben<lb/>
+und den Sonnenlauf beobachten können,<lb/>
+und alle Dinge verstehen, dennoch<lb/>
+schwören, lügen und saufen, und Du<lb/>
+allein nicht?</hi> Ich antwortete ihm,<lb/>
+die Ursache sey weil sie Gott nicht<lb/>
+fürchteten, und wenn sie <hi rendition="#i">s</hi>o stür-<lb/>
+ben, so könnten sie nicht zu Gott<lb/>
+kommen. Er antwortete, <hi rendition="#i">dass<lb/>
+<pb n="117" facs="#f0129" xml:id="pb117_0001"/>
+wenn diese Leute alle zur Hölle füh-<lb/>
+ren so wolle er mit fahren.</hi> Das be-<lb/>
+trübte mich sehr, und weil er zu-<lb/>
+weilen Zahnweh hatte, und einige<lb/>
+andere im Schiff zu gleicher Zeit<lb/>
+auch daran litten, so fragte ich ihn:<lb/>
+ob jener ihr Zahnweh das seinige<lb/>
+erleichtere? Er antwortete: <hi rendition="#i">nein.</hi><lb/>
+Folglich, sagte ich ihm, wenn er<lb/>
+und jene Leute zusammen zur Höl-<lb/>
+le führen so würden ihre Qualen<lb/>
+die seinigen auch nicht erleichtern.<lb/>
+Dieses Wort machte einen grossen<lb/>
+Eindruck auf ihn: er ward ganz<lb/>
+niedergeschlagen, und blieb auf der<lb/>
+übrigen Reise immer am liebsten<lb/>
+für sich alleine.“</q></p> 				<p>Ob nicht vielleicht einer oder der<lb/>
+andre Leser denken mag, der ehrli-<lb/>
+che <hi rendition="#k">Vassa</hi> hätte den guten Moski-<lb/>
+ten-Prinzen mit Hölle und Teufel<lb/>
+wohl können unbehelligt lassen, das<lb/>
+geht mich hier nichts an. Ich hob<lb/>
+gerade <hi rendition="#i">die</hi> Stelle mit aus, um zu zei-<lb/>
+<pb n="118" facs="#f0130" xml:id="pb118_0001"/>
+gen dass die Neger so wie in den übri-<lb/>
+gen guten Eigenschaften und Geistes-<lb/>
+fähigkeiten so auch im wohlmeinen-<lb/>
+den Bekehrungseifer vielen ihrer<lb/>
+weissen Brüder nichts nachgeben.</p> 				<p>Ueberhaupt aber sollte ich nach<lb/>
+allen den angeführten mannichfalti-<lb/>
+gen Beyspielen von fähigen Negern<lb/>
+denken, man könnte wohl ganz an-<lb/>
+sehnliche Provinzen von Europa<lb/>
+nennen, aus deren Mittel man<lb/>
+schwerlich vor der Hand so gute<lb/>
+Schriftsteller, Dichter, Philosophen<lb/>
+und Correspondenten der Pariser A-<lb/>
+cademie zu erwarten hätte: so wie<lb/>
+mir hingegen anderseits kein so-<lb/>
+genanntes <hi rendition="#i">wildes</hi> Volk unter der<lb/>
+Sonne bekannt ist, das sich durch<lb/>
+solche Beyspiele von Perfectibilität<lb/>
+und selbst wissenschaftlicher Cultur-<lb/>
+fähigkeit so ausgezeichnet hätte und<lb/>
+sich dadurch so zunächst an die ge-<lb/>
+bildetsten Völker der Erde anschlös-<lb/>
+se, <hi rendition="#i">als die Neger.</hi></p></div> 			<div n="1" type="part" xml:id="bl000111_14">
+<pb n="119" facs="#f0131" xml:id="pb119_0001"/>
+<head rendition="#c">XIV.<lb/>
+Von den Kakerlacken.</head><lb/>
+<p rendition="#no_indent">Diesen armen Patienten ist es in<lb/>
+der Menschengeschichte theils nicht<lb/>
+besser gegangen als den ehrlichen<lb/>
+Negern. Es hat Zweifler gegeben,<lb/>
+die die Kakerlacken so wenig als die<lb/>
+Mohren für Menschen derselben Gat-<lb/>
+tung mit uns haben erkennen wol-<lb/>
+len. Die letztem waren ihnen zu<lb/>
+schwarz; die erstern zu weiss. –</p> 				<p>Nun gehört zwar im Grunde die<lb/>
+Untersuchung der Kakerlacken über-<lb/>
+haupt gar nicht ins Gebiete der Na-<lb/>
+turgeschichte sondern in die Patho-<lb/>
+logie: inzwischen da sie doch einmal<lb/>
+in jene gezogen worden und zu so<lb/>
+vielen seltsamen Irthümern Anlass<lb/>
+gegeben haben, so darf ich ihrer<lb/>
+doch auch mit ein paar Worten ge-<lb/>
+denken; und sie schliessen um so<lb/>
+<pb n="120" facs="#f0132" xml:id="pb120_0001"/>
+füglicher an den vorigen Abschnitt<lb/>
+an, da ihre Geschichte anfänglich<lb/>
+mit der Negern ihrer verwebt wor-<lb/>
+den.</p> 				<p>Man hat nemlich zu allererst un-<lb/>
+ter diesen letztern eine Art Menschen<lb/>
+bemerkt, die sich durch eine unge-<lb/>
+wöhnliche Weisse oder auch Röthe<lb/>
+der Haut, durch gelblicht-weisses<lb/>
+Haar und blassrothe Augen auszeich-<lb/>
+nen; und freylich mussten diese Son-<lb/>
+derbarkeiten auch an den Negern<lb/>
+eher auffallen als an Weissen, und<lb/>
+eben daher sind auch die Kakerla-<lb/>
+cken zuerst unter dem Namen der<lb/>
+weissen Mohren (bey den Alten<lb/>
+<hi rendition="#i">Levcaethiopes</hi>) bekannt worden.</p> 				<p>Schon zu Ende des vorigen Jahr-<lb/>
+hunderts bemerkte man aber auch<lb/>
+Menschen der Art unter den Ameri-<lb/>
+canischen und bald nachher auch un-<lb/>
+ter Ost-Indischen Völkerschaften.<lb/>
+Cptn. <hi rendition="#k">Cook</hi> fand neuerlich welche<lb/>
+<pb n="121" facs="#f0133" xml:id="pb121_0001"/>
+auf <hi rendition="#i">Utaheiti</hi> und auf den <hi rendition="#i">Freund-<lb/>
+schafts-Inseln;</hi> und jetzt zeigt sich end-<lb/>
+lich dass sie auch in Europa selbst<lb/>
+und zwar häufiger sich finden als<lb/>
+wohl zu wünschen wäre.</p> 				<p>Denn seit ich der Königl. Societät<lb/>
+der Wissenschaften meine Beobach-<lb/>
+tungen über die beiden berühmten<lb/>
+Savoyischen Kakerlacken vorgelegt,<lb/>
+die ich a. 1783 auf einer Excursion<lb/>
+die ich in Gesellschaft des jüngern<lb/>
+Hrn. <hi rendition="#k">Deluc</hi> von <hi rendition="#i">Genf aus</hi> ins <hi rendition="#i">Fau-<lb/>
+cigny</hi> machte, zu untersuchen<lb/>
+Gelegenheit gehabt, und die nun<lb/>
+bekanntlich nach London gegangen,<lb/>
+wohin sie von den Directoren des<lb/>
+Circus verschrieben worden; so<lb/>
+habe ich nun schon von einem gan-<lb/>
+zen Dutzend andrer Kakerlacken<lb/>
+die sich nur allein hin und wieder<lb/>
+in Deutschland gefunden haben,<lb/>
+Nachricht und von den mehresten<lb/>
+auch Proben von dem ihnen ganz<lb/>
+<pb n="122" facs="#f0134" xml:id="pb122_0001"/>
+eignen Haar erhalten. Es scheint<lb/>
+mit den Kakerlacken wie mit man-<lb/>
+chen andern natürlichen Merkwür-<lb/>
+digkeiten gegangen zu seyn, die man<lb/>
+in manchen Ländern lange Zeit <hi rendition="#i">über-<lb/>
+sehen</hi> weil man sie für zu grosse Sel-<lb/>
+tenheiten gehalten als dass man sie<lb/>
+<hi rendition="#i">erwartet</hi> hätte.</p> 				<p>Mit einem Worte, die Kakerla-<lb/>
+cken finden sich unter allen <hi rendition="#i">fünf</hi><lb/>
+Spielarten im Menschengeschlecht.</p> 				<p>Ueberdem aber ist diese Sonder-<lb/>
+barkeit gar nicht dem Menschenge-<lb/>
+schlecht <hi rendition="#i">eigen,</hi> sondern sie findet sich<lb/>
+eben so auch unter andern <hi rendition="#i">warmblü-<lb/>
+thigen</hi> Thieren: unter Säugthie-<lb/>
+ren sowohl als unter Vögeln. Un-<lb/>
+ter jenen sind bekanntlich die weis-<lb/>
+sen Caninchen und die weissen Mäu-<lb/>
+se und unter dielen die weissen Ca-<lb/>
+narienvögel die gemeinden. Hingegen<lb/>
+habe ich aller angewandten Nach-<lb/>
+forschung ohngeachtet kein einziges<lb/>
+<pb n="123" facs="#f0135" xml:id="pb123_0001"/>
+Beyspiel von Kakerlacken unter den<lb/>
+Thieren mit rothen <hi rendition="#i">kalten</hi> Blute, un-<lb/>
+ter den Amphibien oder Fischen auf-<lb/>
+finden können.</p> 				<p>Dass ich die Kakerlacken über-<lb/>
+haupt, folglich auch die weissen Ca-<lb/>
+ninchen ꝛc. für Patienten halte,<lb/>
+wird niemanden befremden der mit<lb/>
+ihrem Zustande bekannt ist. Das<lb/>
+Hauptsymptom desselben besteht in<lb/>
+der eignen Farbe ihrer Augen, deren<lb/>
+Stern blassrosenfarb und die Pupille<lb/>
+von der Farbe eines dunklen Carni-<lb/>
+ols oder fast wie Himbeerensaft ist,<lb/>
+statt dass die letztere bey einem ge-<lb/>
+sunden Auge, der Stern mag übri-<lb/>
+gens blau oder braun seyn, allemal<lb/>
+vollkommen schwarz seyn muss. Die<lb/>
+Ursache jener Röthe liegt in dem<lb/>
+gänzlichen Mangel eines zum deut-<lb/>
+lichen Sehen unentbehrlichen Theils,<lb/>
+nemlich des schwarzbraunen Schleims<lb/>
+womit ein grosser Theil des innern<lb/>
+Augapfels zur Absorbtion der über-<lb/>
+<pb n="124" facs="#f0136" xml:id="pb124_0001"/>
+flüssigen Lichtstralen überzogen ist.<lb/>
+Daher sind auch die Kakerlacken<lb/>
+bey diesem Mangel meist mehr oder<lb/>
+weniger lichtscheu.</p> 				<p>Dieser Mangel des schwarzen Pig-<lb/>
+ments scheint aber immer nur ein<lb/>
+<hi rendition="#i">Symptom</hi> einer allgemeinern Cachexie<lb/>
+zu seyn die sich bey den menschlichen<lb/>
+Kakerlacken vorzüglich durch das<lb/>
+eigne Ansehn der Haut und die<lb/>
+gelblichtweisse Farbe der Haare äus-<lb/>
+sert: wenigstens hat man meines<lb/>
+wissens noch nie jenen Augenfehler<lb/>
+ohne diese Beschaffenheit der Haut<lb/>
+oder Haare bemerkt.</p> 				<p>Das Uebel ist wohl immer <hi rendition="#i">ange-<lb/>
+bohren,</hi> und oft eine <hi rendition="#i">erbliche</hi> Fami-<lb/>
+lienkrankheit. Wies scheint ist es<lb/>
+<hi rendition="#i">unheilbar;</hi> wenigstens ist mir kein<lb/>
+Fall bekannt, dass sich bey irgend<lb/>
+einem Kakerlacken jemals die ge-<lb/>
+dachten Symptome verloren hätten.</p> 				<p>Ueber die Ursachen dieses sonder-<lb/>
+baren Uebels wüsste ich vor der<lb/>
+<pb n="125" facs="#f0137" xml:id="pb125_0001"/>
+Hand nichts irgend befriedigendes<lb/>
+anzugeben. Denn was ein sonst<lb/>
+ganz scharfsinniger Reisender Herr<lb/>
+<hi rendition="#k">Foucher d</hi>'<hi rendition="#k">Obsonville</hi> beobachtet<lb/>
+haben will, dass weisse Mohren<lb/>
+dadurch erzeugt werden könnten,<lb/>
+dass die Eltern um die Zeit Queck-<lb/>
+silber <hi rendition="#i">oder</hi> Zinnober gebraucht, wür-<lb/>
+de schon an und für sich bey manchen<lb/>
+der gedachten Völker und bey den<lb/>
+vielerley Thieren unter welchen Ka-<lb/>
+kerlacken gefunden worden, nicht<lb/>
+denkbar seyn wenn auch nicht ohne-<lb/>
+hin die ganze Idee so äusserst <hi rendition="#i">unwahr-<lb/>
+scheinlich</hi> wäre: so wie vollends die<lb/>
+ehemalige Behauptung ganz <hi rendition="#i">unwahr</hi><lb/>
+ist, dass bey den weissen Mohren keins<lb/>
+von beiden Geschlechtern zur Fort-<lb/>
+pflanzung fähig sey. Schon <hi rendition="#k">de<lb/>
+Brue</hi> führt ein Beyspiel an wo eine<lb/>
+weisse Mohrin von einem Neger<lb/>
+schwanger worden und einen voll-<lb/>
+kommnen jungen Neger gebohren;<lb/>
+und von einer weissen Mohrin die<lb/>
+<pb n="126" facs="#f0138" xml:id="pb126_0001"/>
+neuerlich in England einen Europäer<lb/>
+geheurathet und mit demselben drey<lb/>
+wahre Mulatten aber mit hellen Haar<lb/>
+gezeugt, hat der brave Neger Hr.<lb/>
+<hi rendition="#k">Vassa</hi> in seinem obgedachten interes-<lb/>
+santen Werke eine merkwürdige<lb/>
+Nachricht gegeben.</p> 				<figure xml:id="tx000111_138a"> 					<graphic url="images/tx000111_138a"/> 					<head rendition="#c">5te Menschen Varietät.</head><lb/>
+<figDesc>Textabbildung, S. 126</figDesc></figure></div> 			<div n="1" type="index">
+<pb n="127" facs="#f0139" xml:id="pb127_0001"/>
+<head rendition="#c">Inhalt.</head><lb/>
+<list> 					<item><label>I.</label> Ueber die Veränderlichkeit in der<lb/>
+Schöpfung. <ref target="#bl000111_01">S. 1</ref></item> 					<item><label>II.</label> Ein Blick in die Vorwelt. <ref target="#bl000111_02">6</ref></item> 					<item><label>III.</label> Beyläufig ein Wort über den<lb/>
+Basalt. <ref target="#bl000111_03">19</ref></item> 					<item><label>IV.</label> Umschaffung der Vorwelt. <ref target="#bl000111_04">24</ref></item> 					<item><label>V.</label> Veränderlichkeit in der jetzi-<lb/>
+gen Schöpfung. <ref target="#bl000111_05">28</ref></item> 					<item><label>VI.</label> Die Ausartung der organisir-<lb/>
+ten Körper. <ref target="#bl000111_06">33</ref></item> 					<item><label>VII.</label> Besonders unter den Haus-<lb/>
+thieren. <ref target="#bl000111_07">36</ref></item> 					<item>
+<pb n="128" facs="#f0140" xml:id="pb128_0001"/>
+<label>VIII.</label> Ausartung des vollkommen-<lb/>
+sten aller Hausthiere – <hi rendition="#i">des<lb/>
+Menschen.</hi> <ref target="#bl000111_08">47</ref></item> 					<item><label>IX.</label> Eine hieher gehörige physio-<lb/>
+logische Eigenheit des<lb/>
+menschlichen Körpers. <ref target="#bl000111_09">50</ref></item> 					<item><label>X.</label> Ein Wort zur Beruhigung in<lb/>
+einer allgemeinen Familien-<lb/>
+Angelegenheit. <ref target="#bl000111_10">56</ref></item> 					<item><label>XI.</label> * * * <ref target="#bl000111_11">62</ref></item> 					<item><label>XII.</label> Eintheilung des Menschen-<lb/>
+geschlechts in <hi rendition="#i">fünf</hi> Spielar-<lb/>
+ten. <ref target="#bl000111_12">79</ref></item> 					<item><label>XIII.</label> Ueber die Neger ins be-<lb/>
+sondre. <ref target="#bl000111_13">84</ref></item> 					<item><label>XIV.</label> Von den Kakerlacken. <ref target="#bl000111_14">119</ref></item></list>
+<pb n="interleaf" facs="#f0141" xml:id="pbinterleaf_0004"/>
+<pb n="interleaf" facs="#f0142" xml:id="pbinterleaf_0005"/>
+<pb n="interleaf" facs="#f0143" xml:id="pbinterleaf_0006"/>
+</div>
+<pb n="binding_verso" facs="#f0144" xml:id="pbbinding_verso_0001"/>
+</body></text> </TEI>

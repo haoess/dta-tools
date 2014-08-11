@@ -1,0 +1,3035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.deutschestextarchiv.de/basisformat.rng" type="xml"?>
+<?xml-stylesheet type="text/css" href="../dtabf.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">   <teiHeader>
+<fileDesc>
+<titleStmt>
+<title type="main">Kurtzer Bericht Von der Fruchtbringenden Gesellschafft Vorhaben/ auch dero Nahmen/ Gemählde und Wörter</title>
+<title type="sub">Jn Reimen verfast</title>
+<author>
+<persName ref="http://d-nb.info/gnd/118574868">
+<surname>Anhalt-Köthen</surname>
+<forename>Ludwig von</forename>
+</persName>
+</author>
+<editor corresp="#DTACorpusPublisher">
+<persName ref="http://d-nb.info/gnd/115266127">
+<surname>Geyken</surname>
+<forename>Alexander</forename>
+</persName>
+</editor>
+<editor corresp="#DTACorpusPublisher">
+<persName ref="http://d-nb.info/gnd/1018099549">
+<surname>Haaf</surname>
+<forename>Susanne</forename>
+</persName>
+</editor>
+<editor corresp="#DTACorpusPublisher">
+<persName ref="http://d-nb.info/gnd/1019062681">
+<surname>Jurish</surname>
+<forename>Bryan</forename>
+</persName>
+</editor>
+<editor corresp="#DTACorpusPublisher">
+<persName>
+<surname>Schulz</surname>
+<forename>Matthias</forename>
+</persName>
+</editor>
+<editor corresp="#DTACorpusPublisher">
+<persName>
+<surname>Steinmann</surname>
+<forename>Jakob</forename>
+</persName>
+</editor>
+<editor corresp="#DTACorpusPublisher">
+<persName>
+<surname>Thomas</surname>
+<forename>Christian</forename>
+</persName>
+</editor>
+<editor corresp="#DTACorpusPublisher">
+<persName>
+<surname>Wiegand</surname>
+<forename>Frank</forename>
+</persName>
+</editor>
+<respStmt>
+<orgName ref="http://www.clarin-d.de">CLARIN-D</orgName>
+<resp>
+<note type="remarkResponsibility">Langfristige Bereitstellung der DTA-Ausgabe</note>
+<ref target="http://fedora.dwds.de"/>
+</resp>
+</respStmt>
+</titleStmt>
+<editionStmt><edition>Vollständige digitalisierte Ausgabe.</edition></editionStmt>
+<extent>
+<measure type="images">62</measure>
+<measure type="tokens">13157</measure>
+<measure type="types">3690</measure>
+<measure type="characters">83825</measure>
+</extent>
+<publicationStmt>
+<publisher xml:id="DTACorpusPublisher">
+<email>dta@bbaw.de</email>
+<orgName role="project">Deutsches Textarchiv</orgName>
+<orgName role="hostingInstitution" xml:lang="en">Berlin-Brandenburg Academy of Sciences and Humanities</orgName>
+<orgName role="hostingInstitution" xml:lang="de">Berlin-Brandenburgische Akademie der Wissenschaften (BBAW)</orgName>
+<address>
+<addrLine>Jägerstr. 22/23, 10117 Berlin</addrLine>
+<country>Germany</country>
+</address>
+</publisher>
+<pubPlace>Berlin</pubPlace>
+<date type="publication">2014-03-03T12:04:32Z</date>
+<availability>
+<licence target="http://creativecommons.org/licenses/by-nc/3.0/de/">
+<p>Distributed under the Creative Commons Attribution-NonCommercial 3.0 Unported License.</p>
+</licence>
+</availability>
+<idno>
+<idno type="URLWeb">http://www.deutschestextarchiv.de/anhaltkoethen_fruchtbringende_1628</idno>
+<idno type="URLXML">http://www.deutschestextarchiv.de/book/download_xml/anhaltkoethen_fruchtbringende_1628</idno>
+<idno type="URLHTML">http://www.deutschestextarchiv.de/book/download_html/anhaltkoethen_fruchtbringende_1628</idno>
+<idno type="URLText">http://www.deutschestextarchiv.de/book/download_text/anhaltkoethen_fruchtbringende_1628</idno>
+<idno type="DTADirName">anhaltkoethen_fruchtbringende_1628</idno>
+<idno type="DTAID">20009</idno>
+<idno type="URN">urn:nbn:de:kobv:b4-200905199906</idno>
+</idno>
+</publicationStmt>
+<sourceDesc>
+<bibl type="M">[Anhalt-Köthen, Ludwig von]: Kurtzer Bericht Von der Fruchtbringenden Gesellschafft Vorhaben. 1628.</bibl>
+<biblFull>
+<titleStmt>
+<title level="m" type="main">Kurtzer Bericht Von der Fruchtbringenden Gesellschafft Vorhaben/ auch dero Nahmen/ Gemählde und Wörter</title>
+<title level="m" type="sub">Jn Reimen verfast</title>
+<author>
+<persName ref="http://d-nb.info/gnd/118574868">
+<surname>Anhalt-Köthen</surname>
+<forename>Ludwig von</forename>
+</persName>
+</author>
+</titleStmt>
+<editionStmt>
+<edition n="1"/>
+</editionStmt>
+<extent>
+<measure type="pages">[28] Bl.</measure>
+</extent>
+<publicationStmt>
+<publisher><name>N. N.</name></publisher>
+<pubPlace>N. N.</pubPlace>
+<date type="publication">1628</date>
+</publicationStmt>
+<notesStmt>
+<note type="remarkSource">Das zugrundeliegende Exemplar weist einen Fehler in der Bindung auf: Bl. A[iiij] ist hinter dem Titelblatt eingebunden. Die Bilddateien werden hier in dahingehend korrigierter Reihenfolge wiedergegeben.</note>
+</notesStmt>
+</biblFull>
+<msDesc>
+<msIdentifier>
+<repository>HAB Wolfenbüttel</repository>
+<idno>
+<idno type="shelfmark">HAB Wolfenbüttel, Wa 6098</idno>
+<idno type="URLCatalogue">Dig: http://diglib.hab.de/drucke/wa-6098/start.htm</idno>
+</idno>
+</msIdentifier>
+<physDesc>
+<typeDesc>
+<p>Fraktur</p>
+</typeDesc>
+</physDesc>
+</msDesc>
+</sourceDesc>
+</fileDesc>
+<encodingDesc>
+<editorialDecl>
+<p>Dieses Werk wurde gemäß den <ref target="http://www.deutschestextarchiv.de/doku/richtlinien">DTA-Transkriptionsrichtlinien</ref>
+im Double-Keying-Verfahren von Nicht-Muttersprachlern erfasst und in XML/TEI P5 nach
+<ref target="http://www.deutschestextarchiv.de/doku/basisformat">DTA-Basisformat</ref> kodiert.</p>
+</editorialDecl>
+</encodingDesc>
+<profileDesc>
+<langUsage>
+<language ident="deu">German</language>
+</langUsage>
+<textClass>
+<classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dtamain">Fachtext</classCode>
+<classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dtasub">Sprachwissenschaft</classCode>
+<classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dwds1main">Wissenschaft</classCode>
+<classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#dwds1sub">Sprachwissenschaft</classCode>
+<classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#DTACorpus">core</classCode>
+<classCode scheme="http://www.deutschestextarchiv.de/doku/klassifikation#DTACorpus">china</classCode>
+</textClass>
+</profileDesc>
+</teiHeader>
+<text><front>
+<pb facs="#f0001"/>
+<pb facs="#f0002"/>
+<pb facs="#f0003"/>
+<titlePage type="main">     <docTitle>         <titlePart type="main">             Kurtzer Bericht<lb/>
+Von der<lb/>
+<hi rendition="#b">Fruchtbringenden<lb/>
+Geſellſchafft<lb/>
+Vorhaben/</hi><lb/>
+auch dero<lb/>
+<hi rendition="#b">Nahmen/<lb/>
+Gemaͤhlde</hi><lb/>
+und<lb/>
+<hi rendition="#b">Woͤrter</hi><lb/>
+</titlePart>     <titlePart type="desc">         In Reimen verfaſt.<lb/>
+</titlePart>     </docTitle>     <milestone unit="section" rendition="#hr"/><lb/>
+<docImprint>             Gedruckt im Jahr <docDate><hi rendition="#g">1628</hi></docDate>.<lb/>
+</docImprint></titlePage>
+<pb facs="#f0004"/>
+<pb facs="#f0005"/>
+<div type="preface"> <p><hi rendition="#fr"><hi rendition="#in">N</hi>Ach dem jhrer viel von der Fruchtbringenden</hi><lb/>
+Geſellſchafft/ was dero eigentlicher Zweck/ auch wie und<lb/>
+worzu ſie auffgerichtet/ und angeſtellet/ bericht zu haben/<lb/>
+begehren; Als iſt gut befunden worden/ nachfolgendes kuͤrtzlich<lb/>
+zu jedes begehrenden underricht/ zu verfaſſen. Iſt alſo zu wiſſen/<lb/>
+daß im Jahr 1617. bey einer vornehmen/ wiewol trawrigen Fuͤrſt-<lb/>
+licher und Adelicher Perſonen zuſammenkunfft/ zu ergetzung<lb/>
+vorgangenen leids/ und anreitzung der loͤblichen Jugend/ zu al-<lb/>
+lerley hohen Tugenden/ unterſchiedener <hi rendition="#aq">Academien,</hi> die in<lb/>
+frembden Landen/ beydes zu erhaltung guten vertrawens/ er-<lb/>
+bawung wolanſtaͤndiger Sitten/ als nuͤtzlicher außuͤbung jedes<lb/>
+Volcks Lands Sprachen/ auffgerichtet/ erwehnung geſchehen:<lb/>
+Darbey aber ferner erwogen worden/ weil unſere weitgeehrte<lb/>
+hochdeutſche Mutterſprache/ ſo wol an alter/ ſchoͤnen und zierli-<lb/>
+chen Reden/ als auch an uͤberfluß eigentlicher und wolbedeutlicher<lb/>
+Wort ſo jede ſachen beſſer als die frembden recht zu verſtehen ge-<lb/>
+ben koͤnnen/ einen nicht geringen vorzug hat<hi rendition="#i">;</hi> Das ebener geſtalt<lb/>
+darauff moͤchte gedacht werden/ wie eine ſothane Geſellſchafft zu<lb/>
+erwecken und anzuſtellen/ darinnen man in gut rein deutſch re-<lb/>
+den/ ſchreiben/ auch anders ſo bey dergleichen zuſammenſetzung<lb/>
+und erhebung der Mutterſprache (darzu jeder von Natur ver-<lb/>
+pflichtet) gebraͤuchlich und dienlich/ vornehmen moͤchte.</p><lb/>
+<p>Worauff dann geſchloſſen worden/ dieſe Geſellſchafft/ wiewol<lb/>
+anfangs in der enge/ doch alſo anzurichten/ damit jedermaͤnnigli-<lb/>
+chen ſo ein liebhaber aller Erbarkeit/ Tugend und Hoͤfligkeit vor-<lb/>
+nemlichaber des Vaterlands/ durch anleitung der darzu erkornen<lb/>
+uͤberfluͤſſigen Matery/ anlaß hette/ deſto eher nach einnehmung<lb/>
+dieſesguten vorhabens ſich freywilliglich hinein zubegeben. Vnd<lb/>
+weil bey dergleichen zuſammenthun nicht ungewoͤhnlich und zu<lb/>
+mehrer auffmunterung dienlich/ daß anfaͤnglich die gantze Ge-<lb/>
+ſellſchafft/ nicht allein auff eine beſondere Matery jhren Nahmen<lb/>
+<fw type="sig" place="bottom">A ij</fw><fw type="catch" place="bottom">richten/</fw><lb/>
+<pb facs="#f0006"/>
+richten/ ſondern auch ein darzu bequemes Gemaͤhld jhnen weh-<lb/>
+len/ und ein darauff ſich wolſchickendes Wort/ den zweck und die<lb/>
+bedeutung meldende/ druͤber austrucken laſſe/ wie ſolchem zu fol-<lb/>
+ge ein jedweder Geſellſchaffter/ der hinein zu treten geſinnet/ auch<lb/>
+zuthun ſchuldig: Alſo iſt dieſe Geſellſchafft/ <hi rendition="#fr">die Fruchtbrin-<lb/>
+gende/</hi> genennet/ jhr zum Gemaͤhlde ein Indianiſcher Palmen<lb/>
+oder Nußbaum verordnet/ und zum Wort/ <hi rendition="#fr">Alles zu Nutzen/</hi><lb/>
+geſetzet worden.</p><lb/>
+<p>Der Name Fruchtbringende darumb/ damit ein jedweder/<lb/>
+ſo ſich hinein begiebet oder zu begeben gewillet/ anders auch nicht<lb/>
+als was fruchtmeſſig/ zu Fruͤchten/ Baͤwmen/ Blumen/ Kraͤu-<lb/>
+tern oder dergleichen gehoͤrig/ und aus der Erde wachſende/ oder<lb/>
+darvon entſtehend/ jhme erwehlen koͤnne/ und darneben uͤberall<lb/>
+Frucht zu ſchaffen gefliſſen ſeyn ſolle.</p><lb/>
+<p>Das Gemaͤhlde aus urſachen/ daß wie bey den Thieren kei-<lb/>
+nes gefunden wird/ ſo in allem/ auch den geringſten/ nuͤtzlicher zu<lb/>
+gebrauchen als das Schaf/ dergleichen ebener geſtalt bey dieſem<lb/>
+Indianiſchen Palmen oder Nußbaum vollkoͤmlich ſich ereuge/<lb/>
+inmaſſen die Baͤwm- und Kraͤuterbuͤcher/ ſonderlich aber die<lb/>
+Oſt Indianiſche Beſchreibungen/ mit mehren ſolches bezeugen.</p><lb/>
+<p>Das Wort aber zu dem ende/ daß in und bey dieſer Geſell-<lb/>
+ſchafft alles zu nutzen/ frommen/ und ergetzung/ niemand aber zu<lb/>
+leide/ ſchaden oder verdruß gerichtet ſeyn ſoll.</p><lb/>
+<p>Worauff dann folgends alsbald unterſchiedliche Perſonen<lb/>
+in dieſe Geſellſchafft eingetreten/ und deren eigentlicher zweck und<lb/>
+vorhaben kuͤrtzlich auff nechſtfolgende zwey Puncten gerichtet/<lb/>
+und zuſammen gezogen worden.</p><lb/>
+<p>Erſtlich/ daß ſich ein jedweder in dieſer Geſellſchafft/ erbar/<lb/>
+nuͤtz- und ergetzlich bezeigen/ und alſo uͤberall handeln ſolle/ bey<lb/>
+Zuſam̃enk unfften guͤtig/ froͤlich/ luſtig und vertraͤglich in worten<lb/>
+<fw type="catch" place="bottom">und</fw><lb/>
+<pb facs="#f0007"/>
+und wercken ſeyn/ auch wie darbey keiner dem andern ein ergetz-<lb/>
+lich wort fuͤr uͤbel auffzunehmen/ alſo ſoll man ſich aller groben<lb/>
+verdrießlichen reden/ und ſchertzes darbey enthalten.</p><lb/>
+<p>Fuͤrs ander/ daß man die Hochdeutſche Sprache in jhrem<lb/>
+rechten weſen und ſtandt/ ohne einmiſchung frembder außlaͤn-<lb/>
+<supplied>d</supplied>iſcher wort/ auffs moͤglichſte und thunlichſte erhalte/ und ſich ſo<lb/>
+wol der beſten ausſprache im reden/ als der reineſten art im ſchrei-<lb/>
+ben und Reimen-dichten befleiſſige.</p><lb/>
+<p>Dieſem nach iſt auch beliebet worden/ daß jedweder aus<lb/>
+mehrgemelter Geſellſchafft deren in gold geſchmeltztes Gemaͤhl-<lb/>
+de/ Namen und Wort auff der einen/ wie auch ſein ſelbſt ei-<lb/>
+genes/ auff der ander ſeiten an einem ſittich gruͤnen ſeidenem<lb/>
+Band tragen ſolle.</p><lb/>
+<p>Wie nun ſieder der zeit/ nach dem alter der eintrettung/ und<lb/>
+nicht des Standes Vorzug/ die Geſellſchafft in ordnung ſich<lb/>
+vermehret/ giebet angefuͤgtes verzeichnuͤß nechſt der darauff in<lb/>
+<hi rendition="#c">Reim verfaſten erklaͤrung/ und die darnach verfertigte<lb/>
+und an ſeinen ort verhandene Gemaͤhlde ge-<lb/>
+nugſam zu erkennen.</hi></p></div><lb/>
+<fw type="sig" place="bottom">A iij</fw><fw type="catch" place="bottom">Die</fw></front><body><lb/>
+<pb facs="#f0008"/>
+<div n="1"><head><milestone rendition="#hr" unit="section"/><lb/>
+<hi rendition="#b">Die Fruchtbringende<lb/>
+Geſellſchafft.</hi><lb/>
+Ein Indianiſcher Nußbaum.<lb/>
+<hi rendition="#b">Alles zu Nutzen.</hi></head><lb/>
+<lg type="poem"><l><hi rendition="#in">D</hi>Er Palmenbaum ſo traͤgt die Indianſchen Nuͤße/</l><lb/>
+<l>Bringt manche ſchoͤne Frucht voll anmuth</l><lb/>
+<l><hi rendition="#et">ſchmacks und ſuͤſſe:</hi></l><lb/>
+<l>Weil alles was dran iſt zu nutz wird angewendt/</l><lb/>
+<l>Hat die Geſellſchafft ſich <hi rendition="#fr">F</hi>ruchtbringend auch genent.</l><lb/>
+<l>Daß man in deutſcher Sprach mit nutzen Frucht ſoll</l><lb/>
+<l><hi rendition="#et">bringen/</hi></l><lb/>
+<l>Sich drinnen uͤben ſtets in allen erbarn dingen/</l><lb/>
+<l>Ergetzlich/ luſtig ſey/ geſellig auch dabey:</l><lb/>
+<l>So Frucht und Nutzen ſchaff in Tugend allerley.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0009"/>
+<lg type="poem"> <head><cb type="start"/>
+<hi rendition="#fr">C. V. T.<lb/>
+Der Mehlreiche.</hi><lb/>
+<cb/>
+1.<lb/>
+Rein Weitzenmehl/ ſo durch den<lb/>
+Beutel im mahlen heraus fellet.<lb/>
+<cb/>
+Hierin find ſichs.<cb type="end"/>
+</head><note place="right">1617.</note><lb/>
+<l><hi rendition="#fr"><hi rendition="#in">E</hi>S iſt kein Mehl ſo reich/ als das von reinem Weitzen/</hi></l><lb/>
+<l>So ſich vom Sawerteig/ der ſchlim/ nicht leſt auffbeitzen/</l><lb/>
+<l>Vnd weil darin ſich findt das reichthumb von dem Mehl/</l><lb/>
+<l>Nent den <hi rendition="#fr">Mehlreichen</hi> man mich an der erſten ſtell:</l><lb/>
+<l>Gleich wie nun nuͤtzt das Mehl von huͤlſen rauß geſchroten/</l><lb/>
+<l>Vnd ſich ſchoͤn weiß erzeigt: alſo von boͤſen Rotten/</l><lb/>
+<l>Soll unbefleckt und rein ein tapſſer hertze ſeyn/</l><lb/>
+<l>Vnd meiden wie die Peſt der tugend falſchen ſchein.</l></lg><lb/>
+<lg type="poem"> <head><cb type="start"/>
+<hi rendition="#fr">L. F. Z. A.<lb/>
+Der Nehrende.</hi><lb/>
+<cb/>
+2.<lb/>
+Ein wolausgebacken Weitzenbrodt.<lb/>
+<cb/>
+Nichts beſſers.</head><lb/>
+<l>Das weiſe Weitzenbrodt den menſchen trefflich nehret/</l><lb/>
+<l>Nichts beſſers ſich in jhm/ zu ſeiner Nahrung kehret:</l><lb/>
+<l>Drumb bin unbillich nicht der <hi rendition="#fr">Nehrend</hi> ich genant/</l><lb/>
+<l>Da man zur Nahrung nichts/ ſo beſſer an der hand.</l><lb/>
+<l>Wie nun der Leib/ ſo auch der Geiſt wil ſeyn genehret/</l><lb/>
+<l>Vnd mit der tugend ſchoͤn verbeſſert und vermehret/</l><lb/>
+<l>Daß er fiets bring herfuͤr in uns die ehrenfrucht/</l><lb/>
+<l>Die nutz alleine ſchafft in erbarkeit und zucht.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">J. E. D. J. H. Z. S.<lb/>
+Der Kaͤumling.</hi><lb/>
+<cb/>
+3.<lb/>
+Das Korn in der Erden kaͤumend<lb/>
+theils ausgewachſen.<lb/>
+<cb/>
+Gedruckt/ doch nicht<lb/>
+erſtickt.<cb type="end"/>
+</head><lb/>
+<l>Das koͤrnlein in der erd drin zugedecket kaͤumet/</l><lb/>
+<l>Den kloß der es gedruckt durchbohret und wegreumet/</l><lb/>
+<l>Wie ſoll ich mich dann nicht den Kaͤumling nennen lahn/</l><lb/>
+<l>Da es nicht iſt erſtickt/ beſondern gruͤn kompt ran.</l><lb/>
+<l>Vnd wie das koͤrnlein gut/ gruͤn kaͤumet und auffgehet/</l><lb/>
+<l>Alſo ein edel hertz gedruckt/ drumb nicht vergehet:</l><lb/>
+<l><hi rendition="#in">E</hi>s richt ſich den noch auff und bleibet nicht erſtickt/</l><lb/>
+<l>Vnd ſich mit nutz zur ehr und tugend macht geſchickt.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0010"/>
+<note place="left">1617.</note><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">F. H. Z. S. W.<lb/>
+Der Hoffende.</hi><lb/>
+<cb/>
+4.<lb/>
+Eine halbe reiffe Kirſche.<lb/>
+<cb/>
+Es ſoll noch werden.<cb type="end"/>
+</head><lb/>
+<l>Von der halbreiffen Kirſch/ eh ſie wird vollend reiffen/</l><lb/>
+<l>Hat man die hoffnung ſchon ſie mit der hand zu greiffen/</l><lb/>
+<l>Drumb hab ich Hoffend mich freywilliglich genant/</l><lb/>
+<l>Auff daß mein gut Gemuͤth wuͤrd jederman bekant.</l><lb/>
+<l>Was einer jung nicht iſt/ das kan er alt wol werden/</l><lb/>
+<l>Ich liebte tapfferkeit und tugend hier auff erden/</l><lb/>
+<l>Daher ich nun erlangt die ewig Ehrenkron/</l><lb/>
+<l>Die hoffend ich gewann zum hoͤchſt gewuͤnſchten lohn.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">W. H. Z. S.<lb/>
+Der Schmackhaffte.</hi><lb/>
+<cb/>
+5.<lb/>
+Eine Birn mit der Weſpen ſtich.<lb/>
+<cb/>
+Erkante guͤte.<cb type="end"/>
+</head><lb/>
+<l>Der Birnen guͤte wird vom Weſpenſtich erkennet</l><lb/>
+<l>Daß ſie ſchmackhafftig iſt/ drumb ich mich ſo genennet:</l><lb/>
+<l>Do nun ein wuͤrmlein klein erkent ſchmackhaffte guͤt/</l><lb/>
+<l>So ſchmeckt die tugend ja viel eh ein recht gemuͤth:</l><lb/>
+<l>Vnd ob ſie ſchon wird offt von feinden angeſtochen/</l><lb/>
+<l>Die doch ſich haben nur aus neid an jhr gerochen/</l><lb/>
+<l>So leſt ſie doch nicht nach/ beſondern mehr zummpt/</l><lb/>
+<l>Vnd kriegt zuletzt die frucht/ ſo jhr mit nutz beſtimpt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">L. D. J. F. Z. A.<lb/>
+Der Safftige.</hi><lb/>
+<cb/>
+6.<lb/>
+Eine Waſſer-Melone auffge-<lb/>
+ſchnitten und in ſtuͤcklein zer-<lb/>
+theilet.<lb/>
+<cb/>
+Vnausgeſogen taugs<lb/>
+nicht.<cb type="end"/>
+</head><lb/>
+<l>Waſſer-Melonen ſeynd voll ſafftes ausdermaſſen/</l><lb/>
+<l>Drumb die Geſellſchafft mich hat <hi rendition="#fr">Safftig</hi> nennen laſſen:</l><lb/>
+<l>Vnausgefogen iſt nicht viel an dieſer frucht/</l><lb/>
+<l>Weil man doch kuͤhlung nur drin in der hitze ſucht.</l><lb/>
+<l>Was in der Welt noch gut/ das ſoll daraus man ſaugen/</l><lb/>
+<l>Die ſchalen laſſen ſtehn/ die/ jrdiſch/ gantz nicht taugen.</l><lb/>
+<l>Man bringt die beſte frucht durch Gottes hohe krafft/</l><lb/>
+<l>Da ich genieß jetzund des baums des lebens ſafft.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0011"/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">C. V. K.<lb/>
+Der Wolbekom̃ende.</hi><lb/>
+<cb/>
+7.<lb/>
+Gerſtenaͤhrn aus einem<lb/>
+Korn.<lb/>
+<cb/>
+Im guten Lande.<cb type="end"/>
+</head><note place="right">1617.</note><lb/>
+<l>Die Gerſt im guten Land/ inſonders wol bekommet/</l><lb/>
+<l>Die uns all in gemein mit jhrem nutzen frommet/</l><lb/>
+<l>Ich dieſen Nahmen mir mit allem fleiß ausſucht/</l><lb/>
+<l>Weil ich getragen hab auch funffzehnfache frucht.</l><lb/>
+<l>Mit Gerſt und leibesfrucht bin ich zugleich geſegnet/</l><lb/>
+<l>Sie ſeynd von oben rab mir beyde zugeregnet.</l><lb/>
+<l>Nach tugend und nach ehr ich wolbekommend tracht/</l><lb/>
+<l>Vnd was dann nutzen bringt wird von mir hoch geacht.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">B. V. K.<lb/>
+Der Reinliche.</hi><lb/>
+<cb/>
+8.<lb/>
+Eine außgebluͤhete weiſſe Lilge.<lb/>
+<cb/>
+Vnangeruͤhrt beſtehts.<cb type="end"/>
+</head><lb/>
+<l>Die Lilge reinlich iſt/ wann ſie nicht wird geruͤhret/</l><lb/>
+<l>Beſteht weiß/ unbefleckt/ von inwarts nicht beſchmieret/</l><lb/>
+<l>Darumb den Nahmen ich mir ſo genommen hab/</l><lb/>
+<l>Weil tugend ohne fleck iſt eine reine gab.</l><lb/>
+<l>Man ſoll die Seele ja mit laſtern nicht beflecken/</l><lb/>
+<l>Zur tugend aber ſie inwendig aufferwecken:</l><lb/>
+<l>Mit einer tapffern hand bin unbefleckt und rein</l><lb/>
+<l>Hinanff ins Himmels Chor/ ich ſelig kommen ein.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. G. F. Z. A.<lb/>
+Der Wolriechende.</hi><lb/>
+<cb/>
+9.<lb/>
+Eine außgebluͤhete Maͤyblume.<lb/>
+<cb/>
+Mit ſuͤß vermiſcht.<cb type="end"/>
+</head><lb/>
+<l>Die Maͤyenbluͤmlein ſeynd ſchoͤn und ſehr lieblich riechen/</l><lb/>
+<l>Das ſawr mit ſuͤß vermiſcht/ hat ſich bald eingeſchliechen/</l><lb/>
+<l>Es iſt nicht der geruch der blumen ſuͤß allein/</l><lb/>
+<l>So ohne bitterkeit kan faſt nichts riechend ſeyn.</l><lb/>
+<l>In dieſem thraͤnenthal/ dem endlich ich entgangen</l><lb/>
+<l>Als dieſe blume bluͤht/ da hab ich angefangen</l><lb/>
+<l>Zu bringen wahre fruͤcht’ ins Himmels ſchoͤnen Sahl/</l><lb/>
+<l>Die ohne bitterkeit wol riechen uͤberall.</l></lg><lb/>
+<fw type="sig" place="bottom">B</fw><fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0012"/>
+<note place="left">1617.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">J. C. F. Z. A.<lb/>
+Der Durchdrin-<lb/>
+gende</hi><lb/>
+<cb/>
+10.<lb/>
+Ein Dattelbaum/ darauff ein Ge-<lb/>
+zimm<supplied>e</supplied>r ſo jhn beſchweret.<lb/>
+<cb/>
+Beſchwert doch er-<lb/>
+wehrt.<cb type="end"/>
+</head><lb/>
+<l>Des Dattelnbaums Natur iſt/ wann er wird beſchweret/</l><lb/>
+<l>Daß er durchdringt/ und ſich der ſchweren laſt erwehret/</l><lb/>
+<l>Daher <hi rendition="#fr">Durchdringend</hi> ich mich ſelbſt mit willen nenn/</l><lb/>
+<l>Vnd meinen Nahmen ſo freymuͤtig hier bekenn.</l><lb/>
+<l>Nun durch beſchwerung muß offt ſeyn hindurch gedrungen/</l><lb/>
+<l>Biß zur erleichterung mirs endlich ſey gelungen.</l><lb/>
+<l>Zucht/ tugend/ ſparſamkeit/ durch alle laſter dringt/</l><lb/>
+<l>Auff dieſe weiſe man recht frucht mit nutzen bringt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">W. H. G. Z. B.<lb/>
+Der Kraͤfftige.</hi><lb/>
+<cb/>
+11.<lb/>
+Eine außgebluͤhete volle<lb/>
+Nelcke.<lb/>
+<cb/>
+Im Geruch und Weſen.<cb type="end"/>
+</head><lb/>
+<l>Die Nelcke hat viel krafft beyd im Geruch und Weſen/</l><lb/>
+<l>Drumb habe zum Gemaͤhld die blum mir ausgeleſen/</l><lb/>
+<l>Daher ich Kraͤfftig heiß/ ſie hat es von Natur/</l><lb/>
+<l>Daß allen bluͤmelein in kraͤfften ſie geht fuͤr.</l><lb/>
+<l>Do nun ſo kraͤfftig uns ſich dieſe blum erzeiget/</l><lb/>
+<l>Wer wolt zur tugend nicht von hertzen ſeyn geneiget/</l><lb/>
+<l>Auff daß er fruͤchte brecht allzeit mit nutzen viel/</l><lb/>
+<l>Vnd kaͤme kraͤfftig hin zum rechten Ehrenziel.</l></lg><lb/>
+<note place="left">1618.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">R. F. Z. A.<lb/>
+Der Suͤſſe.</hi><lb/>
+<cb/>
+12.<lb/>
+Stenglein von Zuckerrohr.<lb/>
+<cb/>
+Im Ausſaugen.<cb type="end"/>
+</head><lb/>
+<l>Die Zuckerroͤhrlein ſind zum ſuͤſten im ausſaugen/</l><lb/>
+<l>Viel gehen embſig drauff/ mit Hertzen/ Mund und Augen:</l><lb/>
+<l>Wie man dem Zucker nun kein ding gleich ſuͤſſe find/</l><lb/>
+<l>So ſeine ſuͤſſigkeit in ſaͤure leicht verſchwind/</l><lb/>
+<l>Wann er zu lange ſteht/ drumb muß man recht genieſſen/</l><lb/>
+<l>Der ſuͤſſe dieſer welt/ und ſeyn allein geflieſſen</l><lb/>
+<l>Zu ſchmecken/ wie dann mir geſchehn/ der Engel ſuͤß/</l><lb/>
+<l>So den erwehlten bleibt bey Gott allein gewiß.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0013"/>
+<lg type="poem"> <head> <cb type="start"/>
+<hi rendition="#fr">H. V. K.<lb/>
+Der Gemaͤfte.</hi><lb/>
+<cb/>
+13.<lb/>
+Ein Scheffel voll Bonen.<lb/>
+<cb/>
+Hiermit.<cb type="end"/>
+</head><note place="right">1618.</note><lb/>
+<l>Die fette Bonen frucht wol ausdermaſſen maͤſtet/</l><lb/>
+<l>Vnd wann ſie wol geſchrott/ ein guten ſpeck befeſtet/</l><lb/>
+<l>Ich nente mich <hi rendition="#fr">Gemaͤſt</hi> Hiermit zum unterſcheid/</l><lb/>
+<l>Der Eichelmaſt/ die bloß nur undern baͤumen leit.</l><lb/>
+<l>Mit tugend ſeyn gemaͤſt das iſt das rechte leben/</l><lb/>
+<l>Darnach ohn unterlaß man alle tag ſoll ſtreben/</l><lb/>
+<l>Alsdann mit hoͤchſtem nutz/ man viel frucht bringen wird/</l><lb/>
+<l>Zu ehren ſeinem ſtand/ und ſeim geſchlecht zur zierd.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. H. V. W.<lb/>
+Der Gerade.</hi><lb/>
+<cb/>
+14.<lb/>
+Ein Fichtenbaum.<lb/>
+<cb/>
+Winter und Som̃er gruͤn.<cb type="end"/>
+</head><lb/>
+<l>Ein langer Fichtenbaum/ der wechſt auff fein gerade/</l><lb/>
+<l>Zu aller Jahres zeit gruͤn aus des Himmels gnade/</l><lb/>
+<l>Ich heiß <hi rendition="#fr">Gerad</hi>/ dieweil mein baum auffwechſet gleich/</l><lb/>
+<l>Vnd leſt die blaͤtter nicht/ wie andre baͤume weich:</l><lb/>
+<l>Gerad zu/ thut das beſt/ und geht fuͤr allen dingen/</l><lb/>
+<l>Es pflegt auffrichtig auch gerade frucht zu bringen/</l><lb/>
+<l>Ein ſolch hertz kommet durch zu waſſer und zu land/</l><lb/>
+<l>Es gruͤnt zu winterszeit und Sommer in ſeim ſtandt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. E. A. D. W.<lb/>
+Der Austheilende.</hi><lb/>
+<cb/>
+15.<lb/>
+Ein Eichenbaum voller reiffen<lb/>
+Eicheln/ deren etliche abgefal-<lb/>
+len/ etliche unden liegen.<lb/>
+<cb/>
+Maſt ohne muͤhe.<cb type="end"/>
+</head><lb/>
+<l>Der Eichbaum ſeine Maſt ohn muͤh und ſorg austheilet/</l><lb/>
+<l>Leſt ſie reiff fallen rab/ darmit nicht lang verweilet/</l><lb/>
+<l>Drumb weil die Maſt ohn muͤh/ <hi rendition="#fr">Austheilend</hi> ich mich heiß/</l><lb/>
+<l>Daß man zur Maſt nicht darff anwenden groſſen fleiß.</l><lb/>
+<l>Ein Adlich hertz/ theilt aus/ was es hat/ ſeim Geſellen/</l><lb/>
+<l>Vnd was jhm noͤtig iſt/ freygebig thut zuſtellen/</l><lb/>
+<l>Alſo es bringet frucht nach ſeinem Adel Standt/</l><lb/>
+<l>Vnd nutzt dem nechſten ſeyn/ wird weit und breit bekant.</l></lg><lb/>
+<fw type="sig" place="bottom">B ij</fw><fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0014"/>
+<note place="left">1618.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">W. V. B.<lb/>
+Der Raͤuchernde.</hi><lb/>
+<cb/>
+16.<lb/>
+Ein angezuͤndter Wachholder-<lb/>
+ſtrauch mit ſeinen Beerlein.<lb/>
+<cb/>
+In boͤſer Lufft.<cb type="end"/>
+</head><lb/>
+<l>Es raͤuchern allzuwol Wachholdern angezuͤndet</l><lb/>
+<l>Die Beere mit dem ſirauch/ wo boͤſe lufft man findet:</l><lb/>
+<l>Drumb ich in boͤſer Luff der Raͤuchernd heiß und bin/</l><lb/>
+<l>Daß ſo manch Gifft und Peſt vertrieben wird dahin.</l><lb/>
+<l>Der Rauch iſt das Gebet/ darmit hinweg man treibet</l><lb/>
+<l>Was boͤß iſt auff der Welt/ und was an jhr ſonſt kleibet:</l><lb/>
+<l>Wer wolt nun Raͤuchernd nicht gen Himmel laſſen gehn/</l><lb/>
+<l>Sein Andacht und Gebet/ und mit frucht drin beſtehn.</l></lg><lb/>
+<note place="left">1619.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">A H. Z. S.<lb/>
+Der Vnanſehnliche.</hi><lb/>
+<cb/>
+17.<lb/>
+Ein beſchnittener<lb/>
+Weinſtock.<lb/>
+<cb/>
+Bringt den edelſten ſafft.<cb type="end"/>
+</head><lb/>
+<l>Sehr unanſehnlich iſt ein Weinſtock erſt beſchnitten/</l><lb/>
+<l>Vnd ſcheint das ungluͤck viel im Winter er gelitten/</l><lb/>
+<l>Er acht doch alles nicht den beſten ſafft herbringt/</l><lb/>
+<l>Der manchem kuͤhnen Held verſtandt und muth bezwingt.</l><lb/>
+<l>Ein tugendhafft gemuͤth/ ob es ſehr viel ſchon leidet/</l><lb/>
+<l>Acht es doch alles nicht/ und wann mans gleich beſchneidet/</l><lb/>
+<l>Bringt es drumb eben wol den wahren Ehrenſafft/</l><lb/>
+<l>Vnd taͤglich in jhm ſelbſt verbeſſert ſeine krafft.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. F. H. Z. S.<lb/>
+Der Entzuͤndete.</hi><lb/>
+<cb/>
+18.<lb/>
+Die ſtoppeln auffm felde an-<lb/>
+gezuͤndet/ halb abgebraut.<lb/>
+<cb/>
+Verderbet und erhelt.<cb type="end"/>
+</head><lb/>
+<l>Die Stuppeln/ wann ſie duͤrr im felde/ man anzuͤndet/</l><lb/>
+<l>All Vnkraut das verderbt/ ſo ſich darinnen findet/</l><lb/>
+<l>Erhelt den Acker rein/ die aſch jhn auch bemiſt/</l><lb/>
+<l><hi rendition="#fr">Entzuͤndet</hi> drumb mein Nahm allhier genennet iſt.</l><lb/>
+<l>Wann ein rechtſchaffen hertz in tugend iſt entzuͤndet/</l><lb/>
+<l>All jhre Schweſtern trew in eins zuſammen bindet/</l><lb/>
+<l>Verderbt was boͤß ſich zeigt/ das gut mit fleiß erhelt/</l><lb/>
+<l>Vnd in kein laſter nicht/ mit fuͤrſatz wiſſend faͤllt.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0015"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">E. H. Z. S.<lb/>
+Der Bitterſuͤſſe.</hi><lb/>
+<cb/>
+19.<lb/>
+Eine Juͤden Kirſche mit jhrem<lb/>
+Haͤußlein auffget han.<lb/>
+<cb/>
+Auff beyde Recht.<cb type="end"/>
+</head><note place="right">1619.</note><lb/>
+<l>Wenn man die Juͤdenkirſch mit bloſſer hand anruͤhret/</l><lb/>
+<l>Wird wie gall bitter ſie/ den ſuͤſſen ſchmack verliehret:</l><lb/>
+<l>Drumb bin ich <hi rendition="#fr">Bitter-ſuͤfz</hi> genant auff beyde Recht/</l><lb/>
+<l>Weil in der boͤſen Welt/ man nicht ſoll ſeyn ſo ſchlecht.</l><lb/>
+<l>Wenn man ein frommes hertz in ſeiner ruhe leſſet/</l><lb/>
+<l>Vnd mit dem ſticheln nicht den zorn herauſſer preſſet/</l><lb/>
+<l>So bleibt es in ſeim thun gelinde/ ſuͤß und gut/</l><lb/>
+<l>Hiergegen wehrt ſich der/ der keinem leid ſonſt thut.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">C. B. V. H. Z. D.<lb/>
+Der Heilende.</hi><lb/>
+<cb/>
+20.<lb/>
+Der Dictam mit ſeiner<lb/>
+Blumen.<lb/>
+<cb/>
+Von Natur und Kraͤfften.<cb type="end"/>
+</head><lb/>
+<l>Der Hirſch wann er verwundt/ zum Dictam ſich verfuͤget.</l><lb/>
+<l>Die krafft er von Natur wol weiß/ ſo drinnen lieget:</l><lb/>
+<l>Daher hat erſt der menſch diß heilend kraut erkant/</l><lb/>
+<l>Darvon ich Heilend mich/ ohn urſach nicht genant.</l><lb/>
+<l>Von kraͤfften und Natur ſoll man die laſter heilen/</l><lb/>
+<l>Was nicht taug/ ſchneiden ab/ und muß man darmit eilen/</l><lb/>
+<l>Auff daß die Tugend hoch die beſte frucht vorbring/</l><lb/>
+<l>Vnd es der gantzen Welt zum rechten nutz geling.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">F. V. S.<lb/>
+Der Langſame.</hi><lb/>
+<cb/>
+21.<lb/>
+Ein ausſchlahend er Maulbeerbaum.<lb/>
+<cb/>
+In rechter zeit.<cb type="end"/>
+</head><lb/>
+<l>Der Maulbeerbaum zuletzt die knoſpen thut auslaſſen</l><lb/>
+<l>Langſam zur winterszeit die blaͤtter auch verlaſſen/</l><lb/>
+<l>Der <hi rendition="#fr">Langſam</hi> ich genant drumb bin zu rechter zeit/</l><lb/>
+<l>Weil von Natur er weiß wann froſt noch hinden leit.</l><lb/>
+<l>Geſch winde guts zu thun ſich allzuwol nicht ſchicket/</l><lb/>
+<l>Man fangs an mit bedacht auffs beſt es ſo geluͤcket/</l><lb/>
+<l>Doch muß man haben acht ſtets auff die rechte zeit/</l><lb/>
+<l>Dann wer ſie einſt verleurt/ dem bleibt ſie allzu weit.</l></lg><lb/>
+<fw type="sig" place="bottom">B iij</fw><fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0016"/>
+<note place="left">1619.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">J. A. V. R.<lb/>
+Der Leimende.</hi><lb/>
+<cb/>
+22.<lb/>
+Ein halb verdorter Apffelbaum/ ſo<lb/>
+den Miſpel oder Kenſter traͤgt.<lb/>
+<cb/>
+Von angehencktem<lb/>
+ſchmeiß.<cb type="end"/>
+</head><lb/>
+<l>Der Leim vom Miſpelholtz und behren zubereitet/</l><lb/>
+<l>Der ſoll vom Vogelſchmeiß dahin ſo ſeyn geleitet/</l><lb/>
+<l>Weil er ſich dran gehenckt erzeugt in jhm die krafft/</l><lb/>
+<l>Drumb <hi rendition="#fr">Leimend</hi> ich mir hab genommen dieſen ſafft.</l><lb/>
+<l>Wiewol es nun faſt ſcheint/ als wann darmit ich leime/</l><lb/>
+<l>Vnd daß ſich diß Gemaͤhld hieher nicht ſchick und reime/</l><lb/>
+<l>So wiſt doch das mit nutz ich tapffer leimen wil/</l><lb/>
+<l>Zum guten nur allein/ vorbringen fruͤchte viel.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">C. G. G. Z. S.<lb/>
+Der Vermehrende.</hi><lb/>
+<cb/>
+23.<lb/>
+Tuͤrckiſch Korn mit vielen aͤhren.<lb/>
+<cb/>
+Hundertfaͤltig.<cb type="end"/>
+</head><lb/>
+<l>Auff hundertfaͤltig art/ ſich Tuͤrckiſch Korn vermehret/</l><lb/>
+<l>Das wechſet haͤuffig auff/ dabey auch zimlich nehret/</l><lb/>
+<l>Drumb heiß <hi rendition="#fr">Vermehrend</hi> ich/ darzu in hundert mahl/</l><lb/>
+<l>Weil mit vermehrung man ſoll guts thun ohne zahl.</l><lb/>
+<l>Es iſt gar ein gerings ein zeitlich gut vermehren/</l><lb/>
+<l>Man muß noch hoͤher ſich zu dem ſo geiſtlich kehren/</l><lb/>
+<l>So wird man dann erſt recht frucht bringen mit gedult/</l><lb/>
+<l>Wenn man ſich helt an dem/ der zahlt fuͤr unſre ſchuld.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">G. A. F. Z. A.<lb/>
+Der Anmutige</hi><lb/>
+<cb/>
+24.<lb/>
+Ein Pomerantzen Baum<lb/>
+mit reiffen Pomerantzen.<lb/>
+<cb/>
+Im Geruch uñ Schmack.<cb type="end"/>
+</head><lb/>
+<l>Anmuthig iſt die frucht der reiffen Pomerantzen.</l><lb/>
+<l>Im Schmack und im Geruch/ wo ſie ſich thun einpflantzen/</l><lb/>
+<l>Im Sprichwort ſagt man wol auff ein Ey ſchmeckt ein trunck/</l><lb/>
+<l>Vnd auff ein Apffel rund/ ſchickt ſich ein frewden ſprungk.</l><lb/>
+<l>Man ſoll anmuthig ſeyn in allen ehren ſachen/</l><lb/>
+<l>Vnd nimmer niemand nicht ein eintzig unluſt machen/</l><lb/>
+<l>Alſo anmuthig man iſt im Geruch und Schmack/</l><lb/>
+<l>Wenn man mit grillen nicht zerſtoͤrt ein gut gelack.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0017"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">T. H.<lb/>
+Der Nutzbare.</hi><lb/>
+<cb/>
+25.<lb/>
+Ein Ruͤbeſaat-Stengel mit<lb/>
+reiffer frucht.<lb/>
+<cb/>
+In vielfaͤltigkeit.<cb type="end"/>
+</head><note place="right">1619.</note><lb/>
+<l>Vielfaͤltig nutzbar iſt der gute Ruͤbeſahmen/</l><lb/>
+<l>An Korn und Oel/ daher fuͤhr ich mir dieſen Nahmen:</l><lb/>
+<l>Wie nutzbar ich nun ſey/ mein <hi rendition="#aq"><hi rendition="#g"><hi rendition="#k">Bartas</hi></hi></hi> zeugen ſoll/</l><lb/>
+<l>Den teutſch in reine Reim ich gantz verſetzet wol.</l><lb/>
+<l>Ohn eimg frembd gemeng/ daß die von frembden orten/</l><lb/>
+<l>Sich wundern ob der art/ ſo klar in allen worten/</l><lb/>
+<l>Vnd drumb bezeugen beyd/ daß in gebundner Redt/</l><lb/>
+<l>Ich erſt den weg gezeigt/ und Teutſch in maß geredt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">C. F. Z. A.<lb/>
+Der Schnliche.</hi><lb/>
+<cb/>
+26.<lb/>
+Ein langer ſtengel voll Sonnenblumen<lb/>
+ſich nach der Sonnen wendende.<lb/>
+<cb/>
+Nach dir.<cb type="end"/>
+</head><lb/>
+<l>Die Sonnenblume ſich ſiets nach der Sonne ſehnet/</l><lb/>
+<l>Vnd jhre gantze krafft dahin auffreckend dehnet/</l><lb/>
+<l>Der <hi rendition="#fr">Sehnlich</hi> heiß ich drumb weil nach dem wahren liecht/</l><lb/>
+<l>Mein hertzlich ſehnen iſt ohn unterlaß gericht.</l><lb/>
+<l>Nach dir O hoͤchſte Sonn ich kraͤfftiglich mich ſehne/</l><lb/>
+<l>Mein huͤlff und allen troſt/ auff dich alleine lehne/</l><lb/>
+<l>Du meine Sonne biſt/ <hi rendition="#k">He</hi>rr der gerechtigkeit/</l><lb/>
+<l>Die frucht mich bringen laß den deinen zubereit.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">L. V. D. S.<lb/>
+Der Liebliche.</hi><lb/>
+<cb/>
+27.<lb/>
+Ein Roſenſtock mit einer leibfarben<lb/>
+ſchonen Roſen außgebluͤhet.<lb/>
+<cb/>
+Durchaus.<cb type="end"/>
+</head><lb/>
+<l>Die Rooß ſehr lieblich iſt am Stengel ausgebluͤhet/</l><lb/>
+<l>Nach jhrer liebligkeit iſt man gar ſehr bemuͤhet/</l><lb/>
+<l>Vnd weil ſie im Geruch/ Geſicht und Krafft beliebt/</l><lb/>
+<l>Hab ich durchaus genent mich <hi rendition="#fr">Lieblich</hi> wie ſichs giebt.</l><lb/>
+<l>Do eine Rooſe nun macht ſolche luſt auff Erden/</l><lb/>
+<l>Was Liebligkeit wird dann einſt denn zu theile werden/</l><lb/>
+<l>Die mit dem hertzen Gott und munde lieben feſt/</l><lb/>
+<l>Vnd von jhm kriegen ſo zuletzt das allerbeſt.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0018"/>
+<note place="left">1619.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">H. B. V. B.<lb/>
+Der Kuͤlende.</hi><lb/>
+<cb/>
+28.<lb/>
+Erdbeeren mit jhrem Kraͤndicht.<lb/>
+<cb/>
+In der Hitze.<cb type="end"/>
+</head><lb/>
+<l>Erdbeeren kraut und bluͤth ſehr in der hitz abkuͤhlen/</l><lb/>
+<l>Wann die ein kranckes hertz im Fieber offt thut fuͤhlen/</l><lb/>
+<l>So heiß ich Kuͤhlend nun/ und ſolches in der Hitz/</l><lb/>
+<l>Ein jeder brauche recht verſtandt/ vernunfft und witz:</l><lb/>
+<l>Bey naſſen bruͤdern ſich viel meynen abzukuͤhlen:</l><lb/>
+<l>Erhitzen ſich doch mehr/ und wie die Saͤw ſich wuͤhlen/</l><lb/>
+<l>So dieſe kuͤhle frucht dient nur zur mattigkeit/</l><lb/>
+<l>Wenn man vom Fieber hitz mit kruncken nieder leit.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">L. G. G Z. S.<lb/>
+Der Staͤrckende.</hi><lb/>
+<cb/>
+29.<lb/>
+Eine Citron an einem Baum.<lb/>
+<cb/>
+Vor Andern.<cb type="end"/>
+</head><lb/>
+<l>Citronen voller ſafft das hertz und kraͤffte ſtaͤrcken/</l><lb/>
+<l>Vor andrer ſtaͤrckung ſehr/ am krancken kan mans mercken/</l><lb/>
+<l>Vmb dieſer wirckung ich hab <hi rendition="#fr">Staͤrckend</hi> mich genant/</l><lb/>
+<l>Weil voll ſtaͤrck jhre krafft in heiſſer gifft bekant.</l><lb/>
+<l>Man ſoll die tugend werth ſtets wider laſter ſtaͤrcken/</l><lb/>
+<l>Vnd uͤben gerne ſich in allen Ehrenwercken/</l><lb/>
+<l>Alſo vor andern ſtarck man rechte fruͤchte hringt/</l><lb/>
+<l>Die laſter all zu hauff ſampt der untugend zwingt.</l></lg><lb/>
+<note place="left">1620.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">B. H. Z. S.<lb/>
+Der Austrucknende.</hi><lb/>
+<cb/>
+30.<lb/>
+Eine reiffe Quitte.<lb/>
+<cb/>
+In ſeiner Wirckung.<cb type="end"/>
+</head><lb/>
+<l>Der Quitten edle frucht/ viel feuchtigkeit austreuget/</l><lb/>
+<l>Zu jhrer wirckung gut dem ſchlucken ſich ereuget:</l><lb/>
+<l>Drumb ich <hi rendition="#fr">Austrucknend</hi> mich jetzt alſo nennen wil/</l><lb/>
+<l>Zuſehn ob koͤnn ich auch recht ſchieſſen ſo zum ziel.</l><lb/>
+<l>Daß man das groſſe Meer der laſter und der ſchanden</l><lb/>
+<l>Austrockne/ muß da ſeyn der tugend wind obhanden:</l><lb/>
+<l>Gleich wie die feuchtigkeit im leibe trucknet auß/</l><lb/>
+<l>Wenn man ſich maͤſſig helt/ und nicht lebt hin im ſauß.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0019"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">D. V. D. W.<lb/>
+Der Vielgekoͤrnte.</hi><lb/>
+<cb/>
+31.<lb/>
+Ein auffgeborſtner Granat-<lb/>
+apffel.<lb/>
+<cb/>
+Abkuͤhlend ſtaͤrcket.<cb type="end"/>
+</head><note place="right">1620.</note><lb/>
+<l>Die vielen Koͤrner ſeht der aͤpffel aus Granaten/</l><lb/>
+<l>Ob zur Geſellſchafft frucht ſie nicht ſeynd wol gerathen/</l><lb/>
+<l>Den <hi rendition="#fr">Vielgekoͤrnten</hi> drumb ich mich mit fuge heiß/</l><lb/>
+<l>Weil das vermoͤgen ich der Teutſchen Sprach erweiß:</l><lb/>
+<l>Wann ich ſeh <hi rendition="#aq">Bartam</hi> teutſch/ abkuͤhlend ich mich ſtaͤrcke/</l><lb/>
+<l>Vnd reitzt mich ſolcher an zu einem ſchwerern wercke/</l><lb/>
+<l>Gottfried von <hi rendition="#aq">Bulljon</hi> ich in teutſch hab uͤberbracht/</l><lb/>
+<l>Vnd unſrer Sprach hiedurch ein kern new lob gemacht.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">C. V. L.<lb/>
+Der Reinigende.</hi><lb/>
+<cb/>
+32.<lb/>
+Ein Holunderbaum mit ſeiner<lb/>
+bluͤth und beerlein.<lb/>
+<cb/>
+Durch alle wege.<cb type="end"/>
+</head><lb/>
+<l>Der Holder reinigt ſehr mit ſeiner bluͤth und beeren/</l><lb/>
+<l>Vnd daß durch alle weg/ doch ohne groß beſchweren/</l><lb/>
+<l>Der Reinigend ich drumb genennet worden bin/</l><lb/>
+<l>Weil ich die Frucht erwehlt/ nach meim gemuͤth und ſinn:</l><lb/>
+<l>Wie kan man reiner nun ſein gantzes leben machen/</l><lb/>
+<l>Als wenn man feget aus ſtracks all unreine ſachen?</l><lb/>
+<l>Im Geiſt und in dem Leib/ und wird ein menſch gantz new/</l><lb/>
+<l>Daß man fuͤr Gottes Thron erſcheinen kan ohn ſchew.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">C. E. K.<lb/>
+Der Ausbreitende.</hi><lb/>
+<cb/>
+33.<lb/>
+Ein Lindenbaum.<lb/>
+<cb/>
+In wirckender bluͤth.<cb type="end"/>
+</head><lb/>
+<l>Ein gruͤner Lindenbaum ſich trefflich ſchoͤn ausbreitet/</l><lb/>
+<l>Voll wirckung ſeine bluͤth/ der ſeuchen viel beſtreitet/</l><lb/>
+<l><hi rendition="#fr">Ausbreitend’</hi> iſt der Nahm geworden mir zu theil/</l><lb/>
+<l>Weil im ausbreiten mir ich nehme rechte weil:</l><lb/>
+<l>Zucht/ Tugend/ Erbarkeit die ſoll man ſtets ausbreiten/</l><lb/>
+<l>Auch jung und alt darzu mit ſeinem beyſpiel leiten/</l><lb/>
+<l>Auff daß Fruchtbringend man in dieſer welt mag ſeyn/</l><lb/>
+<l>Im alter und der bluͤth zur ehre wirck allein.</l></lg><lb/>
+<fw type="sig" place="bottom">C</fw><fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0020"/>
+<note place="left">1620.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">H. V. S.<lb/>
+Der Erfrewende.</hi><lb/>
+<cb/>
+34.<lb/>
+Eine Weinpreſſe daraus rother<lb/>
+Wein in ein Glaß laͤufft.<lb/>
+<cb/>
+In rechtem gebrauch.<cb type="end"/>
+</head><lb/>
+<l>Der wein des menſchen hertz thut nach der ſchrifft erfrewen/</l><lb/>
+<l>Er darff/ wenn man jhn recht braucht/ ſich fuͤr niemand ſchewen.</l><lb/>
+<l>Drumb mich <hi rendition="#fr">Erfrewend</hi> ich im Wein genennet hab/</l><lb/>
+<l>Daß man recht im gebrauch erkenne ſeine gab:</l><lb/>
+<l>Man ſoll ſich in dem Wein auch dergeſtalt erfrewen/</l><lb/>
+<l>Daß man ſich nimmer nicht/ laß ſeiner that gerewen/</l><lb/>
+<l>Das iſt der rechte brauch/ wenn man nicht wird bethoͤrt/</l><lb/>
+<l>Vnd ſo das Trinckrecht helt/ daß man bey zeit auffhoͤrt.</l></lg><lb/>
+<note place="left">1621.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">C. D. A. D. W.<lb/>
+Der Gruͤne.</hi><lb/>
+<cb/>
+35.<lb/>
+Stechpalm oder Walddiſteln.<lb/>
+<cb/>
+Nicht ohne Leim.<cb type="end"/>
+</head><lb/>
+<l>Huͤlſt iſt ein kleine Staud/ die jmmer fort gantz gruͤnet/</l><lb/>
+<l>Wiewol ſie ſtachlich iſt/ das Schaf ſich doch erkuͤhnet/</l><lb/>
+<l>Vnd klaubt die blaͤtter rab/ ſie giebt ſehr guten Leim/</l><lb/>
+<l>Der <hi rendition="#fr">Gruͤn</hi> ich bin genent/ hab auch den Leim daheim:</l><lb/>
+<l>Wenn er zu ſtarck wolt ſeyn/ ſo kan man jhn befeuchten/</l><lb/>
+<l>Vnd mit der tugend werth/ hell jederman vorleuchten/</l><lb/>
+<l>Auff daß man gruͤn und new frucht bringe huͤbſch und fein/</l><lb/>
+<l>Damit auch nutze den/ ſo ſonſt ſtets Leimend ſeyn.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">B. F. B. V. L.<lb/>
+Der Steiffe.</hi><lb/>
+<cb/>
+36.<lb/>
+Ein Buchbaum.<lb/>
+<cb/>
+Im feuchten.<cb type="end"/>
+</head><lb/>
+<l>Das Buchenholtz wird ſteiff/ wann es geſetzt im feuchten/</l><lb/>
+<l>Vnd wanns brennt im Camin mit heller flam thut leuchten:</l><lb/>
+<l>Drumb ich der <hi rendition="#fr">Steiffe</hi> heiß/ weil es ſteiff iſt und feſt/</l><lb/>
+<l>Ja auch noch ſteiffer wird/ wenns in eim feuchten neſt:</l><lb/>
+<l>Wanns wetter feucht und truͤb/ ſoll man ſich ſteiff feſt zeigen/</l><lb/>
+<l>Vnd nicht nach jedem wird ſein kleid und mantel neigen/</l><lb/>
+<l>So wird man ſteiff und feſt in langmuth bringen frucht/</l><lb/>
+<l>Wenn man in trangſal auch den wahren nutzen ſucht.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0021"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">H. R.<lb/>
+Der Friedſame.</hi><lb/>
+<cb/>
+37.<lb/>
+Ein Oelbaum.<lb/>
+<cb/>
+In gelindigkeit.<cb type="end"/>
+</head><note place="right">1621.</note><lb/>
+<l>Man helt den Oelbaum ſtets fuͤr ein recht friedenszeichen/</l><lb/>
+<l>Dem in gelindigkeit kein anders zu vergleichen/</l><lb/>
+<l>Daher mir worden iſt ein hoher werther Nahm/</l><lb/>
+<l>Daß man mich hat genent in Lindigkeit <hi rendition="#fr">Friedſam.</hi></l><lb/>
+<l>Wer in gelindigkeit/ ſtill/ friedlich ſich bezeiget/</l><lb/>
+<l>Der macht die gantze welt zum freund und jhm geneiget/</l><lb/>
+<l>Das iſt die beſte frucht die einer bringen kan/</l><lb/>
+<l>Vnd kan man doch darbey wol ſeyn ein tapffer mann.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">F. V. H. Z. B. V. L.<lb/>
+Der Dawerhaffte.</hi><lb/>
+<cb/>
+38.<lb/>
+Ein Cedern Baum.<lb/>
+<cb/>
+In allem Wetter.<cb type="end"/>
+</head><lb/>
+<l>Das Cedernholtz ſehr hart in allem Wetter dawret/</l><lb/>
+<l>Es ſoll verfaulen nie/ fuͤrm froſt jhm auch nicht ſchawret/</l><lb/>
+<l>Vnd ſeine blaͤtter helt/ <hi rendition="#fr">Dawrhafft</hi> ich mich drumb heiß/</l><lb/>
+<l>Weil ich in einem bleib/ es ſey kalt oder heiß:</l><lb/>
+<l>Wer nun zur argen zeit in allem Wetter dawret/</l><lb/>
+<l>Vnd fleiſſig huͤtet ſich fuͤr dem der auff jhn lawret/</l><lb/>
+<l>Der kan wehrhaffte frucht fuͤrbringen jederzeit/</l><lb/>
+<l>Bey jhm mit nutzen auch wird tugend ausgebreit.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">S. V. M.<lb/>
+Der Anlockende.</hi><lb/>
+<cb/>
+39.<lb/>
+Ein Ebereſchenbaum mit ſeinen<lb/>
+beerlein.<lb/>
+<cb/>
+Zun Voͤgeln.<cb type="end"/>
+</head><lb/>
+<l>Die Obereſchenbeer herzu die Vogel locken/</l><lb/>
+<l>Wie mancher Hoffman thut/ wann er ſich uͤbt im ſtocken/</l><lb/>
+<l>Zu gleichnuͤß dieſer beer/ man mich <hi rendition="#fr">Anlockend</hi> heiſt/</l><lb/>
+<l>Damit man ſeh/ wie offt man eim ein tuͤck beweiſt:</l><lb/>
+<l>Nun man ſoll locken an die menſchen zu der tugend/</l><lb/>
+<l>Darbey nicht laſſen aus die zarte liebe jugend.</l><lb/>
+<l>Vnd daß beyd alt und jung mit nutzen bringe frucht/</l><lb/>
+<l>Beſcheiden locken ſie zur ſittſamkeit und zucht.</l></lg><lb/>
+<fw type="sig" place="bottom">C ij</fw><fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0022"/>
+<note place="left">1621.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">F. W. R.<lb/>
+Der Streublichte.</hi><lb/>
+<cb/>
+40.<lb/>
+Eine Waſſernuß wii ſie waͤchſt.<lb/>
+<cb/>
+Im Waſſer.<cb type="end"/>
+</head><lb/>
+<l>Die ſchwartze Stachelnuß im Waſſer ſich rumb ſtreubet/</l><lb/>
+<l>Vnd ſchwebet oben drauff/ an jhrem kraute kleibet/</l><lb/>
+<l>Den Nahmen <hi rendition="#fr">Straublicht</hi> mir ich drumb auffgeben ließ/</l><lb/>
+<l>Weil in den Waſſern ſtill ſie auffwechſt ohn verdrieß:</l><lb/>
+<l>Nun man ſoll eifferig ſich widers boͤſe ſtreuben/</l><lb/>
+<l>In der betruͤbnuͤß fluth/ an Gott allein feſt bleiben/</l><lb/>
+<l>Meins lauffes Stam und Nahm allhier nun iſt vollend/</l><lb/>
+<l>Weil ich verlaſſen hab der argen welt elend.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. E. B.<lb/>
+Der Bittere.</hi><lb/>
+<cb/>
+41.<lb/>
+Wermuth.<lb/>
+<cb/>
+Treibet die Gifft.<cb type="end"/>
+</head><lb/>
+<l>Wermuth ein bitter kraufft/ die kalte Gifft wegtreibet/</l><lb/>
+<l>Bey einer Bittrigkeit die andre mit vertreibet:</l><lb/>
+<l>Daß ich nun <hi rendition="#fr">Bitter</hi> heiß/ niemand ſich wundern thu/</l><lb/>
+<l>Weil auch was bitter iſt/ der Gifft nicht traͤget zu.</l><lb/>
+<l>Das bittre ſeelen Gifft des zorns ſoll man vertreiben/</l><lb/>
+<l>Vnd ſich mit eigner Rach an keinen menſchen reiben/</l><lb/>
+<l>Die Rach iſt anders nichts/ als eine bittre gall/</l><lb/>
+<l>Die Gott mit harter ſtraff vertilget uͤberall.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">W. H.<lb/>
+Der Forttreibende.</hi><lb/>
+<cb/>
+42.<lb/>
+Artiſchocken.<lb/>
+<cb/>
+Zur Zucht.<cb type="end"/>
+</head><lb/>
+<l>Die Artiſchocken gut zur zucht ſich fein forttreiben/</l><lb/>
+<l>Vom ſahmen/ und geſetzt ins Erdreich/ wol bekleiben/</l><lb/>
+<l>Ich hab Forttreibend mich genennet und zur Zucht/</l><lb/>
+<l>Weil eilend ſo fortzeucht ſich dieſe werthe frucht.</l><lb/>
+<l>Laſt uns forttreiben nun der reinen tugend ſahmen/</l><lb/>
+<l>Daß wir erlangen mit ein gut Geruͤcht und Nahmen/</l><lb/>
+<l>Das wird die beſte frucht ſeyn ſo jemals gebracht/</l><lb/>
+<l>Wenn man zu guter Zucht ſich wendt mit aller macht.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0023"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">H. D. S.<lb/>
+Der Schlieſſende.</hi><lb/>
+<cb/>
+43.<lb/>
+Ein weiſſer Kohlkopff.<lb/>
+<cb/>
+In ſeiner Suͤſſe.<cb type="end"/>
+</head><note place="right">1621.</note><lb/>
+<l>Ein dichter Kohlkopff thut in ſeiner Suͤſſe ſchlieſſen/</l><lb/>
+<l>Vnd ſoll das ſawre wol darbey auch gerne miſſen:</l><lb/>
+<l>So <supplied>b</supplied>in ich <hi rendition="#fr">Schlieſſend</hi> nun im Nal men und der that/</l><lb/>
+<l>Ja auff den winter man mich halten muß zu rath.</l><lb/>
+<l>Was ſollen wir denn ſtets in unſre hertzen ſchlieſſen?</l><lb/>
+<l>Die Tugend und die Ehr/ recht jhnen ſeyn geflieſſen/</l><lb/>
+<l>Das wird dann geben uns viel nutz und frucht zugleich/</l><lb/>
+<l>So wird die rechte Suͤß uns all auch machen reich.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">G. F. G. Z. H.<lb/>
+Der Getrewe.</hi><lb/>
+<cb/>
+44.<lb/>
+Das Kraut Mannstrew.<lb/>
+<cb/>
+Staͤrcket den Mann.<cb type="end"/>
+</head><lb/>
+<l>Mannstrew ein wild gewaͤchs zu vielen dingen dienet/</l><lb/>
+<l>Dem Mann noch mehr iſt trew/ daß er ſich wol erkuͤhnet:</l><lb/>
+<l>Drumb iſt mein Nahm genant fuͤr andern der <hi rendition="#fr">Getrew</hi>/</l><lb/>
+<l>Weil mir/ ein ſchwachen Mann zu ſtaͤrcken/ nicht iſt new.</l><lb/>
+<l>Mannstrew und Weiberkrieg die wachſen gern beyſammen/</l><lb/>
+<l>Man muß ſie haben beyd in der that und im Nahmen:</l><lb/>
+<l>Nun wer trew iſt/ bleibt trew vor ſich und ſein Geſchlecht.</l><lb/>
+<l>Darbey auch als ein Mann ſich erbar helt und recht.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">B. V. R.<lb/>
+Der Bluͤhende.</hi><lb/>
+<cb/>
+45.<lb/>
+Ein bluͤhender Roßmarienſtock.<lb/>
+<cb/>
+Zur Staͤrckung.<cb type="end"/>
+</head><lb/>
+<l>Das Roßmarien kraut und bluͤth im leibe ſtaͤrcket/</l><lb/>
+<l>Die ſtaͤrckung doch des haupts/ meiſt aus der bluͤth man mercket/</l><lb/>
+<l>Zur Staͤrckung Bluͤhend ich/ bin/ als zu ſehn/ genant/</l><lb/>
+<l>Mein ſchmack/ ſtaͤrck und geruch iſt jederman bekant:</l><lb/>
+<l>Zur ſtaͤrckung des Gemuͤths/ ſoll fort und fort man bluͤhen/</l><lb/>
+<l>Daß es erbawet werd/ mit fleiß ſich drob bemuͤhen/</l><lb/>
+<l>So wird erlangen man/ ein frucht ſo bringet ſtaͤrck/</l><lb/>
+<l>Vnd darff ſich fuͤrchten nicht fuͤr ſchnoͤdem narrenwerck.</l></lg><lb/>
+<fw type="sig" place="bottom">C iij</fw><fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0024"/>
+<note place="left">1621.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">A. F. Z. A.<lb/>
+Der Sieghaffte.</hi><lb/>
+<cb/>
+46.<lb/>
+Das Kraut Allermann Harniſch.<lb/>
+<cb/>
+Zu ſeiner Zeit.<cb type="end"/>
+</head><lb/>
+<l>Allermann Harniſch rund die wurtzel wol verbunden/</l><lb/>
+<l>Hat wider ſchoß und ſtich auch ſtreich offt uͤberwunden:</l><lb/>
+<l>Doch muß man haben acht genaw auff ſeine zeit/</l><lb/>
+<l>Wenn man wil Sieghafft ſeyn in allem kampff und ſtreit.</l><lb/>
+<l>Den Nahmen <hi rendition="#fr">Sieghafft</hi> auch hab ich mir drumb gegeben/</l><lb/>
+<l>Auff daß die rechte zeit man warnehm in dem leben/</l><lb/>
+<l>Die nicht mehr Morgen iſt/ als Heut und jmmerzu/</l><lb/>
+<l>Daß man den Sieg erhalt in wahrer frewd und ruh.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">E. F. Z. A.<lb/>
+Der Wolbewahrte.</hi><lb/>
+<cb/>
+47.<lb/>
+Eine Welſchenuß auffge-<lb/>
+ſchnitten mit jhrer ſchalen.<lb/>
+<cb/>
+Zur Vollkom̃enheit.<cb type="end"/>
+</head><lb/>
+<l>Die Welſchenuß die iſt mit ſchalen wol bewahret/</l><lb/>
+<l>Vnd ſolches von Natur/ darumb ſich nichts befahret/</l><lb/>
+<l>Biß zur Vollkommenheit/ den Nahmen ich daher</l><lb/>
+<l>Hab/ weil ich meine frucht zu wahren ſtets begehr.</l><lb/>
+<l>Nun was man lernet guts/ das ſoll man wol bewahren/</l><lb/>
+<l>In einem hertzen rein/ mit ſorgen vorgefahren/</l><lb/>
+<l>Damit man es wend an zu nutz dem Vaterland/</l><lb/>
+<l>Ein jeder bringe frucht gemaͤſſe ſeinem Standt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. C. V. F.<lb/>
+Der Brennende.</hi><lb/>
+<cb/>
+48.<lb/>
+Welſche Neſſeln.<lb/>
+<cb/>
+Erzeigt ſich bald.<cb type="end"/>
+</head><lb/>
+<l>Die Welſcheneſſeln ſcharff ſehr heiß und hefftig brennen/</l><lb/>
+<l>Erzeigen ſich auch bald/ drumb ſie mich Brennend nennen:</l><lb/>
+<l>Was eine Neſſel gut bey zeiten werden wil/</l><lb/>
+<l>Bald hebt zu brennen an/ und macht der blaͤßlein viel:</l><lb/>
+<l>Alſo von wahrer lieb auch eiffrig man erbrenne/</l><lb/>
+<l>Vnd zu dem rechten zweck mit groſſer hitze renne/</l><lb/>
+<l>Daß man es bald erreich/ dahin man leufft und rent/</l><lb/>
+<l>Vnd wer recht eiffrig iſt/ zum erſten wird erkent.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0025"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">H. C. V. H.<lb/>
+Der Erwaͤrmende.</hi><lb/>
+<cb/>
+49.<lb/>
+Krauſemuͤntze.<lb/>
+<cb/>
+Hilfft der Dawligkeit.<cb type="end"/>
+</head><note place="right">1621.</note><lb/>
+<l>Die edle Krauſemuͤntz erwaͤrmet wol den Magen/</l><lb/>
+<l>Pflegt die undawligkeit auch daraus zu verjagen/</l><lb/>
+<l>Man nennet von der krafft des krauts <hi rendition="#fr">Erwaͤrmend</hi> mich/</l><lb/>
+<l>Daß man zur Dawligkeit ſelbſt beſſer helffe ſich:</l><lb/>
+<l>Durch glauben lerne man die wiedrigkeit verdawen/</l><lb/>
+<l>Vnd durch den Geiſt erwaͤrmt vertreiben alles grawen/</l><lb/>
+<l>Des fleiſches bloͤdigkeit wird bald ſeyn abgethan/</l><lb/>
+<l>Vnd dann ſich zeigen doͤrfft ein rechter newer Mann.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">F. V. D.<lb/>
+Der Beſtaͤndige.</hi><lb/>
+<cb/>
+50.<lb/>
+Ein Ellren Baum.<lb/>
+<cb/>
+Im Naſſen.<cb type="end"/>
+</head><lb/>
+<l>Die Eller ein feſt holtz/ beſtaͤndig iſt im naſſen/</l><lb/>
+<l>Man thut der Haͤuſer grund drauff ſetzen und mit faſſen/</l><lb/>
+<l>Beſtaͤndig ich daher erhalt den Nahmen mein/</l><lb/>
+<l>Weil ein beſtaͤndig hertz in uns ſoll allzeit ſeyn.</l><lb/>
+<l>Man meynt das dieſes holtz im naſſen ſtein ſoll werden/</l><lb/>
+<l>Ob nun wol kein beſtandt zu finden hier auff Erden/</l><lb/>
+<l>So kan beſtaͤndigkeit doch bleiben nicht zuruͤck/</l><lb/>
+<l>Weil Gott dieſelbe helt fuͤrs allerbeſte ſtuͤck.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">C. D. J. F. Z. A.<lb/>
+Der Vnveraͤnderliche.</hi><lb/>
+<cb/>
+51.<lb/>
+Ein Cypreſſen Vaum.<lb/>
+<cb/>
+Dringet in die hoͤhe.<cb type="end"/>
+</head><note place="right">1622.</note><lb/>
+<l>Nauff der Cypreſſenbaum ſich in die hoͤhe dringet/</l><lb/>
+<l>Vnd unveraͤnderlich vor gruͤne zweiglein bringet/</l><lb/>
+<l>Drumb <hi rendition="#fr">Vnveraͤnderlich</hi> ich mir den Nahmen nam/</l><lb/>
+<l>Weil gleich auff eine weiß’ auffwaͤchſet dieſer Stam<hi rendition="#i">:</hi></l><lb/>
+<l>Recht unveraͤnderlich ein frey gemuͤth ſoll bleiben/</l><lb/>
+<l>Vnd was veraͤnderlich von jhm weg ferne treiben/</l><lb/>
+<l>Daß es frucht/ nutzen ſchaff in Tugend und in Ehr/</l><lb/>
+<l>Vnd unveraͤnderlich zunehm je mehr und mehr.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0026"/>
+<note place="left">1622.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">B. V. E.<lb/>
+Der Geſunde.</hi><lb/>
+<cb/>
+52.<lb/>
+Rauten.<lb/>
+<cb/>
+Schewet keine Gifft.<cb type="end"/>
+</head><lb/>
+<l>Der Gartenraute krafft gantz keine Gifft nicht ſchewet/</l><lb/>
+<l>Der Peſt ſehr widerſteht/ die krafft im leib ernewet/</l><lb/>
+<l>Vnd weil ſie ſo geſund/ <hi rendition="#fr">Geſund</hi> ich auch drumb heiß/</l><lb/>
+<l>Denn ich die groͤſte Gifft vertreihe mit dem ſchweiß.</l><lb/>
+<l>Wer nun iſt eingepflantzt in Gottes Rauten Garten/</l><lb/>
+<l>Der darff ſich ſchewen nicht/ noch auch der Gifft erwarten/</l><lb/>
+<l>Des Satans und des Todts Gott hat gemacht jhn frey/</l><lb/>
+<l>Daß er nun iſt geſund/ und ſicher ohne ſchew.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">L. V. B.<lb/>
+Der Wirckende.</hi><lb/>
+<cb/>
+53.<lb/>
+Wolausgebluͤheter braun<lb/>
+und weiſſer Wieſenklec.<lb/>
+<cb/>
+Zu Milch und Honig.<cb type="end"/>
+</head><lb/>
+<l>Der braun und weiſſe klee fein bund die Wieſen zieret/</l><lb/>
+<l>Zu Milch und Honig wirckt/ daher den Nahmen fuͤhret/</l><lb/>
+<l>In der Geſellſchafft groß der <hi rendition="#fr">Wirckend</hi> voller krafft/</l><lb/>
+<l>Bey wild und zahmen vieh auswirckend guten ſafft.</l><lb/>
+<l>Die Milch die Tugend iſt/ auch weiß und unbeflecket/</l><lb/>
+<l>Der Honig iſt die frucht ſo lieblich ſuͤſſe ſchmecket/</l><lb/>
+<l>Gott helff uns in das Land/ drin Milch und Honig fleuſt/</l><lb/>
+<l>Vnd alle gaben gut/ ohn maß ſein Geiſt ausgeuſt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">W. F. V. T.<lb/>
+Der Durchſtaͤrckende.</hi><lb/>
+<cb/>
+54.<lb/>
+Das Kraut Bachbonen.<lb/>
+<cb/>
+In Gliedern.<cb type="end"/>
+</head><lb/>
+<l>Bachbonen haben krafft die glieder durch zu ſtaͤrcken/</l><lb/>
+<l>Ihr werdet dannenher gar leichtlich koͤnnen mercken</l><lb/>
+<l>Daß ich <hi rendition="#fr">Durchſtaͤrckend</hi> heiß/ jhr habt urſachen da/</l><lb/>
+<l>Weil ich mit meiner Salb den Sehnen kom gar nah.</l><lb/>
+<l>Nun muß man nicht allein durchſtaͤrcken leib und glieder/</l><lb/>
+<l>Man muß auch zu dem Geiſt ſich einſten kehren wieder/</l><lb/>
+<l>Da iſt die rechte Salb/ die durchſtaͤrckt marck und bein/</l><lb/>
+<l>Vnd macht die Seelen auch von allem unflath rein.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0027"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">F. V. K.<lb/>
+Der Helffende.</hi><lb/>
+<cb/>
+55.<lb/>
+Das Kraut Poley.<lb/>
+<cb/>
+In noͤthen.<cb type="end"/>
+</head><note place="right">1622.</note><lb/>
+<l>Poley ein kraͤutlein klein/ das hilfft mit krafft in noͤthen/</l><lb/>
+<l>Die Weiber haben es zum Kindbett offt von noͤthen:</l><lb/>
+<l>Drumb hat man Helffend mich geheiſſen allzuwol/</l><lb/>
+<l>Weil man/ wo es iſt noth/ einander helffen ſoll.</l><lb/>
+<l>Die Freunde wann die noth an mann geht man erſt kennet/</l><lb/>
+<l>Da bald der groͤſte hauff alsdann weg/ haſtig/ rennet:</l><lb/>
+<l>Damit es droben nun gefall dem hoͤchſten Gott/</l><lb/>
+<l>Laſt jedem helffen uns/ wann er ſich findt in noth.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">J. S.<lb/>
+Der Sawerhaffte.</hi><lb/>
+<cb/>
+56.<lb/>
+Rothe Johanns Beer.<lb/>
+<cb/>
+Erfriſcht und ſtaͤrckt.<cb type="end"/>
+</head><lb/>
+<l>Johannes Beerlein roth die ſtaͤrcken und erfriſchen/</l><lb/>
+<l>Seynd ſawerhafft/ und doch nicht leicht hinweg ſich wiſchen/</l><lb/>
+<l>Nun bin ich drumb genent fein friſch der <hi rendition="#fr">Sawerhafft</hi>/</l><lb/>
+<l>Weil im erfriſchen ich bezeige ſawre krafft.</l><lb/>
+<l>Man kan ſich eben wol verſtaͤrcken und erfriſchen/</l><lb/>
+<l>Ob ſchon den gantzen tag man nicht bring zu mit tiſchen/</l><lb/>
+<l>Das ſawr ein guten ſchmack dem ſuͤſſen auch offt giebt/</l><lb/>
+<l>Da meiſt das ſuͤß allein den menſchen nicht beliebt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">P. V. S.<lb/>
+Der Wolgemuthe.</hi><lb/>
+<cb/>
+57.<lb/>
+Das Kraut Wolgemuth.<lb/>
+<cb/>
+Zertreibt das boͤſe.<cb type="end"/>
+</head><lb/>
+<l>Das Kraͤutlein Wolgemuth das boͤſe fein zertreibet/</l><lb/>
+<l>Kein Gifft und ſchwartze Gall im leibe fuͤr jhm bleibet:</l><lb/>
+<l>Wie nun des Krautes Nahm heiß ich auch <hi rendition="#fr">Wolgemuth</hi>/</l><lb/>
+<l>Vnd bin darbey ein menſch der keinem kein leid thut:</l><lb/>
+<l>Das boͤſe laſſe man mit wolgemuthem hertzen/</l><lb/>
+<l>Fuͤr kurtz und kleine luſt macht es ſonſt tauſent ſchmertzen/</l><lb/>
+<l>So wird mein kraͤutlein auch recht bringen gute frucht/</l><lb/>
+<l>Wenn man dem widerſtrebt/ der jmmer ſchaden ſucht.</l></lg><lb/>
+<fw type="sig" place="bottom">D</fw><fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0028"/>
+<note place="left">1622.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">G. R. H. Z. L. V. B.<lb/>
+Der Wunderbare.</hi><lb/>
+<cb/>
+58.<lb/>
+Das Kraut Chriſtwurtz im ſchne.<lb/>
+<cb/>
+In ſeiner bluͤth.<cb type="end"/>
+</head><lb/>
+<l>Chriſtwurtzel bluͤhet gruͤn/ wann die kaͤlt iſt am groͤſten/</l><lb/>
+<l>Im ſchne und hartem froſt/ erzeigt ſie ſich am beſten:</l><lb/>
+<l>In dieſer meiner bluͤth heiß ich nun <hi rendition="#fr">Wunderbar</hi>/</l><lb/>
+<l>Weil ich faſt ſeltzam bin/ in der frucht-bringe ſchar.</l><lb/>
+<l>Gleich wie nun dieſes kraut was wunderbar herbluͤhet/</l><lb/>
+<l>Vnd mancher in der bluͤth ſich wunderlich bemuͤhet:</l><lb/>
+<l>So kan doch in der welt ſo wunderlich nichts ſeyn/</l><lb/>
+<l>Es nutzt/ wann Gott nur giebt darzu den ſegen ſein.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">G. V. V.<lb/>
+Der Erfriſchende.</hi><lb/>
+<cb/>
+59.<lb/>
+Eine Melone.<lb/>
+<cb/>
+Zum Durſt.<cb type="end"/>
+</head><lb/>
+<l>Zucker Melonen gruͤn und ſuͤß zum durſt erfriſchen/</l><lb/>
+<l>Vnd darff man von gewuͤrtz ſonſt nichts darunter miſchen:</l><lb/>
+<l>Darumb <hi rendition="#fr">Erfriſchend</hi> ich zum durſte mich hier nenn/</l><lb/>
+<l>Weil nach der Lebensquell ich heiß von durfte brenn.</l><lb/>
+<l>Wen nun nach Gotte durſt/ daß er erfriſcht moͤg werden/</l><lb/>
+<l>Der muß den Himmelstranck nicht ſuchen hier auff Erden/</l><lb/>
+<l>Beſondern wenden nauff ſein hertz und ſein gemuͤth/</l><lb/>
+<l>So wird mit nutzen er erquickt durch ſeine guͤt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">N. V. B.<lb/>
+Der Heilſamſte.</hi><lb/>
+<cb/>
+60.<lb/>
+Das H. Wundkraut Taback-<lb/>
+genant.<lb/>
+<cb/>
+Zu allen ſchaͤden.<cb type="end"/>
+</head><lb/>
+<l>Das wundenkraut Taback ſo alle ſchaͤden heilet/</l><lb/>
+<l>Saͤumt mit der heilung nicht/ beſondern ſchleunig eilet:</l><lb/>
+<l>Daher werd <hi rendition="#fr">Heilſambſt</hi> ich genent/ und bin bekant</l><lb/>
+<l>Im heilen und im rauch durch viel und manche Land.</l><lb/>
+<l>Den nechſten/ der noth leidt ſoll man auch balde heilen/</l><lb/>
+<l>Dem Samariter gleich/ und drin ſich nicht verweilen/</l><lb/>
+<l>Daß jhm der himliſch Artzt den ſchaden groß auch heil/</l><lb/>
+<l>So jedem angeerht von Adam zu ſeim theil.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0029"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">E. V. B.<lb/>
+Der Truckene.</hi><lb/>
+<cb/>
+61.<lb/>
+Mawer oder Stein Rauten.<lb/>
+<cb/>
+Nicht zu durchnetzen.<cb type="end"/>
+</head><note place="right">1623.</note><lb/>
+<l>Die Mawer Raute glatt die iſt nicht durch zu netzen/</l><lb/>
+<l>Ob es ſchon regnet drauff/ treuffts ab/ ſie thuts nicht ſchaͤtzen:</l><lb/>
+<l>Den Nahmen <hi rendition="#fr">Trucknend</hi> ich drumb wolte fuͤr mich han/</l><lb/>
+<l>Weil auff den blaͤttern mein kein tropffe bleiben kan:</l><lb/>
+<l>Wiewol die fluth mich nun im waſſer uͤbergangen/</l><lb/>
+<l>So hab ich meinem Gott doch fleiſſig angehangen/</l><lb/>
+<l>Das trucken ich fuͤr jhm die ſeele ſtellen kont/</l><lb/>
+<l>Der keinen ſeiner Knecht gelaſſen unbelohnt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">F. F. Z. A.<lb/>
+Der Stetsgruͤnende.</hi><lb/>
+<cb/>
+62.<lb/>
+Wintergruͤn.<lb/>
+<cb/>
+In heilſamer kuͤhlung.<cb type="end"/>
+</head><lb/>
+<l>Das Wintergruͤn auff erd ſich ausbreit und ſtets gruͤnet/</l><lb/>
+<l>Abkuͤhlt in heilſamkeit und zu den wunden dienet:</l><lb/>
+<l>Drumb heiß <hi rendition="#fr">Stetsgruͤnend</hi> ich/ weil fort und fort ich gruͤn/</l><lb/>
+<l>Vnd in der heilungs krafft bequem zur kuͤhlung bin:</l><lb/>
+<l>Wir ſollen in der furcht des <hi rendition="#k">He</hi>rren ſtetig gruͤnen/</l><lb/>
+<l>Vnd mit der hoffnung feſt recht unſerm Schoͤpffer dienen/</l><lb/>
+<l>So wird er heilen uns/ und kuͤhlen unſre ſeel/</l><lb/>
+<l>Daß ſie nicht fuͤrchten darff die gluͤend heiſſe Hell.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">J. A. S. G. Z. P.<lb/>
+Der Ausgedruckte.</hi><lb/>
+<cb/>
+63.<lb/>
+Johannis Kraut.<lb/>
+<cb/>
+Heilt die wunden.<cb type="end"/>
+</head><lb/>
+<l>Johannes Kraut ein oͤhl gibt ſo da heilt die wunden/</l><lb/>
+<l>Von der bluͤth ausgetruckt/ wenn man es drauff gebunden:</l><lb/>
+<l>Von dieſem Kraut iſt nun geworden mir der Nahm/</l><lb/>
+<l>Weil man hat ausgetruckt was bluͤth in meinem ſtam:</l><lb/>
+<l>Die bluͤth ein rothen ſafft/ getruckt aus/ von ſich giebet/</l><lb/>
+<l>Biß auff ſein heilſam blut hat Chriſtus uns geliebet/</l><lb/>
+<l>Daß wir ſeynd ausgetruckt von allen ſuͤnden rein/</l><lb/>
+<l>Weil Adams Fall geheilt durch ſein verdienſt allein.</l></lg><lb/>
+<fw type="sig" place="bottom">D ij</fw><fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0030"/>
+<note place="left">1623.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">M. G.<lb/>
+Der Holdſelige.</hi><lb/>
+<cb/>
+64.<lb/>
+Das Kraut Vergiß mein<lb/>
+nicht.<lb/>
+<cb/>
+In ſtetem gedaͤchtnuͤß.<cb type="end"/>
+</head><lb/>
+<l>Ein bluͤmlein blaw und weiß/ vergiß mein nicht geheiſſen/</l><lb/>
+<l>Soll man hoch billich ſtets in der gedaͤchtnuͤß preiſen/</l><lb/>
+<l>Weil es holdſelig iſt/ <hi rendition="#fr">Holdſelig</hi> ich mich nent/</l><lb/>
+<l>Vnd mir das hertz im leib noch ſeinet wegen brent.</l><lb/>
+<l>Holdſelig Gottes wort im hertzen ſich erzeiget/</l><lb/>
+<l>Wenn aus des Geiſtes grund es lieblich drin auffſteiget/</l><lb/>
+<l>Daſſelbe muͤſſen wir nie laſſen aus dem ſinn/</l><lb/>
+<l>So gehen wir gewiß auff rechter bahne hin.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">W. L. Z. H.<lb/>
+Der Kitzliche.</hi><lb/>
+<cb/>
+65.<lb/>
+Wol ausgebluͤheter Schwartzdorn<lb/>
+ohne blaͤtter.<lb/>
+<cb/>
+Zur bluͤets zeit.<cb type="end"/>
+</head><lb/>
+<l>Der Schledorn bluͤht ſehr voll/ ſich kitzlich drin bezeiget/</l><lb/>
+<l>Mein Nahmen <hi rendition="#fr">Kitzlich</hi> ich darumb hab hin geneiget/</l><lb/>
+<l>Weil kitzlich in der bluͤth er iſt im uͤberfluß/</l><lb/>
+<l>Vnd ſeine volle bluͤth doch niemand giebt verdruß.</l><lb/>
+<l>Zum guten ſoll man nun den kitzel nur anwenden/</l><lb/>
+<l>Vnd ſich vom uͤberfluß zu ſehr nicht laſſen blenden/</l><lb/>
+<l>Vnd bringen mit der bluͤth auch wahret tugend frucht/</l><lb/>
+<l>Die jedes edel hertz mit nutz und ehren ſucht.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">L. H. V. K.<lb/>
+Der Gelinde.</hi><lb/>
+<cb/>
+66.<lb/>
+Das groſſe Wullkraut oder<lb/>
+Konigs Kertz.<lb/>
+<cb/>
+In und auswendig.<cb type="end"/>
+</head><lb/>
+<l>Das Wullkraut in dem leib und auſſen iſt gelinde/</l><lb/>
+<l>Wann es recht zugericht/ gebraucht mans auch eim kinde:</l><lb/>
+<l><hi rendition="#fr">Gelind</hi> den Nahmen mein/ ich mir drumb hab erwehlt/</l><lb/>
+<l>Auff daß da Nahm und Krafft gleich wuͤrden vorgeſtelt.</l><lb/>
+<l>Wie nun diß kraut gelind iſt auſſen und im leibe/</l><lb/>
+<l>Soll man warnehmen ſich daß man alſo auch bleibe/</l><lb/>
+<l>Auswendig nicht allein/ beſondern auch im muth/</l><lb/>
+<l>Damit ſo nutzen ſchaff/ und bringe fruͤchte gut.</l></lg><lb/>
+<fw type="catch" place="bottom">Der</fw><lb/>
+<pb facs="#f0031"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">C. F. K.<lb/>
+Der Seuberende.</hi><lb/>
+<cb/>
+67.<lb/>
+Spargeln.<lb/>
+<cb/>
+Mit luſt.<cb type="end"/>
+</head><note place="right">1623.</note><lb/>
+<l>Die Spargeln haben krafft mit luſt rein aus zu ſeubern/</l><lb/>
+<l>Man darff ſie eſſen nur/ wolthun der menſchen leibern:</l><lb/>
+<l>Drumb mit luſt <hi rendition="#fr">Seubernd</hi> iſt das Wort und Nahme mein/</l><lb/>
+<l>Weil boͤſes auch mit luſt kan ausgeſeubert ſeyn.</l><lb/>
+<l>Man ſoll die laſter ſtets zu ſeubern ſich befleiſſen/</l><lb/>
+<l>Daß nach dem boͤſen man was gutes koͤnne weiſſen/</l><lb/>
+<l>Das wird dem mit der frucht gewiß ſeyn eine luſt/</l><lb/>
+<l>Wer laſter mit wolthun zu daͤmpffen hat gewuſt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">E. V. W.<lb/>
+Der Reitzende.</hi><lb/>
+<cb/>
+68.<lb/>
+Ein Eſchbaum darauff Spaniſch<lb/>
+Fliegen.<lb/>
+<cb/>
+Mit und ohne ſie.<cb type="end"/>
+</head><lb/>
+<l>Die Eſch hat je zu hand im Jahre Spanſche Fliegen/</l><lb/>
+<l>Die/ wann es heiß und warm/ darauff mit hauffen fliegen/</l><lb/>
+<l>Der Baum und Fliegen/ beyd im reitzen haben krafft/</l><lb/>
+<l>Daß ich nun <hi rendition="#fr">Reitzend</hi> heiß kan drumb nicht ſeyn geſtrafft.</l><lb/>
+<l>Nun ſoll man jederman zur tugend ſchoͤn anreitzen/</l><lb/>
+<l>Was boͤß im menſchen iſt mit etwas ſchaͤrff ausbeitzen/</l><lb/>
+<l>So wird man reitzend ſeyn zum guten jeder friſt/</l><lb/>
+<l>Fruchtbringend auch getilgt wird ſo der laſter liſt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">C. O. V. B.<lb/>
+Der Bequeme.</hi><lb/>
+<cb/>
+69.<lb/>
+Ein Ruͤſter.<lb/>
+<cb/>
+Zur Arbeit.<cb type="end"/>
+</head><lb/>
+<l>Die Ruͤſter ſtarck und dicht zur Arbeit iſt bequeme/</l><lb/>
+<l>Vnd daß ja niemand nicht ſich weigre der und ſcheme:</l><lb/>
+<l>Zur Arbeit ich <hi rendition="#fr">Bequem</hi> darumb mich nennen thu/</l><lb/>
+<l>Daß man im muͤſſiggang die zeit nicht bringe zu.</l><lb/>
+<l>Zur Arbeit Leibs und Geiſts ſoll man ſich gern bequemen/</l><lb/>
+<l>Vnd jhm darzu mit luſt die zeit und weile nehmen/</l><lb/>
+<l>Das ſo vertrieben werd der faule muͤſſiggang/</l><lb/>
+<l>Der nach dem Sprichwort iſt des Teuffels Ruhebanck.</l></lg><lb/>
+<fw type="sig" place="bottom">D iij</fw><fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0032"/>
+<note place="left">1623.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">A. F. G. Z. B.<lb/>
+Der Dienliche.</hi><lb/>
+<cb/>
+70.<lb/>
+Creutzbeer.<lb/>
+<cb/>
+Zur oͤffnung.<cb type="end"/>
+</head><lb/>
+<l>Stich oder Kreuſelbeer zur oͤffnung mercklich dienen/</l><lb/>
+<l>Reiff ſeynd ſie etwas ſuͤß/ wie Honig von den Bienen:</l><lb/>
+<l>Zur oͤffnung <hi rendition="#fr">Dienlich</hi> mir der Nahm ertheilet ward/</l><lb/>
+<l>Weil ich zur oͤffnung hab erfunden recht die fahrt.</l><lb/>
+<l>Zur oͤffnung alles guts ſoll dienlich man erweiſen</l><lb/>
+<l>Sich/ und was ſtachlich iſt und kreußlich ab thun reiſſen/</l><lb/>
+<l>So wird man dienen wol Gott und dem Nechſten ſein/</l><lb/>
+<l>Darzu auch bringen frucht in einem hertzen rein.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. E. V. M.<lb/>
+Der Vertraͤgliche.</hi><lb/>
+<cb/>
+71.<lb/>
+Meliſſen.<lb/>
+<cb/>
+Zur Stillung.<cb type="end"/>
+</head><lb/>
+<l>Vertraͤglich iſt Meliß ſie thut viel unluſt ſtillen/</l><lb/>
+<l>Staͤrckt und erquickt das hertz/ reumbt weg was bringt unwillen:</l><lb/>
+<l>Drumb man <hi rendition="#fr">Vertraͤglich</hi> mich zur ſtillung nennet wol/</l><lb/>
+<l>Daß in vertraͤgligkeit den zorn man ſtillen ſoll.</l><lb/>
+<l>Wer nun vertraͤglich iſt/ der kan viel haders ſtillen/</l><lb/>
+<l>Mit tugend uͤberhaͤufft thut er ſein hauß erfuͤllen/</l><lb/>
+<l>Vnd ſittſam in der ſtill des friedens fruͤchte bringt/</l><lb/>
+<l>Daß allen frommen wol in jhren ohren klingt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">W. S.<lb/>
+Der Vnentbehrliche.</hi><lb/>
+<cb/>
+72.<lb/>
+Flachs.<lb/>
+<cb/>
+Hat viel muͤhe.<cb type="end"/>
+</head><lb/>
+<l>Im Hauſe man den Flachs durchaus nicht kan entbehren/</l><lb/>
+<l>Weil man ſoll weiſſes zeug von Jahr zu Jahren mehren/</l><lb/>
+<l>Es hat auch muͤhe viel eh er wird ausgemacht/</l><lb/>
+<l>Drumb <hi rendition="#fr">Vnentbehrlich</hi> mir der Nahm iſt zugebracht.</l><lb/>
+<l>Man ſoll was noͤtig iſt zur tugend nie entbehren/</l><lb/>
+<l>Vielmehr daſſelb im hauß mit muͤh und arbeit mehren/</l><lb/>
+<l>Weil unentbehrlich iſt die Tugend unſerer Rott/</l><lb/>
+<l>Man muß doch allzeit auch muͤh haben biß in todt.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0033"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">K. V. B.<lb/>
+Der Hochtreibende.</hi><lb/>
+<cb/>
+73.<lb/>
+Weiſſe Cartuffeln.<lb/>
+<cb/>
+Durch undere krafft.<cb type="end"/>
+</head><note place="right">1623.</note><lb/>
+<l>Cartuffeln trefflich ſehr durch undre Krafft hochtreiben/</l><lb/>
+<l><hi rendition="#fr">Hochtreibend</hi> mir der Nahm daher auch muſte bleiben/</l><lb/>
+<l>Weil meiner wurtzel macht den ſtengel ſo hoch treibt/</l><lb/>
+<l>Vnd doch dieſelbe gut zu eſſen nur verbleibt.</l><lb/>
+<l>Die tugend und die ſtaͤrck hoch einen Mann erhebet/</l><lb/>
+<l>Vnd wann die wurtzel gut/ nach groſſen ehren ſtrebet</l><lb/>
+<l>Ein hertzhafft kuͤhn gemuͤth/ biß endlich es erwirbt/</l><lb/>
+<l>Ein ſolch geruͤcht daß jhm im tode nicht erſtirbt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">W. K.<lb/>
+Der Vmbwickelnde.</hi><lb/>
+<cb/>
+74.<lb/>
+Ephew an der Mawre.<lb/>
+<cb/>
+Helt ſie feſte.<cb type="end"/>
+</head><lb/>
+<l>Der Ephew uͤmb die Mawr ſich wickelt/ die helt feſte/</l><lb/>
+<l><hi rendition="#fr">Vmbwickelnd</hi> ich mich hieß/ darin zu ſeyn der beſte/</l><lb/>
+<l>Daß ich aus meiner Mawr viel ſchoͤne fruͤchte zoͤg/</l><lb/>
+<l>Vnd drumb nicht gerne wolt/ daß ſie und ich vertroͤg.</l><lb/>
+<l>Worin ſoll man ſich nun mit unſrer ſeele wickeln/</l><lb/>
+<l>In Chriſti windeln rein/ die niemand ſoll zerſtickeln/</l><lb/>
+<l>Die windeln der unſchuld/ die uns nun hat erloͤſt/</l><lb/>
+<l>Von ſuͤnden und dem todt/ damit ſeynd wir getroͤſt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">E. V. F.<lb/>
+Der Hochgefaͤrbte.</hi><lb/>
+<cb/>
+75.<lb/>
+Hanbutten.<lb/>
+<cb/>
+Zertheilt und ſtillt.<cb type="end"/>
+</head><lb/>
+<l>Hanbutten hochgefaͤrbt zertheilen und auch ſtillen</l><lb/>
+<l>Den Stein ſo wol die Ruhr/ alſo mit meinem willen/</l><lb/>
+<l>Man von der Farbe mich nun nennet <hi rendition="#fr">Hochgefaͤrbt</hi>/</l><lb/>
+<l>Weil ſonſten keine frucht ſie faſt ſo hoch ererbt.</l><lb/>
+<l>Mit Chriſti rothem blut ſeynd wir nun hoch gefaͤrbet/</l><lb/>
+<l>Vnd haben auch von jhm als Bruͤder mit geerbet</l><lb/>
+<l>Das ſchoͤne Himmelreich/ ſo er uns ausgetheilt/</l><lb/>
+<l>Geſtillet hat den todt/ die ſuͤnden ausgeheilt.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0034"/>
+<note place="left">1623.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">C. V. W.<lb/>
+Der Vnſchavliche.</hi><lb/>
+<cb/>
+76.<lb/>
+Ein Feigenbaum.<lb/>
+<cb/>
+Fruchtet ohne bluͤth.<cb type="end"/>
+</head><lb/>
+<l>Der Feigenbaum die frucht ohn bluͤth heran reiff bringet/</l><lb/>
+<l>Iſt ein unſchaͤdlich Obſt/ bald ſeubrend foͤrter dringet:</l><lb/>
+<l>Drumb heiß <hi rendition="#fr">Vnſchaͤdlich</hi> ich/ und fruchtend ohne bluͤth/</l><lb/>
+<l>Weil in Vnſchaͤdligkeit ſteht meine krafft und guͤt.</l><lb/>
+<l>Vnſchaͤdlich Chriſtus iſt/ der heilet allen ſchaden/</l><lb/>
+<l>Als ſeines Vaters zorn er auff ſich hat geladen/</l><lb/>
+<l>Vnd uns erwerben wolt das heil mit ſeim verdienſt/</l><lb/>
+<l>Das hab ich mir erlangt/ als ich ſtarb zum gewinſt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. G. V. M.<lb/>
+Der Erleichternde.</hi><lb/>
+<cb/>
+77.<lb/>
+Maloran.<lb/>
+<cb/>
+Der Athem.<cb type="end"/>
+</head><lb/>
+<l>Der gruͤne Majoran wol zum geruch gerathen/</l><lb/>
+<l>Koͤmpt zur erleichterung dem Athem ſehr zu ſtatten:</l><lb/>
+<l><hi rendition="#fr">Erleichternd</hi> man mir nun den Nahmen geben that/</l><lb/>
+<l>Weil manchen Athem ſchwer diß kraut erleichtert hat.</l><lb/>
+<l>Was ſchwer/ das kan man leicht durch fleiſſig arbeit machen/</l><lb/>
+<l>Vnd wenn man ſich fein weiß zu ſchicken in die ſachen/</l><lb/>
+<l>Ein uͤbung tugend iſt die alles leichtert ſehr/</l><lb/>
+<l>Vnd ſchien es anfangs wol zu ſeyn noch einſt ſo ſchwer.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. V. B.<lb/>
+Der Eilende.</hi><lb/>
+<cb/>
+78.<lb/>
+Ein Pfirſigb aum.<lb/>
+<cb/>
+Zur Frucht.<cb type="end"/>
+</head><lb/>
+<l>Ein junger Pfirſchenbaum waͤchſt auff geſchwind und eilet/</l><lb/>
+<l>Zu haben ſeine frucht/ die jhm iſt zugetheilet:</l><lb/>
+<l>Den Nahmen <hi rendition="#fr">Eilend</hi> mir ich alſo nehmen thet/</l><lb/>
+<l>Weil wann da iſt die zeit zu eilen es wol ſteht.</l><lb/>
+<l>Eil doch mit weile/ man wol pfleget recht zu ſagen/</l><lb/>
+<l>Vnd daß man eilend nicht ins glack es ſoll nein wagen/</l><lb/>
+<l>Wenn aber man hat zeit/ und nicht fern iſt die frucht/</l><lb/>
+<l>So eilt mit nutzen der/ der ſie denn fleiſſig ſucht.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0035"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">E. V. W.<lb/>
+Der Wehrende.</hi><lb/>
+<cb/>
+79.<lb/>
+Myrtenbaum.<lb/>
+<cb/>
+Dem Scorpion Gifft.<cb type="end"/>
+</head><note place="right">1623.</note><lb/>
+<l>Der Scorpionen Gifft der Myrtenbeerſafft wehret/</l><lb/>
+<l>Wie auch der Trunckenheit eh man den wein auslehret:</l><lb/>
+<l>Nun <hi rendition="#fr">Wehrend</hi> dieſer Gifft der Nahm iſt worden mir/</l><lb/>
+<l>Auff daß mein art und krafft man beſſer draus verſpuͤr.</l><lb/>
+<l>Drumb allem falſchen Gifft man ſoll von hertzen wehren/</l><lb/>
+<l>Vnd ſeine wider Gifft auffrichtigkeit fort mehren/</l><lb/>
+<l>Auff daß man ſchlecht und recht viel fruͤchte bringen thu/</l><lb/>
+<l>Trew nicht mehr wildpradt ſey/ beſondern wol nehm zu.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">M. L. Z. H.<lb/>
+Der Wolgenante.</hi><lb/>
+<cb/>
+80.<lb/>
+Ein Spindelbaum.<lb/>
+<cb/>
+In fleiſſiger uͤbung.<cb type="end"/>
+</head><lb/>
+<l>Der Spindelbaum der wird von Spindeln ſo genennet/</l><lb/>
+<l>Mein Nahm auch <hi rendition="#fr">Wolgenant</hi> daher bald wird erkennet/</l><lb/>
+<l>Wann nun die Spindel rund mit fleiß herummer geht/</l><lb/>
+<l>So iſt jhr uͤbung recht/ und jhre frucht beſteht.</l><lb/>
+<l>Es ſoll in ſeim beruff ſich jeder embſig uͤben/</l><lb/>
+<l>Darbey zufoͤrderſt Gott/ dann ſeinen Nechſten lieben/</l><lb/>
+<l>Auff daß er wieder ſey von jederman geliebt/</l><lb/>
+<l>Vnd ſeinet wegen nicht werd einig menſch betruͤbt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">G. F. V. K.<lb/>
+Der Wolbedeckte.</hi><lb/>
+<cb/>
+81.<lb/>
+Ein Caſtanienbaum.<lb/>
+<cb/>
+Vmb und uͤmb rauch.<cb type="end"/>
+</head><lb/>
+<l>Caſtanjen frucht iſt braun auch uͤmb und uͤmb bedecket/</l><lb/>
+<l>Darzu von auſſen rauch/ wird drumb nicht leicht beflecket:</l><lb/>
+<l>Mein Wort Rauch uͤmb und uͤmb iſt/ mein Nahm <hi rendition="#fr">Wolbedeckt</hi>/</l><lb/>
+<l>Weil mein Obſt recht verwahrt gleich wie im Igel ſteckt.</l><lb/>
+<l>Was gut iſt in der welt/ das ſoll man wol bedecken/</l><lb/>
+<l>Damit man ſeine frucht/ wanns zeit iſt/ koͤnne ſchmecken/</l><lb/>
+<l>So der Caſtanjenbaum ſein Igelskopff auffthut/</l><lb/>
+<l>Vnd zeigt was an jhm iſt dem vieh und menſchen gut.</l></lg><lb/>
+<fw type="sig" place="bottom">E</fw><fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0036"/>
+<note place="left">1623.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">H. S.<lb/>
+Der Hitzige.</hi><lb/>
+<cb/>
+82.<lb/>
+Ein Mandelbaum.<lb/>
+<cb/>
+Mehret die Natur.<cb type="end"/>
+</head><lb/>
+<l>Der Mandelbaum der iſt gar hitzig/ und vermehret</l><lb/>
+<l>Sehr die Natur/ wie auch was wiedrig iſt abkehret:</l><lb/>
+<l>In mehrung der Natur/ ſo heiß ich <hi rendition="#fr">Hitzig</hi> nun/</l><lb/>
+<l>Auff daß man feſt verharr in hitze guts zu thun/</l><lb/>
+<l>Daß man nicht anfangs ſey zu hitzig/ drauff law werde/</l><lb/>
+<l>Zu letzt wol gar erkalt und ſuche kein gefehrde/</l><lb/>
+<l>So wird man bringen recht das gute werck des liechts/</l><lb/>
+<l>Das werck der finſternuͤß unfruchtbar achten nichts.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">S. V. H.<lb/>
+Der Bewehrte.</hi><lb/>
+<cb/>
+83.<lb/>
+Ehrenpreiß.<lb/>
+<cb/>
+In allem zufall.<cb type="end"/>
+</head><lb/>
+<l>In allem zufall iſt der Ehrenpreiß bewehret/</l><lb/>
+<l>Weil manche kranckheit er von unſerm leib abkehret:</l><lb/>
+<l>Geheiſſen hab ich mich von dieſem kraut <hi rendition="#fr">Bewerth</hi>/</l><lb/>
+<l>Damit man auch im Creutz bleib allzeit unverſehrt.</l><lb/>
+<l>Wer nun wil recht bewehrt ſeyn hier auff dieſer erden/</l><lb/>
+<l>Vnd daß er einſten moͤg ein Kind des lebens werden/</l><lb/>
+<l>Der folge Gottes Geiſt/ ſo klug allein und weiß/</l><lb/>
+<l>Der wird jhm zeigen bald den wahren Ehrenpreiß.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">G. F. V. B.<lb/>
+Der Vertreibende.</hi><lb/>
+<cb/>
+84.<lb/>
+Waſſerpfeffer oder Floͤhkraut.<lb/>
+<cb/>
+Die Floͤhe.<cb type="end"/>
+</head><lb/>
+<note place="left">1624.</note><l>Floͤhkraut was ſcharffer art weg Floͤh und Muͤcken treibet/</l><lb/>
+<l>Daß jhrer keines nicht im Hauß und Zimmer bleibet/</l><lb/>
+<l><hi rendition="#fr">Vertreibend</hi> ich darumb genennet wolte ſeyn/</l><lb/>
+<l>Weil ein ſo ſtarcke krafft ſteckt in dem kraͤutlein klein.</l><lb/>
+<l>Wenn man das boͤſe nun mit nutzen wil vertreiben/</l><lb/>
+<l>So muß mans ohne ſchew mit aller macht weg reiben/</l><lb/>
+<l>Ausbutzen alles huͤbſch im hertzen ſaubern wol/</l><lb/>
+<l>Wann dann die laſter weg/ wird man ſeyn tugend voll.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0037"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">C. V. H.<lb/>
+Der Nankletternde.</hi><lb/>
+<cb/>
+85.<lb/>
+Je lenger je lieber.<lb/>
+<cb/>
+Mit huͤlffe.<cb type="end"/>
+</head><note place="right">1624.</note><lb/>
+<l>Ein Staͤudlein iſt das heiſt Je lenger und je lieber/</l><lb/>
+<l>Wenn mans mit latten hilfft/ ſo kletterts nan und nuͤber:</l><lb/>
+<l>Daher <hi rendition="#fr">Nankletternd</hi> mich mit huͤlff ich nenn und heiß/</l><lb/>
+<l>Mit huͤlff ich von der erd hinnan zu klettern weiß.</l><lb/>
+<l>Wer nun was hoͤher wil/ als er ſonſt iſt/ nauff ſteigen/</l><lb/>
+<l>Der mag von hertzen ſich zu ehr und tugend neigen/</l><lb/>
+<l>Das wird jhm helffen mehr/ als golds und hoffarts viel/</l><lb/>
+<l>Vnd wird erklettern ſo der wahren Tugend ziel!</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. V. D. W.<lb/>
+Der Fortkommende.</hi><lb/>
+<cb/>
+86.<lb/>
+Ein Pappelbaum.<lb/>
+<cb/>
+In kurtzer zeit.<cb type="end"/>
+</head><lb/>
+<l>Die Pappelweiden wol in kurtzer zeit fortkommen/</l><lb/>
+<l>Daher <hi rendition="#fr">Fortkommend</hi> ich den Nahmen mir genommen:</l><lb/>
+<l>Wer nun fortkommen wil/ und das in kurtzer zeit:</l><lb/>
+<l>Der warte ſeines dings/ und lauffe nicht zu weit/</l><lb/>
+<l>So wird er zweiffels frey viel nutz und fruͤchte bringen/</l><lb/>
+<l>In ſeim beruff es jhm nicht uͤbel kan gelingen/</l><lb/>
+<l>Wann er vornemlich macht mit Gott den anfang ſein/</l><lb/>
+<l>Wird er fortkommen bald ohn ungluͤck ſorg und pein.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">W. J. L.<lb/>
+Der Zeitige.</hi><lb/>
+<cb/>
+87.<lb/>
+Ein Birckenbaum.<lb/>
+<cb/>
+Im ausſchlagen.<cb type="end"/>
+</head><lb/>
+<l>Der Birckenbaum erweiſt ſich zeitig im ausſchlagen/</l><lb/>
+<l>Vnd darff mans ſicherlich denn mit ſeim ſaffte wagen:</l><lb/>
+<l>Drumb nenn ich <hi rendition="#fr">Zeitig</hi> mich/ daß ſeine zeit man weiß/</l><lb/>
+<l>In deren er iſt gut/ und drin erhelt den preiß.</l><lb/>
+<l>Was zeitig einmal iſt/ das darff nicht zeitig werden/</l><lb/>
+<l>Vnd mag mans ohne ſorg gebrauchen und gefehrden/</l><lb/>
+<l>Sonſt wird es uͤberreiff und braͤchte keine frucht/</l><lb/>
+<l>Wenn mans ſchon ohne zeit an allen enden ſucht.</l></lg><lb/>
+<fw type="sig" place="bottom">E ij</fw><fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0038"/>
+<note place="left">1624.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">H. V. K.<lb/>
+Der Gute.</hi><lb/>
+<cb/>
+88.<lb/>
+Das Graß.<lb/>
+<cb/>
+So gruͤn als troͤge.<cb type="end"/>
+</head><lb/>
+<l>Das ſchoͤne wuͤchſig Graß iſt gut ſo gruͤn als troͤge.</l><lb/>
+<l>Bekompt dem vieh auch wol/ daß es geſund ſeyn moͤge:</l><lb/>
+<l>Der <hi rendition="#fr">Hute</hi> drumb genant ich bin ſo troͤg als gruͤn/</l><lb/>
+<l>Weil mans im Sommer braucht/ als durch den Winter hin.</l><lb/>
+<l>Dem gruͤnen Graſe wird das leben recht vergliechen/</l><lb/>
+<l>Dem troͤgen hew das fleiſch wann es todt und verbliechen/</l><lb/>
+<l>Gott gebe daß wann wir einſt all ſeyn ausgetroͤgt.</l><lb/>
+<l>Als gut noch moͤgen ſeyn in Gottes ſcheun gelegt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">D. W. F.<lb/>
+Der Erregende.</hi><lb/>
+<cb/>
+89.<lb/>
+Weiſſe Nieſewurtz.<lb/>
+<cb/>
+Das Nieſen.<cb type="end"/>
+</head><lb/>
+<l>Die weiſſe Nieſewurtz das Nieſen thut erregen/</l><lb/>
+<l>Drumb meinen Nahmen man nicht ferne darff auslegen/</l><lb/>
+<l><hi rendition="#fr">Erregend</hi> kan man wol ſeyn wanns zum guten iſt/</l><lb/>
+<l>Vnd daß hinweg man thu betrug und argeliſt.</l><lb/>
+<l>Drumb laſt einander uns zur tugend nur anregen/</l><lb/>
+<l>Vnd alles nach dem Recht gemeſſen uͤberlegen/</l><lb/>
+<l>So zur genieſſung wir gelangen werden bald/</l><lb/>
+<l>Ob uns ſchon dieſe welt gering und ſchlecht abmahlt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. H. M.<lb/>
+Der Stillende.</hi><lb/>
+<cb/>
+90.<lb/>
+Das Kraut Wegereich oder<lb/>
+Wegebreit.<lb/>
+<cb/>
+Fluͤſſige Gebreſten.<cb type="end"/>
+</head><lb/>
+<l>Die fluͤß und manche ſeuch der Wegereich thut ſtillen/</l><lb/>
+<l>Die man erdulden wol muß ſonſten mit unwillen/</l><lb/>
+<l>Den Nahmen <hi rendition="#fr">Stillend</hi> ich mir drumb genommen hab/</l><lb/>
+<l>Auff daß ja nicht blieb aus des kraͤutleins reiche gab.</l><lb/>
+<l>Die laſter hauffen weiß zuflieſſend man ſoll ſtillen/</l><lb/>
+<l>Darbey auch reumen weg untugend und muthwillen/</l><lb/>
+<l>So wird man ſtillend han ſehr gute frucht gebracht/</l><lb/>
+<l>In frieden ſtill mit ruh denn haben groͤßre macht.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0039"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">H. W. G. Z. S.<lb/>
+Der Wuͤrtzende.</hi><lb/>
+<cb/>
+91.<lb/>
+Hopffen.<lb/>
+<cb/>
+Das Bier.<cb type="end"/>
+</head><note place="right">1624.</note><lb/>
+<l>Dem Bier der Hopffen iſt die Wuͤrtze/ Geiſt und Leben/</l><lb/>
+<l>Das iſt ſein eintzig krafft/ jhm muß es ſeyn ergeben:</l><lb/>
+<l>Daher man <hi rendition="#fr">Wuͤrtzend</hi> mich geheiſſen hat ſehr wol/</l><lb/>
+<l>Weil ohn jhm dieſer tranck gebrawt nicht werden ſoll.</l><lb/>
+<l>Das all zu groſſe gluͤck zur zeit muß ſeyn verwuͤrtzet/</l><lb/>
+<l>Daß man in ſeiner luſt zu ſehr nicht ſey verſtuͤrtzet:</l><lb/>
+<l>Nun jeder wuͤrtze ſich und fah im wolſtandt an/</l><lb/>
+<l>Daß er im uͤbelſtandt ſey ein bewehrter Mann.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. K.<lb/>
+Der Faͤrbende.</hi><lb/>
+<cb/>
+92.<lb/>
+Blaw und braune Korn-<lb/>
+blumen.<lb/>
+<cb/>
+Dem Leib ohne ſchaden.<cb type="end"/>
+</head><lb/>
+<l>Kornblumen blaw und braun/ dem leib ohn ſchaden/ faͤrben/</l><lb/>
+<l>Der Zucker und Gewuͤrtz zieht an die farb und erben:</l><lb/>
+<l>Man nennet Faͤrbend mich/ dem leib ich nichtes ſchad</l><lb/>
+<l>Mit meiner guten farb/ auch bin ich gut ins bad.</l><lb/>
+<l>Ohn ſchaden in dem leib uns dieſe farbe faͤrbet/</l><lb/>
+<l>Nicht wie die <hi rendition="#fr">Schmincke</hi> pflegt/ die nur die haut verderbet/</l><lb/>
+<l>Man ſoll mehr jnnerlich auff Seelen ſchmuck beſtehn/</l><lb/>
+<l>Als auff den zierath nur des euſſern leibes ſehn.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">C. M.<lb/>
+Der Abwehrende.</hi><lb/>
+<cb/>
+93.<lb/>
+Gemeine Weiden.<lb/>
+<cb/>
+Die Vnkeuſchheit.<cb type="end"/>
+</head><lb/>
+<l>Gemeine Weiden wol Vnkeuſchheit ab thun wehren/</l><lb/>
+<l>Drumb man den Nahmen mein hieher hat thun verkehren:</l><lb/>
+<l>Man ſoll abwehrend ſeyn was wiederſteht der zucht/</l><lb/>
+<l>Daß man in keuſchheit bring ein recht und gute frucht.</l><lb/>
+<l>Daß nun hertz und gemuͤth keuſch und rein werd erhalten/</l><lb/>
+<l>Soll fleiſſig man an das/ was geiſtlich iſt/ ſich halten/</l><lb/>
+<l>So wird abwehren man leicht der gedancken viel/</l><lb/>
+<l>Vnd wird geendert ſeyn Sinn/ Seel/ Geiſt/ Muth und Will.</l></lg><lb/>
+<fw type="sig" place="bottom">E iij</fw><fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0040"/>
+<note place="left">1624.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">S. V. P.<lb/>
+Der Scharffſpritzende.</hi><lb/>
+<cb/>
+94.<lb/>
+Wilder Cucummer.<lb/>
+<cb/>
+Wann er geruͤhret.<cb type="end"/>
+</head><lb/>
+<l>Hundskuͤrbs am ſtiel geruͤhrt von ſich ſehr ſcharff thut ſpritzen/</l><lb/>
+<l>Sein ſafft und bittrigkeit kan ſonſt auch manchem nuͤtzen:</l><lb/>
+<l>Man hat <hi rendition="#fr">Scharffſpritzend</hi> mich genant wol ausdermaß/</l><lb/>
+<l>Wer nicht wil ſeyn beſpruͤtzt/ das auffziehn underlaß.</l><lb/>
+<l>Damit man uns nun nicht mit ſchaͤrffe thu beſpruͤtzen/</l><lb/>
+<l>Darff man darwider nicht Paffaͤſen vorzuſchuͤtzen/</l><lb/>
+<l>Man halt beſcheiden ſich/ ſtill/ eingezogen fein/</l><lb/>
+<l>So wird gewiß man nicht ohn frucht und nutzen ſeyn.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. M. Z. B.<lb/>
+Der Abwendende.</hi><lb/>
+<cb/>
+95.<lb/>
+Tauſentguͤldenkraut.<lb/>
+<cb/>
+Hitzige Zufaͤlle.<cb type="end"/>
+</head><lb/>
+<l>Klein Tauſentguͤldenkraut ab heiſſe zufaͤll lendet/</l><lb/>
+<l>Das Fieber treibet aus/ und von dem leibe wendet:</l><lb/>
+<l>Daher <hi rendition="#fr">Abwendend</hi> ich heiß in dem kraͤutlein klein/</l><lb/>
+<l>Das wol auff tauſent art mit nutz gebraucht mag ſeyn.</l><lb/>
+<l>Was all zu hitzig iſt im muth ſoll man abwenden/</l><lb/>
+<l>Vnd ſeinen hohen Geiſt ſich ja nicht laſſen blenden/</l><lb/>
+<l>Daß man fein ſittſam bring ein gute frucht mit nutz/</l><lb/>
+<l>Vnd eins dem andern nicht ſo bald ein wort auff mutz.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">T. V. B.<lb/>
+Der Abtreibende.</hi><lb/>
+<cb/>
+96.<lb/>
+Wieſen Kuͤmmel.<lb/>
+<cb/>
+Die Winde.<cb type="end"/>
+</head><lb/>
+<l>Der Wieſenkuͤmmel weiß vom Magen treibt die winde/</l><lb/>
+<l>Das eſſen ſanffte kocht/ die dawung macht gelinde:</l><lb/>
+<l>Ich nenn <hi rendition="#fr">Abtreibend</hi> mich von dieſer wirckung mein/</l><lb/>
+<l>Die gut gefunden wird in dieſem kraut gemein.</l><lb/>
+<l>Man ſoll abtreiben nun den ſtoltz ſo auff thut blehen/</l><lb/>
+<l>Er iſt doch lauter wind/ vergeblich offt thut drehen/</l><lb/>
+<l>Demuth und freundligkeit dargegen helt den preiß/</l><lb/>
+<l>Vnd von der Tugend wird ſchlecht angezogen weiß.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0041"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">L. P. P.<lb/>
+Der Gefaͤhrliche.</hi><lb/>
+<cb/>
+97.<lb/>
+Schlangenmord.<lb/>
+<cb/>
+Den Schlangen.<cb type="end"/>
+</head><note place="right">1624.</note><lb/>
+<l>Der Schlangenmord bewaͤhrt gefaͤhrlich iſt den ſchlangen/</l><lb/>
+<l>Vor jhr und andre Gifft/ man kan darmit ſie fangen:</l><lb/>
+<l>Drumb heiß ich billich mich <hi rendition="#fr">Hefaͤhrlich</hi> dieſem wurm/</l><lb/>
+<l>Auch andrer Peſt und Gifft/ die uns bringt manchen ſturm:</l><lb/>
+<l>Des weibes ſahmen rein zertretten hat der Schlangen</l><lb/>
+<l>Den kopff/ Suͤnd/ Todt und Hell mit ſeiner macht gefangen/</l><lb/>
+<l>Wann der nur bey uns iſt ſo ſchadt uns keine Gifft/</l><lb/>
+<l>Der Fewerſpeiend Drach uns auch mit nichten trifft.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">C. V. A.<lb/>
+Der Reiffende.</hi><lb/>
+<cb/>
+98.<lb/>
+Mißpeln.<lb/>
+<cb/>
+Mit Zeit und Stroh.<cb type="end"/>
+</head><lb/>
+<l>Die Mißpeln mit der Zeit und Stroh ſehr wol ausreiffen/</l><lb/>
+<l>Dem Mohr hilfft weder Zeit noch Stroh/ laug/ waſſer/ ſeiffen:</l><lb/>
+<l>Drumb heiſt man Reiffend mich mit Zeit und auch mit Stroh/</l><lb/>
+<l>Weil man diß Obſts ſonſt nicht ſo bald kan werden froh.</l><lb/>
+<l>Wer nun verlangen traͤgt daß etwas flugs ſoll reiffen/</l><lb/>
+<l>Der nehm nur zeit darzu/ und thu nach tugend ſtreiffen/</l><lb/>
+<l>So darff er zweiffeln nicht/ es kommet noch die zeit/</l><lb/>
+<l>Daß es zu nutz und frucht wird reiff ſeyn und bereit.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">M. L.<lb/>
+Der Schoͤne.</hi><lb/>
+<cb/>
+99.<lb/>
+Tulipan.<lb/>
+<cb/>
+In allerley Farben.<cb type="end"/>
+</head><lb/>
+<l>Die Tulipanen ſeynd viel unterſchiedner Farben/</l><lb/>
+<l>Der manche blume ſonſt muß in den gaͤrten darben:</l><lb/>
+<l>In vielen Farben nun der <hi rendition="#fr">Schoͤn</hi> ich bin genant/</l><lb/>
+<l>Weil ſonſt mein wirckung nicht iſt allerdings bekant.</l><lb/>
+<l>Was ſchoͤn iſt in der welt/ das ſoll man billich preiſen/</l><lb/>
+<l>Vnd jedem ſchoͤnen Geiſt huͤlff und auch ehr beweiſen/</l><lb/>
+<l>Vornemlich wann er trew/ die farbe nicht verleſt/</l><lb/>
+<l>Vnd bey ſeim Herren ſtets beſtaͤndig bleibt und feſt.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0042"/>
+<note place="left">1624.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">J. V. M.<lb/>
+Der Goldgelbe.</hi><lb/>
+<cb/>
+100.<lb/>
+Saffran mit der bluͤth.<lb/>
+<cb/>
+Zur Hertzſtaͤrckung.<cb type="end"/>
+</head><lb/>
+<l>Goldgelber Saffran thut das hertze kraͤfftig ſtaͤrcken/</l><lb/>
+<l>Vnd iſt auch ſonſt bekant in ſeinen guten wercken:</l><lb/>
+<l>Darumb <hi rendition="#fr">Holdgelb</hi> ich mich und zur Hertzſtaͤrckung nenn/</l><lb/>
+<l>Damit kein hitzig Gifft das hertze mir verbrenn.</l><lb/>
+<l>Wie ſoll man ſtaͤrcken nun all ungefaͤlſchte hertzen/</l><lb/>
+<l>Daß ſie nicht fuͤrchten ſich fuͤr leibes noth und ſchmertzen;</l><lb/>
+<l>Die tugend mit der furcht des <hi rendition="#k">He</hi>rren und Gebet/</l><lb/>
+<l>Durch manche tapffre hand den Feind treibt von der ſtet.</l></lg><lb/>
+<note place="left">1625.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">J. E. H. Z. H.<lb/>
+Der Sichere.</hi><lb/>
+<cb/>
+101.<lb/>
+Ein Lorberbaum.<lb/>
+<cb/>
+Fuͤrm Donnerſchlag.<cb type="end"/>
+</head><lb/>
+<l>Der gruͤne Lorberbaum ſo lang er ſteht auff erden/</l><lb/>
+<l>Soll von dem Donnerſtrahl niemals getroffen werden/</l><lb/>
+<l>Vnd deß geſichert ſeyn nach der gemeinen ſag/</l><lb/>
+<l>Drumb man mich <hi rendition="#fr">Sicher</hi> hieß fuͤr allem Donnerſchlag.</l><lb/>
+<l>Wer nun wil ſicher ſeyn daß er bleib ungetroffen</l><lb/>
+<l>Von Gottes ſchwerem zorn/ halt ſein hertz zu jhm offen/</l><lb/>
+<l>Dien jhm in wahrer furcht/ mit zittern ſich erfrew/</l><lb/>
+<l>Daß er dann nutzen ſchaff mit frucht im leben new.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">G. H. V. P.<lb/>
+Der Sanffte.</hi><lb/>
+<cb/>
+102.<lb/>
+Wegewart oder Sonnen-<lb/>
+wirbel.<lb/>
+<cb/>
+In Kuͤhlung.<cb type="end"/>
+</head><lb/>
+<l>Wegewart ein kraut bekant die Leber ſanffte kuͤhlet/</l><lb/>
+<l>Erhelt jhr wuͤrd und krafft/ der menſch es faſt nicht fuͤhlet/</l><lb/>
+<l>So man den <hi rendition="#fr">Sanfften</hi> mich in Kuͤhlung nente wol/</l><lb/>
+<l>Weil in der Leber hitz von jhr man trincken ſoll.</l><lb/>
+<l>Ein recht ſanfftmuͤtig hertz thut viel unmuthes ſtillen/</l><lb/>
+<l>Kuͤhlt ab des zorrens hitz und wehrt dergleichen grillen/</l><lb/>
+<l>Hiermit der tugend krafft in ſich ſanfft ſehen leſt/</l><lb/>
+<l>Vnd nutz mit fruͤchten bringt wann es ſo bleibet feſt.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0043"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">F. H. Z. S. A.<lb/>
+Der Daͤrbe.</hi><lb/>
+<cb/>
+103.<lb/>
+Rewſtaͤdter Ruͤblein<lb/>
+<cb/>
+Hilfft zum Trunck.<cb type="end"/>
+</head><note place="right">1625.</note><lb/>
+<l>Newſtaͤdter Ruͤbelein thun huͤlff/ zum trunck gegeſſen/</l><lb/>
+<l>Vnd wol mit ſaltz beſtrawt/ man kan nicht viel draus preſſen/</l><lb/>
+<l>Den <hi rendition="#fr">Daͤrben</hi> nant ich mich der hilfft zum trunck wanns zeit/</l><lb/>
+<l>Man mercke was fuͤr krafft in dieſen ruͤblein leit.</l><lb/>
+<l>Gleich wie nun was daͤrb iſt/ mit ſaltz man thut verbeſſern/</l><lb/>
+<l>Alſo ein eitle frewd/ ſoll man mit ſchaͤrff einwaͤſſern/</l><lb/>
+<l>Vnd dencken offt zuruͤck/ des dings nicht thun zu viel/</l><lb/>
+<l>Daß auch der trunck mit frucht bring nutz zum rechten ziel.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">D. S.<lb/>
+Der Geſchwinde.</hi><lb/>
+<cb/>
+104.<lb/>
+Bornkreſſe.<lb/>
+<cb/>
+Im Wachsthumb.<cb type="end"/>
+</head><lb/>
+<l>Die Brunnenkreſſe ſich im wachsthumb zeigt geſchwinde/</l><lb/>
+<l>Viel feulung treibet ab/ doch nicht ſo gar gelinde:</l><lb/>
+<l><hi rendition="#fr">Heſchwind</hi> drumb iſt mein Nahm/ weil ſie geſchwind wechſt her/</l><lb/>
+<l>Vnd im wachsthumb geſchwind/ ſich mehret/ mehr und mehr.</l><lb/>
+<l>In tugend wir geſchwind ſeyn ſollen zuzunehmen/</l><lb/>
+<l>Vnd immer wachſen fort/ die laſter gantz verlaͤhmen/</l><lb/>
+<l>So wird es fehlen nicht/ fruchtbringend muß man ſeyn/</l><lb/>
+<l>Der nutz auch folget drauff den ſie belohnt allein.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. W. V. M.<lb/>
+Der Taugliche.</hi><lb/>
+<cb/>
+105.<lb/>
+Blaw Violen.<lb/>
+<cb/>
+Zum Safft.<cb type="end"/>
+</head><lb/>
+<l>Violen blaw zum Safft ſehr tauglich ſeynd gepfluͤcket/</l><lb/>
+<l>Der dient zum boͤſen halß/ daß man nicht dran erſticket:</l><lb/>
+<l>Man nennet <hi rendition="#fr">Tauglich</hi> mich/ fuͤrnemlich zu dem Safft/</l><lb/>
+<l>Weil widers Fiebers hitz drin ein kuͤhlfeuchte krafft.</l><lb/>
+<l>Daß wir nun tauglich ſeynd des lebens ſafft zu haben/</l><lb/>
+<l>Woll den Chriſt geben uns mit ſeinem geiſt und gaben/</l><lb/>
+<l>Vnd laſſen bringen uns frucht der gerechtigkeit/</l><lb/>
+<l>Von der ohn ſein verdienſt wir ſonſt ſeynd fern und weit.</l></lg><lb/>
+<fw type="sig" place="bottom">F</fw><fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0044"/>
+<note place="left">1626.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">F. L. G. Z B.<lb/>
+Der Ergetzende.</hi><lb/>
+<cb/>
+106.<lb/>
+Kappern.<lb/>
+<cb/>
+Miltz und Leber.<cb type="end"/>
+</head><lb/>
+<l>Die gute Kappern frucht/ Miltz/ Leber/ beyd ergetzet/</l><lb/>
+<l>Wann die mit ſchwermuth ſeynd und bittrer gall verletzet/</l><lb/>
+<l><hi rendition="#fr">Ergetzend</hi> ich daher mich habe nennen lahn/</l><lb/>
+<l>Auff daß man wiſſe wie man ſie gebrauchen kan.</l><lb/>
+<l>Man ſoll nun jm inerdar ergetzlich ſich bezeigen/</l><lb/>
+<l>Die ſchwermuth und den zorn zu hoch nicht laſſen ſteigen/</l><lb/>
+<l>Wann man dem wehren thut/ ergetzend frucht man bringt/</l><lb/>
+<l>Man liebt/ man iſt vernuͤgt/ und froͤlich eins her ſingt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">L V. K.<lb/>
+Der Antreibende.</hi><lb/>
+<cb/>
+107.<lb/>
+Eiſentraut.<lb/>
+<cb/>
+Zur Froͤligkeit.<cb type="end"/>
+</head><lb/>
+<l>Ins waſſer Eiſenkraut gelegt und rumb geſprenget/</l><lb/>
+<l>Der Trinckſtub offtermahl viel froͤligkeit anhenget/</l><lb/>
+<l>Schreibt ein vornehmer Mann: <hi rendition="#fr">Antreibend</hi> ich darumb</l><lb/>
+<l>Heiß/ und zur froͤligkeit/ damit ich gern geh’ umb.</l><lb/>
+<l>Es kan doch keiner nicht ſeins lebens recht genieſſen/</l><lb/>
+<l>Als der zur froͤligkeit erweiſet ſich gefliſſen/</l><lb/>
+<l>Es wird vergeblich auch nie angewandt die zeit/</l><lb/>
+<l>Wann man ohn aͤrgernuͤß frucht bringt in froͤligkeit.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. J. V. W.<lb/>
+Der Beſchloſſene.</hi><lb/>
+<cb/>
+108.<lb/>
+Ein Roſenknopff.<lb/>
+<cb/>
+Breit ſich doch aus.<cb type="end"/>
+</head><lb/>
+<l>Wiewol der Roſenknopff in ſich bleibt friſch geſchloſſen/</l><lb/>
+<l>So breit er ſich doch aus wann jhn der thaw begoſſen/</l><lb/>
+<l>Vnd die Sonn offnen thut; Drumb den <hi rendition="#fr">Beſchloſznen</hi> ich/</l><lb/>
+<l>Der ſich auffthut wanns zeit/ wol hab genennet mich.</l><lb/>
+<l>Daß nun was iſt in uns beſchloſſen/ moͤg ausbreiten/</l><lb/>
+<l>Die allerhoͤchſte Sonn uns wol dazu bereiten/</l><lb/>
+<l>Der Geiſt mit ſeinem thaw/ der mit nutz zu ſich ruͤckt/</l><lb/>
+<l>Was ohne frucht in uns vom guten war verruͤckt.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0045"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">J. C. W.<lb/>
+Der Anhenckende.</hi><lb/>
+<cb/>
+109.<lb/>
+Kletten.<lb/>
+<cb/>
+Am Strauben.<cb type="end"/>
+</head><note place="right">1626.</note><lb/>
+<l>Die Klette pfleget ſtets dem ſtrauben anzuhencken/</l><lb/>
+<l>Vnd nimmer den ſo glatt/ wann ich dem nach thu dencken/</l><lb/>
+<l>Find ich was ſonders drin/ drumb hab ich außerwehlt</l><lb/>
+<l>Den rauchen Klettenſtock/ zur frucht und zum Gemaͤhld/</l><lb/>
+<l>Vnd hab <hi rendition="#fr">Anhenckend</hi> mich am Strauben drumb genennet/</l><lb/>
+<l>Das iſt mein Nahm und Wort/ an beyden man mich kennet/</l><lb/>
+<l>Der tugend henck ich an/ wie ſtraub auch jhre bahn/</l><lb/>
+<l>Den weg zur ehre helt ein jeder Rittersman.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">S. G. V. E. H. Z. D L.<lb/>
+Der Lange.</hi><lb/>
+<cb/>
+110.<lb/>
+Indianiſcher Flachs oder<lb/>
+Suͤſſer Alve.<lb/>
+<cb/>
+In Staͤrckenden blaͤttern.<cb type="end"/>
+</head><lb/>
+<l>Der Indianſche Flachs der hat ſehr lange blaͤtter/</l><lb/>
+<l>Die man zun Zelten ſpint/ zu brauchen in dem Wetter.</l><lb/>
+<l>Drumb man den <hi rendition="#fr">Langen</hi> mich/ und in den blaͤttern nent</l><lb/>
+<l>Die ſtaͤrcken/ daß ſo wird des krautes art bekent.</l><lb/>
+<l>So laſt uns ſtaͤrcken nun/ daß es gar lange wehre/</l><lb/>
+<l>Vnd keiner von der bahn des guten ſich abkehre/</l><lb/>
+<l>Ja daß von oben rab der Geiſt uns wohne bey/</l><lb/>
+<l>Der ſtaͤrcke krafft und troſt verleyh zum leben new.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. A. V. H.<lb/>
+Der Erhaltende.</hi><lb/>
+<cb/>
+111.<lb/>
+Heide.<lb/>
+<cb/>
+Schaf und Bienen.<cb type="end"/>
+</head><lb/>
+<l>Die Heide wie ſie waͤchſt die Schafe mit den Bienen/</l><lb/>
+<l>Erhelt und ohne geld jhnn frommen thut und dienen/</l><lb/>
+<l>Nun der <hi rendition="#fr">Erhaltend</hi> ich diß vieh genennet bin/</l><lb/>
+<l>Daß man dadurch vernehm wie ſparſam ſey mein ſinn.</l><lb/>
+<l>Daß ohne koſten man erhalte das ſo nuͤtze/</l><lb/>
+<l>Darff man anſehen nicht die kaͤlte noch die hitze/</l><lb/>
+<l>Man halt und ſchicke ſich wie man kan in die zeit/</l><lb/>
+<l>So wird auch von der frucht der nutzen nicht ſeyn weit.</l></lg><lb/>
+<fw type="sig" place="bottom">F ij</fw><fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0046"/>
+<note place="left">1626.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">J. V. D. B.<lb/>
+Der Gedeyende.</hi><lb/>
+<cb/>
+112.<lb/>
+Der Schwaden am ſchoßgraß.<lb/>
+<cb/>
+Vom Him̃elthaw.<cb type="end"/>
+</head><lb/>
+<l>Vom graſe vor auffgang der Sonnen man den Schwaden</l><lb/>
+<l>Lieſt/ ſonſten er verweſt/ jhn gibt allein aus gnaden</l><lb/>
+<l>Gott mit des Himmelsthaw/ faſt wie das himmelbrodt/</l><lb/>
+<l><hi rendition="#fr">Hedeyend</hi> ich mich nenn/ und trawe ſtets auff Gott.</l><lb/>
+<l>An wachen/ arbeit/ ſorg iſt es gar nicht gelegen/</l><lb/>
+<l>Der <hi rendition="#k">He</hi>rr von oben rab alleine gibt den ſegen/</l><lb/>
+<l>Er leſt gedeyen uns/ und bringen graß und frucht/</l><lb/>
+<l>Nutz/ den man ſonder nutz ohn ſeine gnade ſucht.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">C. G. Z. W.<lb/>
+Der Bethawete.</hi><lb/>
+<cb/>
+113.<lb/>
+Das Kraͤutlein Sonnenthaw.<lb/>
+<cb/>
+Tag und nacht.<cb type="end"/>
+</head><lb/>
+<l>Es iſt ein kraͤutlein klein das traͤgt weißlechte blumen/</l><lb/>
+<l>Des thawes tag und nacht es kan in jhm ſich ruͤhmen:</l><lb/>
+<l><hi rendition="#fr">Bethawet</hi> iſt mein Nahm/ und Sonnenthaw es heiſt/</l><lb/>
+<l>Weil auch die Sonne drauß die feuchte nimmer reiſt.</l><lb/>
+<l>Der Sonnen krafft und thaw gibt froͤligkeit der erden/</l><lb/>
+<l>Die auch den perlen gleich hie kan gefunden werden/</l><lb/>
+<l>Das iſt die ſchoͤnſte frucht/ wann uns Gott hat bethawt/</l><lb/>
+<l>Vnd ſeinen ſegen man ſtets fuͤr den augen ſchawt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">W. G. Z. W.<lb/>
+Der Fruͤhſpate.</hi><lb/>
+<cb/>
+114.<lb/>
+Der Corneelbaum mit<lb/>
+bluͤth und beer.<lb/>
+<cb/>
+So bluͤhend als reiffend.<cb type="end"/>
+</head><lb/>
+<l>Die rothe Caroln beer fruͤh bluͤhend ſich erzeigen/</l><lb/>
+<l>Im reiffen aber ſpat/ wie die art jhnn iſt eigen:</l><lb/>
+<l>Drumb ich <hi rendition="#fr">Fruͤbluͤhend</hi> heiß/ und ſpat im reiffen drauff/</l><lb/>
+<l>Da dieſes baums natur alſo hat ſeinen lauff.</l><lb/>
+<l>Man ſoll die Gottesfurcht zur bluͤhzeit fruͤh anfahen/</l><lb/>
+<l>Daß man im alter reiff/ zu Gott ſich baß koͤn nahen/</l><lb/>
+<l>Ja nichts verſpatet ſey/ frucht bringen wird man dann/</l><lb/>
+<l>Das iſt der groͤſte nutz den der menſch haben kan.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0047"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">H. V. O.<lb/>
+Der Waͤhrende.</hi><lb/>
+<cb/>
+115.<lb/>
+Reiffe borſtorffer am baum<lb/>
+und hinterlegt.<lb/>
+<cb/>
+Biß zum newen.<cb type="end"/>
+</head><note place="right">1626.</note><lb/>
+<l>Das borſtorff apffel obſt das gantze jahr durch wehret/</l><lb/>
+<l>Vnd wanns gehalten wol nicht leichtlich wird verſehret/</l><lb/>
+<l>Biß das new kommet ran/ der <hi rendition="#fr">Waͤhrend</hi> ich drumb heiß/</l><lb/>
+<l>Dann unterm waͤhr obſt mir gegeben wird der preiß.</l><lb/>
+<l>Daß biß zum newen wir ausdawren nun und waͤhren/</l><lb/>
+<l>Woll uns der liebe Gott ſein guten Geiſt beſcheren/</l><lb/>
+<l>Daß wir vernewen uns/ ſo waͤhren immerdar/</l><lb/>
+<l>Biß er uns zu ſich nimpt nauff in der Engelſchar.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">G. P. M.<lb/>
+Der Runde.</hi><lb/>
+<cb/>
+116.<lb/>
+Stabelerbſen.<lb/>
+<cb/>
+In Schotten.<cb type="end"/>
+</head><lb/>
+<l>Man find in Schotten rund der Stabelerbſen ſahmen/</l><lb/>
+<l>In Schotten <hi rendition="#fr">Rund</hi> ich mir drumb hab erlangt den Nahmen/</l><lb/>
+<l>Weil andre ſchotten frucht in ſich nicht ſeynd ſo rund/</l><lb/>
+<l>Wie jedem haußwirth wird die wiſſenſchafft ſeyn kund.</l><lb/>
+<l>Man ſoll ſo in der that ſeyn rund gleich wie im hertzen/</l><lb/>
+<l>Dann wird man leichtlich nie bey jemand es verſchertzen/</l><lb/>
+<l>Ein rund auffrichtig hertz/ Gott auch ſehr wol gefelt/</l><lb/>
+<l>Das iſt die rechte frucht die nuͤtzlich man vorſtelt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">P. G. V. E. H. Z. D. L.<lb/>
+Der Annehmliche.</hi><lb/>
+<cb/>
+117.<lb/>
+Jaßmini weiß.<lb/>
+<cb/>
+In Liebligkeit.<cb type="end"/>
+</head><lb/>
+<l>Annehmlich riechen wol Jaßminen die weiß bluͤhen/</l><lb/>
+<l>Vnd jhre liebligkeit was ſtinckt hinweg macht fliehen:</l><lb/>
+<l>Ich nenn <hi rendition="#fr">Annehmlich</hi> mich/ und daß in liebligkeit/</l><lb/>
+<l>Daß was unlieblich iſt weg ferne ſey und weit.</l><lb/>
+<l>Daß ſo annehmlich iſt wird lieblich angenommen/</l><lb/>
+<l>Es thut auch der geruch dem haupte wol bekommen/</l><lb/>
+<l>Man iſt annehmlich recht/ wann man was lieblichs hat/</l><lb/>
+<l>Das bringt dann liebe frucht zum nutzen in der that.</l></lg><lb/>
+<fw type="sig" place="bottom">F iij</fw><fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0048"/>
+<note place="left">1626.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">C. V. B/<lb/>
+Der Milderende.</hi><lb/>
+<cb/>
+118.<lb/>
+Lampertſche Haſelnuͤſſe.<lb/>
+<cb/>
+Den Huſten.<cb type="end"/>
+</head><lb/>
+<l>Den Huſten mildern thun Lampertſche Haſelnuͤſſe/</l><lb/>
+<l>Wann einem auff die bruſt gefallen ſeynd die fluͤſſe/</l><lb/>
+<l>Die man drumb doͤrren muß/ wann ſie wol zeitig ſeyn/</l><lb/>
+<l>Ich nahm auch <hi rendition="#fr">Mildernd</hi> mir daher den Nahmen mein.</l><lb/>
+<l>Wann etwas iſt zu ſchwer/ das ſoll gemildert werden/</l><lb/>
+<l>Daß deſto leichter man ſein leben fuͤhr auff erden/</l><lb/>
+<l>Es iſt nicht ohne frucht ein mild und mildernd hertz/</l><lb/>
+<l>Zu nutzen wendt es an was man wol redt im ſchertz.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">F. V. L.<lb/>
+Der Leſchende.</hi><lb/>
+<cb/>
+119.<lb/>
+Waldmeiſter.<lb/>
+<cb/>
+Den Brand.<cb type="end"/>
+</head><lb/>
+<l>Waldmeiſter ſpannen lang bluͤth und gut iſt im Maͤyen/</l><lb/>
+<l>Es leſchet wolden brandt/ friſch fleiſch drauff waͤchſt von newen/</l><lb/>
+<l>Der <hi rendition="#fr">Leſchend</hi> ich drumb wurd unbillich nicht genant/</l><lb/>
+<l>Weil auch diß kraͤutleins krafft wol leſcht den kalten brandt.</l><lb/>
+<l>Daß nun geleſchet werd in uns was iſt verderbet/</l><lb/>
+<l>Waſch ab des lebens ſtrohm/ was uns iſt angeerbet/</l><lb/>
+<l>Der Hellen brandt an uns wird haben keine macht/</l><lb/>
+<l>Vnd auch des Himmels frucht mit nutz ſeyn ran gebracht.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. A. V. B.<lb/>
+Der Troͤſtende.</hi><lb/>
+<cb/>
+120.<lb/>
+Augentroſt.<lb/>
+<cb/>
+Die Augen.<cb type="end"/>
+</head><lb/>
+<l>Das kraͤutlein Augentroſt das troͤſtet fein die augen/</l><lb/>
+<l>Es gibt ein gut geſicht/ wann ſie nicht wollen taugen/</l><lb/>
+<l>Der Nahme <hi rendition="#fr">Troͤſtend</hi> mir drumb wol genommen iſt/</l><lb/>
+<l>Da man den Augentroſt nicht gern im hauſe mißt.</l><lb/>
+<l>Wann das hertz iſt getroͤſt die augen es anzeigen/</l><lb/>
+<l>Die ſeines gleichen auch mit liebe zu ſich neigen/</l><lb/>
+<l>Der rechte Troͤſter doch iſt Gottes guter Geiſt/</l><lb/>
+<l>Die frucht der lieb’ er bringt wann er uns zu ſich reift.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0049"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">O. G. V. E. H. Z. D. L.<lb/>
+Der Braune.</hi><lb/>
+<cb/>
+121.<lb/>
+Braunkohl.<lb/>
+<cb/>
+Zur Geſundheit.<cb type="end"/>
+</head><note place="right">1625.</note><lb/>
+<l>Der Braunkohl zum gemuͤß/ daß zur geſundheit nuͤtzet/</l><lb/>
+<l>Vnd wider inre faͤul im leibe ſich vorſchuͤtzet/</l><lb/>
+<l>Braun nach der farb ich heiß die an ſich hat der kohl/</l><lb/>
+<l>Vnd die geſunde krafft dadurch bezeichnet wol.</l><lb/>
+<l>Nun daß uns nicht zu fett der kohl im leben werde/</l><lb/>
+<l>Laſt dencken uns auffs graß/ darunder liegt die erde/</l><lb/>
+<l>Darzu dann wird der leib/ wann Gott der ſeelen rufft/</l><lb/>
+<l>Die bringt im Himmel frucht/ und er ruht in der Grufft.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">A. H. V. E.<lb/>
+Der Guͤnſtige.</hi><lb/>
+<cb/>
+122.<lb/>
+Gunſter.<lb/>
+<cb/>
+Zur Leſchung.<cb type="end"/>
+</head><lb/>
+<l>Des rechten Gunſters bluͤht ein guten ruch thut geben/</l><lb/>
+<l>Im leibe leſchung bringt des durſts ſawr eingegeben</l><lb/>
+<l>Gleich wie die Cappern frucht/ daher ich <hi rendition="#fr">Huͤnſtig</hi> heiß/</l><lb/>
+<l>Zur leſchung dem der iſt von hitz inwendig heiß.</l><lb/>
+<l>Daß man recht guͤnſtig ſey was boͤß all aus zu leſchen/</l><lb/>
+<l>Im hauſe man verhuͤt das plaudern oder draͤſchen/</l><lb/>
+<l>Da iſts ein ſchoͤne frucht/ wann man mit nutz iſt eins/</l><lb/>
+<l>Vnd uͤbels nimmer redt/ drin von eim andern keins.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. L. V. H.<lb/>
+Der Bebende.</hi><lb/>
+<cb/>
+123.<lb/>
+Ein Eſpen.<lb/>
+<cb/>
+In ſeinem Laub.<cb type="end"/>
+</head><lb/>
+<l>Das Eſpenlaub am baum ſich reget ſtets und bebet/</l><lb/>
+<l>Alſo ein friſcher Geiſt mit luſt herummer ſchwebet/</l><lb/>
+<l>Den Nahmen Bebend mir daher ich aus erlaß/</l><lb/>
+<l>Damit auch bebend ſich ein jeder in ſich faß.</l><lb/>
+<l>Das laub am baume zeigt wie leicht es dran thut beben/</l><lb/>
+<l>So unbeſtaͤndig iſt der menſch in ſeinem leben/</l><lb/>
+<l>Mit beben dient drumb Gott/ weil das laub an euch wehrt.</l><lb/>
+<l>So wird dann ſeine frucht in euch ſeyn unverfehrt.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0050"/>
+<note place="left">1626.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">S. L. G. V. E. H. Z. D. L.<lb/>
+Der Durchſuchende.</hi><lb/>
+<cb/>
+124.<lb/>
+Die frucht anacardion oder<lb/>
+Malakiſche hertz bonen.<lb/>
+<cb/>
+Hertz und gehirn.<cb type="end"/>
+</head><lb/>
+<l>Dem hertzen aͤhnlich ſeynd recht die Malackſche bonen/</l><lb/>
+<l>Zu gleich mit dem gehirn durchſuchend es belohnen:</l><lb/>
+<l><hi rendition="#fr">Durchſuchend</hi> dieſe ſtuͤck des leibes nenn ich mich/</l><lb/>
+<l>Daß man mein eigenſchafft moͤg kennen innerlich.</l><lb/>
+<l>Wann nun ſein eigen hertz ein jeder erſt durchſuchet/</l><lb/>
+<l>Vnd dann ſeins gleichen ſicht/ er dem gewiß nicht fluchet/</l><lb/>
+<l>Sein ſinn und ſein gehirn dahin mit fleiß er wend/</l><lb/>
+<l>Wie er mit nutzen bring die frucht zum guten end.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">J. C. V. B.<lb/>
+Der Waͤrmende.</hi><lb/>
+<cb/>
+125.<lb/>
+Baumwolle wie fle waͤchſt.<lb/>
+<cb/>
+Mit bequemligkeit.<cb type="end"/>
+</head><lb/>
+<l>Fein mit bequemligkeit baumwolle waͤrme bringet/</l><lb/>
+<l>Vnd wann die in dem leib/ alsdann ſie ferner dringet:</l><lb/>
+<l>Drumb <hi rendition="#fr">Waͤrmend</hi> ich mich nenn/ und mit bequemligkeit/</l><lb/>
+<l>Dem fewr und inrer hitz allein zum underſcheid.</l><lb/>
+<l>Bequemlich iſt die waͤrm die allgemach angehet/</l><lb/>
+<l>Vnd die uns Gottes geift mit ſanfftem wind zuwehet/</l><lb/>
+<l>Wir wol gewaͤrmet ſeynd wann er recht blaͤſet an/</l><lb/>
+<l>Das fuͤnckelein in uns zu gehen ſeine bahn.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. J. V. Z.<lb/>
+Der Erwartende.</hi><lb/>
+<cb/>
+126.<lb/>
+Ein pflaumen zweiglein auff<lb/>
+einem ſchlehendorn.<lb/>
+<cb/>
+Ein beſſers.<cb type="end"/>
+</head><lb/>
+<l>Ein pflaumen reißlein zart im ſchledorn friſch geſtoſſen/</l><lb/>
+<l>Verbeſſert deſſen art/ draus wird gut obſt genoſſen/</l><lb/>
+<l>Vnd weil der ſchlehen ſtamm ein beſſers/ pflaumen/ giebt/</l><lb/>
+<l><hi rendition="#fr">Erwartend</hi> mir der Nahm ein beſſers hoch geliebt/</l><lb/>
+<l>Gott und dem nechſten dien/ und deines amptes warte/</l><lb/>
+<l>Daß in dich mit gewinſt/ die tugend ſich einarte/</l><lb/>
+<l>Wann du ſo Gott vertrawſt/ er niemals dich verleſt/</l><lb/>
+<l>Mit nutzen auff jhn bawſt/ und harreſt auff das beſt.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0051"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">P. E. D. V.<lb/>
+Der Lufftende.</hi><lb/>
+<cb/>
+127.<lb/>
+Rettig.<lb/>
+<cb/>
+Im aufffteigen.<cb type="end"/>
+</head><note place="right">1626.</note><lb/>
+<l>Der Rettig lufftet wol wann er kompt ins auffſteigen/</l><lb/>
+<l>Wie ſeine wirckung es im beſten kan bezeugen/</l><lb/>
+<l>Den Magen er aufflufft/ drumb <hi rendition="#fr">Lufftend</hi> ich genant</l><lb/>
+<l>Wurd/ weil auffſteigend er/ iſt jederman bekant.</l><lb/>
+<l>Nun daß gelufftet werd/ was recht in ſich auffſteiget/</l><lb/>
+<l>Da muß vom guten nicht ſeyn jemands abgeneiget/</l><lb/>
+<l>Dann wann es anders wer erzeugt es ſchlechte frucht/</l><lb/>
+<l>Die ſonſt nicht einſten wird bey dem gewaͤchs geſucht.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">R. D. V.<lb/>
+Der Widerſtehende.</hi><lb/>
+<cb/>
+128.<lb/>
+Angelica.<lb/>
+<cb/>
+Der Seuche.<cb type="end"/>
+</head><lb/>
+<l>Die groß’ Angelica ſehr widerſteht den ſeuchen/</l><lb/>
+<l>Wer ſie nur brauchen wil der find nicht jhres gleichen/</l><lb/>
+<l>Der ſeuche <hi rendition="#fr">Widerſtehnd</hi> ich mich dahero nant/</l><lb/>
+<l>Vnd thue dem boͤſen gern mit willen widerſtandt.</l><lb/>
+<l>Der bleibt vor gifft geſund der dieſe wurtzel kawet/</l><lb/>
+<l>Wer Gott ſtets bey ſich hat/ demſelben fuͤr nichts grawet/</l><lb/>
+<l>Denn boͤſen widerſteh/ die frommen nicht betruͤb/</l><lb/>
+<l>Fruchthringend du ſo biſt/ Gott und dem menſchen lieb.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">J. A. W.<lb/>
+Der Beſſernde.</hi><lb/>
+<cb/>
+129.<lb/>
+Peterſilgen.<lb/>
+<cb/>
+Die Speiſe.<cb type="end"/>
+</head><lb/>
+<l>Das Peterſilgen kraut iſt billich hoch zu preiſen/</l><lb/>
+<l>Wie ſeine wurtzel auch/ ſie beſſern recht die ſpeiſen/</l><lb/>
+<l>Die ſpeiſe <hi rendition="#fr">Beſſernd</hi> mich darumb ich nennen that/</l><lb/>
+<l>Weil ander gut gewuͤrtz dadurch man helt zu rath.</l><lb/>
+<l>Wer nun mit raͤthligkeit ſein ſachen fleiſſig fuͤhret/</l><lb/>
+<l>Bey dem verbeſſerung im hauſe wird geſpuͤret/</l><lb/>
+<l>Des armuths nicht vergiß/ und beſſer jhm die ſpeiß/</l><lb/>
+<l>Des wirſtu haben lohn/ und in dem Himmel preiß.</l></lg><lb/>
+<fw type="sig" place="bottom">G</fw><fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0052"/>
+<note place="left">1626.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">L. V. D.<lb/>
+Der Steurende.</hi><lb/>
+<cb/>
+130.<lb/>
+Loͤffelkraut.<lb/>
+<cb/>
+Der Schwermuth.<cb type="end"/>
+</head><lb/>
+<l>Das Loͤffelkraut iſt gut der ſchwermuth vorzuſtewren/</l><lb/>
+<l>Sein ſafft die miltz im leib erfriſcht und thut ernewren/</l><lb/>
+<l>Der Schwermuth <hi rendition="#fr">Steurend</hi> mich darumb ich gerne nant/</l><lb/>
+<l>Weil man mit dieſem kraut dieſelb offt abgewandt.</l><lb/>
+<l>Der ſchwermuth beſſer nicht je kan geſtewret werden/</l><lb/>
+<l>Als daß nach muͤgligkeit man ſich verjung auff erden/</l><lb/>
+<l>Was luſtigs nehme vor/ das hertze nicht beſchwer/</l><lb/>
+<l>Mit ſteter uͤberſorg/ in der nichts fruchtet mehr.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">L. H.<lb/>
+Der Zuſam̃enziehende.</hi><lb/>
+<cb/>
+131.<lb/>
+Saurach.<lb/>
+<cb/>
+Im Leibe.<cb type="end"/>
+</head><lb/>
+<l>Saurach die beerlein roth ſehr wol zuſammen ziehen/</l><lb/>
+<l>In leib genommen ein/ was ſonſt herumb moͤcht fliehen/</l><lb/>
+<l><hi rendition="#fr">Zuſammenziehend</hi> drumb den Nahmen nam ich an/</l><lb/>
+<l>Daß was nicht iſt bey ein zuſammenziehe man.</l><lb/>
+<l>Weitleufftigkeit dient nicht/ man halte ſich zuſammen/</l><lb/>
+<l>So wird man haben nutz und einen guten nahmen/</l><lb/>
+<l>Drin ſteht des leibes ſtaͤrck/ dann wann der iſt zertheilt/</l><lb/>
+<l>Bringt er frucht nimmer nicht/ ja wann man noch ſo eilt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">O. H. V. K.<lb/>
+Der Erweichende.</hi><lb/>
+<cb/>
+132.<lb/>
+Zwirbelnuͤſſe.<lb/>
+<cb/>
+Die Bruſt.<cb type="end"/>
+</head><lb/>
+<l>Die Bruſt/ wie man wol weiß/ die zwirbelnuͤß erweichen/</l><lb/>
+<l>Wann dieſe wirckung ſie durch jhre krafft erreichen/</l><lb/>
+<l>So haben der Natur ſie die gebuͤhr gethan/</l><lb/>
+<l>Bey dieſem baum jetzund man mich auch kennen kan/</l><lb/>
+<l>Dann jhm zu folgen nach ich der <hi rendition="#fr">Erweichend</hi> heiſſe/</l><lb/>
+<l>Verſteh/ die bruſt/ wann ich von laſtern mich abreiſſe/</l><lb/>
+<l>Vnd zu der tugend eil/ dran hab all meine luſt/</l><lb/>
+<l>So thut erweichen ſie/ zur ehre/ mir die bruſt.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0053"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">J. S.<lb/>
+Der Vortreffliche.</hi><lb/>
+<cb/>
+133.<lb/>
+Teuffels abbiß.<lb/>
+<cb/>
+Zu vielen kranckheiten.<cb type="end"/>
+</head><note place="right">1626.</note><lb/>
+<l>Des Teuffels abbiß kraut heilt allerley gebrechen/</l><lb/>
+<l>Peſt/ wuͤrme/ ſchwulſt/ geſchwaͤhr/ bauch fluͤſſe/ blehen/ ſtechen/</l><lb/>
+<l>Kurtz es vortrefflich ſchickt zu jeder kranckheit ſich/</l><lb/>
+<l>Zu viel kranckheiten drumb hat man Vortrefflich mich/</l><lb/>
+<l>Im hauffen der da frucht ſtets bringen ſoll/ genennet/</l><lb/>
+<l>Den meiſter allermeiſt/ man an dem wercke kennet.</l><lb/>
+<l>Zu viel kranckheiten mich vortrefflich mache der/</l><lb/>
+<l>Der heiſt/ und iſt zugleich des tods und lebens Herr.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">G. T.<lb/>
+Der Dicke.</hi><lb/>
+<cb/>
+134.<lb/>
+Ein ſtarcker groſſer Kuͤrbiß.<lb/>
+<cb/>
+Gibt guten ſchatten.<cb type="end"/>
+</head><lb/>
+<l>Der dicke Kuͤrbiß pflegt zu geben guten ſchatten/</l><lb/>
+<l>Man pflegt mit ſeinem ſafft den pferden auch zu rathen/</l><lb/>
+<l>Daß ſie die muͤcken nicht und fliegen plagen ſehr/</l><lb/>
+<l>Ein ſtarcker Kuͤrbiß iſt drumb meins Gemaͤhldes ehr.</l><lb/>
+<l>Man nent den <hi rendition="#fr">Dicken</hi> mich/ der guten ſchatten giebet/</l><lb/>
+<l>Zum ſchatten jeder eilt/ den hitz und brandt betruͤbet/</l><lb/>
+<l>Nach gutem ſchatten ich zu nacht und auch zu tag/</l><lb/>
+<l>Zu kuͤhlen drunter mich/ ein groß verlangen trag.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. V. Z.<lb/>
+Der Vermiſchte.</hi><lb/>
+<cb/>
+135.<lb/>
+Dreyfaltigkeitkraut.<lb/>
+<cb/>
+In dreyerley farben.<cb type="end"/>
+</head><lb/>
+<l>In dreyen farben ich mich den <hi rendition="#fr">Vermiſchten</hi> nenne/</l><lb/>
+<l>Vnd keine nimmer nicht doch von der andern trenne.</l><lb/>
+<l>Die frucht ſo ich erwehlt heiſt der Dreyfaltigkeit</l><lb/>
+<l>Das kraut/ nun hoͤret an/ was man dadurch bedeut.</l><lb/>
+<l>Drey farben iſt gewehnt die tugend meiſt zu fuͤhren</l><lb/>
+<l>In jhrem ehrenſchildt/ in wapen und paniren/</l><lb/>
+<l>Vermiſcht doch allzugleich/ Recht/ Weißheit/ Dapffermuth/</l><lb/>
+<l>Dadurch erlanget man hienieden ehr und gut.</l></lg><lb/>
+<fw type="sig" place="bottom">G ij</fw><fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0054"/>
+<note place="left">1626.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">J. V. B.<lb/>
+Der Geruͤhrte.</hi><lb/>
+<cb/>
+136.<lb/>
+Das kraͤutlein ruͤhr mich nicht.<lb/>
+<cb/>
+Springt dahin.<cb type="end"/>
+</head><lb/>
+<l>Das kraͤutlein Ruͤhr-mich nicht hat vor den andern allen/</l><lb/>
+<l>In der Geſellſchafft mir beliebet und gefallen/</l><lb/>
+<l>Seinthalben man auch jetzt die ehre mir erweiſt/</l><lb/>
+<l>Daß den <hi rendition="#fr">Heruͤhrten</hi> man mich in der Rotte heiſt/</l><lb/>
+<l>Mein wort laut/ Springt dahin: So bald man mich beruͤhret/</l><lb/>
+<l>Wird ſtracks ein newe frewd in meinem thun geſpuͤret/</l><lb/>
+<l>Ich ſpringe drauff dahin ſo hoch und weit ich kan/</l><lb/>
+<l>Doch ſpringe nimmer ich ab von der tugend bahn.</l></lg><lb/>
+<note place="left">1627.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">H. C. S.<lb/>
+Der Erweckende.</hi><lb/>
+<cb/>
+137.<lb/>
+Borragen mit jhrer bluͤth.<lb/>
+<cb/>
+Frewden.<cb type="end"/>
+</head><lb/>
+<l>Die blawe bluͤmelein Borragen frewd erwecken</l><lb/>
+<l>Den augen/ laſſen auch nicht hirn und hertze ſtecken/</l><lb/>
+<l>In ſchwerer trawrigkeit <hi rendition="#fr">Erweckend</hi> ich daher</l><lb/>
+<l>Den Nahmen mir erwehlt/ daß man zur frewd/ und mehr</l><lb/>
+<l>Zur tugend munter ſey/ dem hertzen luſt einſchencke/</l><lb/>
+<l>Vnd ſich mit guͤtigkeit zum guten ſtetig lencke/</l><lb/>
+<l>So wird die frewdigkeit erweckt und frucht gebracht/</l><lb/>
+<l>Die billich jederman zu ſuchen hat in acht.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">G H. V. E.<lb/>
+Der Vbertreffende.</hi><lb/>
+<cb/>
+138.<lb/>
+Der wuͤrtznaͤglein baum.<lb/>
+<cb/>
+Im ſtarcken geruch.<cb type="end"/>
+</head><lb/>
+<l>Von weitem im geruch Wuͤrtznaͤglein uͤbertreffen/</l><lb/>
+<l>Daß/ ſo man wuͤrtze heiſt/ mit jhrer krafft auch treffen</l><lb/>
+<l>Zugleich hirn/ naaß und hertz: drumb <hi rendition="#fr">Vbertreffend</hi> mich</l><lb/>
+<l>Nant die fruchtbringe ſchaar: man ſoll verſehen ſich</l><lb/>
+<l>Mit eim geruch/ ſo ſtarck/ nichts von ſich kommen laſſe/</l><lb/>
+<l>Das ungeſchmackt und boͤß/ den ſtanck der laſter haſſe/</l><lb/>
+<l>Dann uͤbertreffend den in tugend man nur acht/</l><lb/>
+<l>Der ſtets ſein gut geruͤcht zu ſtaͤrcken iſt bedacht.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0055"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">J. V. M.<lb/>
+Der Artzeneyende.</hi><lb/>
+<cb/>
+139.<lb/>
+Das kraut Poſt.<lb/>
+<cb/>
+Im Bier.<cb type="end"/>
+</head><note place="right">1627.</note><lb/>
+<l>Im biere Poſt das kraut genuͤglich artzeneyet/</l><lb/>
+<l>Vnd wanns recht ausgekocht/ im magen wol gedeyet/</l><lb/>
+<l>Drumb <hi rendition="#fr">Artzeneyend</hi> ich im biere bin genant/</l><lb/>
+<l>Dann wann man Gruͤſſingk macht in meinem vaterland</l><lb/>
+<l>Thut man diß kraut hinzu/ drob der leib nutz einnimmet/</l><lb/>
+<l>Ob mancher der jhn trinckt/ das maul ſchon druͤber kruͤmmet/</l><lb/>
+<l>So iſt er doch ein ſafft der manchem baß bekoͤmpt/</l><lb/>
+<l>Als wann er einen tranck vom Apotecker nimpt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. E. V. F.<lb/>
+Der Ausfuͤhrende.</hi><lb/>
+<cb/>
+140.<lb/>
+Engelſuͤß.<lb/>
+<cb/>
+Schwer gebluͤth.<cb type="end"/>
+</head><lb/>
+<l>Die wurtzel Engelſuͤß/ das ſchwere blut ausfuͤhret/</l><lb/>
+<l>Die lieb in einigkeit/ auch Engelſuͤß/ man ſpuͤret:</l><lb/>
+<l><hi rendition="#fr">Ausfuͤhrend</hi> mir darumb den Nahmen fugt das gluͤck/</l><lb/>
+<l>Daß nach der ſchwermuth ich mit ſuͤſſem mich erqutck.</l><lb/>
+<l>Was die verurſacht nun ſoll embſig man weg reumen/</l><lb/>
+<l>Vnd zu der tugend weg ſich ja nicht lange ſeumen/</l><lb/>
+<l>Wann das gemuͤth vereint/ viel frucht die liebe bringt/</l><lb/>
+<l>Vnd nach dem ſo mit nutzt/ aus allen kraͤfften ringt.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">W. R.<lb/>
+Der Abkratzende.</hi><lb/>
+<cb/>
+141.<lb/>
+Karten diſtel.<lb/>
+<cb/>
+Das Rauhe.<cb type="end"/>
+</head><lb/>
+<l>Das rauhe von dem tuch ab/ karten diſtel/ kratzen/</l><lb/>
+<l>Ein jeder huͤte ſich zu reden loſe fratzen/</l><lb/>
+<l><hi rendition="#fr">Abkratzend</hi> hat man mich das rauhe nun genent/</l><lb/>
+<l>Dann meine wirckung ſo gar balde wird erkent.</l><lb/>
+<l>Man ſoll was widrig iſt der ehr’/ und rauh/ abbringen/</l><lb/>
+<l>Vnd zu ergrunden die/ ſich in die hoͤhe ſchwingen/</l><lb/>
+<l>Da keine hinderung/ und da man kriegt zu lohn/</l><lb/>
+<l>Nach dieſer rauhen welt/ der tugend ſchoͤne Cron.</l></lg><lb/>
+<fw type="sig" place="bottom">G iij</fw><fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0056"/>
+<note place="left">1627.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">N. T.<lb/>
+Der Widerſtrebende.</hi><lb/>
+<cb/>
+142.<lb/>
+Entzian.<lb/>
+<cb/>
+Dem Gifftigen.<cb type="end"/>
+</head><lb/>
+<l>Die wurtzel Entzian dem Giffte widerſtrebet/</l><lb/>
+<l>Geſund den menſchen helt/ daß ohne ſucht er lebet:</l><lb/>
+<l>Drumb <hi rendition="#fr">Widerſtrebend</hi> mir der Nahme wurd erdacht/</l><lb/>
+<l>Weil dieſe wurtzel hat in ſich ſo groſſe macht.</l><lb/>
+<l>Der ſtarcken ſeelen gifft ſoll man ſtets widerſtreben/</l><lb/>
+<l>In ſeinem wandel rein mit gottesfurcht recht leben/</l><lb/>
+<l>Die frucht muß kommen drauff/ die Chriſten wol anſteht/</l><lb/>
+<l>Dem der es ſo anſtelt es nimmer uͤbel geht.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">H. G. H. V. W.<lb/>
+Der Fortjagende.</hi><lb/>
+<cb/>
+143.<lb/>
+Ritterſporn.<lb/>
+<cb/>
+Das Widrige.<cb type="end"/>
+</head><lb/>
+<l>Der Ritterſporen krafft die fluͤſſe wol fortjaget/</l><lb/>
+<l>Das iſt ein widrig ding ſo manchen hefftig plaget:</l><lb/>
+<l><hi rendition="#fr">Fortjagend</hi> nun daher das widrig ich mich heiß/</l><lb/>
+<l>Daß in dem ungluͤck auch man ſich bezeige weiß.</l><lb/>
+<l>Gedultig ohne zorn/ was widrig iſt außjage/</l><lb/>
+<l>Vnd in ſeim uͤbelſtandt an Gott gantz nicht verzage/</l><lb/>
+<l>Die frucht es bringen muß/ daß mitten in dem leidt/</l><lb/>
+<l>Auch ruhig man wird ſeyn/ und warten beßrer zeit.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">P. M. G. Z. H. M.<lb/>
+Der Faſelnde.</hi><lb/>
+<cb/>
+144.<lb/>
+Rapuntzeln.<lb/>
+<cb/>
+Am berge.<cb type="end"/>
+</head><lb/>
+<l>Rapuntzeln an dem berg im feuchten lande faſeln/</l><lb/>
+<l>Alldar gerathen wol und ſeynd gantz voller zaſeln/</l><lb/>
+<l>Drumb ich mich <hi rendition="#fr">Faſelnd</hi> hieß von dieſer undern krafft/</l><lb/>
+<l>Da diß gewaͤchs ſo wil am berg han ſeinen ſafft.</l><lb/>
+<l>Die arbeit iſt der berg dran faſelt leicht die kugend/</l><lb/>
+<l>Wann ſich ein frey gemuͤth darzu gewehnt von jugend/</l><lb/>
+<l>Es bringt mit nutzen frucht/ und wird ſehr hoch geacht/</l><lb/>
+<l>Wann es an dieſem berg arbeitet tag und nacht.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0057"/>
+<lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">C. M. Z. B.<lb/>
+Der Vollbluͤende.</hi><lb/>
+<cb/>
+145.<lb/>
+Volle rothe Peonien.<lb/>
+<cb/>
+Vortrefflicher wirckung.<cb type="end"/>
+</head><note place="right">1627.</note><lb/>
+<l>Peonien roſen voll in hoher roͤthe bluͤhen/</l><lb/>
+<l>Vnd jhre wirckung groß vortrefflich nach ſich ziehen/</l><lb/>
+<l><hi rendition="#fr">Vollbluͤend</hi> heiß ich drumb des wirckung kraͤfftig iſt/</l><lb/>
+<l>Vnd ſich vortrefflich zeigt zur kranckheit jeder friſt.</l><lb/>
+<l>Es kan ja nimmermehr zu voll die tugend bluͤhen/</l><lb/>
+<l>Als auch ein tapffer hertz zu viel ſich drin bemuͤhen/</l><lb/>
+<l>Vortrefflich iſt die frucht die bluͤhend man anfeht/</l><lb/>
+<l>Vnd wann das alter kompt/ mit ehren drin beſteht.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">F. G. Z. S. L.<lb/>
+Der Werthgeachte.</hi><lb/>
+<cb/>
+146.<lb/>
+Suͤßholtz.<lb/>
+<cb/>
+Den innerlichen gliedern.<cb type="end"/>
+</head><lb/>
+<l>Hochwerth erachtet man/ den innerlichen gliedern/</l><lb/>
+<l>Das Suͤßholtz wann mans thut in ſeinem brauch erwidern/</l><lb/>
+<l>Mein Nahme <hi rendition="#fr">Werthgeacht</hi> genommen iſt daher/</l><lb/>
+<l>Gleich dem der jederman/ von hertzen dienet ſehr.</l><lb/>
+<l>Es mag nicht anders ſeyn/ man muß jhn ſtets werth achten/</l><lb/>
+<l>Wann ſeine guͤtigkeit man gleichdurch wil betrachten/</l><lb/>
+<l>Der nutzen und die frucht/ nie nicht ausbleiben kan/</l><lb/>
+<l>Die frewdig bey ſich hat ein werth geachter mann.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">E. H. Z. R.<lb/>
+Der Schaͤrffende.</hi><lb/>
+<cb/>
+147.<lb/>
+Der deutſche Ingber.<lb/>
+<cb/>
+Den Magen.<cb type="end"/>
+</head><lb/>
+<l>Der deutſche Ingber ſchaͤrfft geſtoſſen klein den Magen/</l><lb/>
+<l>Zertreibt den zaͤhen ſchleim/ und reinigt ſo den kragen/</l><lb/>
+<l>Drumb <hi rendition="#fr">Schaͤrffend</hi> man mich nent den Magen recht und wol/</l><lb/>
+<l>Dann wann der iſt geſchaͤrfft kan nicht das hirn ſeyn voll.</l><lb/>
+<l>Wer von verſtandt iſt ſcharff/ leicht alle ding bedencket/</l><lb/>
+<l>Vnd ſeinen muntern geiſt zum guten gerne lencket/</l><lb/>
+<l>Diß mich verurſacht auch/ daß ich frucht bringe viel/</l><lb/>
+<l>Vnd nuͤtzlich trachte nur nach deutſcher tugend ziel.</l></lg><lb/>
+<fw type="catch" place="bottom"><hi rendition="#fr">Der</hi></fw><lb/>
+<pb facs="#f0058"/>
+<note place="left">1628.</note><lg type="poem"><head><lb/>
+<cb type="start"/>
+<hi rendition="#fr">E. H. Z. L. E.<lb/>
+Der Verwelckte.</hi><lb/>
+<cb/>
+148.<lb/>
+Welcke Ruͤben.<lb/>
+<cb/>
+Zum auswerffen.<cb type="end"/>
+</head><lb/>
+<l>Die welcke Ruͤben gelb die dienen zum auswerffen/</l><lb/>
+<l>Wofern ein rawer fluß die bruſt hat wollen ſchaͤrffen/</l><lb/>
+<l>Nach dieſen Ruͤblein nun <hi rendition="#fr">Verwelckt</hi> werd ich genant/</l><lb/>
+<l>Vnd iſt doch mein gemuͤth von langem her bekant/</l><lb/>
+<l>Man bilde ſich nicht ein/ als wann ich jetzt verwelcke/</l><lb/>
+<l>Dann unter alten offt findt man die beſte ſchaͤlcke/</l><lb/>
+<l>Die werffe man nicht weg/ und hebe ſie wol auff/</l><lb/>
+<l>Daß ſie frucht bringen auch/ mit nutz in jhrem lauff.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">C. S. V. M.<lb/>
+Der Verhindernde.</hi><lb/>
+<cb/>
+149.<lb/>
+Der Morellenbaum.<lb/>
+<cb/>
+Hitzige daͤmpffe.<cb type="end"/>
+</head><lb/>
+<l>Marillen obſt iſt gut die daͤmpffe zu verhindern/</l><lb/>
+<l>Voraus wann hitzig ſie/ bey alten und bey kindern/</l><lb/>
+<l><hi rendition="#fr">Verhindernd</hi> mir der Nahm erhitzte daͤmpffe fiel/</l><lb/>
+<l>Denn man nicht laſſen ſoll anffſteigen deren viel.</l><lb/>
+<l>Diß obſt man zum beſchluß nach andern ſpeiſen eſſe/</l><lb/>
+<l>Ein jederman ſein thun in ſeim beruff abmeſſe/</l><lb/>
+<l>Das boͤß er hindern wird frucht bringen offt und gut/</l><lb/>
+<l>Vnd nutzen ſchaffen dem der keinem leid nicht thut.</l></lg><lb/>
+<lg type="poem"><head><cb type="start"/>
+<hi rendition="#fr">F. W. K.<lb/>
+Der Genißliche.</hi><lb/>
+<cb/>
+150.<lb/>
+Sperberbaum oder Elsbeer.<lb/>
+<cb/>
+In ſeiner weicht.<cb type="end"/>
+</head><lb/>
+<l>Elsbeeren wann ſie teig/ ſeynd ſie erſt zu genieſſen/</l><lb/>
+<l>Wer ſie hart eſſen wil dem moͤcht es leicht verdrieſſen/</l><lb/>
+<l>In ſeiner weiche nun man mich <hi rendition="#fr">Genießlich</hi> nent/</l><lb/>
+<l>Dann wann ſie allzu hart/ das maul man drob zerflent.</l><lb/>
+<l>Daß man werd aber recht von jederman genoſſen/</l><lb/>
+<l>Muß man leutſelig ſeyn/ gutthaͤtig/ unverdroſſen/</l><lb/>
+<l>So kompt man zu der Frucht die jeder bringen ſoll/</l><lb/>
+<l>Vnd zu dem nutzen auch drin man beſtehet wol.</l></lg></div><lb/>
+<pb facs="#f0059"/>
+<pb facs="#f0060"/>
+<pb facs="#f0061"/>
+<pb facs="#f0062"/>
+</body> </text> </TEI>
