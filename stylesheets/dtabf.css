@@ -8,6 +8,9 @@
  * which are part of the DTA base format (DTABf; http://www.deutschestextarchiv.de/doku/basisformat):
  */
 
+@import "tei.css";
+@import "links.css";
+ 
 * {
 }
 
@@ -30,6 +33,7 @@ note[place="foot"]:before{
 	content:"[Fußnote] " attr(n) " ";	
 }
 note[place="foot"] {
+	display:block;
 	vertical-align: 4px;
 	font-size : 60%;
 }
