@@ -8,9 +8,9 @@
  * which are part of the DTA base format (DTABf; http://www.deutschestextarchiv.de/doku/basisformat):
  */
 
-@import url("tei_oxygen.css");
+/* @import url("tei_oxygen.css"); */
 
-@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+/* @namespace oxy url('http://www.oxygenxml.com/extensions/author'); */
 
 * {
 }
@@ -87,6 +87,13 @@ cell[rendition="#right"]{
 }
 cell[rendition="#c"]{
 	text-align:center;
+}
+
+/*TODO: correct? (added from tei_oxygen)*/
+cell[role='label'],
+row[role='label']{
+   color: inherit;
+   background-color: #CCEEFF;
 }
 
 /*  rendition value visualisation	*/
@@ -187,6 +194,11 @@ cell[rendition="#c"]{
 TEI {
 }
 
+/*TODO: correct? (added from tei_oxygen)*/
+TEI, TEI\.2 {
+    display:block;
+}
+
 /*  level 1     - Elements, that have to be considered to fullfill the DTA ›base format‹. These elements are used consequently in the DTA core corpus.    */
 
 actor  {
@@ -230,6 +242,17 @@ castList {
 }
 div {
 }
+
+/*TODO: correct? (added from tei_oxygen)*/
+div,
+body > div,
+body > div > div,
+body > div > div > div,
+body > div > div > div > div{
+    margin-bottom:0.2em;
+}
+
+
 figure {	
 	display:inline;
 	border-width:1mm;
@@ -248,6 +271,15 @@ figure[type="notatedMusic"] {
 figure[type="notatedMusic"]:after {
 	content:"[Musik]";
 }
+
+/*TODO: correct? (added from tei_oxygen)*/
+/*
+ * Support for displaying unparsed entity images.
+*/
+figure[entity]{
+     content: oxy_url(oxy_unparsed-entity-uri(attr(entity))); 
+}
+
 formula  {
     display:inline;
 	border-width:1mm;
@@ -267,6 +299,17 @@ body > div > head,
 body > div > div > head,
 body > div > div > div > head,
 body > div > div > div > div > head {
+	/*TODO: correct? (added from tei_oxygen)*/
+    padding-top:0.6em;
+    padding-bottom:0.2em;
+    padding-left:0.2em;
+    padding-right:0em;
+    background-color:inherit;
+	
+	/* (added from tei_oxygen)
+    color:#004477;
+    border-bottom:1px solid #004477;
+	*/
     color:black;
     border-bottom:none;
     font-size:large;
@@ -277,6 +320,8 @@ body > div > div > div > div > head {
 
 head:before{
 	content:"" !important;
+	/*TODO: correct? (added from tei_oxygen)*/
+	display:block;
 }
 
 head {
@@ -353,13 +398,30 @@ stage {
 }
 supplied {
 }
-table  {
+
+/*TODO: correct? (added from tei_oxygen)*/
+table {
+  border: 1px solid #EEEFEE;
 }
+/*table  {
+}*/
+
+/*TODO: correct? (added from tei_oxygen)*/
+graphic{
+    content: attr(url, url);
+    width:attr(width, length);
+    height:attr(height, length);
+}
+
 text  {
     max-width:800px;
     margin-left:30px;
     line-height:150%;
+	/*TODO: correct? (added from tei_oxygen)*/
+	display: block;
 }
+
+
 titlePage {
 }
 titlePart {
@@ -404,6 +466,13 @@ fw  {
 hi  {
     background:#fff;
 }
+
+/*TODO: correct? (added from tei_oxygen)*/
+hi[rend="sc"] {
+  display: inline;
+  text-decoration:overline;
+}
+
 imprimatur  {
 }
 lb {
@@ -439,6 +508,14 @@ pubPlace {
 quote {
     display:inline;
 }
+
+/* tei_oxygen:
+quote {
+  display: block;
+  margin-left: 1em;
+}
+*/
+
 role 	{
 }
 roleDesc  {
@@ -516,6 +593,8 @@ teiHeader fileDesc{
 teiHeader{
 }
 teiHeader titleStmt{
+	/*TODO: correct? (added from tei_oxygen)*/
+	display:block;
 }
 teiHeader title{
 }
@@ -524,7 +603,7 @@ teiHeader title{
 
 /*  special character displaying	 */
 
-oxy|entity {
+/*oxy|entity {
     background-color:inherit !important;
     margin:0px !important;
     padding:0px !important;
@@ -532,3 +611,4 @@ oxy|entity {
 	font-weight:normal;
     font-family:inherit;
 }
+*/
