@@ -8,10 +8,6 @@
  * which are part of the DTA base format (DTABf; http://www.deutschestextarchiv.de/doku/basisformat):
  */
 
-/* @import url("tei_oxygen.css"); */
-
-/* @namespace oxy url('http://www.oxygenxml.com/extensions/author'); */
-
 * {
 }
 
@@ -21,19 +17,6 @@ TEI * {
     font-size:12pt;
 }
 
-/*  layout options     */
-
-/* hide comments */
-/*oxy|comment:before {
-	color:grey !important;
-	content:'Kommentar: ';
-}
-oxy|comment {
-	display:inline !important;
-	color:silver;
-	background-color:#F7F8E0 !important;
-	font-size:0.7em;
-} */
 note[place="left"]:before{
 	color:silver;
 	content:'Marg. links: ';
@@ -236,7 +219,6 @@ cb[type="end"]:after{
 	color:silver;
 }
 cell  {
-    -oxy-placeholder-content:"Tabelle";
 }
 castList {
 }
@@ -270,14 +252,6 @@ figure[type="notatedMusic"] {
 }
 figure[type="notatedMusic"]:after {
 	content:"[Musik]";
-}
-
-/*TODO: correct? (added from tei_oxygen)*/
-/*
- * Support for displaying unparsed entity images.
-*/
-figure[entity]{
-     content: oxy_url(oxy_unparsed-entity-uri(attr(entity))); 
 }
 
 formula  {
@@ -314,7 +288,6 @@ body > div > div > div > div > head {
     border-bottom:none;
     font-size:large;
     display:block;
-    -oxy-placeholder-content:"Titel";
     text-align:center;
 }
 
@@ -325,11 +298,9 @@ head:before{
 }
 
 head {
-	-oxy-placeholder-content:"Titel";
 }
 item  {
 	display:inline;
-    -oxy-placeholder-content:"Liste";
 }
 
 l {
@@ -540,7 +511,6 @@ abbr {
 }
 expan {
     background-color:#F8F1FB !important;
-    -oxy-placeholder-content:"Expansion";
     color:black;
     font-style:italic;
 }
@@ -557,14 +527,12 @@ corr  {
     background-color:#F8F1FB !important;
     color:green;
     font-style:italic;
-    -oxy-placeholder-content:"Korrektur";
 }
 orig  {
     background-color:#F8F1FB !important;
 }
 reg {
     background-color:#F8F1FB !important;
-    -oxy-placeholder-content:"Normalisierung";
 }
 date {
 }
@@ -603,12 +571,4 @@ teiHeader title{
 
 /*  special character displaying	 */
 
-/*oxy|entity {
-    background-color:inherit !important;
-    margin:0px !important;
-    padding:0px !important;
-    -oxy-display-tags:none;
-	font-weight:normal;
-    font-family:inherit;
-}
-*/
+
