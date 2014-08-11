@@ -1,0 +1,537 @@
+/* 
+ * DTABf to HTML-Stylesheet, 2014-07-18
+ * Deutsches Textarchiv (DTA; http://www.deutschestextarchiv.de)
+*/
+
+/*
+ * Overrides all stylesheet information contained in tei_oxygen.css for those tei-elements, 
+ * which are part of the DTA base format (DTABf; http://www.deutschestextarchiv.de/doku/basisformat):
+ */
+
+@import url("tei_oxygen.css");
+
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+
+* {
+}
+
+TEI * {
+    color:black;
+    font-family:Georgia,"Linux Libertine",Code2000,serif;
+    font-size:12pt;
+}
+
+/*  layout options     */
+
+/* hide comments */
+oxy|comment:before {
+	color:grey !important;
+	content:'Kommentar: ';
+}
+oxy|comment {
+	display:inline !important;
+	color:silver;
+	background-color:#F7F8E0 !important;
+	font-size:0.7em;
+}
+note[place="left"]:before{
+	color:silver;
+	content:'Marg. links: ';
+}
+note[place="right"]:before{
+	color:silver;
+	content:'Marg. rechts: ';
+}
+note[place="foot"]:before{
+	color:silver;
+	content:'Fußnote: ';	
+}
+note[place="end"] {
+	color:silver;
+	content:'Endnote: ';
+}
+note[type="editorial"]:before{
+	color:silver;
+	content:'edit. Kommentar: ';
+}
+fw[type="header"][place="top"] {
+	font-size:0.9em;
+    text-align:center;
+    display:block;
+    color:#666;
+}
+fw[type="catch"][place="bottom"] {
+	font-size:0.9em;
+    text-align:right;
+    display:block;
+    color:#666;
+}
+fw[type="sig"][place="bottom"] {
+	font-size:0.9em;
+    text-align:center;
+    display:block;
+    color:#666;
+}
+space[dim="horizontal"]{
+	content:'        ';
+}	
+cell{
+	text-align:left;
+}
+cell[rendition="#right"]{
+	text-align:right;
+}
+cell[rendition="#c"]{
+	text-align:center;
+}
+
+/*  rendition value visualisation	*/
+*[rendition~="#aq"]{
+	/*Antiqua*/
+	font-family:"Arial Unicode MS", Arial;
+}
+*[rendition~="#b"] {
+	/*Fettdruck*/
+	font-weight:bold;
+    font-family:inherit;
+}
+*[rendition~="#c"]{
+	/*zentrierter Text*/
+	display:block; 
+	text-align:center;
+    font-family:inherit;
+}
+*[rendition~="#blue"]{
+	/*blaue Einfaerbung*/
+	color:blue;
+    font-family:inherit;
+}
+*[rendition~="#blue"] *{
+	/*blaue Einfaerbung fuer Unterlemente*/
+	color:blue;
+    font-family:inherit;
+}
+*[rendition~="#et"]{
+	/*eingerueckter Text*/
+	display:block; 
+	margin-left:2em; 
+	text-indent:2em;
+    font-family:inherit;
+}
+*[rendition~="#fr"]{
+	/*Frakturwechsel*/
+	font-weight:100;
+	font-size:larger;
+}
+*[rendition~="#g"]{
+	/*Sperrdruck*/
+	border:1px dashed black;
+    font-family:inherit;
+}
+*[rendition~="#i"]{
+	/*Kursivdruck*/
+	font-style:italic;
+    font-family:inherit;
+}
+*[rendition~="#in"]{
+	/*Initiale*/
+	font-size:150%;
+    font-family:inherit;
+}
+*[rendition~="#k"]{
+	/*Kapitaelchen*/
+	border:1px solid black;
+    font-family:inherit;
+}
+*[rendition~="#red"]{
+	/*rote Einfaerbung*/
+	color:#F60535;
+    font-family:inherit;
+}
+*[rendition~="#red"] *{
+	/*rote Einfaerbung fuer Unterlemente*/
+	color:#F60535;
+    font-family:inherit;
+}
+*[rendition~="#right"]{
+	/*Rechtsbuendigkeit*/
+	display:block; 
+	text-align:right;
+    font-family:inherit;
+}
+*[rendition~="#sub"]{
+	/*Tiefstellung*/
+	vertical-align:sub; 
+	font-size:.8em;
+    font-family:inherit;
+}
+*[rendition~="#sup"]{
+	/*Hochstellung*/
+	vertical-align:super; 
+	font-size:.8em;
+    font-family:inherit;
+}
+*[rendition~="#u"]{
+	/*gedruckte Unterstreichung*/
+	text-decoration:underline;
+    font-family:inherit;
+}
+*[rendition~="#uu"]{
+	/*doppelte Unterstreichung*/
+	text-decoration:underline;
+    font-family:inherit;
+}
+*[rendition~="#s"]{
+	/*doppelte Unterstreichung*/
+	text-decoration:line-through;
+    font-family:inherit;
+}
+
+
+/*  level 0 (minimum level)    */
+
+TEI {
+}
+
+/*  level 1     - Elements, that have to be considered to fullfill the DTA ›base format‹. These elements are used consequently in the DTA core corpus.    */
+
+actor  {
+}
+back  {
+}
+body  {
+}
+castGroup  {
+}
+castItem  {
+}
+cb  {
+    text-align:center;
+    font-size:.9em;
+	display:block;
+	border:none;
+	border-top:5px dotted #FFFFEE;
+	height:10px;
+}
+cb:after {
+	content:'Spaltenumbruch';
+	color:silver;
+}
+cb[n]:after {
+	content:'Spalte 'attr(n);
+	color:silver;
+}
+cb[type="start"]:after{
+	content:'Spalte 'attr(n)' (Beginn des Spaltensatzes)\A';
+	color:silver;
+}
+cb[type="end"]:after{
+	content:'Spalte 'attr(n)' (Ende des Spaltensatzes)\A';
+	color:silver;
+}
+cell  {
+    -oxy-placeholder-content:"Tabelle";
+}
+castList {
+}
+div {
+}
+figure {	
+	display:inline;
+	border-width:1mm;
+	border-style:double;
+	border-color:black;
+}
+figure:after {
+	content:"[Illustration]";
+}
+figure[type="notatedMusic"] {
+    display:inline;
+	border-width:1mm;
+	border-style:double;
+	border-color:black;
+}
+figure[type="notatedMusic"]:after {
+	content:"[Musik]";
+}
+formula  {
+    display:inline;
+	border-width:1mm;
+	border-style:double;
+	border-color:black;
+}
+formula:after {
+	content:"[Formel]";
+}
+front  {
+}
+gap:after {
+    content:"[Auslassung]";
+}
+div > head,
+body > div > head,
+body > div > div > head,
+body > div > div > div > head,
+body > div > div > div > div > head {
+    color:black;
+    border-bottom:none;
+    font-size:large;
+    display:block;
+    -oxy-placeholder-content:"Titel";
+    text-align:center;
+}
+
+head:before{
+	content:"" !important;
+}
+
+head {
+	-oxy-placeholder-content:"Titel";
+}
+item  {
+	display:inline;
+    -oxy-placeholder-content:"Liste";
+}
+
+l {
+	display:inline;
+}
+head + lb  {
+	display:inline;
+    font-family:'Arial Unicode MS', 'DejaVu', serif;
+    content:'↲';
+    font-size:large;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+}
+lb  {
+	display:block;
+    font-family:'Arial Unicode MS', 'DejaVu', serif;
+    content:'↲';
+}
+lb:after {
+	content:"\a ";
+}
+lg {
+}
+list  {
+    display:inline;
+}
+note {
+	display:inline;
+}
+p {
+	display:block;
+    margin-top:10px;
+    text-indent:15px;
+}
+pb {
+	text-align:center;
+	display:block;
+	border:none;
+	border-top:1px solid #eee;
+	height:10px;
+	font-size:.9em;
+    margin:10px;
+}
+pb[facs]:after {
+	content:'['attr(facs)']\A';
+	color:silver;
+	font-weight:normal;
+}
+pb[n]:after {
+	content:'Seite 'attr(n)' ('attr(facs)')\A';
+	color:silver;
+	font-weight:normal;
+}
+row  {
+}
+sp  {
+}
+speaker  {
+}
+stage {
+}
+supplied {
+}
+table  {
+}
+text  {
+    max-width:800px;
+    margin-left:30px;
+    line-height:150%;
+}
+titlePage {
+}
+titlePart {
+}
+
+
+/*  level 2     - Elements, which are recommended by the DTA ›base format‹, but may be left out in text annotation. These elements are used in all texts of the DTA core corpus.    */
+
+argument  {
+}
+argument > bibl, body > bibl, cit > bibl, div > bibl, div0 > bibl, div1 > bibl, div2 > bibl, div3 > bibl, div4 > bibl, div5 > bibl, div6 > bibl, div7 > bibl, epigraph > bibl, listBibl > bibl > bibl, taxonomy > bibl {
+    display:inline;
+}
+bibl  {
+	content:"";
+    display:inline;
+}
+byline  {
+}
+cit {
+}
+closer {
+}
+dateline {
+}
+docAuthor  {
+}
+docDate {
+}
+docEdition {
+}
+docImprint {
+}
+docTitle  {
+}
+epigraph {
+}
+floatingText  {
+}
+fw  {
+}
+hi  {
+    background:#fff;
+}
+imprimatur  {
+}
+lb {
+}
+milestone[rendition="#hrRed"] {
+	/* milestone ist not displayed in tei */
+	display:inline;
+	font-style:italic;
+	content:"- - - - - - - - - - - - - - - - -";
+	color:#F60535;
+}
+milestone[rendition="#hrBlue"] {
+	/* milestone ist not displayed in tei */
+	display:inline;
+	font-style:italic;
+	content:"- - - - - - - - - - - - - - - - -";
+	color:blue;
+}
+milestone  {
+	/* milestone ist not displayed in tei */
+	display:inline;
+	font-style:italic;
+	content:"- - - - - - - - - - - - - - - - -";
+}
+opener {
+}
+postscript {
+}
+publisher {
+}
+pubPlace {
+}
+quote {
+    display:inline;
+}
+role 	{
+}
+roleDesc  {
+}
+salute {
+}
+signed {
+}
+space  {
+}
+trailer {
+}
+
+/*  level 3     - Elements, which are part of the DTA ›base format‹, but are not used consequently throughout the DTA core corpus. The usage of these elements is optional.    */
+
+
+choice {
+    background-color:#F8F1FB !important;
+}
+abbr {
+    background-color:#F8F1FB !important;
+}
+expan {
+    background-color:#F8F1FB !important;
+    -oxy-placeholder-content:"Expansion";
+    color:black;
+    font-style:italic;
+}
+sic {
+    background-color:#F8F1FB !important;
+    /*color:#DC8A57;*/
+}
+
+sic:after {
+   content:"(sic!)";
+   font-style:italic;
+}
+corr  {
+    background-color:#F8F1FB !important;
+    color:green;
+    font-style:italic;
+    -oxy-placeholder-content:"Korrektur";
+}
+orig  {
+    background-color:#F8F1FB !important;
+}
+reg {
+    background-color:#F8F1FB !important;
+    -oxy-placeholder-content:"Normalisierung";
+}
+date {
+}
+foreign {
+}
+listBibl {
+}
+name  {
+}
+orgName {
+}
+persName  {
+}
+placeName {
+}
+ref  {
+}
+teiHeader p{
+}
+teiHeader publicationStmt{
+}
+teiHeader sourceDesc{
+}
+teiHeader fileDesc{
+}
+teiHeader{
+}
+teiHeader titleStmt{
+}
+teiHeader title{
+}
+
+/* Other Visualisations*/
+
+/*  special character displaying	 */
+
+oxy|entity {
+    background-color:inherit !important;
+    margin:0px !important;
+    padding:0px !important;
+    -oxy-display-tags:none;
+	font-weight:normal;
+    font-family:inherit;
+}
