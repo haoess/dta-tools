@@ -177,15 +177,11 @@ row[role='label']{
 }
 castList {
 }
+
 div {
 }
-
 /*TODO: correct? (added from tei_oxygen)*/
-div,
-body > div,
-body > div > div,
-body > div > div > div,
-body > div > div > div > div{
+div{
     margin-bottom:0.2em;
 }
 
@@ -224,10 +220,7 @@ gap:after {
     content:"[Auslassung]";
 }
 div > head,
-body > div > head,
-body > div > div > head,
-body > div > div > div > head,
-body > div > div > div > div > head {
+body div > head {
 	/*TODO: correct? (added from tei_oxygen)*/
     padding-top:0.6em;
     padding-bottom:0.2em;
@@ -390,7 +383,21 @@ actor  {
 }
 argument  {
 }
-argument > bibl, body > bibl, cit > bibl, div > bibl, div0 > bibl, div1 > bibl, div2 > bibl, div3 > bibl, div4 > bibl, div5 > bibl, div6 > bibl, div7 > bibl, epigraph > bibl, listBibl > bibl > bibl, taxonomy > bibl {
+argument > bibl, 
+body > bibl, 
+cit > bibl, 
+div > bibl, 
+div0 > bibl, 
+div1 > bibl, 
+div2 > bibl, 
+div3 > bibl, 
+div4 > bibl, 
+div5 > bibl, 
+div6 > bibl, 
+div7 > bibl, 
+epigraph > bibl, 
+listBibl > bibl > bibl, 
+taxonomy > bibl {
     display:inline;
 }
 bibl  {
