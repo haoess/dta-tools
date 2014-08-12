@@ -14,76 +14,7 @@
 * {
 }
 
-TEI * {
-    color:black;
-    font-family:Georgia,"Linux Libertine",Code2000,serif;
-    font-size:12pt;
-}
 
-note[place="left"]:before{
-	color:silver;
-	content:'Marg. links: ';
-}
-note[place="right"]:before{
-	color:silver;
-	content:'Marg. rechts: ';
-}
-note[place="foot"]:before{
-	color:silver;
-	content:"[Fußnote] " attr(n) " ";	
-}
-note[place="foot"] {
-	display:block;
-	text-indent:0em;
-	padding: 5px;
-	vertical-align: 4px;
-	font-size : 60%;
-}
-note[place="end"] {
-	color:silver;
-	content:'Endnote: ';
-}
-note[type="editorial"]:before{
-	color:silver;
-	content:'edit. Kommentar: ';
-}
-fw[type="header"][place="top"] {
-	font-size:0.9em;
-    text-align:center;
-    display:block;
-    color:#666;
-}
-fw[type="catch"][place="bottom"] {
-	font-size:0.9em;
-    text-align:right;
-    display:block;
-    color:#666;
-}
-fw[type="sig"][place="bottom"] {
-	font-size:0.9em;
-    text-align:center;
-    display:block;
-    color:#666;
-}
-space[dim="horizontal"]{
-	content:'        ';
-}	
-cell{
-	text-align:left;
-}
-cell[rendition="#right"]{
-	text-align:right;
-}
-cell[rendition="#c"]{
-	text-align:center;
-}
-
-/*TODO: correct? (added from tei_oxygen)*/
-cell[role='label'],
-row[role='label']{
-   color: inherit;
-   background-color: #CCEEFF;
-}
 
 /*  rendition value visualisation	*/
 *[rendition]{
@@ -183,6 +114,12 @@ row[role='label']{
 TEI {
 }
 
+TEI * {
+    color:black;
+    font-family:Georgia,"Linux Libertine",Code2000,serif;
+    font-size:12pt;
+}
+
 /*TODO: correct? (added from tei_oxygen)*/
 TEI, TEI\.2 {
     display:block;
@@ -190,8 +127,7 @@ TEI, TEI\.2 {
 
 /*  level 1     - Elements, that have to be considered to fullfill the DTA ›base format‹. These elements are used consequently in the DTA core corpus.    */
 
-actor  {
-}
+
 back  {
 }
 body  {
@@ -224,7 +160,20 @@ cb[type="end"]:after{
 	content:'Spalte 'attr(n)' (Ende des Spaltensatzes)\A';
 	color:silver;
 }
-cell  {
+cell{
+	text-align:left;
+}
+cell[rendition="#right"]{
+	text-align:right;
+}
+cell[rendition="#c"]{
+	text-align:center;
+}
+/*TODO: correct? (added from tei_oxygen)*/
+cell[role='label'],
+row[role='label']{
+   color: inherit;
+   background-color: #CCEEFF;
 }
 castList {
 }
@@ -335,9 +284,39 @@ lg {
 list  {
     display:inline;
 }
+
 note {
 	display:inline;
 }
+note[place="left"]:before{
+	color:silver;
+	content:'Marg. links: ';
+}
+note[place="right"]:before{
+	color:silver;
+	content:'Marg. rechts: ';
+}
+note[place="foot"]:before{
+	color:silver;
+	content:"[Fußnote] " attr(n) " ";	
+}
+note[place="foot"] {
+	display:block;
+	text-indent:0em;
+	padding: 5px;
+	vertical-align: 4px;
+	font-size : 60%;
+}
+note[place="end"] {
+	color:silver;
+	content:'Endnote: ';
+}
+note[type="editorial"]:before{
+	color:silver;
+	content:'edit. Kommentar: ';
+}
+
+
 
 p + * + p, p + p {
     text-indent:15px;
@@ -407,6 +386,8 @@ titlePart {
 
 /*  level 2     - Elements, which are recommended by the DTA ›base format‹, but may be left out in text annotation. These elements are used in all texts of the DTA core corpus.    */
 
+actor  {
+}
 argument  {
 }
 argument > bibl, body > bibl, cit > bibl, div > bibl, div0 > bibl, div1 > bibl, div2 > bibl, div3 > bibl, div4 > bibl, div5 > bibl, div6 > bibl, div7 > bibl, epigraph > bibl, listBibl > bibl > bibl, taxonomy > bibl {
@@ -438,7 +419,24 @@ epigraph {
 }
 floatingText  {
 }
-fw  {
+
+fw[type="header"][place="top"] {
+	font-size:0.9em;
+    text-align:center;
+    display:block;
+    color:#666;
+}
+fw[type="catch"][place="bottom"] {
+	font-size:0.9em;
+    text-align:right;
+    display:block;
+    color:#666;
+}
+fw[type="sig"][place="bottom"] {
+	font-size:0.9em;
+    text-align:center;
+    display:block;
+    color:#666;
 }
 hi  {
     background:#fff;
@@ -501,8 +499,9 @@ salute {
 }
 signed {
 }
-space  {
-}
+space[dim="horizontal"]{
+	content:'        ';
+}	
 trailer {
 }
 
