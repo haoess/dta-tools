@@ -1,14 +1,8 @@
 /* 
- * DTABf to HTML-Stylesheet, 2014-07-18
+ * DTABf to HTML-Stylesheet, 2014-08-13
  * Deutsches Textarchiv (DTA; http://www.deutschestextarchiv.de)
 */
 
-/*
- * Overrides all stylesheet information contained in tei_oxygen.css for those tei-elements, 
- * which are part of the DTA base format (DTABf; http://www.deutschestextarchiv.de/doku/basisformat):
- */
- 
- 
 * {
 }
 
