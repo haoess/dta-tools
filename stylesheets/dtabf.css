@@ -155,7 +155,8 @@ head:before{
 head {
 }
 item  {
-	display:inline;
+	display:block;
+	margin:0.5em;
 }
 
 l {
@@ -182,7 +183,8 @@ lb:after {
 lg {
 }
 list  {
-    display:inline;
+	display:block;
+	margin-left:0.5em;
 }
 
 note {
@@ -196,11 +198,8 @@ note[place="right"]:before{
 	color:silver;
 	content:'Marg. rechts: ';
 }
-note[place="foot"]::before(2){
-	color:silver;
-	content:"[Fußnote] " attr(n) " ";	
-}
-note[place="foot"]::before{
+
+note[place="foot"]:before{
 	color:silver;
 	content:"[Fußnote] " attr(n) " ";	
 }
