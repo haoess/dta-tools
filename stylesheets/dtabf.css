@@ -355,6 +355,7 @@ fw[type="sig"][place="bottom"] {
     text-align:center;
     display:block;
     color:#666;
+	margin-top:0.5em;
 }
 hi  {
     background:#fff;
