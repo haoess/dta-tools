@@ -9,6 +9,7 @@
 /*  level 0 (minimum level)    */
 
 TEI {
+	display:block;
 }
 
 TEI * {
@@ -17,10 +18,6 @@ TEI * {
     font-size:12pt;
 }
 
-/*TODO: Is TEI.2 really used? (added from tei_oxygen)*/
-TEI, TEI\.2 {
-    display:block;
-}
 
 /*  level 1     - Elements, that have to be considered to fullfill the DTA ›base format‹. These elements are used consequently in the DTA core corpus.    */
 
@@ -80,8 +77,6 @@ row[role='label']{
 castList {
 }
 
-div {
-}
 /*TODO: correct? (added from tei_oxygen)*/
 div{
     margin-bottom:0.2em;
@@ -136,7 +131,7 @@ div > head{
     color:black;
     border-bottom:none;
     font-size:large;
-    display:block;
+    display:inline-block;
     text-align:center;
 }
 
@@ -146,38 +141,37 @@ head:before{
 	display:block;
 }
 
-head {
-}
 item  {
-	display:block;
-	margin:0.5em;
+	display:inline-block;
+	margin:0.25em;
 }
 
 l {
 	display:inline;
 }
-head + lb  {
+/*head + lb:after  {
 	display:inline;
     font-family:'Arial Unicode MS', 'DejaVu', serif;
-    content:'↲';
-    font-size:large;
+    content:"↲\a";
+	white-space:pre;
+    
+	font-size:large;
     padding-top: 12px;
     padding-bottom: 10px;
     margin-bottom: 0.5em;
     margin-top: 1em;
-}
-lb  {
-	display:block;
-    font-family:'Arial Unicode MS', 'DejaVu', serif;
-    content:'↲';
-}
+	
+}*/
+
 lb:after {
-	content:"\a ";
+	font-family:'Arial Unicode MS', 'DejaVu', serif;
+	content:"↲\a";
+	white-space:pre;
 }
 lg {
 }
 list  {
-	display:block;
+	display:inline-block;
 	margin-left:0.5em;
 }
 
@@ -195,16 +189,23 @@ note[place="right"]:before{
 
 note[place="foot"]:before{
 	color:silver;
-	content:"[Fußnote] " attr(n) " ";	
+	content:attr(n)"\a[Fußnote] " attr(n) " ";	
+	white-space:pre;
 }
 note[place="foot"] {
-	display:block;
+	display:inline;
 	text-indent:0em;
 	padding: 5px;
 	vertical-align: 4px;
 	font-size : 60%;
 }
-note[place="end"] {
+note[place="foot"]:after{
+	color:silver;
+	display:inline;
+	content:" [Ende]\a";
+	white-space:pre;
+}
+note[place="end"]:before {
 	color:silver;
 	content:'Endnote: ';
 }
@@ -219,7 +220,7 @@ p + * + p, p + p {
     text-indent:15px;
 }
 p {
-	display:block;
+	display:inline-block;
     /*margin-top:10px;*/
 }
 pb {
@@ -260,7 +261,7 @@ table {
 }*/
 
 /*TODO: correct? (added from tei_oxygen)*/
-graphic{
+graphic:after{
     content: attr(url, url);
     width:attr(width, length);
     height:attr(height, length);
@@ -276,8 +277,30 @@ text  {
 
 
 titlePage {
+	display:inline-block;
+	text-align:center;
 }
+
+titlePart:before{
+	content:"" !important;
+	/*TODO: correct? (added from tei_oxygen)*/
+	display:block;
+}
+
 titlePart {
+    padding-top:0.6em;
+    padding-bottom:0.2em;
+    padding-left:0.2em;
+    padding-right:0em;
+    background-color:inherit;
+	
+	/* (added from tei_oxygen)
+    color:#004477;
+    border-bottom:1px solid #004477;
+	*/
+    color:black;
+    border-bottom:none;
+    font-size:large;	
 }
 
 
@@ -287,29 +310,12 @@ actor  {
 }
 argument  {
 }
-argument > bibl, 
-body > bibl, 
-cit > bibl, 
-div > bibl, 
-div0 > bibl, 
-div1 > bibl, 
-div2 > bibl, 
-div3 > bibl, 
-div4 > bibl, 
-div5 > bibl, 
-div6 > bibl, 
-div7 > bibl, 
-epigraph > bibl, 
-listBibl > bibl > bibl, 
-taxonomy > bibl {
-	/*TODO: bibl immer inline?*/
-    display:inline;
-}
+
 bibl  {
-	content:"";
     display:inline;
 }
 byline  {
+
 }
 cit {
 }
@@ -362,8 +368,7 @@ hi[rend="sc"] {
 
 imprimatur  {
 }
-lb {
-}
+
 milestone[rendition="#hrRed"] {
 	/* milestone ist not displayed in tei */
 	display:inline;
@@ -411,7 +416,7 @@ salute {
 }
 signed {
 }
-space[dim="horizontal"]{
+space[dim="horizontal"]:after{
 	content:'        ';
 }	
 trailer {
