@@ -7,107 +7,10 @@
  * Overrides all stylesheet information contained in tei_oxygen.css for those tei-elements, 
  * which are part of the DTA base format (DTABf; http://www.deutschestextarchiv.de/doku/basisformat):
  */
-
-@import "tei.css";
-@import "links.css";
+ 
  
 * {
 }
-
-
-
-/*  rendition value visualisation	*/
-*[rendition]{
-	font-size:inherit;
-	font-family:inherit;
-}
-*[rendition~="#aq"]{
-	/*Antiqua*/
-	font-family:"Arial Unicode MS", Arial;
-}
-*[rendition~="#b"] {
-	/*Fettdruck*/
-	font-weight:bold;
-}
-*[rendition~="#c"]{
-	/*zentrierter Text*/
-	display:block; 
-	text-align:center;
-}
-*[rendition~="#blue"]{
-	/*blaue Einfaerbung*/
-	color:blue;
-}
-*[rendition~="#blue"] *{
-	/*blaue Einfaerbung fuer Unterlemente*/
-	color:blue;
-}
-*[rendition~="#et"]{
-	/*eingerueckter Text*/
-	display:block; 
-	margin-left:2em; 
-	text-indent:2em;
-}
-*[rendition~="#fr"]{
-	/*Frakturwechsel*/
-	font-weight:100;
-	font-size:larger;
-}
-*[rendition~="#g"]{
-	/*Sperrdruck*/
-	/* border:1px dashed black;
-	*/
-	letter-spacing: 0.3em;
-}
-*[rendition~="#i"]{
-	/*Kursivdruck*/
-	font-style:italic;
-}
-*[rendition~="#in"]{
-	/*Initiale*/
-	font-size:150%;
-}
-*[rendition~="#k"]{
-	/*Kapitaelchen*/
-	/*border:1px solid black;*/
-	font-variant:small-caps;
-}
-*[rendition~="#red"]{
-	/*rote Einfaerbung*/
-	color:#F60535;
-}
-*[rendition~="#red"] *{
-	/*rote Einfaerbung fuer Unterlemente*/
-	color:#F60535;
-}
-*[rendition~="#right"]{
-	/*Rechtsbuendigkeit*/
-	display:block; 
-	text-align:right;
-}
-*[rendition~="#sub"]{
-	/*Tiefstellung*/
-	vertical-align:sub; 
-	font-size:.8em;
-}
-*[rendition~="#sup"]{
-	/*Hochstellung*/
-	vertical-align:super; 
-	font-size:.8em;
-}
-*[rendition~="#u"]{
-	/*gedruckte Unterstreichung*/
-	text-decoration:underline;
-}
-*[rendition~="#uu"]{
-	/*doppelte Unterstreichung*/
-	text-decoration:underline;
-}
-*[rendition~="#s"]{
-	/*doppelte Unterstreichung*/
-	text-decoration:line-through;
-}
-
 
 /*  level 0 (minimum level)    */
 
@@ -120,7 +23,7 @@ TEI * {
     font-size:12pt;
 }
 
-/*TODO: correct? (added from tei_oxygen)*/
+/*TODO: Is TEI.2 really used? (added from tei_oxygen)*/
 TEI, TEI\.2 {
     display:block;
 }
@@ -136,6 +39,11 @@ castGroup  {
 }
 castItem  {
 }
+
+/*castItem + * + roleDesc[rendition~="#leftBraced"]{
+	float:left;
+}*/
+
 cb  {
     text-align:center;
     font-size:.9em;
@@ -219,8 +127,7 @@ front  {
 gap:after {
     content:"[Auslassung]";
 }
-div > head,
-body div > head {
+div > head{
 	/*TODO: correct? (added from tei_oxygen)*/
     padding-top:0.6em;
     padding-bottom:0.2em;
@@ -289,7 +196,11 @@ note[place="right"]:before{
 	color:silver;
 	content:'Marg. rechts: ';
 }
-note[place="foot"]:before{
+note[place="foot"]::before(2){
+	color:silver;
+	content:"[Fußnote] " attr(n) " ";	
+}
+note[place="foot"]::before{
 	color:silver;
 	content:"[Fußnote] " attr(n) " ";	
 }
@@ -398,6 +309,7 @@ div7 > bibl,
 epigraph > bibl, 
 listBibl > bibl > bibl, 
 taxonomy > bibl {
+	/*TODO: bibl immer inline?*/
     display:inline;
 }
 bibl  {
@@ -500,7 +412,7 @@ quote {
 
 role 	{
 }
-roleDesc  {
+roleDesc{
 }
 salute {
 }
@@ -577,6 +489,99 @@ teiHeader titleStmt{
 	display:block;
 }
 teiHeader title{
+}
+
+
+/*  rendition value visualisation	*/
+*[rendition]{
+	font-size:inherit;
+	font-family:inherit;
+}
+*[rendition~="#aq"]{
+	/*Antiqua*/
+	font-family:"Arial Unicode MS", Arial;
+}
+*[rendition~="#b"] {
+	/*Fettdruck*/
+	font-weight:bold;
+}
+*[rendition~="#c"]{
+	/*zentrierter Text*/
+	display:block; 
+	text-align:center;
+}
+*[rendition~="#blue"]{
+	/*blaue Einfaerbung*/
+	color:blue;
+}
+*[rendition~="#blue"] *{
+	/*blaue Einfaerbung fuer Unterlemente*/
+	color:blue;
+}
+*[rendition~="#et"]{
+	/*eingerueckter Text*/
+	display:block; 
+	margin-left:2em; 
+	text-indent:2em;
+}
+*[rendition~="#fr"]{
+	/*Frakturwechsel*/
+	font-weight:100;
+	font-size:larger;
+}
+*[rendition~="#g"]{
+	/*Sperrdruck*/
+	/* border:1px dashed black;
+	*/
+	letter-spacing: 0.3em;
+}
+*[rendition~="#i"]{
+	/*Kursivdruck*/
+	font-style:italic;
+}
+*[rendition~="#in"]{
+	/*Initiale*/
+	font-size:150%;
+}
+*[rendition~="#k"]{
+	/*Kapitaelchen*/
+	/*border:1px solid black;*/
+	font-variant:small-caps;
+}
+*[rendition~="#red"]{
+	/*rote Einfaerbung*/
+	color:#F60535;
+}
+*[rendition~="#red"] *{
+	/*rote Einfaerbung fuer Unterlemente*/
+	color:#F60535;
+}
+*[rendition~="#right"]{
+	/*Rechtsbuendigkeit*/
+	display:block; 
+	text-align:right;
+}
+*[rendition~="#sub"]{
+	/*Tiefstellung*/
+	vertical-align:sub; 
+	font-size:.8em;
+}
+*[rendition~="#sup"]{
+	/*Hochstellung*/
+	vertical-align:super; 
+	font-size:.8em;
+}
+*[rendition~="#u"]{
+	/*gedruckte Unterstreichung*/
+	text-decoration:underline;
+}
+*[rendition~="#uu"]{
+	/*doppelte Unterstreichung*/
+	text-decoration:underline;
+}
+*[rendition~="#s"]{
+	/*doppelte Unterstreichung*/
+	text-decoration:line-through;
 }
 
 /* Other Visualisations*/
