@@ -525,8 +525,7 @@ teiHeader title{
 }
 *[rendition~="#fr"]{
 	/*Frakturwechsel*/
-	font-weight:100;
-	font-size:larger;
+	border:1px dotted silver;
 }
 *[rendition~="#g"]{
 	/*Sperrdruck*/
@@ -581,6 +580,12 @@ teiHeader title{
 *[rendition~="#s"]{
 	/*doppelte Unterstreichung*/
 	text-decoration:line-through;
+}
+
+*[rendition~="#larger"]{
+	/*gegenüber dem Grundtext vergrößerte Schrift*/
+	font-weight:100;
+	font-size:larger;
 }
 
 /* Other Visualisations*/
