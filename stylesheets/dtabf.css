@@ -25,6 +25,8 @@ TEI * {
 back  {
 }
 body  {
+	display:inline-block;
+	text-align:left;
 }
 castGroup  {
 }
@@ -134,12 +136,6 @@ div > head{
     display:inline-block;
 	/*display:block;*/
     text-align:center;
-}
-
-head:before{
-	content:"" !important;
-	/*TODO: correct? (added from tei_oxygen)*/
-	display:block;
 }
 
 item  {
@@ -276,8 +272,8 @@ text  {
     max-width:800px;
     margin-left:30px;
     line-height:150%;
-	/*TODO: correct? (added from tei_oxygen)*/
 	display: block;
+	text-align:center;
 }
 
 titlePage {
@@ -380,10 +376,10 @@ milestone[rendition="#hrBlue"]:after {
 }
 milestone:after  {
 	/* milestone ist not displayed in tei */
-	display:block;
 	font-style:italic;
 	content:"- - - - - - - - - - - - - - - - -";
 	text-align:center;
+	padding: 0px 70px;
 }
 opener {
 }
@@ -583,7 +579,7 @@ teiHeader title{
 }
 
 *[rendition~="#smaller"]{
-	/*gegenüber dem Grundtext verkelinerte Schrift*/
+	/*gegenüber dem Grundtext verkleinerte Schrift*/
 	font-size:smaller;
 }
 
