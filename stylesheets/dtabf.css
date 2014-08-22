@@ -165,7 +165,10 @@ l {
 
 lb:after {
 	font-family:'Arial Unicode MS', 'DejaVu', serif;
-	content:"↲\a";
+	/* with linefeed character*/
+	/* content:"↲\a"; */
+	/* without linefeed character*/
+	content:"\a";
 	white-space:pre;
 }
 lg {
@@ -586,6 +589,12 @@ teiHeader title{
 	/*gegenüber dem Grundtext vergrößerte Schrift*/
 	font-weight:100;
 	font-size:larger;
+}
+
+*[rendition~="#smaller"]{
+	/*gegenüber dem Grundtext verkelinerte Schrift*/
+	font-weight:700;
+	font-size:smaller;
 }
 
 /* Other Visualisations*/
