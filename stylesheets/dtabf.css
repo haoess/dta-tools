@@ -374,25 +374,20 @@ hi[rend="sc"] {
 imprimatur  {
 }
 
-milestone[rendition="#hrRed"] {
+milestone[rendition="#hrRed"]:after {
 	/* milestone ist not displayed in tei */
-	display:inline;
-	font-style:italic;
-	content:"- - - - - - - - - - - - - - - - -";
 	color:#F60535;
 }
-milestone[rendition="#hrBlue"] {
+milestone[rendition="#hrBlue"]:after {
 	/* milestone ist not displayed in tei */
-	display:inline;
-	font-style:italic;
-	content:"- - - - - - - - - - - - - - - - -";
 	color:blue;
 }
-milestone  {
+milestone:after  {
 	/* milestone ist not displayed in tei */
-	display:inline;
+	display:block;
 	font-style:italic;
 	content:"- - - - - - - - - - - - - - - - -";
+	text-align:center;
 }
 opener {
 }
@@ -588,13 +583,11 @@ teiHeader title{
 
 *[rendition~="#larger"]{
 	/*gegenüber dem Grundtext vergrößerte Schrift*/
-	font-weight:100;
 	font-size:larger;
 }
 
 *[rendition~="#smaller"]{
 	/*gegenüber dem Grundtext verkelinerte Schrift*/
-	font-weight:700;
 	font-size:smaller;
 }
 
