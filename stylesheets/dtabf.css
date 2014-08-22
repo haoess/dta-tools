@@ -192,23 +192,21 @@ note[place="right"]:before{
 	color:silver;
 	content:'Marg. rechts: ';
 }
-
 note[place="foot"]:before{
 	color:silver;
-	content:attr(n)"\a[Fußnote] " attr(n) " ";	
+	vertical-align: 0.5em;
+	content:attr(n)"\a" attr(n) " ";	
 	white-space:pre;
 }
 note[place="foot"] {
 	display:inline;
-	text-indent:0em;
-	padding: 5px;
-	vertical-align: 4px;
+	line-height:80%;	
 	font-size : 60%;
 }
 note[place="foot"]:after{
 	color:silver;
 	display:inline;
-	content:" [Ende]\a";
+	content:" [Ende d. Fußnote]\a";
 	white-space:pre;
 }
 note[place="end"]:before {
@@ -219,8 +217,6 @@ note[type="editorial"]:before{
 	color:silver;
 	content:'edit. Kommentar: ';
 }
-
-
 
 p + * + p, p + p {
     text-indent:15px;
@@ -237,7 +233,7 @@ pb {
 	display:block;
 	border:none;
 	border-top:1px solid #eee;
-	height:10px;
+	height:24px;
 	font-size:.9em;
     margin:10px;
 }
