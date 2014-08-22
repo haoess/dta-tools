@@ -132,6 +132,7 @@ div > head{
     border-bottom:none;
     font-size:large;
     display:inline-block;
+	/*display:block;*/
     text-align:center;
 }
 
@@ -143,6 +144,7 @@ head:before{
 
 item  {
 	display:inline-block;
+	/*display:block;*/
 	margin:0.25em;
 }
 
@@ -175,6 +177,7 @@ lg {
 }
 list  {
 	display:inline-block;
+	/*display:block;*/
 	margin-left:0.5em;
 }
 
@@ -224,7 +227,10 @@ p + * + p, p + p {
 }
 p {
 	display:inline-block;
-    /*margin-top:10px;*/
+	/*display:block;*/
+   
+
+   /*margin-top:10px;*/
 }
 pb {
 	text-align:center;
@@ -278,16 +284,10 @@ text  {
 	display: block;
 }
 
-
 titlePage {
-	display:inline-block;
-	text-align:center;
-}
-
-titlePart:before{
-	content:"" !important;
-	/*TODO: correct? (added from tei_oxygen)*/
+	/*display:inline-block;*/
 	display:block;
+	text-align:center;
 }
 
 titlePart {
@@ -304,6 +304,7 @@ titlePart {
     color:black;
     border-bottom:none;
     font-size:large;	
+	display:inline-block;
 }
 
 
