@@ -242,9 +242,7 @@ sub getContent{
 		@nodes= $dom->findnodes($xpath);
 	}
 	if (@nodes) {
-		$result = $nodes[0]->textContent;
-		$result =~ s/^\s+|\s+$//g;
-		return $result;
+		return cleanStr($nodes[0]->textContent);
 	}
 	if (@_ > 1) {
 		return $_[1];
@@ -252,11 +250,10 @@ sub getContent{
 	return EMPTY;
 }
 
+#unused
 sub getNodeContent {
 	my ($node) = @_;
-	my $result = $node->getContent;
-	$result =~ s/^\s+|\s+$//g;
-	return $result;
+	return cleanStr($node->textContent);
 }
 
 sub getAttributeValue{
@@ -267,9 +264,7 @@ sub getAttributeValue{
 		@nodes= $dom->findnodes($xpath);
 	}
 	if (@nodes){
-		$result = $nodes[0]->getAttribute($attribute);
-		$result =~ s/^\s+|\s+$//g;
-		return $result;
+		return cleanStr($nodes[0]->getAttribute($attribute));
 	}
 	if( @_ > 2) {
 		return $_[2];
@@ -310,20 +305,20 @@ sub getPersonData{
 		my $temp = $nodes[0]->getAttribute('ref');
 		if ($temp) {
 			$temp =~ /.*\/(.+)$/;
-			$personData{pnd} = $1;
+			$personData{pnd} = cleanStr($1);
 		}
 	}
 	@nodes = $node->findnodes('persName/surname');
 	if (@nodes) {
-		$personData{surname} = $nodes[0]->textContent;
+		$personData{surname} = cleanStr($nodes[0]->textContent);
 	}
 	@nodes = $node->findnodes('persName/forename');
 	if (@nodes) {
-		$personData{forename} = $nodes[0]->textContent;
+		$personData{forename} = cleanStr($nodes[0]->textContent);
 	}
 	@nodes = $node->findnodes('persName/addName');
 	if (@nodes) {
-		my $temp = shift(@nodes)->textContent;
+		my $temp = cleanStr(shift(@nodes)->textContent);
 		while (@nodes) {
 			$temp .= '; '.shift(@nodes)->textContent;
 		}
@@ -394,6 +389,18 @@ sub qut {
     else {
 		return $s;
 	}
+}
+
+sub cleanStr {
+	my ($s) = @_;
+	$s =~ s/^\s+|\s+$//g;
+	my $number = () = $s =~ /\t/g;
+	if ($number > 0) {
+		# The only warning, which doesn't prevent to create the files/output, because the problem will be fixed. But be carefull while grabbing the output directly!
+		printf '# WARNING: The string "'.$s.'" contains '.$number.' tab'.($number > 1?'s':'').'. '.($number > 1?'They':'It').' will be replaced by a single space.'."\n\n";
+		$s =~ s/\t/ /g;
+	}
+	return $s;
 }
 
 sub generateSqlInsert {
