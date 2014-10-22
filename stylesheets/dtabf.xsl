@@ -238,7 +238,7 @@
   </div>
 </xsl:template>
 
-<xsl:template match='tei:fw[@place="bottom"]'>
+<xsl:template match='tei:fw[@place="bottom"][not(./ancestor::tei:note)]'>
   <xsl:if test="not(@type='page number')">
     <xsl:element name="div">
       <xsl:attribute name="class">
@@ -255,7 +255,7 @@
     </xsl:element>
   </xsl:if>
 </xsl:template>
-
+  
 <xsl:template match='tei:fw[@type="page number"]'/>
 
 <xsl:template match='tei:milestone'>
@@ -282,7 +282,12 @@
         <xsl:if test="@rendition='#c'">
           <xsl:attribute name="style">display:block; text-align:center</xsl:attribute>
         </xsl:if>
-        [FORMEL]
+        <xsl:element name="img">
+          <xsl:attribute name="style">vertical-align:middle; -moz-transform:scale(0.7); -webkit-transform:scale(0.7); transform:scale(0.7)</xsl:attribute>
+          <xsl:attribute name="src">
+            <xsl:text>http://dinglr.de/formula/</xsl:text><xsl:value-of select="encode-for-uri(.)"/>
+          </xsl:attribute>
+        </xsl:element>
       </xsl:element>
     </xsl:when>
     <xsl:when test="string-length(.) &gt; 0"><xsl:apply-templates/></xsl:when>
@@ -365,9 +370,14 @@
     </xsl:choose>
     <xsl:text> </xsl:text>
     <xsl:apply-templates/>
-    <xsl:apply-templates select='tei:fw[@place="bottom"][@type="catch"]' mode="signatures"/>
+    <xsl:apply-templates select='tei:fw[@place="bottom"][@type="catch"]' mode="fn-catch"/>
   </div>
 </xsl:template>
+
+<xsl:template match="tei:note/tei:fw"/>
+<xsl:template match="tei:note/tei:fw" mode="fn-catch">
+  <div class="fw-bottom-catch"><xsl:apply-templates/></div>
+</xsl:template>  
 <!-- end footnotes -->
 
 <!-- end notes -->
@@ -792,7 +802,10 @@
   <xsl:variable name="thisSite" select="."/>
   <xsl:if test="preceding::tei:note[@place='foot'][./preceding::tei:pb[. is $thisSite/preceding::tei:pb[1]]]">
     <span style="display:block; margin-left:1em">
-      <xsl:for-each select="preceding::tei:note[@place='foot'][./preceding::tei:pb[. is $thisSite/preceding::tei:pb[1]]]">
+      <xsl:for-each select="preceding::tei:note[@place='foot' and string-length(@prev) > 0][./preceding::tei:pb[. is $thisSite/preceding::tei:pb[1]]]">
+        <xsl:apply-templates select="." mode="footnotes"/>
+      </xsl:for-each>
+      <xsl:for-each select="preceding::tei:note[@place='foot' and string-length(@prev) = 0][./preceding::tei:pb[. is $thisSite/preceding::tei:pb[1]]]">
         <xsl:apply-templates select="." mode="footnotes"/>
       </xsl:for-each>
     </span>
