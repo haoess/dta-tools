@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:tei="http://www.tei-c.org/ns/1.0"
-    exclude-result-prefixes="tei"
-    version="2.0">
+  xmlns:tei="http://www.tei-c.org/ns/1.0"
+  exclude-result-prefixes="tei"
+  version="2.0">
 
-<xsl:output method="xml" 
-doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-
-transitional.dtd" 
-doctype-public="-//W3C//DTD XHTML 1.0 Transitional//
-EN" indent="yes"/>
+<xsl:output method="xml"
+  doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+  doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN" indent="yes"/>
 
 <xsl:template match="tei:TEI">
   <html>
@@ -16,7 +14,6 @@ EN" indent="yes"/>
       <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
       <style type="text/css">
         body { font-size:14pt; margin-left:1em; margin-right:1em; max-width:600px }
-        .small { font-size:8pt }
         .head  { text-align:center; font-size:1.2em; margin-top:1em }
         .dta-head  { text-align:center; font-size:1.2em; margin-bottom:.5em }
         
@@ -27,25 +24,24 @@ EN" indent="yes"/>
         
         /* quote mess */
         blockquote:before, blockquote:after, q:before, q:after {
-        /* see http://www.paulchaplin.com/blog/css-reset-and-quirky-quotes */
-        content:"";
-        content:none;
+          /* see http://www.paulchaplin.com/blog/css-reset-and-quirky-quotes */
+          content:""; content:none;
         }
         
         /* place holders */
         .ph, .phbl { color:#666 }
         .phbl      { display:block; text-align:center }
         
-        .titlepage  { text-align:center }
-        .byline     { font-size:.9em; margin:1em 0 }
+        .titlepage   { text-align:center }
+        .byline      { font-size:.9em; margin:1em 0 }
         .dta-anzeige { color:#aaa }
-        .dedication { padding-left:2em }
-        .footnotesep{ border-top:1px solid #333; margin-bottom:5px; width:10em }
-        .footnotesep-long{ border-top:1px solid #333; margin-bottom:5px; width:80% }
-        .footnote   { color:#333; font-size:.8em; margin-top:.5em; margin-left:1em }
-        .endnote    { color:#333; font-size:.8em; margin-top:.5em; margin-bottom:.5em }
+        .dedication  { padding-left:2em }
+        
+        .footnote       { color:#333; font-size:.8em; margin-top:.5em; margin-left:1em }
+        .endnote        { color:#333; font-size:.8em; margin-top:.5em; margin-bottom:.5em }
         .endnote-indent { text-indent:1em }
-        .fn-intext  { vertical-align:super; font-size:.8em }
+        .fn-intext      { vertical-align:super; font-size:.8em }
+        .fn-sign        { vertical-align:super; font-size:.8em }
         
         .dta-argument { text-align:center; font-size:.9em }
         
@@ -84,7 +80,7 @@ EN" indent="yes"/>
         .dta-supplied { color:#2D9700 }
         
         /* dramae */
-        .dta-sp { margin-bottom:1em }
+        .dta-sp    { margin-bottom:1em }
         .dta-in-sp { display:inline }
         .dta-actor { float:right }
         
@@ -92,40 +88,39 @@ EN" indent="yes"/>
         .dta-lb-n { float:right }
         
         /* renditions inline */
-        .aq    { font-family:Verdana,sans-serif }
-        .b     { font-weight:bold }
-        .blue  { color:#475784 }
-        .cap   { text-transform:capitalize }
-        .cw    { text-align:right }
-        .fr    { border:1px dotted silver }
-        .sub   { vertical-align:sub; font-size:.7em }
-        .g     { letter-spacing:0.125em }
+        .aq       { font-family:sans-serif }
+        .b        { font-weight:bold }
+        .blue     { color:blue }
+        .fr       { border:1px dotted silver }
+        .g        { letter-spacing:0.125em }
         .g:before { content:''; margin-left:0.125em }
         .g:after  { content:''; margin-right:0em }
-        .i     { font-style:italic }
-        .in    { font-size:150% }
-        .k     { font-variant:small-caps }
-        .red   { color:#BC4C49 }
-
-        .s { text-decoration: line-through }
-        
-        .u     { text-decoration:underline }
-        .up,.sup, .fn-sign { vertical-align:super; font-size:.8em }
-        .uu    { border-bottom:double 3px #000 }
-        
-        .dta-rend { background:url(images/stripes.png) }
+        .i        { font-style:italic }
+        .in       { font-size:150% }
+        .k        { font-variant:small-caps }
+        .larger   { font-size:larger }
+        .red      { color:red }
+        .s        { text-decoration: line-through }
+        .smaller  { font-size:smaller }
+        .sub      { vertical-align:sub; font-size:.7em }
+        .sup      { vertical-align:sup; font-size:.7em }
+        .u        { text-decoration:underline }
+        .uu       { border-bottom:double 3px #000 }
         
         /* renditions block */
         .c     { display:block; text-align:center }
         .et    { display:block; margin-left:2em; text-indent:0 }
+        .et2   { display:block; margin-left:4em; text-indent:0 }
+        .et3   { display:block; margin-left:6em; text-indent:0 }
         .dta-in-sp .et { display:inline; text-indent:2em }
         .right { display:block; text-align:right }
+        .cw    { text-align:right }
         
         /* cast lists */
         table.dta-castgroup { border-collapse:collapse; border-spacing:0; margin:0; width:100% }
-        td.castitem     { border-right:1px solid #333; padding-right:10px; padding-left:0; padding-bottom:5px }
-        .castitem       { margin-bottom:5px }
-        td.roledesc     { vertical-align:middle; padding-left:5px }
+        td.castitem         { border-right:1px solid #333; padding-right:10px; padding-left:0; padding-bottom:5px }
+        .castitem           { margin-bottom:5px }
+        td.roledesc         { vertical-align:middle; padding-left:5px }
         
         /* tables */    
         .dta-table      { margin-top:0; margin-left:auto; margin-right:auto; background:#fff; border-collapse:collapse }
@@ -138,7 +133,7 @@ EN" indent="yes"/>
         caption h6 { font-size:1em; white-space:nowrap; padding-bottom:5px }
         
         /* lists */
-        ul.dta { list-style-type:none; padding-left:2em }
+        ul.dta    { list-style-type:none; padding-left:2em }
         ul.dta li { margin-bottom:3px }
         
         .dta-bibl { font-size:.9em }
@@ -158,10 +153,10 @@ EN" indent="yes"/>
         
         /* all things brace ... */
         .braced-base       { display:inline-block; vertical-align:middle; padding:0 5px 0 5px }
-        p .braced-base     {text-indent:0 !important}
+        p .braced-base     { text-indent:0 !important }
         .braced-left-right { border-left:1px solid #333; border-right:1px solid #333; margin-left:1em }
-        .braced-left { border-left:1px solid #333; margin-left:1em }
-        .braced-right { border-right:1px solid #333 }
+        .braced-left       { border-left:1px solid #333; margin-left:1em }
+        .braced-right      { border-right:1px solid #333 }
         .braced-base .dta-list-item { text-indent:0; margin-bottom:0 }
         
         .dta-pb { color:#666; font-size:.9em }
