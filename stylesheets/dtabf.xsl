@@ -189,6 +189,9 @@
 
 <xsl:template match='tei:text[not(descendant::tei:text)]'>
   <xsl:apply-templates/>
+  <xsl:for-each select="//tei:note[@place='foot' and string-length(@prev) > 0][not(./following::tei:pb)]">
+    <xsl:apply-templates select="." mode="footnotes"/>
+  </xsl:for-each>
   <xsl:for-each select="//tei:note[@place='foot'][not(./following::tei:pb)]">
     <xsl:apply-templates select="." mode="footnotes"/>
   </xsl:for-each>
