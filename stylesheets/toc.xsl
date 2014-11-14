@@ -19,7 +19,30 @@
     <xsl:when test="tei:head//text()">
       <xsl:apply-templates select="tei:head" mode="head"/>
     </xsl:when>
-    <xsl:otherwise>[Kapitel]</xsl:otherwise>
+    <xsl:when test="@type='abbreviations'">[Abkürzungsverzeichnis]</xsl:when>
+    <xsl:when test="@type='act'">[Akt]</xsl:when>
+    <xsl:when test="@type='advertisement'">[Anzeige]</xsl:when>
+    <xsl:when test="@type='appendix'">[Anhang]</xsl:when>
+    <xsl:when test="@type='bibliography'">[Bibliographie]</xsl:when>
+    <xsl:when test="@type='chapter'">[Kapitel]</xsl:when>
+    <xsl:when test="@type='contents'">[Inhaltsverzeichnis]</xsl:when>
+    <xsl:when test="@type='copyright'">[Hinweise zum Copyright]</xsl:when>
+    <xsl:when test="@type='corrigenda'">[Druckfehlerverzeichnis]</xsl:when>
+    <xsl:when test="@type='dedication'">[Widmung]</xsl:when>
+    <xsl:when test="@type='diaryEntry'">[Tagebucheintrag]</xsl:when>
+    <xsl:when test="@type='edition'">[Abdruck]</xsl:when>
+    <xsl:when test="@type='figures'">[Abbildungsverzeichnis]</xsl:when>
+    <xsl:when test="@type='frontispiece'">[Frontispiz]</xsl:when>
+    <xsl:when test="@type='imprint'">[Impressum]</xsl:when>
+    <xsl:when test="@type='imprimatur'">[Druckerlaubnis]</xsl:when>
+    <xsl:when test="@type='index'">[Register]</xsl:when>
+    <xsl:when test="@type='letter'">[Brief]</xsl:when>
+    <xsl:when test="@type='poem'">[Gedicht]</xsl:when>
+    <xsl:when test="@type='postface'">[Nachwort]</xsl:when>
+    <xsl:when test="@type='preface'">[Vorwort]</xsl:when>
+    <xsl:when test="@type='recipe'">[Rezept]</xsl:when>
+    <xsl:when test="@type='scene'">[Szene]</xsl:when>
+    <xsl:otherwise>[Abschnitt]</xsl:otherwise>
   </xsl:choose>
   <xsl:apply-templates/>
 </xsl:template>
