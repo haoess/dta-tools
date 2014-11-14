@@ -8,7 +8,7 @@
 
 <xsl:strip-space elements="*" />
 
-<xsl:template match="tei:titlePage[@type='main']"><xsl:value-of select="preceding::tei:pb[1]/@facs"/>: [Titelseite]</xsl:template>
+<xsl:template match="tei:titlePage[@type='main']"><xsl:text>&#x0a;</xsl:text><xsl:value-of select="preceding::tei:pb[1]/@facs"/>: [Titelseite]</xsl:template>
 
 <xsl:template match="tei:div">
   <xsl:text>&#x0a;</xsl:text>
@@ -33,9 +33,9 @@
 </xsl:template>
 
 <!-- nodes to be ignored -->
-<xsl:template match="tei:teiHeader | tei:cit | tei:closer | tei:dateline | tei:div[@type='imprint' or @type='dedication'] | tei:fw | tei:head | tei:l | tei:list | tei:milestone | tei:note | tei:p | tei:salute | tei:sic | tei:sp | tei:stage | tei:titlePage"/>
+<xsl:template match="tei:teiHeader | tei:cit | tei:closer | tei:dateline | tei:div[@type='imprint' or @type='dedication'] | tei:fw | tei:head | tei:l | tei:list | tei:milestone | tei:note | tei:p | tei:salute | tei:sic | tei:sp | tei:stage | tei:table | tei:titlePage"/>
 
-<xsl:template match="text()"><xsl:value-of select="normalize-space(translate(.,'&#x0a;',' '))"/></xsl:template>
+<xsl:template match="text()"><xsl:value-of select="translate(.,'&#x0a;',' ')"/></xsl:template>
 
 <xsl:template name="spaces">
   <xsl:param name="count" select="1"/>
