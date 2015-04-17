@@ -13,7 +13,7 @@
     <head>
       <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
       <style type="text/css">
-        body { font-size:14pt; margin-left:1em; margin-right:1em; max-width:600px }
+        body { font-size:14pt; margin-left:1em; margin-right:1em; max-width:1000px }
         .head  { text-align:center; font-size:1.2em; margin-top:1em }
         .dta-head  { text-align:center; font-size:1.2em; margin-bottom:.5em }
         
