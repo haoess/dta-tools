@@ -813,7 +813,21 @@
       </xsl:for-each>
     </span>
   </xsl:if>
-  <span class="dta-pb" style="padding-left:15em">|<xsl:value-of select="@facs"/><xsl:if test="@n"> : <xsl:value-of select="@n"/></xsl:if>|</span>
+  <span class="dta-pb" style="padding-left:15em">
+    <xsl:text>|</xsl:text>
+    <xsl:choose>
+      <xsl:when test="@corresp">
+        <xsl:element name="a">
+          <xsl:attribute name="href"><xsl:value-of select="@corresp"/></xsl:attribute>
+          <xsl:value-of select="@facs"/><xsl:if test="@n"> : <xsl:value-of select="@n"/></xsl:if>
+        </xsl:element>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="@facs"/><xsl:if test="@n"> : <xsl:value-of select="@n"/></xsl:if>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:text>|</xsl:text>
+  </span>
   <br />
 </xsl:template>
   
