@@ -78,6 +78,8 @@
         .dta-reg  { border-bottom:dotted 2px #2d9700 }
         .dta-abbr { border-bottom:dotted 2px #002D97 }
         .dta-supplied { color:#2D9700 }
+        .dta-del  { background:#f0f0f0;color:darkred;text-decoration:line-through }
+        .dta-add  { background:#f0f0f0;color:darkgreen }
         
         /* dramae */
         .dta-sp    { margin-bottom:1em }
@@ -232,6 +234,22 @@
       <xsl:apply-templates/>
     </xsl:otherwise>
   </xsl:choose>
+</xsl:template>
+
+<xsl:template match="tei:del">
+  <xsl:element name="span">
+    <xsl:attribute name="class">dta-del</xsl:attribute>
+    <xsl:attribute name="title">Streichung<xsl:if test="@rendition"> (<xsl:value-of select="@rendition"/>)</xsl:if></xsl:attribute>
+    <xsl:apply-templates/>
+  </xsl:element>
+</xsl:template>
+
+<xsl:template match="tei:add">
+  <xsl:element name="span">
+    <xsl:attribute name="class">dta-add</xsl:attribute>
+    <xsl:attribute name="title">Hinzufügung<xsl:if test="@place"> (<xsl:value-of select="@place"/>)</xsl:if></xsl:attribute>
+    <xsl:apply-templates/>
+  </xsl:element>
 </xsl:template>
 
 <xsl:template match='tei:fw[@place="top"]'>
