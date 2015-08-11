@@ -13,7 +13,17 @@
     <head>
       <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
       <style type="text/css">
-        body { font-size:14pt; margin-left:1em; margin-right:1em; max-width:1000px }
+        <xsl:choose>
+          <xsl:when test="//tei:note[@place='right' or @place='left']">
+            body { font-size:14pt; margin-left:200px; margin-right:1em; max-width:1000px; position:absolute }
+          </xsl:when>
+          <xsl:otherwise>
+            body { font-size:14pt; margin-left:1em; margin-right:1em; max-width:1000px; position:absolute }
+          </xsl:otherwise>
+        </xsl:choose>
+      </style>
+
+      <style type="text/css">
         .head  { text-align:center; font-size:1.2em; margin-top:1em }
         .dta-head  { text-align:center; font-size:1.2em; margin-bottom:.5em }
         
@@ -42,6 +52,10 @@
         .endnote-indent { text-indent:1em }
         .fn-intext      { vertical-align:super; font-size:.8em }
         .fn-sign        { vertical-align:super; font-size:.8em }
+
+         .dta-marginal       { position:absolute; width:140px; text-indent:0; background:#fff; padding:0 4px; border:1px solid #D1C5A4; font-size:smaller; z-index:10000 }
+         .dta-marginal-left  { left:-150px; text-align:right }
+         .dta-marginal-right { right:-150px; text-align:left }
         
         .dta-argument { text-align:center; font-size:.9em }
         
