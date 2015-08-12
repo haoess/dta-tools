@@ -6,7 +6,7 @@
 
 <xsl:output method="xml"
   doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
-  doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN" indent="yes"/>
+  doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"/>
 
 <xsl:template match="tei:TEI">
   <html>
