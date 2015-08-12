@@ -121,7 +121,7 @@
         .s        { text-decoration: line-through }
         .smaller  { font-size:smaller }
         .sub      { vertical-align:sub; font-size:.7em }
-        .sup      { vertical-align:sup; font-size:.7em }
+        .sup      { vertical-align:super; font-size:.7em }
         .u        { text-decoration:underline }
         .uu       { border-bottom:double 3px #000 }
         
