@@ -53,11 +53,13 @@
         .fn-intext      { vertical-align:super; font-size:.8em }
         .fn-sign        { vertical-align:super; font-size:.8em }
 
-         .dta-marginal       { position:absolute; width:140px; text-indent:0; background:#fff; padding:0 4px; border:1px solid #D1C5A4; font-size:smaller; z-index:10000 }
-         .dta-marginal-left  { left:-150px; text-align:right }
-         .dta-marginal-right { right:-150px; text-align:left }
+        .dta-marginal       { position:absolute; width:140px; text-indent:0; background:#fff; padding:0 4px; border:1px solid #D1C5A4; font-size:smaller; z-index:10000 }
+        .dta-marginal-left  { left:-150px; text-align:right }
+        .dta-marginal-right { right:-150px; text-align:left }
         
         .dta-argument { text-align:center; font-size:.9em }
+
+        .dta-metamark { color:#666 }
         
         .dta-cb { font-size:.8em; color:#666; text-align:center; display:block; margin:5px }
         
@@ -1223,6 +1225,17 @@
       </xsl:with-param>
     </xsl:call-template>
   </span>
+</xsl:template>
+
+<xsl:template match='tei:metamark'>
+  <xsl:choose>
+    <xsl:when test="text() != ''">
+      <span class="dta-metamark" title="metamark"><xsl:apply-templates/></span>
+    </xsl:when>
+    <xsl:otherwise>
+      <span class="dta-metamark" title="metamark"><xsl:text>&#x23A1;</xsl:text></span>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <xsl:template name="link-ref">
