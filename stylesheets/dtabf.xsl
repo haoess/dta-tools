@@ -831,7 +831,9 @@
   <xsl:if test="@n">
     <span class="dta-lb-n"><xsl:apply-templates select="@n"/></span>
   </xsl:if>
-  <br />
+  <xsl:if test="local-name(preceding-sibling::*[1]) != 'item'">
+    <br />
+  </xsl:if>
   <xsl:apply-templates />
 </xsl:template>
 
