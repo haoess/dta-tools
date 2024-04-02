@@ -141,7 +141,7 @@ sub process {
     # the actual processing logic
     if ($input_string) {
         $output = $self->process_tei_string($input_string);
-    } elsif ($input_filename) {
+    } elsif ($input_filename && $input_filename ne "-") {
         if (! -e $input_filename ) {
             die "No such file or directory: " . $self->input_filename;
         }
@@ -150,6 +150,8 @@ sub process {
         } else {
             $output = $self->process_one_file($input_filename);
         }
+    } else {
+        $output = $self->process_stdin();
     }
 
     # print to file if output_filename is specified
@@ -184,6 +186,13 @@ sub process_one_file {
     open( my $fh, '<:utf8', $fname ) or die $!;
     my $tei_string = do { local $/; <$fh> };
     close $fh;
+    my $result = $self->process_tei_string( $tei_string );
+    return $result;
+}
+
+sub process_stdin {
+    my ($self) = @_;
+    my $tei_string = do { local $/; <STDIN> };
     my $result = $self->process_tei_string( $tei_string );
     return $result;
 }
