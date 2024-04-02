@@ -18,12 +18,18 @@ DTA::TEI::Text - Transform TEI/XML to Plain/Text
 
     use DTA::TEI::Text::Transform;
     my $t2t = DTA::TEI::Text::Transform->new;
+
     # from single file
     my $txt = $t2t->process({filename => '/path/to/file.xml'});
+
     # from directory of xml files
     my $txt = $t2t->process({filename => '/path/to/dir/of/xml-files'});
+
     # from TEI fragment string
     my $txt = $t2t->process({string=>'<p>Foo<lb/>Bar.</p>', is_fragment=>1});
+
+    # from STDIN via filename "-"
+    my $txt = $t2t->process({filename => '-'});
 
 =head1 REQUIRES
 
@@ -110,12 +116,13 @@ or
 
     my $t = DTA::TEI::Text::Transform->new;
     $t->process({ filename => '/some/file', xslt_params => { show_form_feed => 0} });
-   
 
 =head3 filename
 
 Path to the file/set of files to be transformed. If file is a directory,
-process all files with an C<.xml> extension as TEI
+process all files with an C<.xml> extension as TEI.
+
+Providing C<-> as file name, input is read from C<STDIN>.
 
 =head3 string 
 
