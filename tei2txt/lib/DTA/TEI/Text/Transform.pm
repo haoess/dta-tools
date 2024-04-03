@@ -13,6 +13,7 @@ use DTA::TEI::Text;
 use File::Temp qw(tempfile);
 use IPC::Open2;
 
+binmode STDIN, ":utf8";
 binmode STDOUT, ":utf8";
 
 my $TEI_BEFORE=<<'TEI_BEFORE';
