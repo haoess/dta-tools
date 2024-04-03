@@ -458,13 +458,13 @@
         <xsl:when test="@extent">
             <xsl:call-template name="output_gap">
                 <xsl:with-param name="output" select="$gap_char" />
-                <xsl:with-param name="recLevel" select="@extent"/>
+                <xsl:with-param name="amount" select="@extent"/>
             </xsl:call-template>
         </xsl:when>
         <xsl:when test="@quantity">
             <xsl:call-template name="output_gap">
                 <xsl:with-param name="output" select="$gap_char" />
-                <xsl:with-param name="recLevel" select="@quantity"/>
+                <xsl:with-param name="amount" select="@quantity"/>
             </xsl:call-template>
         </xsl:when>
         <xsl:otherwise>
@@ -475,14 +475,12 @@
 </xsl:template>
 <xsl:template name="output_gap">
     <xsl:param name="output" />
-    <xsl:param name="recLevel" />
-    <xsl:value-of select="$output"/>
-    <xsl:if test="$recLevel > 1">
-        <xsl:call-template name="output_gap">
-            <xsl:with-param name="output" select="$output" />
-            <xsl:with-param name="recLevel" select="$recLevel - 1" />
-        </xsl:call-template>
-    </xsl:if>
+    <xsl:param name="amount" />
+    <!-- rekursive Anwendung problematisch wegen xsltMaxDepth -->
+    <!-- Annahme: genügend sonstige XML-Elemente zum Zählen -->
+    <xsl:for-each select="//*[position() &lt;= $amount]">
+      <xsl:value-of select="$output"/>
+    </xsl:for-each>
 </xsl:template>
 
 <!--=====================================-->
